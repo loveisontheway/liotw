@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>IE浏览器版本过低，请更新 ( Internet explorer version is too low, please update )</title>
+    <meta name="author" content="jiangjialiang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <style>
+      body{
+        font-size: 13px;
+        font-family: Georgia,Verdana,sans-serif;
+        color: #333;
+        padding:  0;
+        margin: 0;
+      }
+      .wrap{
+        min-width: 1024px;
+        margin: 47px 20px;
+        /*background-color: #fff4f4;*/
+        /*border: solid 1px #777;*/
+        /*box-shadow: 0 0 8px #888;*/
+        position: relative;
+      }
+      .wrap .title{
+        text-align: center;
+        margin: 13px 25px;
+        font-weight: bold;
+        font-size: 19px;
+      }
+      .wrap .en{
+        text-align: center;
+        margin: 13px 25px;
+        font-size: 16px;
+      }
+      .wrap .list{
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .wrap .list .item{
+        text-align: center;
+        padding: 10px;
+        width: 25%;
+      }
+      .wrap .list .item:hover .link{
+        /*border: dashed 1px rgb(170, 170, 170);*/
+        /*padding-top: 109px;*/
+        /*padding-bottom: 3px;*/
+      }
+      .wrap .list .item .link{
+        /*padding-top: 110px;*/
+        padding-bottom: 4px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        display: block;
+        text-decoration: none;
+      }
+/*      .wrap .list .item .bi{
+        background-image: url('../imgs/browser/ie.png');
+      }*/
+      .wrap .list .item .link .name{
+        color: #e25600;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 19px;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+      }
+      .wrap .list .item .link .vendor{
+        font-size: 10px;
+        color: #aaa;
+        text-align: center;
+        display: block;
+        margin-top: 5px;
+        text-decoration: none;
+      }
+      .wrap .tag {
+        text-align: center;
+        margin: 13px 25px;
+        font-size: 19px;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="title">IE浏览器版本过低，请更新 ( Internet Explorer 10+ )</p>
+      <p class="en">Internet explorer version is too low, please update ( Internet Explorer 10+ )</p>
+      <!-- 用table,为了兼容 ie5 -->
+      <table class="list">
+        <tr>
+          <td class="item">
+              <a class="link" href="http://windows.microsoft.com/en-HK/internet-explorer/download-ie" target="_blank">
+              	<i class="fa fa-internet-explorer fa-5x"></i><br>
+                <span class="name">Internet Explorer</span><br>
+                <span class="vendor">Microsoft</span>
+              </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

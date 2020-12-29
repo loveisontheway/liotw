@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>青海-地区路线</title>
+  <meta name="description" content="青海, qinghai" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|西海、中华水塔||<b>著名景点</b>|青海湖、塔尔寺、昆仑山、可可西里、三江源|
+|<b>行政区类别</b>|省||<b>机    场</b>|西宁曹家堡机场、格尔木机场、玉树巴塘机场、果洛玛沁机场等|
+|<b>所属地区</b>|中国西北||<b>火车站</b>|西宁站、西宁西站、格尔木站|
+|<b>下辖地区</b>|2个市、6个自治州||<b>车牌代码</b>|青A-青H|
+|<b>电话区号</b>|0971-0979||<b>GDP</b>|2642.8亿元（2017年）|
+|<b>邮政区码</b>|810000-817200||<b>人均GDP</b>|44348元人民币（2017年）|
+|<b>地理位置</b>|青藏高原东北部||<b>主要河流</b>|长江、黄河、澜沧江等|
+|<b>面    积</b>|72.10万平方公里||<b>高等学府</b>|青海大学、青海师范大学等|
+|<b>人    口</b>|598.38万（2017年常住人口）||<b>特    产</b>|冬虫夏草、藏雪莲、藏茵陈等|
+|<b>方    言</b>|中原官话-秦陇片、藏语（安多、康巴方言）等||<b>省委书记</b>|王建军|
+|<b>气候条件</b>|高原大陆性气候||<b>代省长</b>|刘宁|
+
+| <b>青海生活文化</b> | <b>青海特色文化</b> | <b>青海曲艺文化</b> | <b>青海建筑文化</b> | <b>青海宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">青海花儿</a> | <a href="javascript:;" onclick="art(this);">藏戏</a> | <a href="javascript:;" onclick="building(this);">青海传统建筑</a> | <a href="javascript:;" onclick="religion(this);">青海庙宇/庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">酥油花</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">热贡艺术</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">青海藏毯</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">青海熬茶</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">青海禁忌</a> | <a href="javascript:;" onclick="feature(this);">青海彩陶</a> |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"内蒙古"）](neimenggu.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"内蒙古"）](neimenggu.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/qinghai.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/qinghai.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '青海民风民俗', '青海有着悠久的历史，是我国黄河流域文化组成部分。青海是多民族地区，所以这里的民族文化十分鲜明，不仅有藏族，还有蒙古族、土族、回族等等，这里有着什么样的风土人情呢？青海当地有什么特色文化呢？青海的民俗文化都有哪些？'],
+    ['方言文化', 'live-2', '青海方言', '青海方言，青海的汉语方言，属于中原官话的秦陇片和陇中片。由于历史上人口的迁徙、各民族长期相处，形成了青海汉语自己的独特风格。青海方言的词汇形象生动、富有魅力，加之发音铿锵，有类关语，形成精细、委婉、幽默、轻快的风格。人们说话时方言加普通话，又产生了一种青海的普通话“青普话”。'],
+    ['节日文化', 'live-3', '青海节日', '青海早在远古时代，青海就有人类活动，最早生息在这块土地的是中国西部古老民族之一氐、羌族群。众多的古文化遗存表明，青海的开发至少已有6000年的历史。青海的历史文化悠久深厚。那么如今青海都还有哪些传统节日习俗文化呢？青海著名的节庆活动有哪些呢？'],
+    ['嫁娶文化', 'live-4', '青海嫁娶文化', '青海人结婚有哪些结婚风俗流程？青海结婚习俗有哪些？青海人娶媳妇都是在半夜里进行，不能见太阳。一般都是凌晨三点左右出发，赶天亮前把新娘娶回家里。那么青海还有哪些结婚习俗呢？'],
+    ['饮食文化', 'live-5', '青海饮食文化', '青海的饮食独具地方特色，风味独特，大多是用当地产的原料，如各种高原动植物等，而且这些地方风味多为私人长期经营，各有其独特和秘制之方，深受人们喜爱。牧区主要食用牦牛肉、丰肉，乳品主要是牦牛奶，也食青稞（多做成糌粑）、大米、面粉。青海的各个民族在漫长的岁月里，逐步形成了一套本民族独特的风俗和习惯。'],
+    ['青海禁忌', 'live-6', '青海禁忌', '青海省世居少数民族主要为藏、回族、土、撒拉、蒙古族。其中土族和撒拉族是青海省独有的两个少数民族。青海的宗教主要有藏传佛教、伊斯兰教和基督教。藏族、蒙古族、 土族信仰藏传佛教,回族、撒拉族信仰伊斯兰教。各民族都有着悠久的历史和优秀的文化传统,保持着独特的、丰富多彩的民族风情和习俗。那么青海有哪些生活习俗以及禁忌呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/qinghai/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="qinghai-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['青海花儿', 'feature-1', '青海花儿', '青海是民间曲调“花儿”的故乡，“河湟花儿”又是“西北花儿”的精魂，居住在这里的各族群众，无论在田间耕作，山野放牧，外出打工或者路途赶车，只要有闲暇时间，都要唱上几句悠扬的“花儿”。对青海人来说，“花儿”像每天的饮食一样普通。那么青海花儿有哪些曲调特点呢？'],
+    ['酥油花', 'feature-2', '酥油花文化', '酥油花是一种用酥油（黄油）塑形像物的特殊技艺，为"塔尔寺三绝"（酥油花、壁画、堆绣）之一。酥油花最早产生于西藏苯教，是施食供品上的小小贴花。按印度传统的佛教习俗，供奉佛和菩萨的贡品有六色，即花、涂香、圣水、瓦香、果品和佛灯，可当时天寒草枯没有鲜花，只好用酥油塑花献佛，由此形成艺术传统。那么酥油花有哪些制作过程呢？'],
+    ['热贡艺术', 'feature-3', '热贡艺术文化', '热贡艺术是藏传佛教艺术的重要组成部分和颇具广泛影响的流派，从十五世纪开始，发祥于青海省黄南藏族自治州同仁县境内隆务河流域。数百年来，这里有大批艺人从事民间佛教绘塑艺术，从艺人员之众多，群体技艺之精妙，都为其它藏区所少见，故被誉为“藏族画家之乡”，而同仁地区在藏语中称为“热贡”，因此这一艺术便统称为“热贡艺术”。那么热贡艺术有哪些艺术特色呢？'],
+    ['青海藏毯', 'feature-4', '青海藏毯文化', '青海藏毯作为青藏高原民族传统手工艺品，有着悠久的历史。青海藏毯有炕毯、艺术挂毯等品种，是以得天独厚的西宁大白毛为原料，在藏族传统艺术的基础上，吸收了多国宗教艺人的艺术精华，独特的藏族手工艺术风格成为世界地毯业的奇葩。那么青海藏毯有哪些特点呢？'],
+    ['青海熬茶', 'feature-5', '青海熬茶文化', '熬茶是一种煮开的红茶，是青海的一种饮茶习惯。熬茶是用川湘茶区出产的砖茶加水煮开，再加上青盐、花椒，讲究点的还要加上姜皮、荆芥。青海人喝咸茶，有句顺口溜“茶毛（没）盐，水一般，人毛（没）钱，鬼一般”，足见茶里青盐的重要性。熬茶不是精细的喝法，原料做法自然讲究，但饮法却无限制，更主要的是它有解油腻、助消化的功效。'],
+    ['青海彩陶', 'feature-6', '青海彩陶文化', '青海彩陶纹样种类繁多，又有自身独特风格，造型饱满凝重，结构均衡严谨，笔锋流利生动，具有流线韵律和强烈动感，富于变化，在中国灿烂的远古文化中占有重要的地位。随着人类文明的不断发展，彩陶艺术收藏的价格随历史的变迁而身价百倍，同时也为家庭、写字楼、茶楼、餐厅、娱乐场所及宾馆增添了文化气息和质感。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/qinghai/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="qinghai-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['藏戏', 'art-1', '藏戏文化', '青海是个多民族地区，其中包括汉、藏 、土、回、撒拉、蒙古、哈萨克、等名族，但是汉、藏、回族的传统和文化艺术对她的文化艺术以及建筑特色影响最深，在各民族间又经过相互学习、吸收、融合、创造出了具有本地区特点的文化艺术。这些文化艺术的成就，很重要的一部分体现在建筑之中。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/qinghai/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="qinghai-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['青海传统建筑', 'building-1', '青海建筑文化', '青海是个多民族地区，其中包括汉、藏 、土、回、撒拉、蒙古、哈萨克、等名族，但是汉、藏、回族的传统和文化艺术对她的文化艺术以及建筑特色影响最深，在各民族间又经过相互学习、吸收、融合、创造出了具有本地区特点的文化艺术。这些文化艺术的成就，很重要的一部分体现在建筑之中。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/qinghai/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="qinghai-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['青海庙宇/庙会', 'religion-1', '庙宇/庙会文化', '青海是个多民族聚居的省份，历史悠久，文化灿烂，同时也是一个多宗教的省份。主要宗教有藏传佛教、伊斯兰教、基督教、天主教。藏传佛教和伊斯兰教影响最广，遍及全省各个地区；天主教和基督教主要在城镇和铁路沿线。汉传佛教和道教在一些农业区有一定的影响。藏族、回族、蒙古族、土族和撒拉族等几个世居少数民族，普遍信仰宗教。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/qinghai/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="qinghai-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '青海',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

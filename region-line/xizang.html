@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>西藏-地区路线</title>
+  <meta name="description" content="西藏, xizang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|藏、乌斯藏、吐蕃||<b>著名景点</b>|布达拉宫、大昭寺、甘丹寺、珠穆朗玛峰、雅鲁藏布江等|
+|<b>行政区类别</b>|自治区||<b>机    场</b>|拉萨贡嘎国际机场、昌都邦达机场等|
+|<b>所属地区</b>|中国西南地区||<b>火车站</b>|拉萨站、日喀则站、林芝站、那曲站|
+|<b>下辖地区</b>|6个地级市、1个地区||<b>车牌代码</b>|藏A-藏G|
+|<b>电话区号</b>|（+86）0891-0897||<b>GDP</b>|1310.6亿元（2017年）|
+|<b>邮政区码</b>|850000-860000||<b>人均GDP</b>|39650元|
+|<b>地理位置</b>|中国西南地区边疆，青藏高原西南部||<b>历史名人</b>|松赞干布、阿沛·阿旺晋美等|
+|<b>面    积</b>|122.84万平方千米||<b>海拔最高端</b>|珠穆朗玛峰|
+|<b>人    口</b>|330.54万人（2016年）||<b>平均海拔</b>|4000米以上|
+|<b>方    言</b>|藏语（卫藏方言、康方言）||<b>根基文化</b>|象雄文化|
+|<b>气候条件</b>|西北严寒、东南温暖湿润||<b>现任领导</b>|党委书记吴英杰，区主席齐扎拉|
+
+| <b>西藏生活文化</b> | <b>西藏特色文化</b> | <b>西藏曲艺文化</b> | <b>西藏建筑文化</b> | <b>西藏宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">哈达</a> | <a href="javascript:;" onclick="art(this);">藏戏</a> | <a href="javascript:;" onclick="building(this);">藏式门窗</a> | <a href="javascript:;" onclick="religion(this);">转经筒</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">锅庄舞</a> |-| <a href="javascript:;" onclick="building(this);">西藏建筑风格</a> | <a href="javascript:;" onclick="religion(this);">风马旗</a> |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">藏族服装</a> | - | - | <a href="javascript:;" onclick="religion(this);">玛尼石</a> |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">尼木三绝</a> | - |-|<a href="javascript:;" onclick="religion(this);">宗教/庙宇/庙会</a>|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">西藏吉祥八宝</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">西藏禁忌</a> | <a href="javascript:;" onclick="feature(this);">格萨尔史诗</a> |-| -|-|
+|-| <a href="javascript:;" onclick="feature(this);">藏医药</a> |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图](#one)
++ [II. 景点](#two)
++ [III. 路线规划](#three)
+  - [1、叶城 - 阿克美其特村](#1)
+  - [2、阿克美其特村 - 库地](#2)
+  - [3、库地 - 204道班](#3)
+  - [4、204道班 - 黑恰达坂](#4)
+  - [5、黑恰达坂 - 三十里营房](#5)
+  - [6、三十里营房 - 红柳滩](#6)
+  - [7、红柳滩 - 泉水湖检查站](#7)
+  - [8、泉水湖检查站 - 松西村](#8)
+  - [9、松西村 - 多玛乡](#9)
+  - [10、多玛乡 - 日土县](#10)
+  - [11、日土县 - 噶尔县](#11)
+  - [12、噶尔县 - 那木如村](#12)
+  - [13、那木如村 - 门士乡](#13)
+  - [14、门士乡 - 巴嘎村](#14)
+  - [15、巴嘎村 - 霍尔乡](#15)
+  - [16、霍尔乡 - 马攸检查站](#16)
+  - [17、马攸检查站 - 帕羊镇](#17)
+  - [18、帕羊镇 - 仲巴县](#18)
+  - [19、仲巴县 - 昔日达吉岭寺](#19)
+  - [20、昔日达吉岭寺 - 萨嘎县](#20)
+  - [21、萨嘎县 - 佩枯错](#21)
+  - [22、佩枯错 - 门士乡](#22)
+  - [23、门士乡 - 岗嘎镇](#23)
+  - [24、岗嘎镇 - 藏普村](#24)
+  - [25、藏普村 - 绒布寺](#25)
+  - [26、绒布寺 - 珠峰大本营](#26)
+  - [27、珠峰大本营 - 扎西宗村](#27)
+  - [28、扎西宗村 - 定日县](#28)
+  - [29、定日县 - 拉孜县](#29)
+  - [30、拉孜县 - 吉定镇](#30)
+  - [31、吉定镇 - 江孜县](#31)
+  - [32、江孜县 - 浪卡子县](#32)
+  - [33、浪卡子县 - 曲水县](#33)
+  - [34、曲水县 - 拉萨](#34)
+  - [35、拉萨 - 羊八井镇](#35)
+  - [36、羊井八镇 - 高美村](#36)
+  - [37、高美村 - 加岗村](#37)
+  - [38、加岗村 - 纳木错乡](#38)
+  - [39、纳木错乡 - 日布村](#39)
+  - [40、日布村 - 尼玛江热乡](#40)
+  - [41、尼玛江热乡 - 一四三道班](#41)
+  - [42、一四三道班 - 加兴乡](#42)
+  - [43、加兴乡 - 巴河镇](#43)
+  - [44、巴河镇 - 林芝市](#44)
+  - [45、林芝市 - 鲁朗](#45)
+  - [46、鲁朗镇 - 通麦](#46)
+  - [47、通麦 - 波密](#47)
+  - [48、波密 - 然乌镇](#48)
+  - [49、然乌镇 - 八宿县](#49)
+  - [50、八宿县 - 邦达镇](#50)
+  - [51、邦达镇 - 左贡县](#51)
+  - [52、左贡县 - 登巴村](#52)
+  - [53、登巴村 - 芒康县](#53)
+  - [54、芒康县 - 盐井村](#54)
+
+<h2 id="one"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;总路线图</h2>
+<img data-src="../imgs/region-line/xizang/xizang.png" width="80%" height="80%" title="总路线图"/>
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/xizang/scene-spot.png" width="80%" height="80%" title="景点"/>
+<img data-src="../imgs/region-line/scenic-spot/xizang.gif" title="景点"/>
+
+<h2 id="three"><i class="fa fa-spinner fa-pulse"></i>&nbsp;路线规划</h2>
+  <h4 id="1">1、叶城 - 阿克美其特村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/1.png" width="61%" height="40%" title="1、叶城 - 阿克美其特村"/>
+  <img data-src="../imgs/region-line/xizang/1t.png" title="1、叶城 - 阿克美其特村"/>
+
+  <h4 id="2">2、阿克美其特村 - 库地&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/2.png" width="61%" height="40%" title="2、阿克美其特村 - 库地"/>
+  <img data-src="../imgs/region-line/xizang/2t.png" title="2、阿克美其特村 - 库地"/>
+
+  <h4 id="3">3、库地 - 204道班&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/3.png" width="61%" height="40%" title="3、库地 - 204道班"/>
+  <img data-src="../imgs/region-line/xizang/3t.png" title="3、库地 - 204道班"/>
+
+  <h4 id="4">4、204道班 - 黑恰达坂&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/4.png" width="61%" height="40%" title="4、204道班 - 黑恰达坂"/>
+  <img data-src="../imgs/region-line/xizang/4t.png" title="4、204道班 - 黑恰达坂"/>
+
+  <h4 id="5">5、黑恰达坂 - 三十里营房&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/5.png" width="61%" height="40%" title="5、黑恰达坂 - 三十里营房"/>
+  <img data-src="../imgs/region-line/xizang/5t.png" title="5、黑恰达坂 - 三十里营房"/>
+
+  <h4 id="6">6、三十里营房 - 红柳滩&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/6.png" width="61%" height="40%" title="6、三十里营房 - 红柳滩"/>
+  <img data-src="../imgs/region-line/xizang/6t.png" title="6、三十里营房 - 红柳滩"/>
+
+  <h4 id="7">7、红柳滩 - 泉水湖检查站&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/7.png" width="61%" height="40%" title="7、红柳滩 - 泉水湖检查站"/>
+  <img data-src="../imgs/region-line/xizang/7t.png" title="7、红柳滩 - 泉水湖检查站"/>
+
+  <h4 id="8">8、泉水湖检查站 - 松西村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/8.png" width="61%" height="40%" title="8、泉水湖检查站 - 松西村"/>
+  <img data-src="../imgs/region-line/xizang/8t.png" title="8、泉水湖检查站 - 松西村"/>
+
+  <h4 id="9">9、松西村 - 多玛乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/9.png" width="61%" height="40%" title="9、松西村 - 多玛乡"/>
+  <img data-src="../imgs/region-line/xizang/9t.png" title="9、松西村 - 多玛乡"/>
+
+  <h4 id="10">10、多玛乡 - 日土县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/10.png" width="61%" height="40%" title="10、多玛乡 - 日土县"/>
+  <img data-src="../imgs/region-line/xizang/10t.png" title="10、多玛乡 - 日土县"/>
+
+  <h4 id="11">11、日土县 - 噶尔县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/11.png" width="61%" height="40%" title="11、日土县 - 噶尔县"/>
+  <img data-src="../imgs/region-line/xizang/11t.png" title="11、日土县 - 噶尔县"/>
+
+  <h4 id="12">12、噶尔县 - 那木如村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/12.png" width="61%" height="40%" title="12、噶尔县 - 那木如村"/>
+  <img data-src="../imgs/region-line/xizang/12t.png" title="12、噶尔县 - 那木如村"/>
+
+  <h4 id="13">13、那木如村 - 门士乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/13.png" width="61%" height="40%" title="13、那木如村 - 门士乡"/>
+  <img data-src="../imgs/region-line/xizang/13t.png" title="13、那木如村 - 门士乡"/>
+
+  <h4 id="14">14、门士乡 - 巴嘎村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/14.png" width="61%" height="40%" title="14、门士乡 - 巴嘎村"/>
+  <img data-src="../imgs/region-line/xizang/14t.png" title="14、门士乡 - 巴嘎村"/>
+
+  <h4 id="15">15、巴嘎村 - 霍尔乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/15.png" width="61%" height="40%" title="15、巴嘎村 - 霍尔乡"/>
+  <img data-src="../imgs/region-line/xizang/15t.png" title="15、巴嘎村 - 霍尔乡"/>
+
+  <h4 id="16">16、霍尔乡 - 马攸检查站&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/16.png" width="61%" height="40%" title="16、霍尔乡 - 马攸检查站"/>
+  <img data-src="../imgs/region-line/xizang/16t.png" title="16、霍尔乡 - 马攸检查站"/>
+
+  <h4 id="17">17、马攸检查站 - 帕羊镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/17.png" width="61%" height="40%" title="17、马攸检查站 - 帕羊镇"/>
+  <img data-src="../imgs/region-line/xizang/17t.png" title="17、马攸检查站 - 帕羊镇"/>
+
+  <h4 id="18">18、帕羊镇 - 仲巴县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/18.png" width="61%" height="40%" title="18、帕羊镇 - 仲巴县"/>
+  <img data-src="../imgs/region-line/xizang/18t.png" title="18、帕羊镇 - 仲巴县"/>
+
+  <h4 id="19">19、仲巴县 - 昔日达吉岭寺&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/19.png" width="61%" height="40%" title="19、仲巴县 - 昔日达吉岭寺"/>
+  <img data-src="../imgs/region-line/xizang/19t.png" title="19、仲巴县 - 昔日达吉岭寺"/>
+
+  <h4 id="20">20、昔日达吉岭寺 - 萨嘎县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/20.png" width="61%" height="40%" title="20、昔日达吉岭寺 - 萨嘎县"/>
+  <img data-src="../imgs/region-line/xizang/20t.png" title="20、昔日达吉岭寺 - 萨嘎县"/>
+
+  <h4 id="21">21、萨嘎县 - 佩枯错&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/21.png" width="61%" height="40%" title="21、萨嘎县 - 佩枯错"/>
+  <img data-src="../imgs/region-line/xizang/21t.png" title="21、萨嘎县 - 佩枯错"/>
+
+  <h4 id="22">22、佩枯错 - 门士乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/22.png" width="61%" height="40%" title="22、佩枯错 - 门士乡"/>
+  <img data-src="../imgs/region-line/xizang/22t.png" title="22、佩枯错 - 门士乡"/>
+
+  <h4 id="23">23、门士乡 - 岗嘎镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/23.png" width="61%" height="40%" title="23、门士乡 - 岗嘎镇"/>
+  <img data-src="../imgs/region-line/xizang/23t.png" title="23、门士乡 - 岗嘎镇"/>
+
+  <h4 id="24">24、岗嘎镇 - 藏普村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/24.png" width="61%" height="40%" title="24、岗嘎镇 - 藏普村"/>
+  <img data-src="../imgs/region-line/xizang/24t.png" title="24、岗嘎镇 - 藏普村"/>
+
+  <h4 id="25">25、藏普村 - 绒布寺&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/25.png" width="61%" height="40%" title="25、藏普村 - 绒布寺"/>
+  <img data-src="../imgs/region-line/xizang/25t.png" title="25、藏普村 - 绒布寺"/>
+
+  <h4 id="26">26、绒布寺 - 珠峰大本营&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/26.png" width="61%" height="40%" title="26、绒布寺 - 珠峰大本营"/>
+  <img data-src="../imgs/region-line/xizang/26t.png" title="26、绒布寺 - 珠峰大本营"/>
+
+  <h4 id="27">27、珠峰大本营 - 扎西宗村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/27.png" width="61%" height="40%" title="27、珠峰大本营 - 扎西宗村"/>
+  <img data-src="../imgs/region-line/xizang/27t.png" title="27、珠峰大本营 - 扎西宗村"/>
+
+  <h4 id="28">28、扎西宗村 - 定日县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/28.png" width="61%" height="40%" title="28、扎西宗村 - 定日县"/>
+  <img data-src="../imgs/region-line/xizang/28t.png" title="28、扎西宗村 - 定日县"/>
+
+  <h4 id="29">29、定日县 - 拉孜县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/29.png" width="61%" height="40%" title="29、定日县 - 拉孜县"/>
+  <img data-src="../imgs/region-line/xizang/29t.png" title="29、定日县 - 拉孜县"/>
+
+  <h4 id="30">30、拉孜县 - 吉定镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/30.png" width="61%" height="40%" title="30、拉孜县 - 吉定镇"/>
+  <img data-src="../imgs/region-line/xizang/30t.png" title="30、拉孜县 - 吉定镇"/>
+
+  <h4 id="31">31、吉定镇 - 江孜县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/31.png" width="61%" height="40%" title="31、吉定镇 - 江孜县"/>
+  <img data-src="../imgs/region-line/xizang/31t.png" title="31、吉定镇 - 江孜县"/>
+
+  <h4 id="32">32、江孜县 - 浪卡子县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/32.png" width="61%" height="40%" title="32、江孜县 - 浪卡子县"/>
+  <img data-src="../imgs/region-line/xizang/32t.png" title="32、江孜县 - 浪卡子县"/>
+
+  <h4 id="33">33、浪卡子县 - 曲水县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/33.png" width="61%" height="40%" title="33、浪卡子县 - 曲水县"/>
+  <img data-src="../imgs/region-line/xizang/33t.png" title="33、浪卡子县 - 曲水县"/>
+
+  <h4 id="34">34、曲水县 - 拉萨&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/34.png" width="61%" height="40%" title="34、曲水县 - 拉萨"/>
+  <img data-src="../imgs/region-line/xizang/34t.png" title="34、曲水县 - 拉萨"/>
+
+  <h4 id="35">35、喀斯村 - 羊八井镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/35.png" width="61%" height="40%" title="35、喀斯村 - 羊八井镇"/>
+  <img data-src="../imgs/region-line/xizang/35t.png" title="35、喀斯村 - 羊八井镇"/>
+
+  <h4 id="36">36、羊八井镇 - 高美村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/36.png" width="61%" height="40%" title="36、羊八井镇 - 高美村"/>
+  <img data-src="../imgs/region-line/xizang/36t.png" title="36、羊八井镇 - 高美村"/>
+
+  <h4 id="37">37、高美村 - 加岗村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/37.png" width="61%" height="40%" title="37、高美村 - 加岗村"/>
+  <img data-src="../imgs/region-line/xizang/37t.png" title="37、高美村 - 加岗村"/>
+
+  <h4 id="38">38、加岗村 - 纳木错乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/38.png" width="61%" height="40%" title="38、加岗村 - 纳木错乡"/>
+  <img data-src="../imgs/region-line/xizang/38t.png" title="38、加岗村 - 纳木错乡"/>
+
+  <h4 id="39">39、纳木错乡 - 日布村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/39.png" width="61%" height="40%" title="39、纳木错乡 - 日布村"/>
+  <img data-src="../imgs/region-line/xizang/39t.png" title="39、纳木错乡 - 日布村"/>
+
+  <h4 id="40">40、日布村 - 尼玛江热乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/40.png" width="61%" height="40%" title="40、日布村 - 尼玛江热乡"/>
+  <img data-src="../imgs/region-line/xizang/40t.png" title="40、日布村 - 尼玛江热乡"/>
+
+  <h4 id="41">41、尼玛江热乡 - 一四三道班&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/41.png" width="61%" height="40%" title="41、尼玛江热乡 - 一四三道班"/>
+  <img data-src="../imgs/region-line/xizang/41t.png" title="41、尼玛江热乡 - 一四三道班"/>
+
+  <h4 id="42">42、一四三道班 - 加兴乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/42.png" width="61%" height="40%" title="42、一四三道班 - 加兴乡"/>
+  <img data-src="../imgs/region-line/xizang/42t.png" title="42、一四三道班 - 加兴乡"/>
+
+  <h4 id="43">43、加兴乡 - 巴河镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/43.png" width="61%" height="40%" title="43、加兴乡 - 巴河镇"/>
+  <img data-src="../imgs/region-line/xizang/43t.png" title="43、加兴乡 - 巴河镇"/>
+
+  <h4 id="44">44、巴河镇 - 林芝市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/44.png" width="61%" height="40%" title="44、巴河镇 - 林芝市"/>
+  <img data-src="../imgs/region-line/xizang/44t.png" title="44、巴河镇 - 林芝市"/>
+
+  <h4 id="45">45、林芝市 - 鲁朗&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/45.png" width="61%" height="40%" title="45、林芝市 - 鲁朗"/>
+  <img data-src="../imgs/region-line/xizang/45t.png" title="45、林芝市 - 鲁朗"/>
+
+  <h4 id="46">46、鲁朗 - 通麦&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/46.png" width="61%" height="40%" title="46、鲁朗 - 通麦"/>
+  <img data-src="../imgs/region-line/xizang/46t.png" title="46、鲁朗 - 通麦"/>
+
+  <h4 id="47">47、通麦 - 波密&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/47.png" width="61%" height="40%" title="47、通麦 - 波密"/>
+  <img data-src="../imgs/region-line/xizang/47t.png" title="47、通麦 - 波密"/>
+
+  <h4 id="48">48、波密 - 然乌镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/48.png" width="61%" height="40%" title="48、鲁朗 - 然乌镇"/>
+  <img data-src="../imgs/region-line/xizang/48t.png" title="48、波密 - 然乌镇"/>
+
+  <h4 id="49">49、然乌镇 - 八宿县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/49.png" width="61%" height="40%" title="49、然乌镇 - 八宿县"/>
+  <img data-src="../imgs/region-line/xizang/49t.png" title="49、然乌镇 - 八宿县"/>
+
+  <h4 id="50">50、八宿县 - 邦达镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/50.png" width="61%" height="40%" title="50、八宿县 - 邦达镇"/>
+  <img data-src="../imgs/region-line/xizang/50t.png" title="50、八宿县 - 邦达镇"/>
+
+  <h4 id="51">51、邦达镇 - 左贡县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/51.png" width="61%" height="40%" title="51、邦达镇 - 左贡县"/>
+  <img data-src="../imgs/region-line/xizang/51t.png" title="51、邦达镇 - 左贡县"/>
+
+  <h4 id="52">52、左贡县 - 登巴村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/52.png" width="61%" height="40%" title="52、左贡县 - 登巴村"/>
+  <img data-src="../imgs/region-line/xizang/52t.png" title="52、左贡县 - 登巴村"/>
+
+  <h4 id="53">53、登巴村 - 芒康县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/53.png" width="61%" height="40%" title="53、登巴村 - 芒康县"/>
+  <img data-src="../imgs/region-line/xizang/53t.png" title="53、登巴村 - 芒康县"/>
+
+  <h4 id="54">54、芒康县 - 盐井村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xizang/54.png" width="61%" height="40%" title="54、芒康县 - 盐井村"/>
+  <img data-src="../imgs/region-line/xizang/54t.png" title="54、芒康县 - 盐井村"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/xizang.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+
+  $('img').lazyload();
+
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '西藏民风民俗', '西藏文化是中华文化和世界文化宝库中的一颗璀璨明珠。从气势恢宏的庙宇到金碧辉煌的殿堂，从浩如烟海的经书到神秘多姿的宗教仪轨，从美妙精美的唐卡到馥郁悠长的藏香，无不体现出雪域文化特有的神韵与魅力。高原人民在生活中的衣食住行、婚丧嫁娶、信仰礼仪、节日、游艺、都极具地域风情和民族特色。'],
+    ['方言文化', 'live-2', '西藏方言', '藏区大部的传统语言是藏语，分布在现在中国西藏自治区、四川阿坝藏族羌族自治州和甘孜藏族自治州、甘肃甘南藏族自治州、青海和云南迪庆藏族自治州四个地区。藏语又可分成三大方言：卫藏方言（即拉萨话）、康方言（德格话、昌多话）、安多方言。只有安多方言没有区别意义的声调。藏族不同方言的发音不同，对话有一定的困难，但是因为藏文是拼写古藏语语音，不随方言发音而改变，藏文的写法还是相同。'],
+    ['节日文化', 'live-3', '西藏节日', '藏传佛教在中国西藏已有1300多年的历史，成为藏族人民生活的一部分，西藏的节日由于受其深刻影响，而具有浓厚的宗教色彩，有的已演化成纯粹的宗教节日。也许是自然环境太过严酷，也许是各种劳务甚为繁重，生活在雪域高原的藏民族，渴望能够改变自身的命运，祈盼上苍能够垂爱于他们，神佛能够保护他们。藏族是个多节日的民族，按藏历(与汉族的农历近似)计算，几乎月月有节日。'],
+    ['嫁娶文化', 'live-4', '西藏嫁娶文化', '藏族的结婚礼仪有哪些？藏族结婚习俗又有哪些？当代藏族男女青年的婚姻，在礼俗方面早已是很简便的了。藏族婚恋的最大禁忌，就是禁止近亲婚配，这合人类优生学原理。不仅堂兄姐妹之间禁婚，有姨表、姑表关系的人也禁婚。一般母系亲族后裔在4代后方能通婚。在某些地区，则要经过7～9代才允许通婚。而父系后裔只要知道是同一祖先，都严禁通婚。'],
+    ['饮食文化', 'live-5', '西藏饮食文化', '西藏因为从高寒的藏北草原到中部的温带农区，再到藏东南的亚热带低地，地形参差，气温和湿度殊异，物产丰寡不均，促成了饮食习俗的多样化；其次，地域辽阔，峡谷峻岭多，冰川雪地覆盖面积大，交通阻塞，影响了饮食文化的相互传播及融合，致使城乡之间、衣牧区之间、腹心地区与边缘地区之间的差异相当大；以及西藏古代笨教的“血祭”和中世纪佛教禁欲主义的长期推行，直接阻碍了饮食业的发展。'],
+    ['西藏禁忌', 'live-6', '西藏禁忌', '西藏境内有200多万人口,主要从事农牧业和手工业。藏族的主食为糌粑、酥油茶、牛羊肉、青稞酒。藏族是个勤劳、好客的民族,每逢节日、重要仪式及尊贵的客人来临,总要敬献“哈达”、青稞酒、酥油茶,以示庆祝。那么准备去西藏旅游的你，还知道西藏有哪些生活习俗禁忌呢？去西藏旅游还需要注意哪些风俗习惯呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xizang/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xizang-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['哈达', 'feature-1', '哈达', '哈达是蒙古族人民藏族人民作为礼仪用的丝织品，是藏民任何阶层的人物，在来往时最通行的一种礼物，也是社交活动中的必备品。哈达类似于古代汉族的礼帛，蒙古族人和藏族人表示敬意和祝贺用的长条丝巾或纱巾，多为白色、蓝色，也有黄色等。'],
+    ['锅庄舞', 'feature-2', '锅庄舞', '锅庄舞，又称为“果卓”、“歌庄”、“卓”等，藏语意为圆圈歌舞，是藏族三大民间舞蹈之一，分布于西藏昌都、那曲，四川阿坝、甘孜，云南迪庆及青海、甘肃的藏族聚居区。锅庄分为用于大型宗教祭祀活动的“大锅庄”、用于民间传统节日的“中锅庄”和用于亲朋聚会的“小锅庄”等几种，规模和功能各有不同。'],
+    ['藏族服装', 'feature-3', '藏装', '藏族，这个一直生活在号称“地球第三极”的万里雪域高原上得民族，因气候寒冷，所以服饰也带着浓浓的雪域风情特色。其实藏族服装有很多种类，但是奇怪的是，不管是哪个藏区的服装，别人都能一眼就认出这就是藏族服装。藏族服装具有悠久的历史，对藏族服饰的研究必然促进、加深对藏族的形成及文化发展史的研究。肥腰、长袖、大襟是藏装的典型结构。那么藏服还有什么特点呢？'],
+    ['尼木三绝', 'feature-4', '尼木三绝文化', '尼木三绝，是指西藏自治区拉萨市尼木县的三种特产，及其制作技术。分别是：雪拉藏纸、吞巴藏香和普松雕刻，它们被并称为“尼木三绝”。这三种特产和创造于尼木的藏文字一样凝聚着藏民族智慧，有着同样悠久历史和社会影响。'],
+    ['西藏吉祥八宝', 'feature-5', '西藏吉祥八宝', '西藏八宝吉祥图，藏语称“扎西达杰”，是藏族绘画里最常见而又赋予深刻内涵的一种组合式绘画精品。它们有：金鱼、胜利幢、宝伞、白海螺、莲花、宝瓶、吉祥网、金轮。八宝中的每一宝都有它深刻的含义，是藏族中最常见的一种图案，藏族人民赋予了它深刻的内涵。八宝吉祥经常在壁画、丝绣和手绘的唐卡中出现，也常被刻饰在家具和木器上。'],
+    ['格萨尔史诗', 'feature-6', '格萨尔史诗文化', '格萨尔史诗也称《格萨尔王传》，是一部一百多万诗行、两千多万字的作品。作品讲述了传说中的岭国国王格萨尔的故事，他以惊人的毅力及神奇的力量征战四方、抑强扶弱造福人群。《格萨尔史诗》被称为当今世界仍被传唱的最后一部史诗，传播范围遍及西藏、四川、青海、甘肃、内蒙古等地，由联合国教科文组织列为“非物质文化遗产”。'],
+    ['藏医药', 'feature-7', '藏医药文化', '藏医药学是民族优秀文化的瑰宝之一，也是中国传统医药的重要组成部分，它是仅次于中医中药而有系统理论的民族医药，有着丰富的内容和浩瀚的医学文献，几千年来为我国藏区人民的健康和繁衍昌盛出了重要贡献。世世代代的生活在雪域高原的藏族人民在与自然和各种疾病进行斗争中，积累了治疗各种疾病的经验，形成了独具特色的藏医药学体系。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xizang/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xizang-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['藏戏', 'art-1', '藏戏文化', '藏戏是藏族戏剧的泛称，它在藏语文中被称为“阿吉拉姆”，是‘仙女大姐”的意思，简称“拉姆”（即仙女）。藏戏艺术，历史十分悠久，剧种流派众多，表演形式富有民族特色，《文成公主》《诺桑王子》《卓娃桑姆》《朗萨雯蚌》《白玛文巴》《顿月顿珠》《智美更登》《苏吉尼玛》八大剧目已成经典，音乐唱腔韵味隽永，面具服饰五彩缤纷、瑰奇神异。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xizang/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xizang-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['藏式门窗', 'building-1', '藏式门窗文化', '藏式建筑的装饰性在很大程度上是由门窗这些既有实用价值,又有装饰价值的因素来体现的。在卫藏地区的藏式建筑中,门窗的装饰展现出独特风貌,其结构、形制、色彩体现出多元文化的影响,张扬出一种鲜明的藏民族文化和性格特征。门的传统样式也丰富多彩。藏式门一般由门扇、门框、门枕、门槛、门脸、门斗栱、门楣、门帘、门套、门壁左右等组成。出于防寒保暖以及防御外来入侵的考虑，藏式门的门洞一般较小。'],
+    ['西藏建筑风格', 'building-2', '西藏建筑文化', '西藏建筑的特点源于西藏地区的文化特色和历史底蕴，在长期的建筑实践中，适应自然、崇尚自然、因地制宜、就地取材、艰苦劳作、奋斗不息，发明和积累了十分宝贵的建造技术和建筑经验，形成了西藏独特的建筑形式和西藏特色建筑文化。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xizang/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xizang-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['转经筒', 'religion-1', '转经筒文化', '转经筒的质地一般都是银质、铜质和木质的，在一个圆筒的轴间插入带有手柄的轴柱，筒侧设一小耳，耳边系一吊坠，这样就可以手摇把柄利用离心力旋转经筒，通常转经筒上都刻有藏传佛教的六字真言，筒内也装有经文。在藏传佛教地区，经常能见到藏人手中摇转着装有经文的转经筒， 转经的人认为摇转经轮就相当于念经，是修持的一种方式。'],
+    ['风马旗', 'religion-2', '风马旗文化', '风马旗亦称为“风马经幡”或“五彩经幡”。“风马”的确切意思是：“风是传播、运送印在经幡上的经文远行的工具和手段，是传播运送经文的一种无形的马，马即是风。”藏民族认为雪域藏地的崇山峻岭、大江莽原的守护神是天上的赞神和地上的年神，他们经常骑着风马在雪山、森林、草原、峡谷中巡视，保护雪域部落的安宁祥和，抵御魔怪和邪恶的入侵。'],
+    ['玛尼石', 'religion-3', '玛尼石文化', '玛尼石是藏族的传统民间艺术，大都刻有六字真言、慧眼、神像造像、各种吉祥图案，以期祛邪求福。玛尼石堆最直接的意义有两个，一是祈福和禳解；二是供人们转经礼拜，随时匡正自己的思想行为。玛尼石可组成为玛尼堆或玛尼墙，在西藏各地的山间、路口、湖边、江畔，几乎都可以看到。'],
+    ['宗教/庙宇/庙会', 'religion-4', '庙宇/庙会文化', '中国是一个有多种宗教的国家，世界的三大宗教（佛教、天主教、伊斯兰教），在中国都有其信徒、组织和活动场所。其中，佛教分汉语系佛教、藏语系佛教和巴利语系佛教三大支。西藏佛教，指的就是这三大支系中的藏语系佛教，通称藏传佛教，俗称喇嘛教。在西藏自治区全部人口中，多数人信仰藏传佛教。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xizang/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xizang-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '西藏',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

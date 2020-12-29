@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>南海-地区路线</title>
+  <meta name="description" content="南海, nanhai" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|琼、琼州、琼崖||<b>著名景点</b>|万绿园、铜鼓岭、博鳌、日月湾、五指山、分界洲岛、天涯海角等|
+|<b>行政区类别</b>|省级行政区、经济特区、自由贸易港||<b>机    场</b>|海口美兰国际机场、三亚凤凰国际机场等|
+|<b>所属地区</b>|中华人民共和国-华南地区||<b>火车站</b>|海口站、海口东站、三亚站等|
+|<b>下辖地区</b>|4个地级市、5个县级市、4个县、6个自治县||<b>车牌代码</b>|琼A至琼F|
+|<b>电话区号</b>|（+86）0898||<b>GDP</b>|4462.54亿元人民币（2017年）|
+|<b>邮政区码</b>|570000至572900||<b>人均GDP</b>|48430元人民币（2017年）|
+|<b>地理位置</b>|中国最南端||<b>高等学府</b>|海南大学、海南师范大学等|
+|<b>面    积</b>|3.54万平方公里（陆地面积）||<b>省    树</b>|椰子树、黄花梨|
+|<b>人    口</b>|925.76万（2017年）||<b>省    花</b>|三角梅|
+|<b>方    言</b>|海南话/黎语/临高语/儋州话//军话/客家话等||<b>省委书记</b>|刘赐贵|
+|<b>气候条件</b>|热带季风气候||<b>省    长</b>|沈晓明|
+|-|-||<b>古今名人</b>|海瑞、丘濬、冯白驹、宋庆龄等|
+|-|-||<b>海域面积</b>|约200万平方公里|
+
+| <b>海南生活文化</b> | <b>海南特色文化</b> | <b>海南曲艺文化</b> | <b>海南建筑文化</b> | <b>海南宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">海南椰子文化</a> | <a href="javascript:;" onclick="art(this);">海南琼剧</a> | <a href="javascript:;" onclick="building(this);">海南建筑</a> | <a href="javascript:;" onclick="religion(this);">海南庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">黎锦</a> | <a href="javascript:;" onclick="art(this);">崖州民歌</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">临高人偶戏</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">黎族面具舞</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">黎族纹身</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">海南禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/hainan.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/hainan.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '海南民风民俗', '海南不仅具有得天独厚的热带海岛自然风光，还有独具特色的民族风情，省内有汉、黎、苗、回、彝、侗、瑶等30多个民族，古朴独特的民族风情使本岛社会风貌显得丰富多彩。那么在海南有哪些民俗文化呢？海南有哪些节日呢？'],
+    ['方言文化', 'live-2', '海南方言', '海南是一个由移民组成的社会。海南岛原先没有人居住，大约在3000多年前，古百越族的一支从两广横渡琼州海峡到达海南岛，这就是今天黎族的祖先。后来，汉族、苗族、回族等民族相继移居海南，逐步形成海南今天多民族聚居社会。经过历史演变，各民族的某些特征在不断被同化，但是作为本民族最基本特征的方言被世代保留和延续焉。形成了今天众多的海南方言。'],
+    ['节日文化', 'live-3', '海南节日', '海南的特色文化沃土异常深厚和富有魅力。海南省的居民包括汉、黎、苗、回、彝、侗、瑶等30多个民族。世居的有黎、苗、回、汉等族。千百年来，古朴独特的民族风情使本岛社会风貌显得丰富多彩。那么海南有哪些著名的节庆活动呢？海南大型的节日庆典有哪些呢？'],
+    ['嫁娶文化', 'live-4', '海南嫁娶文化', '每个地方因为不同的风俗习惯就有相应的文化习俗。那么准备在海南结婚的你，是不是也想了解一下海南有哪些结婚习俗呢？海南结婚时有哪些流程呢？还有在海南结婚需要哪些彩礼呢？'],
+    ['饮食文化', 'live-5', '海南饮食文化', '海南拥有丰盛的物产资源，许多名特原料都可以制作特色菜品。海南不仅有海鲜菜、热带菜，更有绵延2000多年、由奇绝的百越菜演化而来的黎族菜。过去，作为粤菜的一个地域分支，海南菜的菜品总量在1000种左右。那么海南有哪些名菜呢？海南黎族的饮食文化又怎么样呢？海南的小吃有哪些呢？'],
+    ['海南禁忌', 'live-6', '海南禁忌', '在民间，禁忌是无所不在的，“百无禁忌”其实就是“百有禁忌”。禁忌就像游荡的幽灵，在人们身边飘舞着，无时无刻地嵌入人们的精神生活中。海南民间崇尚“万物有灵”的自然观念，因此在本土民间宗教信仰当中，朴素的自然观与民间宗教信仰有密切的关系。那么海南还有哪些禁忌呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hainan/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hainan-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['海南椰子文化', 'feature-1', '海南椰子文化', '海南岛又称“椰岛”，椰子树是海南的象征。椰子树千百年来在海南人民的生活中有举足轻重和不可或缺的重要作用，不但可以生产椰子汁、椰子果、令人填饥裹腹，它的树、它的叶、它的壳还可以做成家私、工艺纪念品供人生活中使用和欣赏品。同时，他还能为人类提供遮雨挡风避署的作用。'],
+    ['黎锦', 'feature-2', '黎锦', '黎锦是以棉线为主，麻线、丝线和金银线为辅交织而成。东方、昌江地区黎族创造了扎染与织造相结合的织锦工艺。其经线多采用缬染法（即扎染），在一个扎线架上编好经线，然后用纱线在经线上扎结，染色后拆去纱线，即出现蓝地白花的图案，再织进彩色纬线。纺织、织造的工具仍然沿用古老的传统工具，如手搓去籽十字棍、木制手摇轧花机、脚踏纺纱机和织布机等。'],
+    ['临高人偶戏', 'feature-3', '临高人偶戏', '临高人偶戏是一种海南省的汉族民间艺术。系从民间用佛像祭祀的宗教活动演变而来，故亦称佛子戏。其表演特点为幕台不设布幛，演员手擎木偶化装登台，人与偶在台上共同扮演角色，以人的表演弥补木偶感情的不足。人偶戏以本地的民歌调为主要唱腔，优美动听。'],
+    ['黎族面具舞', 'feature-4', '黎族面具舞', '黎族面具舞主要在“傩祭”时表演。用来驱除疫鬼，消灾除难。“傩”是我国古代华夏民族的一种驱鬼逐疯的宗教辟邪仪式，而在举行这种仪式时跳的舞蹈称为“傩舞”。那么黎族面具舞有哪些表演形式呢？黎族面具舞起源于什么时候呢？'],
+    ['黎族纹身', 'feature-5', '黎族纹身', '黎族纹身，历史悠久。自汉代开始，已经有文字记载。在世界的民族族群中是一种罕见的文化现象。纹身，作为一种传统文化，是黎族母系氏族社会的遗存，是母权制的产物，是原始宗教中的自然崇拜、祖先崇拜、图腾崇拜的艺术结晶，是黎族历史上凝聚力、号召力、生命力的标志。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hainan/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hainan-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['海南琼剧', 'art-1', '琼剧文化', '琼剧，又称琼州剧、海南戏，是中国海南省的地方民间戏曲艺术。琼剧是南方戏剧的其中一个支系，主要以海南话为戏曲语言，因此流行地域亦仅限于海南岛及两广之间。琼剧是当地的本土文化象征之一，相信已有一段颇长的历史，但实际起源时期却难以考知。'],
+    ['崖州民歌', 'art-2', '崖州民歌', '崖州民歌是海南省地方民歌的古老歌种之一，流行在三亚、乐东黄流及古崖州属地。客家方言咏唱、格律异常严谨且自成一体、蔚起于古崖州"西六里"乡间并向四周传播的一种汉语民谣。古老的崖州民歌，至今仍在传唱。没有任何花哨的修饰，民歌歌手将热情的曲调注入吟唱中，把对生活的热爱用质朴的语言淋漓畅快地一一释放。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hainan/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hainan-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['海南建筑', 'building-1', '海南建筑', '海南最早的移民大多由闽南地区迁移而来，早期建筑体现出深厚的闽南风格。随后，岭南、云贵以及东南亚等周边地区移民带来了各自地区的文化，琼北建筑也逐渐加入岭南风格。同时，大量来自中原地区的驻军带来了中原文化，使得琼北建筑也融入了某些中原建筑元素。那么海南建筑有哪些风格特点呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hainan/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hainan-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['海南庙会', 'religion-1', '海南庙会文化', '海南是一个有多种宗教的省份，现有佛教、伊斯兰教、天主教、基督教和道教五种宗教。全省现有信教群众约八万人，其中：佛教2万多人，伊斯兰教八千多人，天主教一千多人，基督教四万多人，道教约一万多人。依法登记的宗教活动场所122个，其中佛教14个，伊斯兰教7个，天主教8个，基督教29个，道教1个。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hainan/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hainan-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '海南',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

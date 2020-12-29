@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>上海-地区路线</title>
+  <meta name="description" content="上海, shanghai" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|申城、魔都、沪上、东方巴黎||<b>著名景点</b>|外滩、豫园、南京路、人民广场、静安寺、新天地、迪士尼乐园等|
+|<b>行政区类别</b>|直辖市||<b>机    场</b>|上海虹桥国际机场、上海浦东国际机场|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|上海站、上海南站、上海虹桥站、上海西站等|
+|<b>下辖地区</b>|16个市辖区||<b>车牌代码</b>|沪A －沪N|
+|<b>电话区号</b>|021||<b>GDP</b>|30133.86亿元（2017年）|
+|<b>邮政区码</b>|200000||<b>人均GDP</b>|124606元（2017年）|
+|<b>地理位置</b>|长江入海口南岸，东海之滨||<b>著名人物</b>|胡适、顾维钧、厉麟似、张爱玲等|
+|<b>面    积</b>|6340平方公里||<b>著名高校</b>|复旦、交大、同济、华师、东华等|
+|<b>人    口</b>|2418.33万（2017年常住人口）||<b>市委书记</b>|李强（中共中央政治局委员）|
+|<b>方    言</b>|吴语-太湖片-苏沪嘉小片-上海话||<b>行政区划代码</b>|310000|
+|<b>气候条件</b>|亚热带季风气候||<b>市    长</b>|应勇（中共中央委员）|
+|-|-||<b>市树市花</b>|法国梧桐、白玉兰|
+
+| <b>上海生活文化</b> | <b>上海特色文化</b> | <b>上海曲艺文化</b> | <b>上海建筑文化</b> | <b>上海宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | - | <a href="javascript:;" onclick="art(this);">上海沪剧</a> | <a href="javascript:;" onclick="building(this);">外滩</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | - | <a href="javascript:;" onclick="art(this);">独角戏</a> | <a href="javascript:;" onclick="building(this);">上海弄堂</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | <a href="javascript:;" onclick="art(this);">浦东说书</a> | <a href="javascript:;" onclick="building(this);">上海庙宇</a> | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">上海禁忌</a> | - |-| -|-|
+|<a href="javascript:;" onclick="live(this);">海派文化</a>| - |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/shanghai.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/shanghai.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '上海民风民俗', '开埠前的上海，与江浙毗邻地区的民俗没有多大差别，随着各地移民集聚上海，经过碰撞、交汇，逐渐形成了上海自己的民风民俗特色。那么上海具体有哪些风俗习惯呢？我们一起来了解更多关于上海的那些民风民俗吧！'],
+    ['方言文化', 'live-2', '上海方言', '上海话又叫上海方言、上海闲话，俗称沪语，是主要分布于上海市区的方言，属于吴语太湖片苏沪嘉小片。上海话有哪些文化历史？常用的上海话你都知道是什么意思吗？'],
+    ['节日文化', 'live-3', '上海节日', '上海也是一座新兴的旅游目的地，具有深厚的近代城市文化底蕴和众多的历史古迹文化。那么上海都有哪些节日习俗呢?本文为为你盘点了上海的所有节日习俗大全。下面我们就一起来了解一下吧！'],
+    ['嫁娶文化', 'live-4', '上海嫁娶文化', '上海如今的发展已经达到了国际都市的水平，很多的文化都受到了西方文化的不同程度的冲击，婚俗文化也是如此，上海结婚习俗具有中西结合的特点，既有中国特色，想要在上海踏入婚姻殿堂的你，应该要了解一下'],
+    ['饮食文化', 'live-5', '上海饮食文化', '上海位于我国长江三角洲，是一个沿江滨海的城市，气候温暖，四季分明，邻近江湖密布，全年盛产鱼虾，市郊菜田连片，四时蔬菜常青，物产丰富。正是这样独特的地理环境以及人文历史，所以形成了上海独有的饮食文化。'],
+    ['上海禁忌', 'live-6', '上海禁忌', '上海随着经济的发展，产业的转型，城市的开放，上海逐渐成为全国，乃至全世界涌入的焦点。越来越的人群涌入到了上海的这个大都市的生活中，那么在上海在这个城市生活，在生活上有哪些平时需要我们注意的呢？'],
+    ['海派文化', 'live-7', '海派文化', '海派文化诞生于上海，但是上海的本土文化并不完全是海派文化。海派文化本质上是上海的城市文化，糅合了以江南文化为主体的中国传统文化，以及欧美的外来文化，互相影响，互相交融后形成的上海城市文化。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanghai/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanghai-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['上海沪剧', 'art-1', '沪剧文化', '中国传统戏曲剧种。流行于上海和江浙地区。渊源于上海浦东的民歌东乡调，清末形成上海滩簧，其间受苏州滩簧的影响。后采用文明戏的演出形式，发展成为小型舞台剧“申曲”。1927年以后，申曲开始演出文明戏和时事剧。1941年上海沪剧社成立，申曲正式改称沪剧。那么沪剧发展后有哪些艺术特色呢？'],
+    ['独角戏', 'art-2', '独角戏', '独脚戏（亦名滑稽） 受小热昏、文明戏、苏滩等兄弟艺术影响，以滑稽娱人为主要审美功能的曲艺形式。独角戏同时也是上海的传统曲艺之一的类别。那么独角戏的艺术特色有哪些呢？'],
+    ['浦东说书', 'art-3', '浦东说书', '浦东说书是上海市的传统说唱艺术。起源于黄浦江以东包括川沙、南汇、奉贤在内的“浦东”。主要分布于川沙、南汇、奉贤、金山以及松江、青浦等市郊全境；除在上海老城厢演出外，也曾流传到浙江平湖、嘉兴等地。 那么浦东说书有哪些曲艺风格呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanghai/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanghai-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['外滩', 'building-1', '上海外滩', '外滩，位于上海市中心黄浦区的黄浦江畔，即外黄浦滩，1844年（清道光廿四年）起这一带被划为英国租界，成为上海十里洋场的真实写照，也是旧上海租界区以及整个上海近代城市开始的起点。那么上海的外滩建筑风格是怎么样的，为什么称之为“外滩”。'],
+    ['上海弄堂', 'building-2', '上海弄堂', '上海这座城市就好像一个有生命的肌体。从高空俯看：纵横交织的道路犹如动脉，把城市分成若干个小区；每个小区之内，又有许多建筑与建筑之间形成的小通道，它密密麻麻布满全城，就像毛细血管那样细小却充满了生机。'],
+    ['上海庙宇', 'building-3', '上海庙宇', '上海作为国际大都市的上海，在寺庙文化特色方面也有可圈可点之处。寺院庙堂，是供着祖宗神佛著名历史人物便于世人瞻仰祭祀的地方。那么上海有哪些著名的寺庙，上海的庙会文化是什么样的？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanghai/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanghai-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '上海',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

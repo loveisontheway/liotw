@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>陕西-瀑布流相册</title>
+		<meta name="description" content="陕西, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '安甘泉雨岔大峡谷'],
+			['2.jpg', '安甘泉雨岔大峡谷'],
+			['3.jpg', '华山'],
+			['4.jpg', '华山'],
+			['5.jpg', '西安古城'],
+			['6.jpg', '西安古城'],
+			['7.jpg', '靖边波浪谷'],
+			['8.jpg', '西安大唐芙蓉园'],
+			['9.jpg', '西安大唐芙蓉园'],
+			['10.jpg', '宝鸡九龙山'],
+			['11.jpg', '宝鸡九龙山'],
+			['12.jpg', '西安城市夜景'],
+			['13.jpg', '西安城市夜景'],
+			['14.jpg', '秦岭光头山'],
+			['15.jpg', '太白山'],
+			['16.jpg', '西安钟鼓楼'],
+			['17.jpg', '西安钟鼓楼'],
+			['18.jpg', '靖边丹霞'],
+			['19.jpg', '华山'],
+			['20.jpg', '金丝大峡谷'],
+			['21.jpg', '西安大雁塔'],
+			['22.jpg', '乾陵'],
+			['23.jpg', '华山'],
+			['24.jpg', '漫川关古镇'],
+			['25.jpg', '千层河'],
+			['26.jpg', '凤堰古梯田'],
+			['27.jpg', '秦岭'],
+			['28.jpg', '西安古城'],
+			['29.jpg', '西安广仁寺'],
+			['30.jpg', '西安事变旧址'],
+			['31.jpg', '西安半坡遗址'],
+			['32.jpg', '西安云居寺'],
+			['33.jpg', '汉江'],
+			['34.jpg', '平利'],
+			['35.jpg', '天书峡'],
+			['36.jpg', '西安青龙寺'],
+			['37.jpg', '终南山'],
+			['38.jpg', '西安曲江'],
+			['39.jpg', '延安轩辕庙'],
+			['40.jpg', '西安楼观台'],
+			['41.jpg', '延安'],
+			['42.jpg', '西安大慈恩'],
+			['43.jpg', '商洛天佛洞'],
+			['44.jpg', '汉中石门栈道'],
+			['45.jpg', '凤县消灾寺'],
+			['46.jpg', '西安香积寺'],
+			['47.jpg', '西安大兴善寺'],
+			['48.jpg', '西安护国兴教寺'],
+			['49.jpg', '西安至相寺'],
+			['50.jpg', '西安荐福寺'],
+			['51.jpg', '西安青龙寺'],
+			['52.jpg', '咸阳乾陵'],
+			['53.jpg', '秦始皇陵兵马俑'],
+			['54.jpg', '秦始皇陵兵马俑'],
+			['55.jpg', '延安民居'],
+			['56.jpg', '延安民居']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml += 
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/shanxi1/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/shanxi1/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div> 
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js"></script>
+	<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+    <script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '图片无水印...',
+			  text: 'Image without watermark...',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

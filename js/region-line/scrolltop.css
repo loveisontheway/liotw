@@ -1,0 +1,44 @@
+#back,#backBike {
+position: fixed; 
+	text-align: center;
+	line-height: 30px;
+	width: 48px;
+	top: 50px;
+	height: 48px;
+	font-size: 12px;
+	cursor: pointer;
+	right: 5px;
+	_position: absolute;
+	_right: auto;
+	z-index: 999999;
+}
+
+#full-top {
+position: fixed; 
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	bottom: 35px;
+	height: 33px;
+	font-size: 12px;
+	cursor: pointer;
+	right: 0px;
+	_position: absolute;
+	_right: auto;
+	z-index: 999999;
+}
+
+#full-btm {
+position: fixed; 
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	bottom: 12px;
+	height: 33px;
+	font-size: 12px;
+	cursor: pointer;
+	right: 0px;
+	_position: absolute;
+	_right: auto;
+	z-index: 999999;
+}

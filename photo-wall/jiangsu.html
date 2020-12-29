@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>江苏-瀑布流相册</title>
+		<meta name="description" content="江苏, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '瘦西湖雪景'],
+			['2.jpg', '苏州拙政园雪景'],
+			['3.jpg', '苏州用直古镇'],
+			['4.jpg', '无锡灵山大佛'],
+			['5.jpg', '无锡灵山大佛'],
+			['6.jpg', '瘦西湖'],
+			['7.jpg', '南京玄武湖'],
+			['8.jpg', '苏州园林'],
+			['9.jpg', '无锡太湖'],
+			['10.jpg', '南京明孝陵'],
+			['11.jpg', '古典园林'],
+			['12.jpg', '太湖夕阳'],
+			['13.jpg', '苏州重元寺'],
+			['14.jpg', '江苏连岛'],
+			['15.jpg', '无锡荡口古镇'],
+			['16.jpg', '樱花'],
+			['17.jpg', '无锡蠡园'],
+			['18.jpg', '南京夫子庙夜景'],
+			['19.jpg', '苏州周庄夜景'],
+			['20.jpg', '虎丘'],
+			['21.jpg', '苏州网师园'],
+			['22.jpg', '南京夫子庙'],
+			['23.jpg', '南京明孝陵'],
+			['24.jpg', '阳羡湖'],
+			['25.jpg', '同里古镇'],
+			['26.jpg', '同里古镇'],
+			['27.jpg', '无锡长广溪国家湿地'],
+			['28.jpg', '无锡古运河'],
+			['29.jpg', '南京夫子庙'],
+			['30.jpg', '瑞光塔'],
+			['31.jpg', '南京雨花台'],
+			['32.jpg', '周庄'],
+			['33.jpg', '镇江西津渡'],
+			['34.jpg', '太湖湿地'],
+			['35.jpg', '太湖湿地'],
+			['36.jpg', '苏州甪直古镇'],
+			['37.jpg', '苏州角门'],
+			['38.jpg', '南京朝天宫'],
+			['39.jpg', '南京秦淮河'],
+			['40.jpg', '无锡灵山大佛']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml += 
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/jiangsu/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/jiangsu/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div> 
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js"></script>
+	<script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '目前是网络图片，骑行后会更新为真实图片',
+			  text: 'Currently, it is a network picture, which will be updated as the real picture after cycling',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>江苏-地区路线</title>
+  <meta name="description" content="江苏, jiangsu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|苏||<b>著名景点</b>|中山陵、云龙湖、三台山、花果山、太湖、苏州园林、瘦西湖等|
+|<b>行政区类别</b>|省||<b>机    场</b>|南京禄口国际机场、徐州观音国际机场、苏南硕放国际机场等|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|南京南站、徐州东站、苏州站、连云港站等|
+|<b>下辖地区</b>|13个地级市、22个县级市、19个县、55个市辖区||<b>车牌代码</b>|苏A—苏N|
+|<b>电话区号</b>|025、0510—0527||<b>GDP</b>|85900.9亿元（2017年）|
+|<b>邮政区码</b>|210000至226000||<b>人均GDP</b>|107189（2017年）|
+|<b>地理位置</b>|中国东部沿海，长江、淮河下游||<b>著名高校</b>|南京大学、东南大学等|
+|<b>面    积</b>|103229.17平方千米||<b>历史名人</b>|刘邦、项羽、李煜、刘裕、孙权等|
+|<b>人    口</b>|2298.47万（2014年）||<b>省树省花</b>|银杏树、茉莉花|
+|<b>方    言</b>|江淮官话、吴语、中原官话||<b>党政领导</b>|省委书记：娄勤俭；省长：吴政隆|
+|<b>气候条件</b>|亚热带季风气候—温带季风气候||-|-|
+
+| <b>江苏生活文化</b> | <b>江苏特色文化</b> | <b>江苏曲艺文化</b> | <b>江苏建筑文化</b> | <b>江苏宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | - | <a href="javascript:;" onclick="art(this);">昆曲</a> | <a href="javascript:;" onclick="building(this);">南京总统府</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | - | <a href="javascript:;" onclick="art(this);">苏州评弹</a> | <a href="javascript:;" onclick="building(this);">夫子庙</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | <a href="javascript:;" onclick="art(this);">锡剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">江苏禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/jiangsu.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/jiangsu.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '江苏民风民俗', '江苏历史悠久。这里是中国吴越文化的发祥地，早在数十万年前南京一带就已经是人类聚居之地。6000多年前，南京和太湖附近出现了原始村落，开始了原始农业生产。3000多年前，江苏青铜器的冶炼和锻造，已达到很高的技术水平。那么江苏省现在还有哪些民俗文化呢？'],
+    ['方言文化', 'live-2', '江苏方言', '江苏历史悠久。这里是中国吴越文化的发祥地，早在数十万年前南京一带就已经是人类聚居之地。6000多年前，南京和太湖附近出现了原始村落，开始了原始农业生产。3000多年前，江苏青铜器的冶炼和锻造，已达到很高的技术水平。那么江苏省现在还有哪些民俗文化呢？'],
+    ['节日文化', 'live-3', '江苏节日', '江苏拥有中原、江淮、金陵、吴四大多元文化，是中国古代文明的发祥地之一。江苏传统文化不仅是多元的，由多个区域文化所组成，而且也是南北文化交融的结晶。'],
+    ['嫁娶文化', 'live-4', '江苏嫁娶文化', '每个地方都有它的婚俗习惯，下面让我们来看看江苏各地婚俗风尚，各地婚俗奇特搞笑，看过之后是否让你觉得这些婚俗礼仪不可思议呢？下面就跟着小编一起来盘点江苏各地婚俗仪式，你觉得这些婚俗礼仪不可思议吗？'],
+    ['饮食文化', 'live-5', '江苏饮食文化', '区域饮食文化是地方文化的重要组成部分，也带有区域传统文化的强烈特征。所以，近代江苏大体可分为四个饮食文化圈：苏锡常饮食文化圈、徐海饮食文化圈、宁镇扬淮饮食文化圈与通盐饮食文化圈。那么江苏有什么饮食文化呢？'],
+    ['江苏禁忌', 'live-6', '江苏禁忌', '江苏在6000多年前，太湖附近以及徐州和洪泽湖附近就已经出现了原始村落，开始了原始农业生产。那么在这个历史悠久的省份里，江苏有哪些生活禁忌？在江苏生活，什么话不能说，说话需要注意哪些词语呢？江苏的一些特殊的节日都需要注意些什么？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangsu/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangsu-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['昆曲', 'art-1', '昆曲', '昆剧，原名“昆山腔”、“昆腔”，是中国古老的戏曲声腔、剧种。清代以来被称为“昆曲”，现又被称为“昆剧”。昆曲是中国汉族传统戏曲中最古老的剧种之一，也是中国汉族传统文化艺术。那么昆曲有什么艺术特点呢？'],
+    ['苏州评弹', 'art-2', '苏州评弹', '苏州评弹是苏州评话和苏州弹词的总称，是采用以苏州话为代表的吴语徒口讲说表演的传统曲艺说书形式。它产生并流行于苏州及江、浙、沪一带。评弹的历史悠久，清乾隆时期已颇流行。最著名的艺人有王周士，他曾为乾隆皇帝演唱过。那么苏州评弹有什么艺术特色呢？'],
+    ['锡剧', 'art-3', '锡剧', '锡剧前称滩簧，是江、浙一带说唱艺术的一大支流，发端于古老的吴歌。经过民间的演唱流变衍化，一代代艺人的加工提高和姐妹艺术的借鉴融合逐渐形成锡剧的雏形，锡剧最早出现于无锡东乡的羊尖严家桥一带。主要表现形式有山歌小调、弹词、宣卷、花鼓滩簧等。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangsu/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangsu-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['南京总统府', 'building-1', '南京总统府', '南京总统府位于南京市玄武区长江路292号，现在已成为我国最大的近代史博物馆。迄今已有600多年的历史。明朝初年曾是归德侯府和汉王府。清朝为江宁织造署、江南总督署、两江总督署。清朝康熙、乾隆皇帝下江南时均以此为“行宫”。南京总统府是中国近代建筑遗存中规模最大、保存最完整的建筑群，也是南京民国建筑的主要代表。'],
+    ['夫子庙', 'building-2', '夫子庙', '夫子庙是一组规模宏大的古建筑群，主要由孔庙、学宫、贡院三大建筑群组成，占地极大。有照壁、泮池、牌坊、聚星亭、魁星阁、棂星门、大成殿、明德堂、尊经阁等建筑。夫子庙被誉为秦淮名胜而成为古都南京的特色景观区，是中国最大的传统古街市，与上海城隍庙、苏州玄妙观和北京天桥为中国四大闹市。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangsu/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangsu-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['江苏庙会', 'religion-1', '庙会/庙宇文化', '江苏全境主要分布有汉族、蒙古族，以及满、回、达斡尔、鄂温克等49个民族，是中国五个少数民族自治区之一。在蒙古族悠久的宗教历史上,萨满信仰和佛教始终占有主导地位。蒙古族宗教文化便是指以萨满信仰文化和具有蒙古族传统文化特色的佛教文化。那么在江苏又有哪些保留至今的一些庙会呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangsu/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangsu-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '江苏',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

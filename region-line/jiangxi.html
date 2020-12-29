@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>江西-地区路线</title>
+  <meta name="description" content="江西, jiangxi" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|江右、赣鄱大地、江南西道||<b>著名景点</b>|庐山、井冈山、龙虎山、三清山、江湾、景德镇古窑民俗博览区等|
+|<b>行政区类别</b>|省||<b>机    场</b>|南昌昌北国际机场、赣州黄金机场等|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|南昌站、南昌西站、赣州站、鹰潭站等|
+|<b>下辖地区</b>|11个设区的市、24个市辖区、11个不设区的市（县级）、65个县||<b>车牌代码</b>|赣A—赣T|
+|<b>电话区号</b>|（+86）0791-0799||<b>GDP</b>|20818.5亿元（2017年）|
+|<b>邮政区码</b>|330000-344000||<b>人均GDP</b>|45187元（2017年）|
+|<b>地理位置</b>|中国东南部、长江中下游||<b>省    花</b>|杜鹃|
+|<b>面    积</b>|16.69万平方公里||<b>省    树</b>|樟树|
+|<b>人    口</b>|4622.1万人（2017年常住人口） [2] ||<b>最高山峰</b>|黄岗山（2157.8米）|
+|<b>方    言</b>|赣语、客家语、江淮官话、吴语、徽语等||<b>最大平原</b>|鄱阳湖平原|
+|<b>气候条件</b>|亚热带季风性湿润气候||<b>党委书记</b>|陈全国|
+|-|-||<b>主要领导</b>|省委书记：刘奇，代省长：易炼红|
+
+| <b>江西生活文化</b> | <b>江西特色文化</b> | <b>江西曲艺文化</b> | <b>江西建筑文化</b> | <b>江西宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">全丰花灯</a> | <a href="javascript:;" onclick="art(this);">江西赣剧</a> | <a href="javascript:;" onclick="building(this);">赣派建筑</a> | <a href="javascript:;" onclick="religion(this);">江西宗教/庙宇</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">南丰傩舞</a> | <a href="javascript:;" onclick="art(this);">永新小鼓</a> | <a href="javascript:;" onclick="building(this);">赣南客家围屋</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">兴国山歌</a> | <a href="javascript:;" onclick="art(this);">萍乡春锣</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">景德镇手工制瓷技艺</a> | <a href="javascript:;" onclick="art(this);">赣南采茶戏</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/jiangxi.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/jiangxi.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '江西民风民俗', '江西作为明确的行政区域建制，则始于汉高帝初年。历史悠久，江西有许多的地方还延续着一些古老的耕作文明，比如景德镇的瓷器，抚州的书院等等。那么如今江西还有哪些特色的传统文化？江西还有哪些民俗活动呢？'],
+    ['方言文化', 'live-2', '江西方言', '江西方言的历史悠久，其形成当从西汉时期就已开始初具规模。汉高祖时设豫章郡，郡治南昌，下辖十八县，遍布今江西四方。既有人口就有语言和方言，有了人口也才谈得上设置郡县，所以，豫章郡和十八县的设置是江西地区经济文化发展的必然结果，也是赣方言开始形成的具体表现和证明。'],
+    ['节日文化', 'live-3', '江西节日', '江西文化在上古时代脱胎于百越文化、吴楚文化，在两千多年中不断接受华夏文化的浸染，最终发展出独特于世的江西本地文化。那么现在江西还有哪些特色的节庆活动呢？江西特色的传统节日习俗节日都还有哪些呢？'],
+    ['嫁娶文化', 'live-4', '江西嫁娶文化', '结婚是人生中尤为重要的一个里程碑。从古至今，结婚这一习俗都保留至今。当然每个地方都有当地不一样的结婚习俗，那么江西结婚风俗有哪些呢?江西的结婚习俗都有哪些流程呢？'],
+    ['饮食文化', 'live-5', '江西饮食文化', '江西简称赣，江西菜又称赣菜。它的形成有其社会、经济、文化、物产资源各方面因素，气候环境、饮食习俗更是其主要因素。江西，位于长江中下游南岸，四季气候为春多梅雨、夏炎热、秋干燥、冬潮冷。山区地带更为湿润，由于特殊的环境气候所致，江西人的饮食习惯中也是多喜香辣和偏爱咸鲜，口味注重浓郁，菜肴形成的特色颇具鲜明。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangxi/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangxi-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['全丰花灯', 'feature-1', '全丰花灯', '全丰花灯是江西修水全丰镇的一种汉族曲艺形式。是一项介于灯、戏、舞之间的艺术表演活动，主要特色是灯队表演，具有浓厚的民俗色彩。春节期间，乡村各路花灯云集，从初一发灯一直唱到元宵，跑东家窜西家，通宵演唱。此外，民间节日、做寿、上梁、婚嫁，都请来花灯热闹一番。'],
+    ['南丰傩舞', 'feature-2', '南丰傩舞', '南丰傩舞，俗称“跳傩”，是沿袭古代驱鬼逐疫的仪式“驱傩”，历经漫岁月，不断改革、创新，逐渐演变而成的民间舞蹈。南丰有傩，自汉开始。南丰傩舞因其动作简朴、刚劲，保持较多的原始风格，故被《中国民族民间舞蹈集成·江西卷》誉之为“中国古代舞蹈活化石”。'],
+    ['兴国山歌', 'feature-3', '兴国山歌', '兴国山歌是中国民间音乐非物质文化遗产之一，是流行于以江西省兴国县为中心延及赣、粤、闽、桂数省的客家民歌，传说起源于“木客”号子。兴国山歌属于汉族口头艺术，下里巴人的山野俚曲，只是代代口耳相传，正史没有对其起源进行记载，而以“太上隐者”名义出现在《全唐诗》里的二支山歌，也被记录的文人进行了“雅化”。'],
+    ['景德镇手工制瓷技艺', 'feature-4', '景德镇手工制瓷技艺', '江西省景德镇是汉族传统手工制瓷技艺的重镇。成型工序在宋代已初步建立。千余年来，景德镇制制业集历代名窑之大成，汇各地技艺之精华，形成了独树一帜的手工制瓷工艺生产体系，创造了中国陶瓷史上最辉煌灿烂的一段历史。其成就之高、影响之大、技艺之精湛、品种之齐全，是任何时代，任何其他窑场都难以企及的。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangxi/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangxi-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['江西赣剧', 'art-1', '江西赣剧', '赣剧是一个兼唱高腔、乱弹、昆腔及其它曲调的多声腔的传统戏曲剧种，所用方言为赣语。其起源和前身为弋阳腔，为著名的古代四大声腔之一。弋阳腔饶河班、信河班两大流派1950年相合，随后进入省会南昌，1953年正式成立江西省赣剧团，弋阳腔于是更名为赣剧。'],
+    ['永新小鼓', 'art-2', '永新小鼓', '永新小鼓是江西省吉安市的传统戏曲剧种之一，起源于道情。相传在清道光年间形成于江西永新。早期是收容孤寡残疾的养济院里的盲艺人传唱谋生的渔鼓形式。后来有永新的盲艺人改用小鼓伴奏，并在语言音调、表演风格上有所变化，演唱一些从戏曲、小说中改编的短篇曲目，逐渐发展到编唱长篇曲词，并形成具有地方色彩的曲种。'],
+    ['萍乡春锣', 'art-3', '萍乡春锣', '萍乡春锣是流传在萍乡一带的由“报春”演变来的一种民间曲艺形式。传统的萍乡春锣，由一个人表演，演唱者身披一黄色绸缎或布袋，将一面直径约200公分的小鼓系在左腹部，鼓边挂一同样大小的小铜锣，左手持鼓签，右手持锣槌，敲打出曲首的过门和段落之间的间奏音乐。以说唱为主，表演为辅。'],
+    ['赣南采茶戏', 'art-4', '赣南采茶戏', '赣南采茶戏是江西省赣南土生的传统戏曲剧种之一，在当地民间灯彩和采茶歌舞的基础上形成为戏，其产生和流传具有悠久的历史。那么赣南采茶戏有哪些艺术特点呢？赣南采茶戏的传统曲目有哪些呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangxi/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangxi-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['赣派建筑', 'building-1', '赣派建筑', '赣派建筑是江右民系的传统建筑。亦是中国古建筑的重要流派之一，代表性的村落有乐安流坑、东乡浯溪、吉安钓源、泰和爵誉、丰城白马寨、丰城厚板塘、安义罗田、安义京台、安义水南、赣县白鹭、铅山河口、贵溪上清、广昌驿前、宜黄棠阴等村镇。'],
+    ['赣南客家围屋', 'building-2', '赣南客家围屋', '赣南客家围屋是江西省赣南地区的民居建筑。以其主房四周外围筑以高墙炮楼而得名。围屋集精巧的建筑结构和精湛的建筑技艺于一身，充分体现了古代劳动人民的聪明才智和艺术创造力。那么赣南客家围屋的建筑还有哪些建筑特色呢？赣南客家围屋的建筑功能又有哪些呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangxi/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangxi-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['江西宗教/庙宇', 'religion-1', '宗教/庙宇', '宗教文化是人类传统文化的重要组成部分，它影响到人们的思想意识、生活习俗等领域，是旅游资源的重要组成部分。江西省现有佛教、道教、伊斯兰教、天主教、基督教5大宗教，建有宗教团体200余个，其中全省性宗教团体8个。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jiangxi/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jiangxi-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '江西',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

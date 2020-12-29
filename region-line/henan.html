@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>河南-地区路线</title>
+  <meta name="description" content="河南, henan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|中原、中州、中土、豫州||<b>著名景点</b>|少林寺、龙门石窟、殷墟、天地之中、嵩山、黄帝故里、白马寺等|
+|<b>行政区类别</b>|省||<b>机    场</b>|郑州新郑国际机场、洛阳北郊机场、南阳姜营机场等|
+|<b>所属地区</b>|中国华中||<b>火车站</b>|郑州站、郑州东站、商丘站、洛阳站、开封站、安阳站、南阳站等|
+|<b>下辖地区</b>|17个地级市、1个省直管市、52个市辖区、20个县级市、85个县||<b>车牌代码</b>|豫A—豫U|
+|<b>电话区号</b>|0370—0379、0391—0398||<b>GDP</b>|44988.16亿元（2017年）|
+|<b>邮政区码</b>|450000—477100||<b>人均GDP</b>|47130.00元（2017年）|
+|<b>地理位置</b>|中国中东部、黄河中下游||<b>省    花</b>|腊梅|
+|<b>面    积</b>|16.7万平方千米||<b>省    树</b>|桂花树|
+|<b>人    口</b>|9559.13万人（2017年）||<b>历史名人</b>|老子、庄子、杜甫、白居易等|
+|<b>方    言</b>|中原官话||<b>高等学府</b>|郑州大学、河南大学等|
+|<b>气候条件</b>|温带季风气候—亚热带季风气候||-|-|
+
+| <b>河南生活文化</b> | <b>河南特色文化</b> | <b>河南曲艺文化</b> | <b>河南建筑文化</b> | <b>河南宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">开封斗鸡</a> | <a href="javascript:;" onclick="art(this);">河南豫剧</a> | <a href="javascript:;" onclick="building(this);">龙门石窟</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">中原文化</a> | <a href="javascript:;" onclick="art(this);">河南越调</a> | <a href="javascript:;" onclick="building(this);">红旗渠</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | - | <a href="javascript:;" onclick="building(this);">河南庙宇文化</a> | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">河南禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/henan.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/henan.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '河南民风民俗', '河南是中原文化的根源所在地，是道家、墨家、法家、名家、纵横家等思想的发祥地。河南当地有什么特色文化？河南民俗节日活动有哪些？'],
+    ['方言文化', 'live-2', '河南方言', '河南方言，属北方方言，即官话方言，是中国最大的方言。河南方言实际上就是古代的官话，也就是古代的普通话。主要是指流行于河南及河南周边地区。由于河南人口众多，历来的战争、运动、经济活动和其他原因，人口的流动性使得全国其他地区也有以河南话为主的群体。'],
+    ['节日文化', 'live-3', '河南节日', '河南地处黄河中下游，是我国古代文明发祥地之一，至迟在50万年前就有人类在这里生息和繁衍。七八千年前的裴李岗文化时期，这里就产生了农业、畜牧业和制陶等手工业。河南身为中华民族与华夏文明的发源地，如今河南还保留了那些的传统节日习俗呢？河南还有哪些特殊的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '河南嫁娶文化', '河南是中华民族与华夏文明的发源地，中国四大发明中的指南针、造纸、火药三大技术均发明于河南。历史上先后有20多个朝代建都或迁都河南，为此河南的历史文化也是非常悠久的，那么在河南这个历史文化悠久的省份里，河南人结婚有什么特色的风俗习惯的呢？身为河南人的你对河南结婚风俗了解吗？'],
+    ['饮食文化', 'live-5', '河南饮食文化', '俗话说：“一方水土一方人”。河南地处中原，在这块神奇的土地上，尽管演绎了无数次的战争，但挥之不去的地域文化，却和那些王城古都的秦砖汉瓦一样，见证着历史。如今，富有地域色彩的饮食文化依然影响着一代又一代人。那么河南在饮食上有什么文化特色呢？'],
+    ['河南禁忌', 'live-6', '河南禁忌', '随着历史的风云变幻，和河南特殊的地理位置，和历史上大大小小的战乱，不仅给中原大地留下深深的创伤，也导致众多的河南人流离失所。正是这样复杂的历史变换过程，造就了河南人坚韧不拔、不屈不挠的性格，也锻炼出河南人吃苦耐劳、乐于奉献的精神。那么河南人在平时的生活中有什么忌讳呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/henan/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="henan-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['开封斗鸡', 'feature-1', '开封斗鸡文化', '开封斗鸡是一种娱乐活动。说起“ 中国一绝”的斗鸡，就不能不提到开封。 中原斗鸡是“ 中国四大名鸡”之一，而中原一带的斗鸡，追根溯源，大多出自开封斗鸡。那么开封斗鸡这种娱乐活动是起源于哪里呢？'],
+    ['中原文化', 'feature-2', '中原文化', '中原文化以河南省为核心，以广大的黄河中下游地区为腹地，逐层向外辐射，影响延及海外。中原地区是中华文明的摇篮，中原文化是中华文化的重要源头和核心组成部分。中原地区在古代不仅是中国的政治经济中心，也是主流文化和主导文化的发源地。那么中原文化包括了哪些文化呢？']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/henan/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="henan-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['河南豫剧', 'art-1', '豫剧文化', '豫剧，是在河南梆子的基础上，不断进行继承、改革和创新发展起来的。中国戏曲三鼎甲“榜眼”，中国各地域戏曲之首。建国后因河南简称“豫”，所以称豫剧。那么豫剧有什么艺术特点呢？豫剧又分什么流派呢？'],
+    ['河南越调', 'art-2', '越调文化', '越调是河南省的汉族戏曲剧种之一。主要流行于河南全境、湖北西北部、陕西东南部、安徽西北部、山西东南部、河北中南部、北京等省市。越调的主奏乐器早期是象鼻四弦，后来一般用坠胡。那么越调有什么艺术特色呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/henan/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="henan-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['龙门石窟', 'building-1', '河南龙门石窟', '龙门石窟是中国石刻艺术宝库之一，是国家AAAAA级景区，位于中国河南省洛阳市南郊12公里处伊水两岸的龙门山和香山崖壁上，开凿于北魏中期至北宋的四百余年间。龙门石窟至今仍存有窟龛2100多个，造像10万余尊，碑刻题记3600余品，其中“龙门二十品”是书法魏碑精华。'],
+    ['红旗渠', 'building-2', '河南红旗渠工程', '红旗渠，是一条位于中国河南省安阳市林县（现林州市）穿越太行山区的人工引水渠。青年洞风景区是本渠点睛之笔，素有：鸡鸣闻三省：的牛岭山下方，红旗渠于1960年2月开始修建，于1969年7月完工。那么红旗渠的建筑构造以及修建背景有哪些呢？'],
+    ['河南庙宇文化', 'building-3', '河南庙宇文化', '河南地处中原，是中华文明的主要发源地之一，也是佛教在我国内地传播最早的地方之一，河南佛教在中国佛教历史上占有极其重要的地位。中国佛教的译经事业开始于河南洛阳，开封和邺(今安阳境)亦曾长期有佛经重要译场，许多历史上著名的中外译经师曾在这里译经传道。除了河南少林寺，那么现在河南有哪些著名的寺庙呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/henan/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="henan-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '河南',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

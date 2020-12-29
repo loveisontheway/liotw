@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>宁夏-瀑布流相册</title>
+		<meta name="description" content="宁夏, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '沙坡头'],
+			['2.jpg', '沙坡头'],
+			['3.jpg', '沙坡头'],
+			['4.jpg', '沙坡头'],
+			['5.jpg', '水洞沟古人类文化遗址'],
+			['6.jpg', '水洞沟古人类文化遗址'],
+			['7.jpg', '银川西部影视城'],
+			['8.jpg', '银川西部影视城'],
+			['9.jpg', '贺兰山岩画'],
+			['10.jpg', '西夏王陵'],
+			['11.jpg', '固原高山地貌'],
+			['12.jpg', '固原高山地貌'],
+			['13.jpg', '银川'],
+			['14.jpg', '骆驼'],
+			['15.jpg', '镇北堡影视城'],
+			['16.jpg', '中卫'],
+			['17.jpg', '中卫'],
+			['18.jpg', '中卫'],
+			['19.jpg', '中卫高庙'],
+			['20.jpg', '银川沙湖'],
+			['21.jpg', '西部影视城'],
+			['22.jpg', '西部影视城'],
+			['23.jpg', '西部影视城'],
+			['24.jpg', '宁夏博物馆'],
+			['25.jpg', '贺兰山岩画']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml += 
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/ningxia/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/ningxia/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div> 
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js"></script>
+	<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+    <script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '图片无水印...',
+			  text: 'Image without watermark...',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

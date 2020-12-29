@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>澳门-地区路线</title>
+  <meta name="description" content="澳门, aomen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|妈港、濠江、梳打埠、马交、濠海、濠镜、濠镜澳、香山澳等||<b>著名景点</b>|澳门历史城区、大三巴牌坊、观光塔、葡京赌场、妈阁庙、谭公庙等|
+|<b>行政区类别</b>|特别行政区||<b>机    场</b>|澳门国际机场|
+|<b>所属地区</b>|华南地区||<b>火车站</b>|-|
+|<b>下辖地区</b>|7个堂区||<b>车牌代码</b>|粤Z（进入内地）|
+|<b>电话区号</b>|+853||<b>GDP</b>|504亿美元（2017年，国际汇率）|
+|<b>邮政区码</b>|999078||<b>人均GDP</b>|80893美元（2017年，国际汇率）|
+|<b>地理位置</b>|珠江三角洲西南部、珠江口西岸||<b>城市美誉</b>|东方赌城、海上花园|
+|<b>面    积</b>|32.8平方公里（海域面积85平方公里）||<b>货    币</b>|人民币、澳门币|
+|<b>人    口</b>|65.6万（截至2018年3月）||<b>回归时间</b>|1999年12月20日|
+|<b>方    言</b>|粤语||<b>官方语言</b>|中文（含粤语、普通话）、葡语|
+|<b>气候条件</b>|亚热带季风气候||<b>地区代码</b>|MAC|
+|-|-||<b>官方语言</b>|中文（含粤语、普通话）、葡语|
+|-|-||<b>政治体制</b>|行政主导的代议民主制|
+|-|-||<b>法律体系</b>|大陆法系|
+|-|-||<b>行政长官</b>|崔世安|
+|-|-||<b>著名高校</b>|澳门大学、澳门城市大学等|
+|-|-||<b>行政区划代码</b>|820000|
+|-|-||<b>域    名</b>|.mo|
+
+| <b>澳门旅游攻略</b> | <b>澳门旅游必去景点</b> | <b>澳门旅游注意事项</b> | <b>港澳台</b> | <b>其它</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="strategy(this);">澳门旅游攻略</a> | <a href="javascript:;" onclick="scene(this);">威尼斯人度假村</a> | <a href="javascript:;" onclick="notes(this);">澳门旅游注意事项</a> | <a href="javascript:;" onclick="tips(this);">港澳台旅游小贴士</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">大三巴牌坊</a> | - | <a href="introduce.html">港澳台简介</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">澳门旅游塔</a> | - | <a href="permit.html">港澳台通行证</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">东望洋山</a> | - |-|-|
+| - | <a href="javascript:;" onclick="scene(this);">渔人码头</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">妈祖文化村</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">议事亭前地</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">龙环葡韵</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">新濠天地</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">新马路</a> | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/travel-map/aomen.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/aomen.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var strategyArr = [
+    [
+      '澳门旅游攻略', 
+      'strategy-1', 
+      '澳门旅游景点/攻略/自由行', 
+      '澳门半岛面积不大，拿个地图，匆匆一天也能走完。是个低调与奢华兼具的城市，值得细致品尝。即使不是赌徒，在澳门，你可能也会踏进葡京赌场，对世界顶级豪客的一掷万金心惊肉跳一翻。在这个以赌博为合法产业支撑的城市，澳门依然是个安全有序的城市。',
+      '<b>最佳季节 ： </b>10月-12月',
+      '<b>建议游玩 ： </b>2-3天',
+      '<b>人均花费 ： </b>￥4000元'
+    ]
+  ];
+
+  var strategy = function(obj) {
+    var title = obj.innerText;
+    for(var i=0; i<strategyArr.length; i++) {
+      if(strategyArr[i][0] === title) {
+        swal({
+          title: strategy[2],
+          html: '<img src="../imgs/timeline/aomen/'+strategyArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+strategyArr[i][3]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][4]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][5]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][6]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var sceneArr = [
+    ['威尼斯人度假村', 'scene-1', '澳门最美的赌场酒店，十分有特色，风景也很好。'],
+    ['大三巴牌坊', 'scene-2', '已有350多年历史，是澳门旅游最为众熟悉的标志，是圣保禄教堂前壁的遗迹。'],
+    ['澳门旅游塔', 'scene-3', '澳门新一代地标建筑及观光首选景点。'],
+    ['东望洋山', 'scene-4', '东望洋炮台，炮台上的小圣堂──圣母雪地殿教堂，东望洋灯塔'],
+    ['渔人码头', 'scene-5', '澳门首个主题文化创意娱乐旅游综合体'],
+    ['妈祖文化村', 'scene-6', '天后宫的建筑风格按照中国古建筑的传统规制设计和建造'],
+    ['议事亭前地', 'scene-7', '属典型的欧陆建筑风格，充满异国风情，繁盛的商业区'],
+    ['龙环葡韵', 'scene-8', '葡式建筑真的是很好看啊，典型的西欧建筑风格。(近维多利亚港)'],
+    ['新濠天地', 'scene-9', '去新濠天地大赌场，比较有名气的是《水舞间》。(近尖东)'],
+    ['新马路', 'scene-10', '新马路长不足一英里，但处处可见土生葡人的生活痕迹。']
+  ];
+
+  var scene = function (obj) {
+    var title = obj.innerText;
+    for(var j=0; j<sceneArr.length; j++) {
+      if(sceneArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/aomen/'+sceneArr[j][1]+'.jpg" width="240px" height="240px"/><p>'+sceneArr[j][2]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var notesArr = [
+    [
+      '澳门旅游注意事项', 
+      '<b>签证：</b>港澳通行证', 
+      '<b>货币：</b>1元人民币兑换1.17元左右澳门币；1元港币兑换1.03元左右澳门币。可以直接使用港币，在澳门赌场里，港元是唯一流通的货币。', 
+      '<b>海关：</b>旅客可随身携带自用及适量的物品进出境而无须向海关申报，每名入境旅客可免税携带葡萄酒及烈酒各一公升、200枝香烟；50枝雪茄和250克烟丝。此外，所有进口电器用品需缴付5%进口税。离境旅客携带古董、金器、珠宝、收音机及相机等都不用报税。',
+      '<b>交通：</b>澳门有一个国际机场，有两个主要客运码头。澳门本地还有公交、出租车、三轮车、老爷车等。', 
+      '<b>住宿：</b>澳门的高档酒店比较多，也有经济的旅馆。', 
+      '<b>美食：</b>最吸引人的还是当地正宗的葡国菜和各种小食店的特色小吃。', 
+      '<b>购物：</b>露天市场更是在澳门非常受欢迎；你还可以到路环氹仔的各大旅游度假村去享受出入各种免税店。'
+    ]
+  ];
+
+  var notes = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<notesArr.length; k++) {
+      if(notesArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][6]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][7]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var tipsArr = [
+    [
+      '港澳台旅游小贴士', 
+      '1、多了解香港及澳门的法律法规。',
+      '2、香港及澳门旅游地图、交通指南。',
+      '3、银两：港币、人民币、现金、银行卡。',
+      '4、要注意陋习：不要当众裸上身试衣、男子裸露上、不要街头爆粗口、室内不可以吸烟、地铁里不能吃盒饭、父母亲教好小孩子不要随地小便，不要随地吐痰，闯红灯、乱扔垃圾等等。否则最少罚HKD00。',
+      '5、每位客人可携带一件手提行李登机，规格以不超过标准(长56CM，宽36CM，高23CM)为准，数量以不超过20公斤为准。箱式的、带拉杆的行李乘国际航班时必须拖运。',
+      '6、身份证原件、无身份证儿童带户口本原件，带有效签注的港澳通行证。',
+      '7、赴台旅游应当持《大陆居民往来台湾通行证》、旅游签注和入台证。'
+    ]
+  ];
+
+  var tips = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<tipsArr.length; m++) {
+      if(tipsArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][6]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][7]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '澳门',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

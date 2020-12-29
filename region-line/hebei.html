@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>河北-地区路线</title>
+  <meta name="description" content="河北, hebei" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|燕赵、冀州、直隶||<b>著名景点</b>|大慈阁、北戴河、清东陵、白洋淀、避暑山庄、西柏坡、山海关|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|石家庄正定机场、秦皇岛北戴河机场、邯郸机场、山海关机场等|
+|<b>所属地区</b>|华北地区||<b>火车站</b>|石家庄站、唐山站、保定站、秦皇岛站、山海关站、邯郸站等|
+|<b>下辖地区</b>|11个地级市||<b>车牌代码</b>|冀A/B/C/D/E/F/G/H/J/R/T|
+|<b>电话区号</b>|（+86）0310至0319/（+86）0335||<b>GDP</b>|35964.0亿元（2017年）|
+|<b>邮政区码</b>|050011||<b>人均GDP</b>|47827元|
+|<b>地理位置</b>|太行山以东，渤海以西||<b>著名高校</b>|燕山大学、河北大学、NEUQ等|
+|<b>面    积</b>|18.88万平方千米||<b>国家级新区</b>|雄安新区|
+|<b>人    口</b>|7519.52万人（2017年）||<b>省委书记</b>|王东峰|
+|<b>方    言</b>|北京官话、冀鲁官话、东北官话、晋语||<b>省    长</b>|许勤|
+|<b>气候条件</b>|温带大陆性季风气候||-|-|
+
+| <b>河北生活文化</b> | <b>河北特色文化</b> | <b>河北曲艺文化</b> | <b>河北建筑文化</b> | <b>河北宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">吴桥杂技</a> | <a href="javascript:;" onclick="art(this);">河北梆子</a> | <a href="javascript:;" onclick="building(this);">承德避暑山庄</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">滕氏布糊画</a> | <a href="javascript:;" onclick="art(this);">京东大鼓</a> | <a href="javascript:;" onclick="building(this);">赵州桥</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | <a href="javascript:;" onclick="art(this);">河北唐剧</a> | <a href="javascript:;" onclick="building(this);">维吾尔族民居</a> | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | <a href="javascript:;" onclick="art(this);">河北哈哈腔</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">河北禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/hebei.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/hebei.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '河北民风民俗', '河北是中华民族的发源地之一，它拥有博大精深的文化基础，造就了怎么样的风俗文化呢？让我们一起去感受河北的风土人情，领略当地不一样的文化习俗。'],
+    ['方言文化', 'live-2', '河北方言', '河北方言主要是“冀中南方言”。唐山、张家口、承德虽属河北，以前不在冀州之内，分属青州、幽州、并州。河北话发音较平，而且一般句子的结尾多用去声。这样的发音模式就会显得缺乏韵味儿，也可以说比较平实，这在某种程度上反应了河北人的性格特点。'],
+    ['节日文化', 'live-3', '河北节日', '河北省地处华北、外绕渤海，内环京津，是中国著名的旅游资源大省。早在五千多年前，中华民族的三大始祖黄帝、炎帝和蚩尤就是在河北由征战到融合，从而开创了中华文明史。春秋战国时期，河北地属燕国和赵国，故有“燕赵”之称，那么如今河北还有哪些传统节日习俗文化呢？'],
+    ['嫁娶文化', 'live-4', '河北嫁娶文化', '河北简称冀，位于华北平原，兼跨内蒙古高原，面积18.8万平方公里，省会石家庄市。河北省内环京津，东临渤海，地理位置优越，是我国最早命名的历史文化名城之一。那么在河北这个历史文化名城里，河北有哪些婚嫁习俗呢？'],
+    ['饮食文化', 'live-5', '河北饮食文化', '河北菜即冀菜，提起冀菜，恐怕很多人的直接反应就是保定菜。没错，如今最惹火的的确是名声在外的保定菜，不过要全面概括，冀菜其实包括三大流派：以保定为代表的冀中南菜 ，以承德为代表的塞外宫廷菜和以唐山为代表的冀东沿海菜。'],
+    ['河北禁忌', 'live-6', '河北禁忌', '河北不仅自然景观丰富，而且人文景观也非常的多，有很多地方值得去玩一玩，有7处国家重点风景名胜区、5座国家历史文化名城、6座省级历史文化名城等等，都是不错的选择。其中沧州和吴桥是中国的武术和杂技之乡。那么去河北旅游，都应该注意些什么呢！河北人都忌讳些什么呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hebei/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hebei-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['吴桥杂技', 'feature-1', '吴桥杂技', '吴桥杂技是河北省的传统民俗杂技艺术。提到“杂技之乡”人们多以河北省沧州市吴桥县素称。据有关史料记载，吴桥杂技历史最悠久。相传，吴桥是孙武后代的封地。吴桥姓孙的人也确实不少，以孙姓命名的村就有前孙、后孙、牌坊村等不下十多个村。'],
+    ['滕氏布糊画', 'feature-2', '滕氏布糊画', '滕氏布糊画是河北丰宁民间艺术家滕腾发明的新画种，被誉为“中华百艳，华夏一绝”。创作技法集绘画、雕塑、堆绣、唐卡、剪纸等工艺之大成，用料讲究、色彩绚丽、操作细腻、画面逼真、取材广泛。有油画透视之效果，但不失国画之特点；有工笔之观感，又具有写意之风格。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hebei/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hebei-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['河北梆子', 'art-1', '河北梆子', '河北梆子是中国汉族地方戏曲之一，是河北省的主要地方剧种，是梆子声腔的一个重要支脉，是“山陕梆子”传入河北之后经河北人民培育而形成的。河北梆子曾出现过三个流派，包括直隶老派、山陕派和直隶新派，这三个派别标志着河北梆子历史的不同发展阶段。还想要了解更多关于河北梆子的文化么？'],
+    ['京东大鼓', 'art-2', '京东大鼓', '京东大鼓，产生于河北省香河和宝坻一带的农村，它是在汉族民间小调的基础上，结合当地的语言音调逐步发展而成的汉族曲艺鼓书暨鼓曲形式。20世纪初传入天津市区。特别是七八十年代，天津的群众文化相当普及，京东大鼓时常作为一种文艺汇演的表演项目。'],
+    ['河北唐剧', 'art-3', '河北唐剧', '唐剧，又名影调剧，是20世纪60年代初诞生在河北省唐山市的新剧种，公演于1960年6月。它的音乐唱腔源于唐 唐剧山皮影，它的表演艺术继承了我国戏曲的优秀传统并吸收借鉴了唐山民间舞蹈和影人动作。剧是在唐山皮影戏唱腔、音乐的基础上，吸收京剧表演艺术孕育而成的新剧种，于20世纪60年代初诞生于唐山市，原定名为唐山戏，后改称唐剧。'],
+    ['河北哈哈腔', 'art-4', '河北哈哈腔', '哈哈腔又被称为柳子调、喝喝腔，由民间秧歌发展而成。根据山东省 德州地区、河北省保定地区有关文化部门的考察资料，远在明代，哈哈腔已在鲁西北各县和河北沧州地区各县流行，延至清乾隆期间，又进一步流传到河北保定地区各县农村。由此看来，哈哈腔是一个比较古老的地方小戏。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hebei/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hebei-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['承德避暑山庄', 'building-1', '承德避暑山庄', '承德避暑山庄，又称“热河行宫”，坐落于中国北部河北省承德市中心以北的狭长谷地上，占地面积584公顷。避暑山庄始建于清康熙四十二年（公元1703年），雍正（公元1723—1736年在位）时代一度暂停营建，清乾隆六年至五十七年（公元1741—1792年）又继续修建，增加了乾隆36景和山庄外的外八庙。'],
+    ['赵州桥', 'building-2', '赵州桥', '赵州桥又称安济桥，坐落在河北省赵县洨河上，横跨洨水南北两岸，因桥体全部用石料建成，俗称“大石桥”。建于隋朝年间公元595年——605年，由著名匠师李春设计建造，距今已有约1500年的历史，是当今世界上现存最早、保存最完整的古代敞肩石拱桥。'],
+    ['维吾尔族民居', 'building-3', '维吾尔族民居', '维吾尔族的住宅，多成院落，一般大门忌朝西开。维吾尔族的建筑物有其独特风格。房屋方形，有较深的前廊;室内凿壁龛，并饰以各种花纹图案。旧式房屋多系土木结构，窗子较小，房顶开一个窗，通风采光差;室内进门有一连灶土炕，用来做饭取暖。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hebei/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hebei-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '河北',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>北京-地区路线</title>
+  <meta name="description" content="北京, beijing" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|燕京、蓟城、涿郡、幽州、北平||<b>著名景点</b>|天安门广场、故宫、颐和园、八达岭长城、明十三陵等|
+|<b>行政区类别</b>|首都、直辖市||<b>机    场</b>|北京首都国际机场、北京南苑机场、北京大兴国际机场（在建）|
+|<b>所属地区</b>|中国华北||<b>火车站</b>|北京站、北京东站、北京南站、北京西站、北京北站等|
+|<b>下辖地区</b>|16个区||<b>车牌代码</b>|京A-京Q|
+|<b>电话区号</b>|（+86）010||<b>GDP</b>|28000.4亿元（2017年）|
+|<b>邮政区码</b>|100000||<b>人均GDP</b>|57230元（2017年）|
+|<b>地理位置</b>|华北平原西北边缘||<b>市树，市花</b>|国槐、月季|
+|<b>面    积</b>|1.641万平方千米||<b>高等学府</b>|北大、清华、人大、北师大等|
+|<b>人    口</b>|2170.7万（2017年常住人口）||<b>现任领导</b>|市委书记蔡奇；市长陈吉宁|
+|<b>方    言</b>|北京话||<b>行政区划代码</b>|110000|
+|<b>气候条件</b>|温带季风性气候||-|-|
+
+| <b>北京生活文化</b> | <b>北京特色文化</b> | <b>北京曲艺文化</b> | <b>北京建筑文化</b> | <b>北京宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | - | <a href="javascript:;" onclick="art(this);">北京京剧</a> | <a href="javascript:;" onclick="building(this);">北京中轴线</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | - | <a href="javascript:;" onclick="art(this);">北京皮影</a> | <a href="javascript:;" onclick="building(this);">北京四合院</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | <a href="javascript:;" onclick="art(this);">北京评书</a> | <a href="javascript:;" onclick="building(this);">北京胡同</a> | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | <a href="javascript:;" onclick="building(this);">北京庙宇/庙会</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">北京禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/beijing.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/beijing.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '北京民风民俗', '老北京的古老风俗不计其数，其中的民间行业活动别有一番风味，说说老北京七十二行，吹糖人儿、耍蝈蝈……现如今还流传与大街小巷，可大部分却已被遗忘，甚至有人闻所未闻。现在我们就一起到那古色古香的胡同里去感受一下老北京当年的行行业业。'],
+    ['方言文化', 'live-2', '北京方言', '北京话，俗称“京片子”，是一种主要分布在北京的汉语方言，属于官话中的北京官话。北京尖团音不分，儿化音多，还有一些独有词汇。北京话有哪些文化历史？常用的北京话你都知道是什么意思吗？'],
+    ['节日文化', 'live-3', '北京节日', '节日文化也是一种历史文化，是一个国家或一个民族在漫长的历史过程中形成和发展的民族文化，也是一种民族风俗和民族习惯，有深刻的寓意。作为中国文化中心的北京有哪些传统节日？老北京的传统节日文化是怎么样的？'],
+    ['嫁娶文化', 'live-4', '北京嫁娶文化', '在北京办婚礼，免不了要入乡随俗，虽然老北京人的北京结婚习俗礼仪太多，要是按照过去那可惨了，现在是新时代，就不必一一遵循那些繁文缛节。但基本的规矩还是要学习一下的！'],
+    ['饮食文化', 'live-5', '北京饮食文化', '北京作为全国的政治中心，皇室贵族、官僚绅士、大户人家云集，加之北京作为一个五方杂处的大都市，来自全国各地和各个民族的人士聚居于此，他们也将各自的饮食文化带到了北京。近代以后，西洋饮食文化也在北京传播发展。这些不同地域、不同流派的饮食文化在北京经过长时间的发展演化，最终形成了别具特色的京味饮食文化。'],
+    ['北京禁忌', 'live-6', '北京禁忌', '老北京人在日常生活中的礼数多，讲究多，禁忌也多。那么生活在北京，多多少少要了解一些北京人的禁忌，知道在北京什么话不能说，什么事不能做。本文将为大家介绍北京的生活文化，看看北京人日常生活中的禁忌有哪些。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/beijing/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="beijing-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['北京京剧', 'art-1', '京剧文化', '京剧曾称平剧，中国五大戏曲剧种之一，腔调以西皮、二黄为主，用胡琴和锣鼓等伴奏，被视为中国国粹，中国戏曲三鼎甲“榜首”。京剧走遍世界各地，成为介绍、传播中国传统艺术文化的重要媒介。分布地以北京为中心，遍及中国。在2010年11月16日，京剧被列入“人类非物质文化遗产代表作名录”。'],
+    ['北京皮影', 'art-2', '皮影戏文化', '皮影戏是中国民间一门古老的传统艺术，老北京人都叫它“驴皮影”。先后形成东城、西城两大派别。千百年来，这门古老的艺术，伴随着祖祖辈辈的先人们，度过了许多欢乐的时光。北京皮影戏是怎么形成的？'],
+    ['北京评书', 'art-3', '评书文化', '北京评书是一种传统说唱艺术，2008年6月7日，北京评书经国务院批准列入第二批国家级非物质文化遗产名录。综观北京评书的发展历程，大致可以分为四个时期：清初开创时期，清末民初奠基时期，二十世纪三四十年代兴盛时期，解放后拓新时期。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/beijing/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="beijing-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['北京中轴线', 'building-1', '北京中轴线', '北京中轴线，是指北京自元大都、明清北京城以来北京城市东西对称布局建筑物的对称轴，北京市诸多其他建筑物亦位于此条轴线上。明清北京城的中轴线南起永定门，北至钟鼓楼，直线距离长约7.8公里。北京中轴线是怎么来的？北京中轴线有什么象征意义？北京中轴线上的建筑有哪些？'],
+    ['北京四合院', 'building-2', '四合院文化', '四合院建筑，是我国古老、传统的文化象征。“四”东西南北四面，“合”是合在一起，形成一个口字形，这就是四合院的基本特征。四合院建筑之雅致，结构之巧，数量之众多，当推北京为最。北京是六朝古都，北京的四合院必然内蕴浓郁的帝都色彩。认知北京，了解北京与北京文化，四合院是一个极好入口。'],
+    ['北京胡同', 'building-3', '胡同文化', '北京的胡同绝不仅仅是城市的脉络，交通的衢道，它更是北京普通老百姓生活的场所，京城历史文化发展演化的重要舞台。漫步在北京胡同，到处都是名胜古迹，细细品味又似北京的百科全书，不少胡同中的一块砖、一片瓦都有好几百年的历史了。'],
+    ['北京庙宇/庙会', 'building-4', '庙宇/庙会文化', '作为全国政治、文化中心的北京，自然成为宗教发展的胜地。在其历史文化的长卷中，北京的寺庙文化占有极为重要的地位。出于政治与信仰的需要，历朝帝王、皇亲国戚、宫廷太监、达官显贵纷纷出资修庙，京城敕建的寺庙比比皆是。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/beijing/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="beijing-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '北京',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天津-瀑布流相册</title>
+		<meta name="description" content="天津, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '西开教堂'],
+			['2.jpg', '滨海夜景'],
+			['3.jpg', '黄崖关长城'],
+			['4.jpg', '七里海湿地'],
+			['5.jpg', '天津之眼'],
+			['6.jpg', '天津大剧院'],
+			['7.jpg', '大港湿地公园'],
+			['8.jpg', '杨柳青石家大院'],
+			['9.jpg', '意式风情街'],
+			['10.jpg', '海河夜景'],
+			['11.jpg', '南翠屏公园'],
+			['12.jpg', '吕祖堂'],
+			['13.jpg', '奥林匹克中心'],
+			['14.jpg', '古玩街'],
+			['15.jpg', '解放桥'],
+			['16.jpg', '小白楼'],
+			['17.jpg', '五大道'],
+			['18.jpg', '天后宫'],
+			['19.jpg', '世纪钟'],
+			['20.jpg', '鼓楼'],
+			['21.jpg', '瓷房子'],
+			['22.jpg', '滨江道步行街'],
+			['23.jpg', '北安桥'],
+			['24.jpg', '凯旋门'],
+			['25.jpg', '黄崖关长城'],
+			['26.jpg', '七里海湿地'],
+			['27.jpg', '建筑'],
+			['28.jpg', '盘山'],
+			['29.jpg', '抗震纪念塔'],
+			['30.jpg', '天后宫']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml += 
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/tianjin/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/tianjin/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div> 
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js">
+	<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+    <script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '目前是网络图片，骑行后会更新为真实图片',
+			  text: 'Currently, it is a network picture, which will be updated as the real picture after cycling',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

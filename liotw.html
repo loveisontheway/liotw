@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>爱就在路上&nbsp;love is on the way</title>
+	<meta name="author" content="jiangjialiang" />
+	<meta name="keywords" content="liotw, love is on the way, china, russia, mongolia, kazakhstan, nepal, bike, bicycle, outdoor, travel, sports, 爱就在路上, 中国, 俄罗斯, 蒙古国, 哈萨克斯坦, 尼泊尔, 自行车, 户外, 旅游, 运动" />
+	<meta name="description" content="爱就在路上, 国内外跨境骑行, 路线规划, 骑行游记, 地方人文风情, 户外技能, 地理知识" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  	<link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"/>
+	<link rel="stylesheet" href="css/fullpage/fullpage.css" />
+	<link rel="stylesheet" href="css/fullpage/examples.css" />
+	<link rel="stylesheet" href="css/fullpage/style.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<script src="js/sweetalert/es6-promise.auto.min.js"></script>
+	<script src="js/sweetalert/sweetalert2.all.js"></script>
+	<script src="js/fullpage/fullpage.js"></script>
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: hidden;
+	}
+
+/*	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; !* in case the video doesn't fit the whole page*!
+  		!*background-image: !* our video *!;*!
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; !*cover video background *!
+   		z-index:3;
+	}*/
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	/*video::-webkit-media-controls {*/
+	  /*display:none !important;*/
+	/*}*/
+
+/*	#section2 img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover;
+   		z-index:3;
+	}*/
+
+	#section3 img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: contain;
+   		z-index:3;
+	}
+
+/*	#section4 a {
+		line-height: 50px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}*/
+
+	/*----------countdown begin----------*/
+	ul.countdown {
+		list-style: none;
+		margin: 75px 0;
+		padding: 0;
+		display: block;
+		text-align: center;
+	}
+	ul.countdown li {
+		display: inline-block;
+	}
+	ul.countdown li span {
+		font-size: 80px;
+		font-weight: 300;
+		line-height: 80px;
+	}
+	ul.countdown li.seperator {
+		font-size: 80px;
+		line-height: 70px;
+		vertical-align: top;
+	}
+	ul.countdown li p {
+		color: #363f48;
+		font-size: 14px;
+	}
+	/*----------countdown end----------*/
+
+	.footer {
+	    font-size: 7px;
+	    position: absolute;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+<div id="logo">
+	<a href="javascript:;" title="爱就在路上 love is on the way">
+		<img src="imgs/liotw.png"/>
+	</a>
+</div>
+<!-- <div id="menu">
+<ul>
+	<li data-menuanchor="firstPage"><a href="#firstPage">love</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">is</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">on</a></li>
+	<li data-menuanchor="4thpage"><a href="#4thpage">the</a></li>
+	<li data-menuanchor="lastPage"><a href="#lastPage">way</a></li>
+</ul>
+</div> -->
+
+<div id="fullpage">
+
+	<div class="section" id="section0">
+		<!-- <video id="myVideo" loop muted data-autoplay>
+			<source data-src="imgs/fullpage/bicycle.mp4" type="video/mp4">
+		</video> -->
+		<span>
+			<a href="javascript:window.open('video/video.html')" title="录制的骑行视频" style="text-decoration:none;color:#333;">
+				<i class="fa fa-video-camera fa-2x"></i>
+			</a>
+		</span>
+		<h1 style="font-size: 2em;color:#444;">出发倒计时</h1>
+		<p style="font-size: 1em;color:#444;">Start countdown</p>
+		<ul class="countdown">
+		  <li> <span class="days">00</span>
+		    <p class="days_ref">days</p>
+		  </li>
+		  <li class="seperator">.</li>
+		  <li> <span class="hours">00</span>
+		    <p class="hours_ref">hours</p>
+		  </li>
+		  <li class="seperator">:</li>
+		  <li> <span class="minutes">00</span>
+		    <p class="minutes_ref">minutes</p>
+		  </li>
+		  <li class="seperator">:</li>
+		  <li> <span class="seconds">00</span>
+		    <p class="seconds_ref">seconds</p>
+		  </li>
+		</ul>
+		<h5>出发时间：2019.03.09&nbsp;&nbsp;杭州</h5>
+		<h6>Departure time：2019.03.09&nbsp;&nbsp;hangzhou</h6>
+	</div>
+	<div class="section" id="section1">
+		<div id="mainMap" style="width: 100%;height: 90%;background-size: contain;background-position: center center;object-fit: contain;"></div>
+	</div>
+	<div class="section" id="section5">
+		<div id="bikeMap" style="width: 100%;height: 90%;background-size: contain;background-position: center center;object-fit: contain;"></div>
+	</div>
+	<div class="section" id="section2">
+		<!-- <img data-src="imgs/fullpage/we.png" alt="we" /> -->
+		<div><img data-src="imgs/code/wb-code.png" width="110" height="110"></div><br>
+		<div class="me">
+			<div class="card">
+				<div class="img"><span></span><span></span><span></span><span></span></div>
+				<div class="content">
+					<p>花名：沐汐</p>
+					<p>爱好：旅行</p>
+					<p>职业：Java</p>
+					<p>籍贯：湖南</p><br>
+					<h2>本次骑行人数1人，会经过20个省级行政区域，4个境外国家，里程28500公里，时间300天，骑行途中个人出资1万做点微公益。</h2><br>
+					<h2>来路不由己，但前路可期，因为爱就在路上；世界那么大，终于可以去看看了，是旅行不是旅游，是亲身体会不是走马观花，是筹备已久不是说走就走，是实行微公益不是为了骑而骑。</h2>
+				</div>
+			</div>
+		</div>
+		<br><div><img data-src="imgs/code/wx-code.png" width="110" height="110"></div>
+	</div>
+	<div class="section" id="section3">
+		<img data-src="imgs/fullpage/loveisontheway.png" alt="loveisontheway" />
+	</div>
+	<div class="section" id="section4">
+		<div>
+			<h1 style="font-size: 2em;color:#444;">特别鸣谢</h1>
+			<p style="font-size: 1em;">友情链接</p><br><br>
+			<div class="rvc" id="rvc1">
+				<div class="rvc-wrapper">
+					<ul>
+						<li>
+							<a href="javascript:window.open('http://inshotapp.com/');">
+								<img data-src="imgs/unit/inshot.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('https://www.maigoo.com/');">
+								<img data-src="imgs/unit/maigoo.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('https://www.merida.tw/');">
+								<img data-src="imgs/unit/merida.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.giant.com.cn/');">
+								<img data-src="imgs/unit/giant.gif"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.sony.com.cn/');">
+								<img data-src="imgs/unit/sony.jpg"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="rvc-prv"><i class="fa fa-angle-left"></i></div>
+				<div class="rvc-next"><i class="fa fa-angle-right"></i></div>
+			</div>
+			<div class="rvc" id="rvc2">
+				<div class="rvc-wrapper">
+					<ul>
+						<li>
+							<!-- <a href="javascript:window.open('https://movie.douban.com/subject/26694967/');">
+								<img data-src="imgs/unit/aerial-china.png"/>
+							</a> -->
+							<a href="javascript:window.open('https://m.msyc.cc/tmn585930.html');">
+								<img data-src="imgs/unit/omall.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('https://www.letour.fr/en/');">
+								<img data-src="imgs/unit/letour.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.goprochina.cn/');">
+								<img data-src="imgs/unit/gopro.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('https://music.163.com/#/djradio?id=618058');">
+								<img data-src="imgs/unit/ruixi.jpeg"/>
+							</a>
+						</li>
+						<li>
+							<!-- <a href="javascript:window.open('https://alvarotrigo.com/fullPage/');">
+								<img data-src="imgs/unit/fullpage.png"/>
+							</a> -->
+							<a href="javascript:window.open('region-line/xiaoai.html');">
+								<img data-src="imgs/unit/xiaoai.png"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="rvc-prv"><i class="fa fa-angle-left"></i></div>
+				<div class="rvc-next"><i class="fa fa-angle-right"></i></div>
+			</div>
+			<div class="rvc" id="rvc3">
+				<div class="rvc-wrapper">
+					<ul>
+						<li>
+							<a href="javascript:window.open('https://www.naturehike.com/');">
+								<img data-src="imgs/unit/naturehike.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.mafengwo.cn/');">
+								<img data-src="imgs/unit/mafengwo.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.8264.com/');">
+								<img data-src="imgs/unit/8264.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.91weitu.com/');">
+								<img data-src="imgs/unit/91weitu.png"/>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:window.open('http://www.ivsky.com/');">
+								<img data-src="imgs/unit/ivsky.gif"/>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="rvc-prv"><i class="fa fa-angle-left"></i></div>
+				<div class="rvc-next"><i class="fa fa-angle-right"></i></div>
+			</div>
+		</div>
+		<div class="footer" style="bottom: 25px;">
+			Copyright&nbsp;&copy;&nbsp;2019-2020&nbsp;liotw.com&nbsp;
+<!--			<a href="http://www.miitbeian.gov.cn/" target="view_window">湘ICP备18024659号-1</a>-->
+			<a href="https://beian.miit.gov.cn/#/Integrated/index" target="view_window">湘ICP备18024659号-1</a>
+		</div>
+<!-- 		<div class="footer" style="bottom: 0px;">
+			<img data-src="imgs/a6.png"/>
+			<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010008">
+				&nbsp;<img data-src="imgs/a7.png"/>&nbsp;
+			</a>
+			<span>湘公网安备 32011402010008号</span>
+		</div> -->
+	</div>
+</div>
+
+<script src="js/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/echarts/echarts-2.0.2.js"></script>
+<script src="js/jquery/jquery.downCount.js"></script>
+<script src="js/jquery/rvc.js"></script>
+<script type="text/javascript">
+
+	$('#rvc1').rvc({
+		liNum: 5,			// 2~5之间的整数
+		spaceBetween: 20,	// li项之间的距离
+		plr: 20,			// 当屏幕小于1024时，rvc的padding-left，padding-right值
+		time: 200,			// 动画时间
+		prv: '.rvc-prv',	// 前一个按钮
+		next: '.rvc-next'	// 下一个按钮
+	});
+	$('#rvc2').rvc({
+		liNum: 5,
+		spaceBetween: 20,
+		plr: 20,
+		time: 200,
+		prv: '.rvc-prv',
+		next: '.rvc-next'
+	});
+	$('#rvc3').rvc({
+		liNum: 5,
+		spaceBetween: 20,
+		plr: 20,
+		time: 200,
+		prv: '.rvc-prv',
+		next: '.rvc-next'
+	});
+
+	$('.countdown').downCount({
+		date: '03/09/2019 00:00:00',
+		offset: +8
+	}, function () {
+		$('#section0 h1').html('启动计时器');
+		$('#section0 p').html('Start timer');
+	});
+
+	(function() {
+		var o = navigator.userAgent.match(/MSIE (\d+)/);
+		o = o && o[1];
+		// ie10 以下 || o != null
+		if (!!o && o < 10) {
+			// var browser = location.protocol + '//' + location.host + '/browser/browser.html';
+			var browser = 'browser/browser.html';
+			window.location.href = browser;
+			return false;
+		}
+	})();
+
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#00AAAA', '#486ab3', '#00A83B', '#7BAABE'],
+        anchors: ['firstPage', 'secondPage', '5thPage', '3rdPage', '4thpage', 'lastPage'],
+        // menu: '#menu',
+		// loopBottom: true,
+		// loopTop: true,
+		// navigation: true,
+        // navigationPosition: 'right',
+        // navigationTooltips: ['love', 'is', 'on', 'the', 'way'],
+        // equivalent to jQuery `easeOutBack` extracted from http://matthewlein.com/ceaser/
+        easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
+        afterLoad: function(origin, destination, direction){
+			// using index
+			if(destination.index == 1){
+				getEcharts();
+			}
+			if(destination.index == 2){
+				getBikeEcharts();
+			}
+		}
+    });
+
+	var provinceArr = [
+	    ['重庆', '重庆市', 'chongqing'],
+	    ['新疆', '乌鲁木齐', 'xinjiang'],
+	    ['新疆', '红柳村', 'xinjiang'],
+	    ['新疆', '哈密', 'xinjiang'],
+	    ['新疆', '吐鲁番', 'xinjiang'],
+	    ['新疆', '恰库尔图镇', 'xinjiang'],
+	    ['新疆', '北屯市', 'xinjiang'],
+	    ['新疆', '布尔津县', 'xinjiang'],
+	    ['新疆', '喀纳斯湖', 'xinjiang'],
+	    ['新疆', '吉木乃县', 'xinjiang'],
+	    ['新疆', '克拉玛依', 'xinjiang'],
+	    ['新疆', '乌苏', 'xinjiang'],
+	    ['新疆', '赛里木湖', 'xinjiang'],
+	    ['新疆', '霍尔果斯', 'xinjiang'],
+	    ['新疆', '伊宁', 'xinjiang'],
+	    ['新疆', '昭苏县', 'xinjiang'],
+	    ['新疆', '巩留县', 'xinjiang'],
+	    ['新疆', '那拉提', 'xinjiang'],
+	    ['新疆', '库车县', 'xinjiang'],
+	    ['新疆', '阿拉尔市', 'xinjiang'],
+	    ['新疆', '沙漠公路', 'xinjiang'],
+	    ['新疆', '和田', 'xinjiang'],
+	    ['新疆', '叶城', 'xinjiang'],
+	    ['新疆', '希依提墩乡', 'xinjiang'],
+	    ['新疆', '喀什', 'xinjiang'],
+	    ['新疆', '塔什库尔干塔吉克自治县', 'xinjiang'],
+	    ['新疆', '黑恰道班', 'xinjiang'],
+	    ['西藏', '松西村', 'xizang'],
+	    ['西藏', '噶尔县', 'xizang'],
+	    ['西藏', '冈仁波齐', 'xizang'],
+	    ['西藏', '萨嘎县', 'xizang'],
+	    ['西藏', '珠峰大本营', 'xizang'],
+	    ['西藏', '日客则', 'xizang'],
+	    ['西藏', '羊卓雍措', 'xizang'],
+	    ['西藏', '拉萨', 'xizang'],
+	    ['西藏', '纳木错', 'xizang'],
+	    ['西藏', '日多乡', 'xizang'],
+		['西藏', '林芝', 'xizang'],
+		['西藏', '然乌镇', 'xizang'],
+		['西藏', '盐井村', 'xizang'],
+	    ['宁夏', '银川', 'ningxia'],
+	    ['广西', '安龙县', 'guangxi'],
+		['广西', '南宁', 'guangxi'],
+		['广西', '玉林', 'guangxi'],
+		['广西', '岑溪', 'guangxi'],
+	    ['内蒙古', '呼和浩特', 'neimenggu'],
+	    ['内蒙古', '呼伦贝尔', 'neimenggu'],
+	    ['内蒙古', '满洲里', 'neimenggu'],
+	    ['内蒙古', '二连浩特', 'neimenggu'],
+	    ['内蒙古', '乌兰察布', 'neimenggu'],
+	    ['内蒙古', '呼和浩特', 'neimenggu'],
+	    ['内蒙古', '包头', 'neimenggu'],
+	    ['内蒙古', '巴彦淖尔', 'neimenggu'],
+	    ['广东', '广州', 'guangdong'],
+		['广东', '深圳', 'guangdong'],
+		['广东', '汕头', 'guangdong'],
+		['浙江', '杭州', 'zhejiang'],
+		['浙江', '温州', 'zhejiang'],
+	    ['浙江', '台州', 'zhejiang'],
+		['浙江', '宁波', 'zhejiang'],
+	    ['福建', '厦门', 'fujian'],
+		['福建', '福州', 'fujian'],
+	    ['湖北', '武汉', 'hubei'],
+	    ['江苏', '南京', 'jiangsu'],
+	    ['江苏', '南通', 'jiangsu'],
+	    ['江苏', '连云港', 'jiangsu'],
+	    ['河北', '石家庄', 'hebei'],
+	    ['河北', '唐山', 'hebei'],
+		['河北', '葫芦岛', 'hebei'],
+	    ['山西', '太原', 'shanxi'],
+	    ['辽宁', '沈阳', 'liaoning'],
+	    ['辽宁', '葫芦岛', 'liaoning'],
+	    ['吉林', '长春', 'jilin'],
+	    ['吉林', '齐齐哈尔', 'jilin'],
+	    ['黑龙江', '哈尔滨', 'heilongjiang'],
+	    ['安徽', '合肥', 'anhui'],
+	    ['江西', '南昌', 'jiangxi'],
+	    ['山东', '济南', 'shandong'],
+	    ['山东', '青岛', 'shandong'],
+		['山东', '威海', 'shandong'],
+		['山东', '蓬莱', 'shandong'],
+		['山东', '央子镇', 'shandong'],
+		['山东', '滨江', 'shandong'],
+	    ['河南', '郑州', 'henan'],
+	    ['湖南', '长沙', 'hunan'],
+	    ['海南', '海口', 'hainan'],
+	    ['四川', '成都', 'sichuan'],
+	    ['贵州', '贵阳', 'guizhou'],
+	    ['云南', '昆明', 'yunnan'],
+	    ['云南', '香格里拉', 'yunnan'],
+		['云南', '丽江', 'yunnan'],
+		['云南', '泸沽湖', 'yunnan'],
+		['云南', '大理', 'yunnan'],
+		['云南', '昆明', 'yunnan'],
+		['云南', '罗平县', 'yunnan'],
+	    ['陕西', '西安', 'shanxi1'],
+	    ['甘肃', '兰州', 'gansu'],
+	    ['甘肃', '嘉峪关', 'gansu'],
+	    ['甘肃', '瓜州县', 'gansu'],
+	    ['甘肃', '敦煌', 'gansu'],
+	    ['甘肃', '柳园镇', 'gansu'],
+	    ['青海', '西宁', 'qinghai'],
+	    ['青海', '石乃亥乡', 'qinghai'],
+	    ['青海', '祁连县', 'qinghai'],
+	    ['南海诸岛', '南沙群岛', 'nanhai'],
+	    ['台湾', '台北', 'taiwan']
+	];
+
+	var countryArr = [
+		['俄罗斯', '贝加尔湖', 'Russia', 'russia', 'russia','Озеро Байкал'],
+		['俄罗斯', '奥洛维扬纳亚', 'Russia', 'russia', 'russia','Оловяннинский'],
+		['俄罗斯', '赤塔', 'Russia', 'russia', 'russia','Чита'],
+		['俄罗斯', '希洛克', 'Russia', 'russia', 'russia','Хилок'],
+		['俄罗斯', '乌兰乌德', 'Russia', 'russia', 'russia','Улан-Удэ'],
+	    ['蒙古国', '乌兰巴托', 'Mongolia','mongolia','mongolia', 'Улаанбаатар хот'],
+	    ['蒙古国', '苏赫巴托尔', 'Mongolia','mongolia','mongolia', 'Суббатор'],
+	    ['蒙古国', '巴彦高勒', 'Mongolia','mongolia','mongolia', 'Баян гол'],
+	    ['蒙古国', '苏木贝尔', 'Mongolia','mongolia','mongolia', 'Су Mubei'],
+	    ['蒙古国', '赛音山达', 'Mongolia','mongolia','mongolia', 'Saiyinshanda'],
+	    ['哈萨克斯坦', '卡普恰盖', 'Kazakhstan','kazakhstan','kazakhstan', 'Капуча'],
+	    ['尼泊尔', '加德满都', 'Nepal','nepal','nepal', 'Katmandu'],
+	    ['中国', '北京', 'China','beijing','china','Beijing'],
+	    ['中国', '天津', 'China','tianjin','china','Tianjin'],
+	    ['中国', '上海', 'China','shanghai','china','Shanghai'],
+	    ['中国', '香港', 'China','xianggang','hongkong','Hongkong'],
+	    ['中国', '澳门', 'China','aomen','macao','Macao']
+	];
+
+	function getEcharts(){
+	    // Step:1 conifg ECharts's path, link to echarts.js from current page.
+	    // Step:1 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+	    require.config({
+	        paths: {
+	            echarts: './js'
+	        }
+	    });
+
+	    // Step:2 require echarts and use it in the callback.
+	    // Step:2 动态加载echarts然后在回调函数中开始使用，注意保持按需加载结构定义图表路径
+	    require(
+	        [
+	            'echarts',
+	            'echarts/chart/map'
+	        ],
+	        function (ec) {
+	            // --- 地图 ---
+	            var myChart = ec.init(document.getElementById('mainMap'));
+
+	            myChart.on('click', function (params) {
+				    var name = params.name;
+				    var val = '';
+				    var index = 0;
+				    var country = '';
+				    var site = '';
+				    var pic = '';
+				    var nation = '';
+				    if(!!name){
+				    	// 禁止点击线
+				    	if(name.indexOf('>') != -1){
+				    		return false;
+				    	}
+
+				    	for(var i=0; i<provinceArr.length; i++){
+				    		if(provinceArr[i][0] === name){
+				    			val = provinceArr[i][2];
+				    			swal({
+								  title: '中国 · '+name,
+								  text: 'china · '+val,
+								  imageUrl: 'imgs/country/china.png',
+								  imageWidth: 194,
+								  imageHeight: 128,
+								  imageAlt: val,
+								  animation: false,
+								  showCancelButton: true,
+								  confirmButtonColor: '#3085d6',
+								  cancelButtonColor: '#d33',
+								  confirmButtonText: '图片 Photo',
+								  cancelButtonText: '线路 Line'
+								}).then(function(result) {
+									if (result.value) {	// confirm = photo
+										window.location.href = 'photo-wall/'+val+'.html';
+									}else if(result.dismiss === 'cancel') {	// cancel = line
+										window.location.href = 'region-line/'+val+'.html';
+									}
+								});
+								return false;
+				    		}
+				    	}
+
+				    	for(var j=0; j<countryArr.length; j++){
+				    		if(countryArr[j][1] === name){
+								++index; val = countryArr[j][3]; country = countryArr[j][0]; site = countryArr[j][5]; pic = countryArr[j][4]; nation = countryArr[j][2]; break;
+				    		}
+				    	}
+
+				    	if(!!index){
+							swal({
+							  title: country+' · '+name,
+							  text: nation+' · '+site,
+							  imageUrl: 'imgs/country/'+pic+'.png',
+							  imageWidth: 194,
+							  imageHeight: 128,
+							  imageAlt: val,
+							  animation: false,
+							  showCancelButton: true,
+							  confirmButtonColor: '#3085d6',
+							  cancelButtonColor: '#d33',
+							  confirmButtonText: '图片 Photo',
+							  cancelButtonText: '线路 Line'
+							}).then(function(result) {
+								if (result.value) {	// confirm = photo
+									window.location.href = 'photo-wall/'+val+'.html';
+								}else if(result.dismiss === 'cancel') {	// cancel = line
+									window.location.href = 'region-line/'+val+'.html';
+								}
+							});
+							return false;
+				    	}
+				    }
+				});
+
+	            myChart.setOption({
+	            	title: {
+			            // text: '跨境骑行300天',
+			            text: '前期规划路线',
+			            textStyle:{
+		                    color:'#0B615E'
+		                },
+			            // subtext: 'Cross-border cycling for 300 days',
+			            subtext: 'earlier stage plan line',
+			            subtextStyle:{
+		                    color:'#0B615E'
+		                },
+		                link: "region-line/plan.html",	// 点击标题内容要跳转的链接
+		                sublink: "region-line/plan.html",
+			            x:'center',
+				        y:'top',
+				        textAlign:'center'
+			        },
+				    tooltip: {
+						formatter: function (params, ticket, callback) {
+							if (params.name.indexOf('>') != -1) {
+						        return '';
+							} else {
+								return info = '<pre style="font-size:16px">' + params.name + '</pre>'
+							}
+						},
+						backgroundColor: "#ff7f50",   // 提示框背景颜色
+						textStyle: { color: "#fff" }  // 提示框字体颜色
+					},
+					dataRange: {
+						min : 0,
+						max : 60,
+						calculable : true,
+						show: false,
+						text:['High','Low'],
+						color: ['#ff3333', 'orange', 'yellow','lime','aqua'],
+						textStyle:{
+							color:'#fff'
+						}
+					},
+					series : [
+						{
+							type: 'map',
+							roam: false,	// true:支持缩放 false:不支持缩放
+							hoverable: true,
+							mapType: 'china',
+							itemStyle:{
+								normal:{
+									// borderColor:'#009fd8',
+									// borderColor:'#004383',
+									borderWidth:1,
+									areaStyle:{
+										color: '#004383'
+									}
+								}
+							},
+							data:[],
+							markLine : {
+								smooth:true,
+								symbol: ['none', 'circle'],
+								symbolSize : 1,
+								itemStyle : {
+									normal: {
+										color:'#fff',
+										borderWidth:1,
+										borderColor:'rgba(30,144,255,0.5)'
+									}
+								},
+								data: []
+							},
+							geoCoord: {
+								'上海': [121.4648,31.2891],
+								'重庆市': [107.7539,30.1904],
+								'武汉': [114.3896,30.6628],
+								'南京': [118.8062,31.9208],
+								'石家庄': [114.4995,38.1006],
+								'太原': [112.3352,37.9413],
+								'合肥': [117.29,32.0581],
+								'南昌': [116.0046,28.6633],
+								'济南': [117.1582,36.8701],
+								'郑州': [113.4668,34.6234],
+								'长沙': [113.0823,28.2568],
+								'海口': [110.3893,19.8516],
+								'成都': [103.9526,30.7617],
+								'贵阳': [106.6992,26.7682],
+								'西安': [109.1162,34.2004],
+								'南沙群岛': [115.8151,18.2930],
+								'台北': [121.5629,25.0413],
+								'香港': [114.1726,22.2803],
+								'澳门': [113.5516,22.1926],
+
+								'杭州': [120.1622,30.2843],
+								'南通': [120.9165,32.0012],
+								'连云港': [119.2240,34.6116],
+								'青岛': [120.3980,36.0734],
+								'威海': [122.1307,37.5237],
+								'蓬莱': [120.7601,37.8234],
+								'央子镇': [119.1698,37.0482],
+								'滨江': [117.9685,37.4114],
+
+								'天津': [117.4219,39.4189],
+								'北京': [116.4551,40.2539],
+
+								'唐山': [118.1893,39.6511],
+								'葫芦岛': [120.8671,40.7253],
+
+								'沈阳': [123.1238,42.1216],
+
+								'长春': [125.8154,44.2584],
+
+								'哈尔滨': [127.9688,45.368],
+								'齐齐哈尔': [123.9394,47.3756],
+
+								'呼伦贝尔': [119.8000,49.2168],
+								'满洲里': [117.4279,49.5094],
+
+								'奥洛维扬纳亚': [115.5217,50.9653],
+								'赤塔': [113.4428,52.1352],
+								'希洛克': [110.5614,51.4808],
+								'乌兰乌德': [107.6546,51.9266],
+								'贝加尔湖': [105.9971,51.7644],
+
+								'苏赫巴托尔': [106.2084,50.3462],
+								'巴彦高勒': [106.0851,48.9119],
+								'乌兰巴托': [106.9384,47.9007],
+								'苏木贝尔': [108.3324,46.4561],
+								'赛音山达': [110.0434,44.9153],
+
+								'二连浩特': [111.9659,43.6599],
+								'乌兰察布': [113.1479,41.0229],
+								'呼和浩特': [111.4124,40.4901],
+								'包头': [109.8548,40.6736],
+								'巴彦淖尔': [107.4079,40.7576],
+								'银川': [106.3586,38.1775],
+								'兰州': [103.5901,36.3043],
+								'西宁': [101.4038,36.8207],
+								'石乃亥乡': [99.6072,36.9978],
+								'祁连县': [100.2643,38.1900],
+								'嘉峪关': [98.2895,39.7779],
+								'瓜州县': [95.7967,40.5306],
+								'敦煌': [94.6592,40.1584],
+								'柳园镇': [95.5078,41.1106],
+
+								'红柳村': [94.6488,41.6087],
+								'哈密': [93.5850,42.8368],
+								'吐鲁番': [89.2433,42.9450],
+								'乌鲁木齐': [87.9236,43.5883],
+								'恰库尔图镇': [89.5514,46.3374],
+								'北屯市': [87.8186,47.3590],
+								'喀纳斯湖': [87.0275,48.7990],
+								'吉木乃县': [85.9053,47.4394],
+								'克拉玛依': [84.8935,45.5787],
+								'乌苏': [84.7555,44.4104],
+								'赛里木湖': [81.1703,44.7293],
+								'霍尔果斯': [80.4252,44.2156],
+								'伊宁': [81.2899,43.9154],
+								'昭苏县': [81.1565,43.1457],
+								'巩留县': [82.2494,43.4912],
+								'那拉提': [84.0339,43.3272],
+								'库车县': [82.9684,41.7246],
+								'阿拉尔市': [81.2928,40.5564],
+								'沙漠公路': [80.8696,38.8440],
+								'和田': [79.9314,37.1111],
+								'叶城': [77.4477,37.8734],
+								'希依提墩乡': [77.5449,38.9380],
+								'喀什': [76.0090,39.4616],
+								'塔什库尔干塔吉克自治县': [75.2342,37.7754],
+								'黑恰道班': [77.4551,36.4438],
+								'松西村': [80.4079,34.373],
+								'噶尔县': [80.1319,32.4755],
+								'冈仁波齐': [81.2818,30.9738],
+								'萨嘎县': [85.2464,29.3270],
+								'珠峰大本营': [86.8929,28.1922],
+								'日客则': [88.9074,29.2625],
+								'羊卓雍措': [90.5184,29.0141],
+								'拉萨': [91.1255,29.6509],
+								'纳木错': [90.9737,30.8578],
+								'日多乡': [92.2411,29.6999],
+								'林芝': [94.3696,29.6536],
+								'然乌镇': [96.7498,29.5109],
+								'盐井村': [98.6158,29.0301],
+
+								'香格里拉': [99.7148,27.8377],
+								'丽江': [100.2345,26.8643],
+								'泸沽湖': [100.9106,27.7231],
+								'大理': [100.2334,25.5949],
+								'昆明': [102.8366,24.8922],
+								'罗平县': [104.3130,24.8963],
+
+								'安龙县': [105.4536,25.1038],
+								'南宁': [108.3880,22.8301],
+								'玉林': [110.1771,22.6851],
+								'岑溪': [111.0096,22.9366],
+
+								'广州': [113.2816,23.1452],
+								'深圳': [114.0635,22.5570],
+								'汕头': [116.6759,23.3747],
+
+								'厦门': [118.1017,24.4908],
+								'福州': [119.3068,26.0965],
+
+								'温州': [119.3068,26.0965],
+								'台州': [121.4272,28.6883],
+								'宁波': [121.5604,29.8923],
+
+								'卡普恰盖': [77.0523,43.8669],
+								'加德满都': [85.3859,27.6487]
+
+							},
+							markPoint : {
+								symbol:'emptyCircle',
+								symbolSize : function (v){
+									return 3 + v/50
+								},
+								effect : {
+									show: true,
+									shadowBlur : 0
+								},
+								itemStyle:{
+									normal:{
+										label:{show:false}
+									},
+									emphasis: {
+										label:{position:'top'}
+									}
+								},
+								data : [
+									{name: '上海', value: 1},
+									{name: '重庆市', value: 1},
+									{name: '武汉', value: 1},
+									{name: '南京', value: 1},
+									{name: '石家庄', value: 1},
+									{name: '太原', value: 1},
+									{name: '合肥', value: 1},
+									{name: '南昌', value: 1},
+									{name: '济南', value: 1},
+									{name: '郑州', value: 1},
+									{name: '长沙', value: 1},
+									{name: '海口', value: 1},
+									{name: '成都', value: 1},
+									{name: '贵阳', value: 1},
+									{name: '西安', value: 1},
+									{name: '南沙群岛', value: 1},
+									{name: '台北', value: 1},
+									{name: '香港', value: 1},
+									{name: '澳门', value: 1},
+
+									{name: '杭州', value: 10},
+									{name: '南通', value: 10},
+									{name: '连云港', value: 10},
+									{name: '青岛', value: 10},
+									{name: '威海', value: 10},
+									{name: '蓬莱', value: 10},
+									{name: '央子镇', value: 10},
+									{name: '滨江', value: 10},
+									{name: '天津', value: 10},
+									{name: '北京', value: 10},
+									{name: '唐山', value: 10},
+									{name: '葫芦岛', value: 10},
+									{name: '沈阳', value: 10},
+									{name: '长春', value: 10},
+									{name: '哈尔滨', value: 10},
+									{name: '齐齐哈尔', value: 10},
+
+									{name: '呼伦贝尔', value: 20},
+									{name: '满洲里', value: 20},
+
+									{name: '奥洛维扬纳亚', value: 30},
+									{name: '赤塔', value: 30},
+									{name: '希洛克', value: 30},
+									{name: '乌兰乌德', value: 30},
+									{name: '贝加尔湖', value: 30},
+
+									{name: '苏赫巴托尔', value: 40},
+									{name: '巴彦高勒', value: 40},
+									{name: '乌兰巴托', value: 40},
+									{name: '苏木贝尔', value: 40},
+									{name: '赛音山达', value: 40},
+
+									{name: '二连浩特', value: 20},
+									{name: '乌兰察布', value: 20},
+									{name: '呼和浩特', value: 20},
+									{name: '包头', value: 20},
+									{name: '巴彦淖尔', value: 20},
+									{name: '银川', value: 20},
+									{name: '兰州', value: 20},
+									{name: '西宁', value: 20},
+									{name: '石乃亥乡', value: 20},
+									{name: '祁连县', value: 20},
+									{name: '嘉峪关', value: 20},
+									{name: '瓜州县', value: 20},
+									{name: '敦煌', value: 20},
+									{name: '柳园镇', value: 20},
+
+									{name: '红柳村', value: 50},
+									{name: '哈密', value: 50},
+									{name: '吐鲁番', value: 50},
+									{name: '乌鲁木齐', value:50},
+									{name: '恰库尔图镇', value: 50},
+									{name: '北屯市', value: 50},
+									{name: '喀纳斯湖', value: 50},
+									{name: '吉木乃县', value: 50},
+									{name: '克拉玛依', value: 50},
+									{name: '乌苏', value: 50},
+									{name: '赛里木湖', value: 50},
+									{name: '伊宁', value: 50},
+									{name: '昭苏县', value: 50},
+									{name: '巩留县', value: 50},
+									{name: '那拉提', value: 50},
+									{name: '库车县', value: 50},
+									{name: '阿拉尔市', value: 50},
+									{name: '沙漠公路', value: 50},
+									{name: '和田', value: 50},
+									{name: '叶城', value: 50},
+									{name: '希依提墩乡', value: 50},
+									{name: '喀什', value: 50},
+									{name: '塔什库尔干塔吉克自治县', value: 50},
+
+									{name: '黑恰道班', value: 55},
+									{name: '松西村', value: 55},
+									{name: '噶尔县', value: 55},
+									{name: '冈仁波齐', value: 55},
+									{name: '萨嘎县', value: 55},
+									{name: '珠峰大本营', value: 55},
+									{name: '日客则', value: 55},
+									{name: '羊卓雍措', value: 55},
+									{name: '拉萨', value: 55},
+									{name: '纳木错', value: 55},
+									{name: '日多乡', value: 55},
+									{name: '林芝', value: 55},
+									{name: '然乌镇', value: 55},
+									{name: '盐井村', value: 55},
+
+									{name: '香格里拉', value: 10},
+									{name: '丽江', value: 10},
+									{name: '泸沽湖', value: 10},
+									{name: '大理', value: 10},
+									{name: '昆明', value: 10},
+									{name: '罗平县', value: 10},
+									{name: '安龙县', value: 10},
+									{name: '南宁', value: 10},
+									{name: '玉林', value: 10},
+									{name: '岑溪', value: 10},
+									{name: '广州', value: 10},
+									{name: '深圳', value: 10},
+									{name: '汕头', value: 10},
+									{name: '厦门', value: 10},
+									{name: '福州', value: 10},
+									{name: '温州', value: 10},
+									{name: '台州', value: 10},
+									{name: '宁波', value: 10},
+
+									{name: '卡普恰盖', value: 50},
+									{name: '加德满都', value: 60}
+								]
+							}
+						},
+						{
+							// name: '杭州',
+							type: 'map',
+							mapType: 'china',
+							data:[],
+							markLine : {
+								smooth: false,
+								effect: {
+									show: false,	// 显隐移动效果
+									scaleSize: 2,
+									period: 200,	// 移动速度
+									color: '#fff',
+									shadowBlur: 10
+								},
+								itemStyle : {
+									normal: {
+										label:{show:false},
+										borderWidth:1,
+										lineStyle: {
+											type: 'solid',
+											width: 2,
+											shadowBlur: 10
+										}
+									}
+								},
+								data : [
+									[{name: '杭州'}, {name: '南通', value: 10}],
+									[{name: '南通'}, {name: '连云港', value: 10}],
+									[{name: '连云港'}, {name: '青岛', value: 10}],
+									[{name: '青岛'}, {name: '威海', value: 10}],
+									[{name: '威海'}, {name: '蓬莱', value: 10}],
+									[{name: '蓬莱'}, {name: '央子镇', value: 10}],
+									[{name: '央子镇'}, {name: '滨江', value: 10}],
+									[{name: '滨江'}, {name: '天津', value: 10}],
+									[{name: '天津'}, {name: '北京', value: 10}],
+									[{name: '北京'}, {name: '唐山', value: 10}],
+									[{name: '唐山'}, {name: '葫芦岛', value: 10}],
+									[{name: '葫芦岛'}, {name: '沈阳', value: 10}],
+									[{name: '沈阳'}, {name: '长春', value: 10}],
+									[{name: '长春'}, {name: '哈尔滨', value: 10}],
+									[{name: '哈尔滨'}, {name: '齐齐哈尔', value: 10}],
+
+									[{name: '齐齐哈尔'}, {name: '呼伦贝尔', value: 20}],
+									[{name: '呼伦贝尔'}, {name: '满洲里', value: 20}],
+
+									[{name: '满洲里'}, {name: '奥洛维扬纳亚', value: 30}],
+									[{name: '奥洛维扬纳亚'}, {name: '赤塔', value: 30}],
+									[{name: '赤塔'}, {name: '希洛克', value: 30}],
+									[{name: '希洛克'}, {name: '乌兰乌德', value: 30}],
+									[{name: '乌兰乌德'}, {name: '贝加尔湖', value: 30}],
+
+									[{name: '贝加尔湖'}, {name: '苏赫巴托尔', value: 40}],
+									[{name: '苏赫巴托尔'}, {name: '巴彦高勒', value: 40}],
+									[{name: '巴彦高勒'}, {name: '乌兰巴托', value: 40}],
+									[{name: '乌兰巴托'}, {name: '苏木贝尔', value: 40}],
+									[{name: '苏木贝尔'}, {name: '赛音山达', value: 40}],
+
+									[{name: '赛音山达'}, {name: '二连浩特', value: 20}],
+									[{name: '二连浩特'}, {name: '乌兰察布', value: 20}],
+									[{name: '乌兰察布'}, {name: '呼和浩特', value: 20}],
+									[{name: '呼和浩特'}, {name: '包头', value: 20}],
+									[{name: '包头'}, {name: '巴彦淖尔', value: 20}],
+									[{name: '巴彦淖尔'}, {name: '银川', value: 20}],
+									[{name: '银川'}, {name: '兰州', value: 20}],
+									[{name: '兰州'}, {name: '西宁', value: 20}],
+									[{name: '西宁'}, {name: '石乃亥乡', value: 20}],
+									[{name: '石乃亥乡'}, {name: '祁连县', value: 20}],
+									[{name: '祁连县'}, {name: '嘉峪关', value: 20}],
+									[{name: '嘉峪关'}, {name: '瓜州县', value: 20}],
+									[{name: '瓜州县'}, {name: '敦煌', value: 20}],
+									[{name: '敦煌'}, {name: '柳园镇', value: 20}],
+
+									[{name: '柳园镇'}, {name: '红柳村', value: 50}],
+									[{name: '红柳村'}, {name: '哈密', value: 50}],
+									[{name: '哈密'}, {name: '吐鲁番', value: 50}],
+									[{name: '吐鲁番'}, {name: '乌鲁木齐', value: 50}],
+									[{name: '乌鲁木齐'}, {name: '恰库尔图镇', value: 50}],
+									[{name: '恰库尔图镇'}, {name: '北屯市', value: 50}],
+									[{name: '北屯市'}, {name: '喀纳斯湖', value: 50}],
+									[{name: '喀纳斯湖'}, {name: '吉木乃县', value: 50}],
+									[{name: '吉木乃县'}, {name: '克拉玛依', value: 50}],
+									[{name: '克拉玛依'}, {name: '乌苏', value: 50}],
+									[{name: '乌苏'}, {name: '赛里木湖', value: 50}],
+									[{name: '赛里木湖'}, {name: '霍尔果斯', value: 50}],
+									[{name: '霍尔果斯'}, {name: '卡普恰盖', value: 50}],
+									[{name: '卡普恰盖'}, {name: '伊宁', value: 50}],
+									[{name: '伊宁'}, {name: '昭苏县', value: 50}],
+									[{name: '昭苏县'}, {name: '巩留县', value: 50}],
+									[{name: '巩留县'}, {name: '那拉提', value: 50}],
+									[{name: '那拉提'}, {name: '库车县', value: 50}],
+									[{name: '库车县'}, {name: '阿拉尔市', value: 50}],
+									[{name: '阿拉尔市'}, {name: '沙漠公路', value: 50}],
+									[{name: '沙漠公路'}, {name: '和田', value: 50}],
+									[{name: '和田'}, {name: '叶城', value: 50}],
+									[{name: '叶城'}, {name: '希依提墩乡', value: 50}],
+									[{name: '希依提墩乡'}, {name: '喀什', value: 50}],
+									[{name: '喀什'}, {name: '塔什库尔干塔吉克自治县', value: 50}],
+
+									[{name: '塔什库尔干塔吉克自治县'}, {name: '黑恰道班', value: 55}],
+									[{name: '黑恰道班'}, {name: '松西村', value: 55}],
+									[{name: '松西村'}, {name: '噶尔县', value: 55}],
+									[{name: '噶尔县'}, {name: '冈仁波齐', value: 55}],
+									[{name: '冈仁波齐'}, {name: '萨嘎县', value: 55}],
+									[{name: '萨嘎县'}, {name: '加德满都', value: 55}],
+									[{name: '加德满都'}, {name: '珠峰大本营', value: 55}],
+									[{name: '珠峰大本营'}, {name: '日客则', value: 55}],
+									[{name: '日客则'}, {name: '羊卓雍措', value: 55}],
+									[{name: '羊卓雍措'}, {name: '拉萨', value: 55}],
+									[{name: '拉萨'}, {name: '纳木错', value: 55}],
+									[{name: '纳木错'}, {name: '日多乡', value: 55}],
+									[{name: '日多乡'}, {name: '林芝', value: 55}],
+									[{name: '林芝'}, {name: '然乌镇', value: 55}],
+									[{name: '然乌镇'}, {name: '盐井村', value: 55}],
+
+									[{name: '盐井村'}, {name: '香格里拉', value: 10}],
+									[{name: '香格里拉'}, {name: '丽江', value: 10}],
+									[{name: '丽江'}, {name: '泸沽湖', value: 10}],
+									[{name: '泸沽湖'}, {name: '大理', value: 10}],
+									[{name: '大理'}, {name: '昆明', value: 10}],
+									[{name: '昆明'}, {name: '罗平县', value: 10}],
+									[{name: '罗平县'}, {name: '安龙县', value: 10}],
+									[{name: '安龙县'}, {name: '南宁', value: 10}],
+									[{name: '南宁'}, {name: '玉林', value: 10}],
+									[{name: '玉林'}, {name: '岑溪', value: 10}],
+									[{name: '岑溪'}, {name: '广州', value: 10}],
+									[{name: '广州'}, {name: '深圳', value: 10}],
+									[{name: '深圳'}, {name: '汕头', value: 10}],
+									[{name: '汕头'}, {name: '厦门', value: 10}],
+									[{name: '厦门'}, {name: '福州', value: 10}],
+									[{name: '福州'}, {name: '温州', value: 10}],
+									[{name: '温州'}, {name: '台州', value: 10}],
+									[{name: '台州'}, {name: '宁波', value: 10}],
+									[{name: '宁波'}, {name: '杭州', value: 10}]
+								]
+							}
+						}
+					]
+	        });
+		});
+	}
+
+	/*** ---------------------- bike line ---------------------- ***/
+
+    var provinceBikeArr = [
+	    ['重庆', '重庆市', 'chongqing'],
+	    ['新疆', '乌鲁木齐', 'xinjiang'],
+	    ['西藏', '拉萨', 'xizang'],
+	    ['宁夏', '银川', 'ningxia'],
+		['广西', '南宁', 'guangxi'],
+	    ['内蒙古', '呼和浩特', 'neimenggu'],
+	    ['广东', '广州', 'guangdong'],
+		['浙江', '杭州', 'zhejiang'],
+		['福建', '福州', 'fujian'],
+	    ['湖北', '武汉', 'hubei'],
+	    ['江苏', '南京', 'jiangsu'],
+	    ['河北', '石家庄', 'hebei'],
+	    ['山西', '太原', 'shanxi'],
+	    ['辽宁', '沈阳', 'liaoning'],
+	    ['吉林', '长春', 'jilin'],
+	    ['黑龙江', '哈尔滨', 'heilongjiang'],
+	    ['安徽', '合肥', 'anhui'],
+	    ['江西', '南昌', 'jiangxi'],
+	    ['山东', '济南', 'shandong'],
+	    ['河南', '郑州', 'henan'],
+	    ['湖南', '长沙', 'hunan'],
+	    ['海南', '海口', 'hainan'],
+	    ['四川', '成都', 'sichuan'],
+	    ['贵州', '贵阳', 'guizhou'],
+	    ['云南', '昆明', 'yunnan'],
+	    ['陕西', '西安', 'shanxi1'],
+	    ['甘肃', '兰州', 'gansu'],
+	    ['青海', '西宁', 'qinghai'],
+	    ['南海诸岛', '南沙群岛', 'nanhai'],
+	    ['台湾', '台北', 'taiwan']
+	];
+
+	var countryBikeArr = [
+		['俄罗斯', '奥洛维扬纳亚', 'Russia', 'russia', 'russia','Оловяннинский'],
+	    ['哈萨克斯坦', '卡普恰盖', 'Kazakhstan','kazakhstan','kazakhstan', 'Капуча'],
+	    ['日本', '东京', 'Japan','japan','japan', 'とうきょう、Tōkyō'],
+	    ['中国', '北京', 'China','beijing','china','Beijing'],
+	    ['中国', '天津', 'China','tianjin','china','Tianjin'],
+	    ['中国', '上海', 'China','shanghai','china','Shanghai'],
+	    ['中国', '香港', 'China','xianggang','hongkong','Hongkong'],
+	    ['中国', '澳门', 'China','aomen','macao','Macao']
+	];
+
+    function getBikeEcharts(){
+	    // Step:1 conifg ECharts's path, link to echarts.js from current page.
+	    // Step:1 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+	    require.config({
+	        paths: {
+	            echarts: './js'
+	        }
+	    });
+
+	    // Step:2 require echarts and use it in the callback.
+	    // Step:2 动态加载echarts然后在回调函数中开始使用，注意保持按需加载结构定义图表路径
+	    require(
+	        [
+	            'echarts',
+	            'echarts/chart/map'
+	        ],
+	        function (ec) {
+	            // --- 地图 ---
+	            var myChart = ec.init(document.getElementById('bikeMap'));
+
+	            myChart.on('click', function (params) {
+				    var name = params.name;
+				    var val = '';
+				    var index = 0;
+				    var country = '';
+				    var site = '';
+				    var pic = '';
+				    var nation = '';
+				    if(!!name){
+				    	// 禁止点击线
+				    	if(name.indexOf('>') != -1){
+				    		return false;
+				    	}
+
+				    	for(var i=0; i<provinceBikeArr.length; i++){
+				    		if(provinceBikeArr[i][0] === name){
+				    			val = provinceBikeArr[i][2];
+				    			swal({
+								  title: '中国 · '+name,
+								  text: 'china · '+val,
+								  imageUrl: 'imgs/country/china.png',
+								  imageWidth: 194,
+								  imageHeight: 128,
+								  imageAlt: val,
+								  animation: false,
+								  showCancelButton: true,
+								  confirmButtonColor: '#3085d6',
+								  cancelButtonColor: '#d33',
+								  confirmButtonText: '图片 Photo',
+								  cancelButtonText: '线路 Line'
+								}).then(function(result) {
+									if (result.value) {	// confirm = photo
+										window.location.href = 'photo-bike/'+val+'.html';
+									}else if(result.dismiss === 'cancel') {	// cancel = line
+										window.location.href = 'region-bike/'+val+'.html';
+									}
+								});
+								return false;
+				    		}
+				    	}
+
+				    	for(var j=0; j<countryBikeArr.length; j++){
+				    		if(countryBikeArr[j][1] === name){
+								++index; val = countryBikeArr[j][3]; country = countryBikeArr[j][0]; site = countryBikeArr[j][5]; pic = countryBikeArr[j][4]; nation = countryBikeArr[j][2]; break;
+				    		}
+				    	}
+
+				    	if(!!index){
+							swal({
+							  title: country+' · '+name,
+							  text: nation+' · '+site,
+							  imageUrl: 'imgs/country/'+pic+'.png',
+							  imageWidth: 194,
+							  imageHeight: 128,
+							  imageAlt: val,
+							  animation: false,
+							  showCancelButton: true,
+							  confirmButtonColor: '#3085d6',
+							  cancelButtonColor: '#d33',
+							  confirmButtonText: '图片 Photo',
+							  cancelButtonText: '线路 Line'
+							}).then(function(result) {
+								if (result.value) {	// confirm = photo
+									window.location.href = 'photo-bike/'+val+'.html';
+								}else if(result.dismiss === 'cancel') {	// cancel = line
+									window.location.href = 'region-bike/'+val+'.html';
+								}
+							});
+							return false;
+				    	}
+				    }
+				});
+
+	            myChart.setOption({
+	            	title: {
+			            text: '实际骑行路线',
+			            textStyle:{
+		                    color:'#0B615E'
+		                },
+			            subtext: 'actual bike line',
+			            subtextStyle:{
+		                    color:'#0B615E'
+		                },
+		                link: "region-bike/plan.html",	// 点击标题内容要跳转的链接
+		                sublink: "region-bike/plan.html",
+			            x:'center',
+				        y:'top',
+				        textAlign:'center'
+			        },
+				    tooltip: {
+						formatter: function (params, ticket, callback) {
+							if (params.name.indexOf('>') != -1) {
+						        return '';
+							} else {
+								return info = '<pre style="font-size:16px">' + params.name + '</pre>'
+							}
+						},
+						backgroundColor: "#ff7f50",   // 提示框背景颜色
+						textStyle: { color: "#fff" }  // 提示框字体颜色
+					},
+					dataRange: {
+						min : 0,
+						max : 60,
+						calculable : true,
+						show: false,
+						text:['High','Low'],
+						color: ['#ff3333', 'orange', 'yellow','lime','aqua'],
+						textStyle:{
+							color:'#fff'
+						}
+					},
+					series : [
+						{
+							type: 'map',
+							roam: false,	// true:支持缩放 false:不支持缩放
+							hoverable: true,
+							mapType: 'china',
+							itemStyle:{
+								normal:{
+									// borderColor:'#009fd8',
+									// borderColor:'#004383',
+									borderWidth:1,
+									areaStyle:{
+										color: '#004383'
+									}
+								}
+							},
+							data:[],
+							markLine : {
+								smooth:true,
+								symbol: ['none', 'circle'],
+								symbolSize : 1,
+								itemStyle : {
+									normal: {
+										color:'#fff',
+										borderWidth:1,
+										borderColor:'rgba(30,144,255,0.5)'
+									}
+								},
+								data: []
+							},
+							geoCoord: {
+								'上海': [121.4648,31.2891],
+								'重庆市': [107.7539,30.1904],
+								'武汉': [114.3896,30.6628],
+								'南京': [118.8062,31.9208],
+								'石家庄': [114.4995,38.1006],
+								'太原': [112.3352,37.9413],
+								'合肥': [117.29,32.0581],
+								'南昌': [116.0046,28.6633],
+								'济南': [117.1582,36.8701],
+								'郑州': [113.4668,34.6234],
+								'长沙': [113.0823,28.2568],
+								'海口': [110.3893,19.8516],
+								'成都': [103.9526,30.7617],
+								'贵阳': [106.6992,26.7682],
+								'西安': [109.1162,34.2004],
+								'南沙群岛': [115.8151,18.2930],
+								'台北': [121.5629,25.0413],
+								'香港': [114.1726,22.2803],
+								'澳门': [113.5516,22.1926],
+
+								'昆明': [102.8366,24.8922],
+								'南宁': [108.3880,22.8301],
+								'广州': [113.2816,23.1452],
+
+								'杭州': [120.1622,30.2843],
+								'震泽古镇': [120.512325,30.915611],
+								'昆承湖': [120.780851,31.570896],
+								'南通': [120.900154,31.986059],
+								'通海湖公园': [120.844904,32.765633],
+								'大丰区': [120.470252,33.206857],
+								'白天鹅公园': [119.799891,33.770482],
+								'杨集镇': [119.625683,33.595164],
+								'和安湖生态公园': [119.194243,34.839338],
+								'海曲公园': [119.47976,35.427997],
+								'双球公园': [119.993756,35.87405],
+								'墨河公园': [120.457258,36.39093],
+								'交通商务宾馆': [120.521379,36.866224],
+								'广霞旅馆': [121.158924,37.207359],
+								'烟台港客运站': [121.383961,37.562121],
+								'炮台山公园': [121.777277,39.059705],
+								'中心公园': [122.351253,39.400812],
+								'青堆镇': [123.266472,39.837242],
+								'东港市': [124.157086,39.875871],
+								'佳谊宾馆': [124.398722,40.130189],
+								'凤城市体育馆': [124.078423,40.451763],
+								'草河口镇': [123.915956,40.878748],
+								'望溪公园': [123.776524,41.296983],
+								'高官乡': [123.917301,41.482279],
+								'万科金域国际': [123.990621,41.889081],
+								'人民公园': [124.051591,42.549359],
+								'南湖公园': [124.370101,43.168397],
+								'响铃公园': [124.844784,43.513714],
+								'朝阳公园': [125.308544,43.878941],
+								'龙潭公园': [125.191063,44.440557],
+								'镜湖公园': [124.815378,45.136638],
+								'兴城镇': [125.321091,46.000287],
+								'儿童公园': [125.002461,46.61306],
+								'鑫佰利宾馆': [124.445597,46.868394],
+								'鹤泉园': [123.948854,47.345248],
+								'幸福广场': [123.473942,48.130045],
+								'慧源快捷宾馆': [123.08445,48.528295],
+								'大时尼奇': [122.572199,48.699932],
+								'兴安岭站': [121.678724,48.827368],
+								'乌奴耳镇': [121.257357,48.870616],
+								'牙克石市': [120.718059,49.290145],
+								'凯沃宾馆': [119.782367,49.212733],
+								'沃新哈格音': [118.876781,49.382083],
+								'飞马广场': [117.677842,49.512349],
+								'七居商务宾馆': [117.463938,49.59444],
+
+								'新巴尔虎右旗': [116.843217,48.678133],
+								'阿尔山': [120.344452,47.185303],
+								'霍林郭勒': [119.666052,45.544062],
+								'锡林浩特': [116.094677,43.908022],
+								'张家口': [114.894253,40.783685],
+								'太原': [112.576194,37.86943],
+								'临汾': [111.509151,36.083479],
+								'西安': [108.970324,34.362511],
+								'天水': [105.787591,34.560617],
+								'兰州': [105.787591,34.560617],
+								'西宁': [101.813775,36.589582],
+								'黑马河': [99.514113,36.870957],
+								'祁连县': [100.231608,38.176882],
+								'张掖': [100.231608,38.176882],
+								'嘉峪关': [98.286093,39.777995],
+								'玉门': [97.058074,40.31178],
+								'敦煌': [94.671025,40.149616],
+								'柳园': [95.487692,41.091061],
+
+								'红柳村': [94.6488,41.6087],
+								'哈密': [93.5850,42.8368],
+								'吐鲁番': [89.2433,42.9450],
+								'乌鲁木齐': [87.9236,43.5883],
+								'恰库尔图镇': [89.5514,46.3374],
+								'北屯市': [87.8186,47.3590],
+								'喀纳斯湖': [87.0275,48.7990],
+								'吉木乃县': [85.9053,47.4394],
+								'克拉玛依': [84.8935,45.5787],
+								'乌苏': [84.7555,44.4104],
+								'赛里木湖': [81.1703,44.7293],
+								'霍尔果斯': [80.4252,44.2156],
+								'伊宁': [81.2899,43.9154],
+								'昭苏县': [81.1565,43.1457],
+								'巩留县': [82.2494,43.4912],
+								'那拉提': [84.0339,43.3272],
+								'库车县': [82.9684,41.7246],
+								'阿拉尔市': [81.2928,40.5564],
+								'沙漠公路': [80.8696,38.8440],
+								'和田': [79.9314,37.1111],
+								'叶城': [77.4477,37.8734],
+								'希依提墩乡': [77.5449,38.9380],
+								'喀什': [76.0090,39.4616],
+								'塔什库尔干塔吉克自治县': [75.2342,37.7754],
+								'黑恰道班': [77.4551,36.4438],
+								'松西村': [80.4079,34.373],
+								'噶尔县': [80.1319,32.4755],
+								'冈仁波齐': [81.2818,30.9738],
+								'萨嘎县': [85.2464,29.3270],
+								'珠峰大本营': [86.8929,28.1922],
+								'日客则': [88.9074,29.2625],
+								'羊卓雍措': [90.5184,29.0141],
+								'拉萨': [91.1255,29.6509],
+								'唐古拉山口': [91.933277,32.877712],
+
+								'奥洛维扬纳亚': [115.5217,50.9653],
+								'卡普恰盖': [77.0523,43.8669],
+								'东京': [125.298068,37.12655]
+								// '东京': [139.745627,35.656515]
+
+							},
+							markPoint : {
+								symbol:'emptyCircle',
+								symbolSize : function (v){
+									return 3 + v/50
+								},
+								effect : {
+									show: true,
+									shadowBlur : 0
+								},
+								itemStyle:{
+									normal:{
+										label:{show:false}
+									},
+									emphasis: {
+										label:{position:'top'}
+									}
+								},
+								data : [
+									{name: '上海', value: 1},
+									{name: '杭州', value: 1},
+									{name: '重庆市', value: 1},
+									{name: '武汉', value: 1},
+									{name: '南京', value: 1},
+									{name: '石家庄', value: 1},
+									{name: '太原', value: 1},
+									{name: '合肥', value: 1},
+									{name: '南昌', value: 1},
+									{name: '济南', value: 1},
+									{name: '郑州', value: 1},
+									{name: '长沙', value: 1},
+									{name: '海口', value: 1},
+									{name: '成都', value: 1},
+									{name: '贵阳', value: 1},
+									{name: '西安', value: 1},
+									{name: '南沙群岛', value: 1},
+									{name: '台北', value: 1},
+									{name: '香港', value: 1},
+									{name: '澳门', value: 1},
+									{name: '西宁', value: 1},
+									{name: '昆明', value: 1},
+									{name: '南宁', value: 1},
+									{name: '广州', value: 1},
+									{name: '拉萨', value: 1},
+									{name: '乌鲁木齐', value:1},
+
+
+									{name: '南通', value: 10},
+									{name: '烟台港客运站', value: 10},
+									{name: '和安湖生态公园', value: 10},
+									{name: '炮台山公园', value: 10},
+									{name: '佳谊宾馆', value: 10},
+									{name: '万科金域国际', value: 10},
+									{name: '朝阳公园', value: 10},
+									{name: '镜湖公园', value: 10},
+									{name: '儿童公园', value: 10},
+									{name: '鹤泉园', value: 10},
+								    {name: '大时尼奇', value: 10},
+									{name: '牙克石市', value: 10},
+									{name: '沃新哈格音', value: 10},
+									{name: '七居商务宾馆', value: 10},
+									{name: '新巴尔虎右旗', value: 40},
+									{name: '阿尔山', value: 40},
+									{name: '霍林郭勒', value: 40},
+									{name: '锡林浩特', value: 40},
+									{name: '张家口', value: 40},
+									{name: '临汾', value: 40},
+									{name: '天水', value: 40},
+
+									{name: '兰州', value: 40},
+
+									{name: '祁连县', value: 40},
+									{name: '嘉峪关', value: 40},
+									{name: '敦煌', value: 40},
+									{name: '柳园', value: 40},
+									{name: '玉门', value: 40},
+									{name: '黑马河', value: 40},
+
+									{name: '红柳村', value: 50},
+									{name: '哈密', value: 50},
+									{name: '吐鲁番', value: 50},
+
+									{name: '恰库尔图镇', value: 50},
+									{name: '北屯市', value: 50},
+									{name: '喀纳斯湖', value: 50},
+									{name: '吉木乃县', value: 50},
+									{name: '克拉玛依', value: 50},
+									{name: '乌苏', value: 50},
+									{name: '赛里木湖', value: 50},
+									{name: '伊宁', value: 50},
+									{name: '昭苏县', value: 50},
+									{name: '巩留县', value: 50},
+									{name: '那拉提', value: 50},
+									{name: '库车县', value: 50},
+									{name: '阿拉尔市', value: 50},
+									{name: '沙漠公路', value: 50},
+									{name: '和田', value: 50},
+									{name: '叶城', value: 50},
+									{name: '希依提墩乡', value: 50},
+									{name: '喀什', value: 50},
+									{name: '塔什库尔干塔吉克自治县', value: 50},
+									{name: '霍尔果斯', value: 50},
+
+									{name: '黑恰道班', value: 55},
+									{name: '松西村', value: 55},
+									{name: '噶尔县', value: 55},
+									{name: '冈仁波齐', value: 55},
+									{name: '萨嘎县', value: 55},
+									{name: '珠峰大本营', value: 55},
+									{name: '日客则', value: 55},
+									{name: '羊卓雍措', value: 55},
+									{name: '唐古拉山口', value: 55},
+
+									{name: '卡普恰盖', value: 60},
+									{name: '奥洛维扬纳亚', value: 60},
+									{name: '东京', value: 60}
+
+								]
+							}
+						},
+						{
+							// name: '杭州',
+							type: 'map',
+							mapType: 'china',
+							data:[],
+							markLine : {
+								smooth: false,
+								effect: {
+									show: false,	// 显隐移动效果
+									scaleSize: 2,
+									period: 200,	// 移动速度
+									color: '#fff',
+									shadowBlur: 10
+								},
+								itemStyle : {
+									normal: {
+										label:{show:false},
+										borderWidth:1,
+										lineStyle: {
+											type: 'solid',
+											width: 2,
+											shadowBlur: 10
+										}
+									}
+								},
+								data : [
+									[{name: '杭州'}, {name: '南通', value: 10}],
+									[{name: '南通'}, {name: '和安湖生态公园', value: 10}],
+									[{name: '和安湖生态公园'}, {name: '烟台港客运站', value: 10}],
+									[{name: '烟台港客运站'}, {name: '炮台山公园', value: 10}],
+									[{name: '炮台山公园'}, {name: '佳谊宾馆', value: 10}],
+									[{name: '佳谊宾馆'}, {name: '万科金域国际', value: 10}],
+									[{name: '万科金域国际'}, {name: '朝阳公园', value: 10}],
+									[{name: '朝阳公园'}, {name: '镜湖公园', value: 10}],
+									[{name: '镜湖公园'}, {name: '儿童公园', value: 10}],
+									[{name: '儿童公园'}, {name: '鹤泉园', value: 10}],
+									[{name: '鹤泉园'}, {name: '大时尼奇', value: 10}],
+									[{name: '大时尼奇'}, {name: '牙克石市', value: 10}],
+									[{name: '牙克石市'}, {name: '沃新哈格音', value: 10}],
+									[{name: '沃新哈格音'}, {name: '七居商务宾馆', value: 10}],
+
+									[{name: '七居商务宾馆'}, {name: '新巴尔虎右旗', value: 40}],
+									[{name: '新巴尔虎右旗'}, {name: '阿尔山', value: 40}],
+									[{name: '阿尔山'}, {name: '霍林郭勒', value: 40}],
+									[{name: '霍林郭勒'}, {name: '锡林浩特', value: 40}],
+									[{name: '锡林浩特'}, {name: '张家口', value: 40}],
+									[{name: '张家口'}, {name: '太原', value: 40}],
+									[{name: '太原'}, {name: '临汾', value: 40}],
+									[{name: '临汾'}, {name: '西安', value: 40}],
+									[{name: '西安'}, {name: '天水', value: 40}],
+									[{name: '天水'}, {name: '兰州', value: 40}],
+									[{name: '兰州'}, {name: '西宁', value: 40}],
+									[{name: '西宁'}, {name: '黑马河', value: 40}],
+									[{name: '黑马河'}, {name: '祁连县', value: 40}],
+									[{name: '祁连县'}, {name: '张掖', value: 40}],
+									[{name: '张掖'}, {name: '嘉峪关', value: 40}],
+									[{name: '嘉峪关'}, {name: '玉门', value: 40}],
+									[{name: '玉门'}, {name: '敦煌', value: 40}],
+									[{name: '敦煌'}, {name: '柳园', value: 40}],
+									[{name: '柳园'}, {name: '红柳村', value: 40}],
+
+									[{name: '红柳村'}, {name: '哈密', value: 50}],
+									[{name: '哈密'}, {name: '吐鲁番', value: 50}],
+									[{name: '吐鲁番'}, {name: '乌鲁木齐', value: 50}],
+									[{name: '乌鲁木齐'}, {name: '恰库尔图镇', value: 50}],
+									[{name: '恰库尔图镇'}, {name: '北屯市', value: 50}],
+									[{name: '北屯市'}, {name: '喀纳斯湖', value: 50}],
+									[{name: '喀纳斯湖'}, {name: '吉木乃县', value: 50}],
+									[{name: '吉木乃县'}, {name: '克拉玛依', value: 50}],
+									[{name: '克拉玛依'}, {name: '乌苏', value: 50}],
+									[{name: '乌苏'}, {name: '赛里木湖', value: 50}],
+									[{name: '赛里木湖'}, {name: '霍尔果斯', value: 50}],
+									[{name: '霍尔果斯'}, {name: '伊宁', value: 50}],
+									[{name: '伊宁'}, {name: '昭苏县', value: 50}],
+									[{name: '昭苏县'}, {name: '巩留县', value: 50}],
+									[{name: '巩留县'}, {name: '那拉提', value: 50}],
+									[{name: '那拉提'}, {name: '库车县', value: 50}],
+									[{name: '库车县'}, {name: '阿拉尔市', value: 50}],
+									[{name: '阿拉尔市'}, {name: '沙漠公路', value: 50}],
+									[{name: '沙漠公路'}, {name: '和田', value: 50}],
+									[{name: '和田'}, {name: '叶城', value: 50}],
+									[{name: '叶城'}, {name: '希依提墩乡', value: 50}],
+									[{name: '希依提墩乡'}, {name: '喀什', value: 50}],
+									[{name: '喀什'}, {name: '塔什库尔干塔吉克自治县', value: 50}],
+
+									[{name: '塔什库尔干塔吉克自治县'}, {name: '黑恰道班', value: 55}],
+									[{name: '黑恰道班'}, {name: '松西村', value: 55}],
+									[{name: '松西村'}, {name: '噶尔县', value: 55}],
+									[{name: '噶尔县'}, {name: '冈仁波齐', value: 55}],
+									[{name: '冈仁波齐'}, {name: '萨嘎县', value: 55}],
+									[{name: '萨嘎县'}, {name: '珠峰大本营', value: 55}],
+									[{name: '珠峰大本营'}, {name: '日客则', value: 55}],
+									[{name: '日客则'}, {name: '羊卓雍措', value: 55}],
+									[{name: '羊卓雍措'}, {name: '拉萨', value: 55}],
+									[{name: '拉萨'}, {name: '唐古拉山口', value: 55}],
+									[{name: '唐古拉山口'}, {name: '长沙', value: 55}],
+									[{name: '长沙'}, {name: '杭州', value: 55}]
+
+								]
+							}
+						}
+					]
+	        });
+		});
+	}
+
+
+	console.log([
+	 " _                            _                             _     _                                         ",
+	 "| |   ___   __   __   ___    (_)  ___      ___    _ __     | |_  | |__     ___    __      __   __ _   _   _ ",
+	 "| |  / _ \\  \\ \\ / /  / _ \\   | | / __|    / _ \\  | '_ \\    | __| | '_ \\   / _ \\   \\ \\ /\\ / /  / _` | | | | |",
+	 "| | | (_) |  \\ V /  |  __/   | | \\__ \\   | (_) | | | | |   | |_  | | | | |  __/    \\ V  V /  | (_| | | |_| |",
+	 "|_|  \\___/    \\_/    \\___|   |_| |___/    \\___/  |_| |_|    \\__| |_| |_|  \\___|     \\_/\\_/    \\__,_|  \\__, |",
+	 "                                                                                                      |___/ "
+	].join('\n'));
+
+	/*console.log("%c ", "padding:200px 300px;background:url('http://img.bbztx.com/image_test/upload/thumbs/20180930/logo/46c772bc-622e-4ad9-852f-49a67376a597_3459*3520.jpg') no-repeat;");*/
+
+	/* Preloder
+	-------------------------------------------------------------------*/
+	$(window).load(function () {
+	    "use strict";
+	    $("#loader").fadeOut();
+	    $("#preloader").delay(350).fadeOut("slow");
+	});
+	 /* Preloder End
+	-------------------------------------------------------------------*/
+</script>
+</body>
+</html>

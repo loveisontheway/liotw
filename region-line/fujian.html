@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>福建-地区路线</title>
+  <meta name="description" content="福建, fujian" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|闽、八闽、八闽大地、海西||<b>著名景点</b>|鼓浪屿、武夷山、泰宁、土楼、清源山、白水洋、太姥山、三坊七巷|
+|<b>行政区类别</b>|省||<b>机    场</b>|福州长乐国际机场、厦门高崎国际机场、泉州晋江国际机场等|
+|<b>所属地区</b>|中国华东地区||<b>火车站</b>|福州站、厦门北站、泉州站、漳州站、福州南站等|
+|<b>下辖地区</b>|9地级市、1综合实验区、29市辖区、10市辖开发区、12县级市、44县||<b>车牌代码</b>|闽A-闽K|
+|<b>电话区号</b>|0591-0599||<b>GDP</b>|32298.28亿元（2017年）|
+|<b>邮政区码</b>|350000-365000||<b>人均GDP</b>|82582元（2017年）|
+|<b>地理位置</b>|中国东南||<b>最长山脉</b>|武夷山脉|
+|<b>面    积</b>|12.4万平方千米||<b>最高山峰</b>|黄岗山（2157.8米）|
+|<b>人    口</b>|3911万（2017年末全省常住人口）||<b>最长河流</b>|闽江|
+|<b>方    言</b>|闽东语、闽南语、莆仙话、闽中语、客家语等||<b>最大岛屿</b>|海坛岛|
+|<b>气候条件</b>|亚热带季风气候||<b>知名高校</b>|厦门大学、福州大学等|
+|-|-||<b>历史名人</b>|林则徐、郑成功、朱熹、林语堂等|
+|-|-||<b>省委书记</b>|于伟国|
+|-|-||<b>省    长</b>|唐登杰|
+|-|-||<b>主要河流</b>|闽江、九龙江、晋江、汀江|
+|-|-||<b>民间信仰</b>|妈祖、关帝、开闽王、开漳圣王等|
+
+| <b>福建生活文化</b> | <b>福建特色文化</b> | <b>福建曲艺文化</b> | <b>福建建筑文化</b> | <b>福建宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">福建妈祖文化</a> | <a href="javascript:;" onclick="art(this);">传统曲艺民俗文化</a> | <a href="javascript:;" onclick="building(this);">福建土楼</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">船政文化</a> | - | <a href="javascript:;" onclick="building(this);">福建三坊七街</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | - | <a href="javascript:;" onclick="building(this);">福建庙宇/庙会</a> | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">福建禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/fujian.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/fujian.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '福建民风民俗', '福建历史源远流长，科学文化曾盛极一时。5000年前，先民们就在此生息繁衍，创造了可与仰韶又化、河姆渡文化相媲美的昙石山文化。南宋和元代，泉州成为世界上最大商港之一，与100多个国家和地区有通商关系，形成了着名的“海上丝绸之路”。那么福建的民俗文化都有哪些？'],
+    ['方言文化', 'live-2', '福建方言', '福建省历来以方言复杂着称。全国汉语方言有七大类，福建境内就占有其五：闽方言、客方言、赣方言、吴方言和官话方言。方言的形成主要是由于社会的分裂、人民的迁徙、民族的融合和地理的阻隔。福建境内现存的各种方言都有自己独特的形成过程。那么福建方言总的来说有什么特色呢？'],
+    ['节日文化', 'live-3', '福建节日', '福建重要的传统节日有春节(元旦)、元宵、拗九、清明、端午、七夕、中元、中秋、冬至、除夕等。福建各地许多节日习俗多姿多彩,具有浓郁的地方文化特色,成为福建民俗文化不可或缺的组成部分。过年、元宵与拗九正月初一是一年中最重要的。那么福建除了这些普通的节日风俗以外，福建还有哪些特殊的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '福建嫁娶文化', '福建，简称“闽”，省会福州。福建位于我国东南沿海，东隔台湾海峡与台湾省相望。福建身为一个沿海地区，大家都是了解的。但是大家对于福建结婚习俗又了解多少呢?了解福建订婚有什么习俗、结婚有什么习俗吗?'],
+    ['饮食文化', 'live-5', '福建饮食文化', '福建省位于我国东南部，面临大海，背负群山，气候温和，雨量充沛，大地常绿，四季如春。沿海地区海岸线漫长，浅海滩涂辽阔，鱼、虾、螺、蚌、蚝等海鲜佳品常年不绝。辽阔的江河平原，则盛产稻米、蔗糖、蔬菜、花果，尤以荔枝、龙眼、柑橘等佳果誉满中外。这些丰富的物质资源，形成福建独有的饮食文化。'],
+    ['福建禁忌', 'live-6', '福建禁忌', '福建民间的忌讳,在日常生活中都可以见到,特别是在节庆、婚姻、亲友赠送礼物和交往中就会比较多见。比如福建民间至今还有农历正月初一不扫地的习俗,即忌扫地。据说这一天扫地,会把家中的财宝扫出门,不吉利。这是人们求富心情的一种寄托。那么福建除了这个民间禁忌之外还有哪些忌讳呢？福建的生活忌讳都有哪些？福建的彩俗忌讳又有哪些？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/fujian/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="fujian-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['福建妈祖文化', 'feature-1', '妈祖文化', '妈祖是流传于中国沿海地区的汉族民间信仰。妈祖文化肇于宋、成于元、兴于明、盛于清、繁荣于近现代，妈祖文化体现了汉族海洋文化的一种特质。汉族民间在海上航行要先在船舶启航前要先祭妈祖，祈求保佑顺风和安全，在船舶上立妈祖神位供奉。这就是“有海水处有华人，华人到处有妈祖”的真实写照。那么如今妈祖文化祭典都还有哪些流程呢？妈祖文化的价值意义又有哪些呢？'],
+    ['船政文化', 'feature-2', '船政文化', '福州马尾福建船政的辉煌延续了40多年。但是却展现了近代中国先进科技、高等教育、工业制造、西方经典文化翻译传播等丰硕成果，孕育了诸多仁人志士及其先进思想，折射出中华民族特有的砺志进取、虚心好学、博采众长、勇于创新、忠心报国的传统文化神韵，为此，我们将之称为“船政文化。那么福建船政文化的起源是哪里呢？']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/fujian/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="fujian-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['传统曲艺民俗文化', 'art-1', '福建传统曲艺文化', '曲艺是中华民族各种说唱艺术的统称，它是由民间口头文学和歌唱艺术经过长期发展演变形成的一种独特的艺术形式。而戏剧则是曲艺花园中一朵璀璨的奇葩。那么在福建这个历史文化悠久的地区里，属于福建的传统曲艺有哪些呢？除了大家都知道的闽剧之外，你还知道福建还有哪些传统曲艺么？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/fujian/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="fujian-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['福建土楼', 'building-1', '福建土楼', '福建土楼，因其大多数为福建客家人所建，故又称“客家土楼”。土楼产生于宋元，成熟于明末、清代和民国时期。以土、木、石、竹为主要建筑材料，利用未经烧焙的土并按一定比例的沙质黏土和黏质沙土拌合而成，用夹墙板夯筑而成的两层以上的房屋。那么福建土楼有哪些建筑特点呢？'],
+    ['福建三坊七街', 'building-2', '三坊七街', '三坊七巷是福州市鼓楼区南后街两旁从北到南依次排列的十条坊巷的简称。福州自汉始，先后建成了冶城、子城等六次城垣，城市由北向南扩展，整个布局，以屏山为屏障，于山、乌山相对峙，以南街（八一七路）为中轴，两侧成坊成巷，讲究对称，逐步形成三坊七巷一条街（“街”指南后街）。'],
+    ['福建庙宇/庙会', 'building-3', '庙宇/庙会文化', '福建佛教历史悠久，高僧辈出，名山古刹众多（比如普陀寺、开元寺、金山寺、莲山寺等等），文化底蕴丰厚，且自古就与台湾及海外关系密切。即使到了今天，福建依然是我国佛教的重镇，四众弟子多、佛教团体多,寺院建筑普遍经过仿古修葺，完整而不失岁月沧桑之美。那么现在福建有还有哪些著名的寺庙，福建的庙会文化是什么样的？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/fujian/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="fujian-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '福建',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>内蒙古-地区路线</title>
+  <meta name="description" content="内蒙古, neimenggu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|蒙、内蒙、塞北||<b>著名景点</b>|成吉思汗陵，鄂尔多斯草原，呼伦贝尔草原等|
+|<b>行政区类别</b>|自治区||<b>机    场</b>|呼和浩特白塔国际机场、包头机场、鄂尔多斯伊金霍洛国际机场等|
+|<b>所属地区</b>|华北地区、东北地区、西北地区||<b>火车站</b>|呼和浩特站、包头站、鄂尔多斯站、赤峰站、通辽站等|
+|<b>下辖地区</b>|9个地级市、3个盟||<b>车牌代码</b>|蒙A-蒙M|
+|<b>电话区号</b>|（+86）0470～0482||<b>GDP</b>|16103.2亿元（2017年）|
+|<b>邮政区码</b>|010000-026000||<b>人均GDP</b>|63786元（2017年）|
+|<b>地理位置</b>|中国北部（97°E~126°E，37°N~53°N）||-|-|
+|<b>面    积</b>|118.3万平方千米||-|-|
+|<b>人    口</b>|2470.6万（2017年常住人口）||-|-|
+|<b>气候条件</b>|温带大陆性气候、温带季风气候||-|-|
+
+| <b>内蒙古生活文化</b> | <b>内蒙古特色文化</b> | <b>内蒙古曲艺文化</b> | <b>内蒙古建筑文化</b> | <b>内蒙古宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">内蒙古博克</a> | <a href="javascript:;" onclick="art(this);">好来宝</a> | <a href="javascript:;" onclick="building(this);">蒙古包</a> | <a href="javascript:;" onclick="religion(this);">内蒙古庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">那达慕大会</a> | <a href="javascript:;" onclick="art(this);">乌力格尔</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">巴林左旗皮影戏</a> | <a href="javascript:;" onclick="art(this);">蒙古族呼麦</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">二人台</a> | <a href="javascript:;" onclick="art(this);">马头琴</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">蒙古马耐力赛</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">内蒙古禁忌</a> | <a href="javascript:;" onclick="feature(this);">顶碗舞</a> |-| -|-|
+|-| <a href="javascript:;" onclick="feature(this);">安代舞</a> |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图](#one)
++ [II. 景点](#two)
++ [III. 路线规划（所含地区：宁夏、甘肃、青海）](#three)
+  - [1、齐齐哈尔 - 扎兰屯市](#1)
+  - [2、扎兰屯市 - 博克图镇](#2)
+  - [3、博克图镇 - 免渡河镇](#3)
+  - [4、免渡河镇 - 呼伦贝尔](#4)
+  - [5、呼伦贝尔 - 扎赉诺尔区](#5)
+  - [6、扎赉诺尔区 - 满洲里](#6)
+  - [7、满洲里 - 新巴尔虎右旗（备用路线）](#7)
+  - [8、新巴尔虎右旗 - 新巴尔虎左旗（备用路线）](#8)
+  - [9、新巴尔虎左旗 - 阿尔山市（备用路线）](#9)
+  - [10、阿尔山市 - 树木沟乡（备用路线）](#10)
+  - [11、树木沟乡 - 霍林郭勒市（备用路线）](#11)
+  - [12、霍林郭勒市 - 西乌珠穆沁旗（备用路线）](#12)
+  - [13、西乌珠穆沁旗 - 锡林浩特市（备用路线）](#13)
+  - [14、锡林浩特市 - 苏尼特左旗（备用路线）](#14)
+  - [15、苏尼特左旗 - 二连浩特（备用路线）](#15)
+  - [16、二连浩特 - 苏尼特右旗](#16)
+  - [17、苏尼特右旗 - 察哈尔右翼后旗](#17)
+  - [18、察哈尔右翼后旗 - 呼和浩特](#18)
+  - [19、呼和浩特 - 包头市](#19)
+  - [20、包头市 - 巴彦淖尔市](#20)
+  - [21、巴彦淖尔市 - 乌海市](#21)
+  - [22、乌海市 - 银川](#22)
+  - [23、银川 - 中卫市](#23)
+  - [24、中卫市 - 刘川乡](#24)
+  - [25、刘川乡 - 兰州](#25)
+  - [26、兰州 - 民和回族土族自治县](#26)
+  - [27、民和回族土族自治县 - 西宁](#27)
+  - [28、西宁 - 江西沟乡](#28)
+  - [29、江西沟乡 - 石乃海乡](#29)
+  - [30、石乃海乡 - 哈尔盖乡](#30)
+  - [31、哈尔盖乡 - 默勒镇](#31)
+  - [32、默勒镇 - 祁连县](#32)
+  - [33、祁连县 - 肃南裕固族自治县](#33)
+  - [34、肃南裕固族自治县 - 嘉峪关市](#34)
+  - [35、嘉峪关市 - 玉门市](#35)
+  - [36、玉门市 - 瓜州县](#36)
+  - [37、瓜州县 - 敦煌莫高窟](#37)
+  - [38、敦煌莫高窟 - 柳园镇](#38)
+  - [39、柳园镇 - 红柳村](#39)
+
+<h2 id="one"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;总路线图</h2>
+<img data-src="../imgs/region-line/neimenggu/neimenggu.png" width="80%" height="80%" title="总路线图"/>
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/neimenggu.gif" title="景点"/>
+
+<h2 id="three"><i class="fa fa-spinner fa-pulse"></i>&nbsp;路线规划（所含地区：宁夏、甘肃、青海）</h2>
+  <h4 id="1">1、齐齐哈尔 - 扎兰屯市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/1.png" width="61%" height="40%" title="1、齐齐哈尔 - 扎兰屯市"/>
+  <img data-src="../imgs/region-line/neimenggu/1t.png" title="1、齐齐哈尔 - 扎兰屯市"/>
+
+  <h4 id="2">2、扎兰屯市 - 博克图镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/2.png" width="61%" height="40%" title="2、扎兰屯市 - 博克图镇"/>
+  <img data-src="../imgs/region-line/neimenggu/2t.png" title="2、扎兰屯市 - 博克图镇"/>
+
+  <h4 id="3">3、博克图镇 - 免渡河镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/3.png" width="61%" height="40%" title="3、博克图镇 - 免渡河镇"/>
+  <img data-src="../imgs/region-line/neimenggu/3t.png" title="3、博克图镇 - 免渡河镇"/>
+
+  <h4 id="4">4、免渡河镇 - 呼伦贝尔&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/4.png" width="61%" height="40%" title="4、免渡河镇 - 呼伦贝尔"/>
+  <img data-src="../imgs/region-line/neimenggu/4t.png" title="4、免渡河镇 - 呼伦贝尔"/>
+
+  <h4 id="5">5、呼伦贝尔 - 扎赉诺尔区&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/5.png" width="61%" height="40%" title="5、呼伦贝尔 - 扎赉诺尔区"/>
+  <img data-src="../imgs/region-line/neimenggu/5t.png" title="5、呼伦贝尔 - 扎赉诺尔区"/>
+
+  <h4 id="6">6、扎赉诺尔区 - 满洲里&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/6.png" width="61%" height="40%" title="6、扎赉诺尔区 - 满洲里"/>
+  <img data-src="../imgs/region-line/neimenggu/6t.png" title="6、扎赉诺尔区 - 满洲里"/>
+
+  <h4 id="7">7、满洲里 - 新巴尔虎右旗（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/7.png" width="61%" height="40%" title="7、满洲里 - 新巴尔虎右旗（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/7t.png" title="7、满洲里 - 新巴尔虎右旗（备用路线）"/>
+
+  <h4 id="8">8、新巴尔虎右旗 - 新巴尔虎左旗（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/8.png" width="61%" height="40%" title="8、新巴尔虎右旗 - 新巴尔虎左旗（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/8t.png" title="8、新巴尔虎右旗 - 新巴尔虎左旗（备用路线）"/>
+
+  <h4 id="9">9、新巴尔虎左旗 - 阿尔山市（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/9.png" width="61%" height="40%" title="9、新巴尔虎左旗 - 阿尔山市（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/9t.png" title="9、新巴尔虎左旗 - 阿尔山市（备用路线）"/>
+
+  <h4 id="10">10、阿尔山市 - 树木沟乡（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/10.png" width="61%" height="40%" title="10、阿尔山市 - 树木沟乡（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/10t.png" title="10、阿尔山市 - 树木沟乡（备用路线）"/>
+
+  <h4 id="11">11、树木沟乡 - 霍林郭勒市（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/11.png" width="61%" height="40%" title="11、树木沟乡 - 霍林郭勒市（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/11t.png" title="11、树木沟乡 - 霍林郭勒市（备用路线）"/>
+
+  <h4 id="12">12、霍林郭勒市 - 西乌珠穆沁旗（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/12.png" width="61%" height="40%" title="12、霍林郭勒市 - 西乌珠穆沁旗（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/12t.png" title="12、霍林郭勒市 - 西乌珠穆沁旗（备用路线）"/>
+
+  <h4 id="13">13、西乌珠穆沁旗 - 锡林浩特市（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/13.png" width="61%" height="40%" title="13、西乌珠穆沁旗 - 锡林浩特市（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/13t.png" title="13、西乌珠穆沁旗 - 锡林浩特市（备用路线）"/>
+
+  <h4 id="14">14、锡林浩特市 - 苏尼特左旗（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/14.png" width="61%" height="40%" title="14、锡林浩特市 - 苏尼特左旗（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/14t.png" title="14、锡林浩特市 - 苏尼特左旗（备用路线）"/>
+
+  <h4 id="15">15、苏尼特左旗 - 二连浩特（备用路线）&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/15.png" width="61%" height="40%" title="15、苏尼特左旗 - 二连浩特（备用路线）"/>
+  <img data-src="../imgs/region-line/neimenggu/15t.png" title="15、苏尼特左旗 - 二连浩特（备用路线）"/>
+
+  <h4 id="16">16、二连浩特 - 苏尼特右旗&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/16.png" width="61%" height="40%" title="16、二连浩特 - 苏尼特右旗"/>
+  <img data-src="../imgs/region-line/neimenggu/16t.png" title="16、二连浩特 - 苏尼特右旗"/>
+
+  <h4 id="17">17、苏尼特右旗 - 察哈尔右翼后旗&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/17.png" width="61%" height="40%" title="17、苏尼特右旗 - 察哈尔右翼后旗"/>
+  <img data-src="../imgs/region-line/neimenggu/17t.png" title="17、苏尼特右旗 - 察哈尔右翼后旗"/>
+
+  <h4 id="18">18、察哈尔右翼后旗 - 呼和浩特&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/18.png" width="61%" height="40%" title="18、察哈尔右翼后旗 - 呼和浩特"/>
+  <img data-src="../imgs/region-line/neimenggu/18t.png" title="18、察哈尔右翼后旗 - 呼和浩特"/>
+
+  <h4 id="21">19、呼和浩特 - 包头市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/19.png" width="61%" height="40%" title="19、呼和浩特 - 包头市"/>
+  <img data-src="../imgs/region-line/neimenggu/19t.png" title="19、呼和浩特 - 包头市"/>
+
+  <h4 id="22">20、包头市 - 巴彦淖尔市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/20.png" width="61%" height="40%" title="20、包头市 - 巴彦淖尔市"/>
+  <img data-src="../imgs/region-line/neimenggu/20t.png" title="20、包头市 - 巴彦淖尔市"/>
+
+  <h4 id="23">21、巴彦淖尔市 - 乌海市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/21.png" width="61%" height="40%" title="21、巴彦淖尔市 - 乌海市"/>
+  <img data-src="../imgs/region-line/neimenggu/21t.png" title="21、巴彦淖尔市 - 乌海市"/>
+
+  <h4 id="24">22、乌海市 - 银川&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/22.png" width="61%" height="40%" title="22、乌海市 - 银川"/>
+  <img data-src="../imgs/region-line/neimenggu/22t.png" title="22、乌海市 - 银川"/>
+
+  <h4 id="25">23、银川 - 中卫市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/23.png" width="61%" height="40%" title="23、银川 - 中卫市"/>
+  <img data-src="../imgs/region-line/neimenggu/23t.png" title="23、银川 - 中卫市"/>
+
+  <h4 id="26">24、中卫市 - 刘川乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/24.png" width="61%" height="40%" title="24、中卫市 - 刘川乡"/>
+  <img data-src="../imgs/region-line/neimenggu/24t.png" title="24、中卫市 - 刘川乡"/>
+
+  <h4 id="27">25、刘川乡 - 兰州&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/25.png" width="61%" height="40%" title="25、刘川乡 - 兰州"/>
+  <img data-src="../imgs/region-line/neimenggu/25t.png" title="25、刘川乡 - 兰州"/>
+
+  <h4 id="28">26、兰州 - 民和回族土族自治县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/26.png" width="61%" height="40%" title="26、兰州 - 民和回族土族自治县"/>
+  <img data-src="../imgs/region-line/neimenggu/26t.png" title="26、兰州 - 民和回族土族自治县"/>
+
+  <h4 id="29">27、民和回族土族自治县 - 西宁&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/27.png" width="61%" height="40%" title="27、民和回族土族自治县 - 西宁"/>
+  <img data-src="../imgs/region-line/neimenggu/27t.png" title="27、民和回族土族自治县 - 西宁"/>
+
+  <h4 id="30">28、西宁 - 江西沟乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/28.png" width="61%" height="40%" title="28、西宁 - 江西沟乡"/>
+  <img data-src="../imgs/region-line/neimenggu/28t.png" title="28、西宁 - 江西沟乡"/>
+
+  <h4 id="31">29、江西沟乡 - 石乃海乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/29.png" width="61%" height="40%" title="29、江西沟乡 - 石乃海乡"/>
+  <img data-src="../imgs/region-line/neimenggu/29t.png" title="29、江西沟乡 - 石乃海乡"/>
+
+  <h4 id="32">30、石乃海乡 - 哈尔盖乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/30.png" width="61%" height="40%" title="30、石乃海乡 - 哈尔盖乡"/>
+  <img data-src="../imgs/region-line/neimenggu/30t.png" title="30、石乃海乡 - 哈尔盖乡"/>
+
+  <h4 id="33">31、哈尔盖乡 - 默勒镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/31.png" width="61%" height="40%" title="31、哈尔盖乡 - 默勒镇"/>
+  <img data-src="../imgs/region-line/neimenggu/31t.png" title="31、哈尔盖乡 - 默勒镇"/>
+
+  <h4 id="34">32、默勒镇 - 祁连县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/32.png" width="61%" height="40%" title="32、默勒镇 - 祁连县"/>
+  <img data-src="../imgs/region-line/neimenggu/32t.png" title="32、默勒镇 - 祁连县"/>
+
+  <h4 id="35">33、祁连县 - 肃南裕固族自治县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/33.png" width="61%" height="40%" title="33、祁连县 - 肃南裕固族自治县"/>
+  <img data-src="../imgs/region-line/neimenggu/33t.png" title="33、祁连县 - 肃南裕固族自治县"/>
+
+  <h4 id="36">34、肃南裕固族自治县 - 嘉峪关市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/34.png" width="61%" height="40%" title="34、肃南裕固族自治县 - 嘉峪关市"/>
+  <img data-src="../imgs/region-line/neimenggu/34t.png" title="34、肃南裕固族自治县 - 嘉峪关市"/>
+
+  <h4 id="37">35、嘉峪关市 - 玉门市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/35.png" width="61%" height="40%" title="35、嘉峪关市 - 玉门市"/>
+  <img data-src="../imgs/region-line/neimenggu/35t.png" title="35、嘉峪关市 - 玉门市"/>
+
+  <h4 id="38">36、玉门市 - 瓜州县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/36.png" width="61%" height="40%" title="36、玉门市 - 瓜州县"/>
+  <img data-src="../imgs/region-line/neimenggu/36t.png" title="36、玉门市 - 瓜州县"/>
+
+  <h4 id="39">37、瓜州县 - 敦煌莫高窟&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/37.png" width="61%" height="40%" title="37、瓜州县 - 敦煌莫高窟"/>
+  <img data-src="../imgs/region-line/neimenggu/37t.png" title="37、瓜州县 - 敦煌莫高窟"/>
+
+  <h4 id="40">38、敦煌莫高窟 - 柳园镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/38.png" width="61%" height="40%" title="38、敦煌莫高窟 - 柳园镇"/>
+  <img data-src="../imgs/region-line/neimenggu/38t.png" title="38、敦煌莫高窟 - 柳园镇"/>
+
+  <h4 id="41">39、柳园镇 - 红柳村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/neimenggu/39.png" width="61%" height="40%" title="39、柳园镇 - 红柳村"/>
+  <img data-src="../imgs/region-line/neimenggu/39t.png" title="39、柳园镇 - 红柳村"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/neimenggu.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '内蒙古民风民俗', '蒙古族在古代是一个游牧民族，他们在草原上以放牧和打猎为生，赢得了“马背上的民族”这个称号。这里的人民纯朴热情，至今保留着许多民族独有的传统民俗，比如祭敖包、那达慕、民族服饰等等，都有着迥异于中原内陆的别样风情。那么内蒙古历史文化有什么特点，内蒙古有哪些民俗文化？'],
+    ['方言文化', 'live-2', '内蒙古方言', '内蒙方言主要指内蒙古地区使用的各类汉语方言。内蒙古最正宗的方言其实应该是蒙语，但是在上个世纪，随着大批外来人口的迁入，蒙语反而被其迁入者的语言所代替。'],
+    ['节日文化', 'live-3', '内蒙古节日', '蒙古族的节日比较多，有春节、端午节、中秋节、重阳节、中元节、那达慕、祭鄂博、成吉思汗纪念节等。不过在内蒙古除开一些普通的传统节日，那么在内蒙古还有什么特色的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '内蒙古嫁娶文化', '蒙古族的婚俗之一，娶亲一般是在结婚喜日的前一天。新郎在欢乐的气氛中，穿上艳丽的蒙古长袍，腰扎彩带，头戴圆顶红缨帽，脚蹬高筒皮靴，佩带弓箭。伴郎、祝颂人，也穿上节日盛装。一同骑上马，携带彩车和礼品，前往女家娶亲。那么内蒙古除了这些婚俗之外，还有哪些结婚习俗呢？'],
+    ['饮食文化', 'live-5', '内蒙古饮食文化', '蒙古族由于地理位置、自然条件、生产发展状况的差异，在饮食习惯上也不尽相同。在牧区，蒙古族以牛羊肉、乳食为主食，史书以“游牧民族四季出行，惟逐水草，所食惟肉酪”来形容游牧生活形成的饮食习惯。烤肉、烧肉、肉干、手抓肉均为蒙古族家常食品，其中手抓肉最有名，四季都可以食用。'],
+    ['内蒙古禁忌', 'live-6', '内蒙古禁忌', '蒙古忌讳，就是蒙古人在生活中的忌讳，有些特别忌讳，就令行禁止。如在毡门、顶毡、灶火、坠绳等方面都有忌讳。比如：进蒙古包不能踩门槛，不能在门槛垂腿而坐，不能挡在门上，这是蒙古包的三忌，这种风俗自古就有。内蒙古除了这些禁忌之外还有忌讳呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for(var i=0;i<liveArr.length;i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/neimenggu/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="neimenggu-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['内蒙古博克', 'feature-1', '内蒙古博克文化', '搏克是蒙古族传统的体育娱乐活动之一，草原上的人们把蒙古式摔跤称作"搏克"（蒙语结实、团结、持久的意思）。它是蒙族三大运动（摔跤、赛马、射箭）之首，不管是祭敖包，还是开那达慕，"搏克"都是绝对不可缺少的主项。'],
+    ['那达慕大会', 'feature-2', '那达慕大会文化', '“那达慕”是蒙古语，也称“那雅尔(Nair)”，“慕”是蒙语的译音，意为“娱乐、游戏”，以表示丰收的喜悦之情。“那达慕”大会是蒙古族历史悠久的传统节日，在蒙古族人民的生活中占有重要地位。每年七、八月牲畜肥壮的季节举行的“那达慕”大会，是人们为了庆祝丰收而举行的文体娱乐大会。'],
+    ['巴林左旗皮影戏', 'feature-3', '巴林左旗皮影戏', '巴林左旗皮影戏是古老的传统民间艺术。经过几代艺人的探索实践，已形成具有当地特色的声腔体系。它曾有过辉煌的历史，上世纪五六十年代，几乎村村有影箱子，皮影艺人达到200多人。2010年内蒙古13个项目入选第三批国家级非遗名录，其中就包括巴林左旗皮影戏。'],
+    ['二人台', 'feature-4', '二人台文化', '二人台俗称双玩意儿，二人班。起源于山西，成长于内蒙古，是流行于内蒙古自治区中西部及山西、陕西、河北三省北部地区的传统戏曲剧种。因为其剧目大多采用一丑一旦二人演唱的形式，所以叫二人台。各地的二人台，在长期发展过程中，逐渐形成不同的艺术风格，以内蒙古呼和浩特为界，分为东西两路。'],
+    ['蒙古马耐力赛', 'feature-5', '蒙古马耐力赛文化', '“蒙古马耐力赛”是内蒙古自治区呼伦贝尔市牧区特有的一种体育竞技项目。“蒙古马耐力赛”具有悠久的历史渊源。公元13世纪，蒙古族为生活需要和战争所需，饲养大量的马匹。因北方地区地域辽阔,居住分散，所有马匹具备了长途奔跑的性能，蒙古族积累了丰富的驯马技术。'],
+    ['顶碗舞', 'feature-6', '顶碗舞文化', '顶碗舞是蒙古族的民间舞蹈相关的史料记载，《顶碗舞》的出处与和田佛教有着一定的渊源·佛教教义当中有多种对佛的供养仪式，用碗盛上糜乳的供奉以及用歌舞表演的伎乐供养都包括在其中两者的结合导致了这种用盛了糜乳的碗放在头顶上舞蹈的形式形式新颖，动作优美，气质高雅，风格独特，具有浓郁的民族特点。'],
+    ['安代舞', 'feature-7', '安代舞文化', '安代舞被称为蒙古族舞蹈活化石，是流传内蒙古通辽市周边地区的一种原生态舞蹈。安代舞发源于库伦旗，据考证约形成于明末清初。当时库伦体制是"政教合一"，寺庙林立，僧侣众多。清朝中期，各地闯关东的移民大量涌入草原，不同部落、不同地域的文化风俗相糅合铸就了库伦蒙古族文化，孕育了具有广泛群众性的安代舞。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0;j<featureArr.length;j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/neimenggu/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="neimenggu-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['好来宝', 'art-1', '好来宝文化', '好来宝，又作“好力宝”。蒙古语译音，蒙古族曲艺之一。是一种由一个人或者多人以四胡等乐器自行伴奏，坐着用蒙古族语言进行“说唱”表演的曲艺形式。大约形成于公元12世纪前后。它用蒙古语演唱，有固定的曲调，有一定的韵律。唱词初为即兴吟唱，后来就开始创作，并出现了一大批“好来宝”作家。'],
+    ['乌力格尔', 'art-2', '乌力格尔文化', '乌力格尔，蒙古语意为"说书"，是蒙古族的一种曲艺形式，主要流传于内蒙古自治区及我国东北各省蒙古族聚居区。它最初的形式与西方中世纪的吟游诗人相似，艺人们身背四弦琴或者潮尔(马头琴)，在大草原上随风漂泊，四处流浪，追逐蒙古包和王爷贵族们的府邸，一人一琴，自拉自唱，精彩的说唱、长篇的传奇成为草原上最受人们欢迎的艺术形式之一。'],
+    ['蒙古族呼麦', 'art-3', '蒙古族呼麦文化', '呼麦是蒙古族人创造的一种神奇的歌唱艺术：一个歌手纯粹用自己的发声器官，在同一时间里唱出两个声部。呼麦声部关系的基本结构为一个持续低音和它上面流动的旋律相结合。又可以分为“泛音呼麦”、“震音呼麦”、“复合呼麦”等。在中国各民族民歌中,它是独一无二的。'],
+    ['马头琴', 'art-4', '马头琴文化', '马头琴，是蒙古民间拉弦乐器。蒙古语称“潮尔”。琴身木制，长约一米，有两根弦，共鸣箱呈梯形，声音圆润，低回宛转，音量较弱。马头琴是一种两弦的弦乐器，有梯形的琴身和雕刻成马头形状的琴柄，为蒙古族人民喜爱的乐器。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/neimenggu/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="neimenggu-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['蒙古包', 'building-1', '蒙古包文化', '蒙古包是蒙古族牧民居住的一种房子，适于牧业生产和游牧生活。蒙古包包内宽敞舒适，是用特制的木架做“哈那”（蒙古包的围栏支撑），用两至三层羊毛毡围裹而成，之后用马鬃或驼毛拧成的绳子捆绑而成，顶部用“乌耐”作支架并盖有“布乐斯”，以呈天幕状。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/neimenggu/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="neimenggu-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['内蒙古庙会', 'religion-1', '庙会/庙宇文化', '内蒙古全境主要分布有汉族、蒙古族，以及满、回、达斡尔、鄂温克等49个民族，是中国五个少数民族自治区之一。在蒙古族悠久的宗教历史上,萨满信仰和佛教始终占有主导地位。蒙古族宗教文化便是指以萨满信仰文化和具有蒙古族传统文化特色的佛教文化。那么在内蒙古又有哪些保留至今的一些庙会呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/neimenggu/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="neimenggu-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '内蒙古',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+
+</script>
+</body>
+</html>

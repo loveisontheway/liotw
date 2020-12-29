@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>新疆-地区路线</title>
+  <meta name="description" content="新疆, xinjiang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|西域、安西、新疆省||<b>著名景点</b>|天山、高昌古城、吐鲁番、喀纳斯湖、博斯腾湖、魔鬼城等|
+|<b>行政区类别</b>|自治区||<b>机    场</b>|乌鲁木齐地窝堡国际机场、石河子花园机场、喀什机场等|
+|<b>所属地区</b>|中国西北地区||<b>火车站</b>|乌鲁木齐站、喀什站、哈密站等|
+|<b>下辖地区</b>|4地级市、5地区、5自治州、9区直辖县级行政单位||<b>车牌代码</b>|新A-新R|
+|<b>电话区号</b>|（+86）0991-0909||<b>GDP</b>|9617.23亿元（2016年）|
+|<b>邮政区码</b>|830000-840000||<b>人均GDP</b>|41841元|
+|<b>地理位置</b>|中国西北部（73°E~96°E，34°N~48°N）||<b>主要地形区</b>|准噶尔盆地、塔里木盆地|
+|<b>面    积</b>|166万平方千米||<b>主要山脉</b>|昆仑山、阿尔泰山、天山|
+|<b>人    口</b>|2298.47万（2014年）||<b>主要民族</b>|汉族、维吾尔族、哈萨克族|
+|<b>方    言</b>|汉语、维吾尔语、哈萨克语等多民族语言||<b>行政区划代码</b>|650000|
+|<b>气候条件</b>|温带大陆性气候||<b>党委书记</b>|陈全国|
+|-|-||<b>自治区主席</b>|雪克来提·扎克尔|
+
+| <b>新疆生活文化</b> | <b>新疆地方特色文化</b> | <b>新疆曲艺文化</b> | <b>新疆建筑文化</b> | <b>新疆宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">龟兹文化</a> | <a href="javascript:;" onclick="art(this);">新疆曲子戏</a> | <a href="javascript:;" onclick="building(this);">维吾尔族民居建筑技艺</a> |-|
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">刀郎文化</a> | <a href="javascript:;" onclick="art(this);">新疆舞</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">节日文化</a> |-| <a href="javascript:;" onclick="art(this);">新疆达瓦孜</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> |-|-|-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> |-|-|-|-|
+| <a href="javascript:;" onclick="live(this);">新疆禁忌</a> |-|-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图](#one)
++ [II. 景点](#two)
++ [III. 路线规划](#three)
+  - [1、红柳村 - 骆驼圈镇](#1)
+  - [2、骆驼圈镇 - 哈密瓜园](#2)
+  - [3、哈密瓜园 - 戈壁滩](#3)
+  - [4、戈壁滩 - 南湖戈壁滩](#4)
+  - [5、南湖戈壁滩 - 七克台镇](#5)
+  - [6、七克台镇 - 火焰山](#6)
+  - [7、火焰山 - 阿乐惠镇](#7)
+  - [8、阿乐惠镇 - 托里乡](#8)
+  - [9、托里乡 - 乌鲁木齐](#9)
+  - [10、乌鲁木齐 - 幸福路村](#10)
+  - [11、幸福路村 - 喀什赛克赛乌勒](#11)
+  - [12、喀什赛克赛乌勒 - 恰库尔图镇](#12)
+  - [13、恰库尔图镇 - 克孜勒克热什村](#13)
+  - [14、克孜勒克热什村 - 布尔津县](#14)
+  - [15、布尔津县 - 苏克巴斯陶哈拉斯](#15)
+  - [16、苏克巴斯陶哈拉斯 - 禾木喀纳斯蒙古族乡](#16)
+  - [17、禾木喀纳斯蒙古族乡 - 喀纳斯湖](#17)
+  - [18、喀纳斯湖 - 哈巴河县](#18)
+  - [19、哈巴河县 - 吉木乃县](#19)
+  - [20、吉木乃县 - 和什托洛盖镇](#20)
+  - [21、和什托洛盖镇 - 克拉玛依](#21)
+  - [22、克拉玛依 - 乌苏市](#22)
+  - [23、乌苏市 - 托托乡](#23)
+  - [24、托托乡 - 博乐市](#24)
+  - [25、博乐市 - 赛里木湖](#25)
+  - [26、赛里木湖 - 霍城县](#26)
+  - [27、霍城县 - 努拉洪布拉克村](#27)
+  - [28、努拉洪布拉克村 - 昭苏县](#28)
+  - [29、昭苏县 - 阿克吐别克乡](#29)
+  - [30、阿克吐别克乡 - 新源县](#30)
+  - [31、新源县 - 那拉提度假村](#31)
+  - [32、那拉提度假村 - 巴音郭楞乡](#32)
+  - [33、巴音郭楞乡 - 库车县](#33)
+  - [34、库车县 - 喀斯坎村](#34)
+  - [35、喀斯村 - 阿拉尔市](#35)
+  - [36、阿拉尔市 - 沙漠公路A](#36)
+  - [37、沙漠公路A - 沙漠公路B](#37)
+  - [38、沙漠公路B - 塔瓦库勒乡](#38)
+  - [39、塔瓦库勒乡 - 和田市](#39)
+  - [40、和田市 - 木吉乡](#40)
+  - [41、木吉乡 - 叶城县](#41)
+  - [42、叶城县 - 希依提墩乡](#42)
+  - [43、希依提墩乡 - 疏勒县](#43)
+  - [44、疏勒县 - 奥依塔克镇](#44)
+  - [45、奥依塔克镇 - 布伦口乡](#45)
+  - [46、布伦口乡 - 塔什库尔干塔吉克自治县](#46)
+
+<h2 id="one"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;总路线图</h2>
+<img data-src="../imgs/region-line/xinjiang/xinjiang.png" width="50%" height="50%" title="总路线图"/>
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/xinjiang/scene-spot.png" width="50%" height="50%" title="景点"/>
+<img data-src="../imgs/region-line/scenic-spot/xinjiang.gif" title="景点"/>
+
+<h2 id="three"><i class="fa fa-spinner fa-pulse"></i>&nbsp;路线规划</h2>
+  <h4 id="1">1、红柳村 - 骆驼圈镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/1.png" width="61%" height="40%" title="1、红柳村 - 骆驼圈镇"/>
+  <img data-src="../imgs/region-line/xinjiang/1t.png" title="1、红柳村 - 骆驼圈镇"/>
+
+  <h4 id="2">2、骆驼圈镇 - 哈密瓜园&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/2.png" width="61%" height="40%" title="2、骆驼圈镇 - 哈密瓜园"/>
+  <img data-src="../imgs/region-line/xinjiang/2t.png" title="2、骆驼圈镇 - 哈密瓜园"/>
+
+  <h4 id="3">3、哈密瓜园 - 戈壁滩&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/3.png" width="61%" height="40%" title="3、哈密瓜园 - 戈壁滩"/>
+  <img data-src="../imgs/region-line/xinjiang/3t.png" title="3、哈密瓜园 - 戈壁滩"/>
+
+  <h4 id="4">4、戈壁滩 - 南湖戈壁滩&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/4.png" width="61%" height="40%" title="4、戈壁滩 - 南湖戈壁滩"/>
+  <img data-src="../imgs/region-line/xinjiang/4t.png" title="4、戈壁滩 - 南湖戈壁滩"/>
+
+  <h4 id="5">5、南湖戈壁滩 - 七克台镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/5.png" width="61%" height="40%" title="5、南湖戈壁滩 - 七克台镇"/>
+  <img data-src="../imgs/region-line/xinjiang/5t.png" title="5、南湖戈壁滩 - 七克台镇"/>
+
+  <h4 id="6">6、七克台镇 - 火焰山&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/6.png" width="61%" height="40%" title="6、七克台镇 - 火焰山"/>
+  <img data-src="../imgs/region-line/xinjiang/6t.png" title="6、七克台镇 - 火焰山"/>
+
+  <h4 id="7">7、火焰山 - 阿乐惠镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/7.png" width="61%" height="40%" title="7、火焰山 - 阿乐惠镇"/>
+  <img data-src="../imgs/region-line/xinjiang/7t.png" title="7、火焰山 - 阿乐惠镇"/>
+
+  <h4 id="8">8、阿乐惠镇 - 托里乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/8.png" width="61%" height="40%" title="8、阿乐惠镇 - 托里乡"/>
+  <img data-src="../imgs/region-line/xinjiang/8t.png" title="8、阿乐惠镇 - 托里乡"/>
+
+  <h4 id="9">9、托里乡 - 乌鲁木齐&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/9.png" width="61%" height="40%" title="9、托里乡 - 乌鲁木齐"/>
+  <img data-src="../imgs/region-line/xinjiang/9t.png" title="9、托里乡 - 乌鲁木齐"/>
+
+  <h4 id="10">10、乌鲁木齐 - 幸福路村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/10.png" width="61%" height="40%" title="10、乌鲁木齐 - 幸福路村"/>
+  <img data-src="../imgs/region-line/xinjiang/10t.png" title="10、乌鲁木齐 - 幸福路村"/>
+
+  <h4 id="11">11、幸福路村 - 喀什赛克赛乌勒&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/11.png" width="61%" height="40%" title="11、幸福路村 - 喀什赛克赛乌勒"/>
+  <img data-src="../imgs/region-line/xinjiang/11t.png" title="11、幸福路村 - 喀什赛克赛乌勒"/>
+
+  <h4 id="12">12、喀什赛克赛乌勒 - 恰库尔图镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/12.png" width="61%" height="40%" title="12、喀什赛克赛乌勒 - 恰库尔图镇"/>
+  <img data-src="../imgs/region-line/xinjiang/12t.png" title="12、喀什赛克赛乌勒 - 恰库尔图镇"/>
+
+  <h4 id="13">13、恰库尔图镇 - 克孜勒克热什村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/13.png" width="61%" height="40%" title="13、恰库尔图镇 - 克孜勒克热什村"/>
+  <img data-src="../imgs/region-line/xinjiang/13t.png" title="13、恰库尔图镇 - 克孜勒克热什村"/>
+
+  <h4 id="14">14、克孜勒克热什村 - 布尔津县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/14.png" width="61%" height="40%" title="14、克孜勒克热什村 - 布尔津县"/>
+  <img data-src="../imgs/region-line/xinjiang/14t.png" title="14、克孜勒克热什村 - 布尔津县"/>
+
+  <h4 id="15">15、布尔津县 - 苏克巴斯陶哈拉斯&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/15.png" width="61%" height="40%" title="15、布尔津县 - 苏克巴斯陶哈拉斯"/>
+  <img data-src="../imgs/region-line/xinjiang/15t.png" title="15、布尔津县 - 苏克巴斯陶哈拉斯"/>
+
+  <h4 id="16">16、苏克巴斯陶哈拉斯 - 禾木喀纳斯蒙古族乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/16.png" width="61%" height="40%" title="16、苏克巴斯陶哈拉斯 - 禾木喀纳斯蒙古族乡"/>
+  <img data-src="../imgs/region-line/xinjiang/16t.png" title="16、苏克巴斯陶哈拉斯 - 禾木喀纳斯蒙古族乡"/>
+
+  <h4 id="17">17、禾木喀纳斯蒙古族乡 - 喀纳斯湖&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/17.png" width="61%" height="40%" title="17、禾木喀纳斯蒙古族乡 - 喀纳斯湖"/>
+  <img data-src="../imgs/region-line/xinjiang/17t.png" title="17、禾木喀纳斯蒙古族乡 - 喀纳斯湖"/>
+
+  <h4 id="18">18、喀纳斯湖 - 哈巴河县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/18.png" width="61%" height="40%" title="18、喀纳斯湖 - 哈巴河县"/>
+  <img data-src="../imgs/region-line/xinjiang/18t.png" title="18、喀纳斯湖 - 哈巴河县"/>
+
+  <h4 id="19">19、哈巴河县 - 吉木乃县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/19.png" width="61%" height="40%" title="19、哈巴河县 - 吉木乃县"/>
+  <img data-src="../imgs/region-line/xinjiang/19t.png" title="19、哈巴河县 - 吉木乃县"/>
+
+  <h4 id="20">20、吉木乃县 - 和什托洛盖镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/20.png" width="61%" height="40%" title="20、吉木乃县 - 和什托洛盖镇"/>
+  <img data-src="../imgs/region-line/xinjiang/20t.png" title="20、吉木乃县 - 和什托洛盖镇"/>
+
+  <h4 id="21">21、和什托洛盖镇 - 克拉玛依&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/21.png" width="61%" height="40%" title="21、和什托洛盖镇 - 克拉玛依"/>
+  <img data-src="../imgs/region-line/xinjiang/21t.png" title="21、和什托洛盖镇 - 克拉玛依"/>
+
+  <h4 id="22">22、克拉玛依 - 乌苏市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/22.png" width="61%" height="40%" title="22、克拉玛依 - 乌苏市"/>
+  <img data-src="../imgs/region-line/xinjiang/22t.png" title="22、克拉玛依 - 乌苏市"/>
+
+  <h4 id="23">23、乌苏市 - 托托乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/23.png" width="61%" height="40%" title="23、乌苏市 - 托托乡"/>
+  <img data-src="../imgs/region-line/xinjiang/23t.png" title="23、乌苏市 - 托托乡"/>
+
+  <h4 id="24">24、托托乡 - 博乐市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/24.png" width="61%" height="40%" title="24、托托乡 - 博乐市"/>
+  <img data-src="../imgs/region-line/xinjiang/24t.png" title="24、托托乡 - 博乐市"/>
+
+  <h4 id="25">25、博乐市 - 赛里木湖&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/25.png" width="61%" height="40%" title="25、博乐市 - 赛里木湖"/>
+  <img data-src="../imgs/region-line/xinjiang/25t.png" title="25、博乐市 - 赛里木湖"/>
+
+  <h4 id="26">26、赛里木湖 - 霍城县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/26.png" width="61%" height="40%" title="26、赛里木湖 - 霍城县"/>
+  <img data-src="../imgs/region-line/xinjiang/26t.png" title="26、赛里木湖 - 霍城县"/>
+
+  <h4 id="27">27、霍城县 - 努拉洪布拉克村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/27.png" width="61%" height="40%" title="27、霍城县 - 努拉洪布拉克村"/>
+  <img data-src="../imgs/region-line/xinjiang/27t.png" title="27、霍城县 - 努拉洪布拉克村"/>
+
+  <h4 id="28">28、努拉洪布拉克村 - 昭苏县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/28.png" width="61%" height="40%" title="28、努拉洪布拉克村 - 昭苏县"/>
+  <img data-src="../imgs/region-line/xinjiang/28t.png" title="28、努拉洪布拉克村 - 昭苏县"/>
+
+  <h4 id="29">29、昭苏县 - 阿克吐别克乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/29.png" width="61%" height="40%" title="29、昭苏县 - 阿克吐别克乡"/>
+  <img data-src="../imgs/region-line/xinjiang/29t.png" title="29、昭苏县 - 阿克吐别克乡"/>
+
+  <h4 id="30">30、阿克吐别克乡 - 新源县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/30.png" width="61%" height="40%" title="30、阿克吐别克乡 - 新源县"/>
+  <img data-src="../imgs/region-line/xinjiang/30t.png" title="30、阿克吐别克乡 - 新源县"/>
+
+  <h4 id="31">31、新源县 - 那拉提度假村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/31.png" width="61%" height="40%" title="31、新源县 - 那拉提度假村"/>
+  <img data-src="../imgs/region-line/xinjiang/31t.png" title="31、新源县 - 那拉提度假村"/>
+
+  <h4 id="32">32、那拉提度假村 - 巴音郭楞乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/32.png" width="61%" height="40%" title="32、那拉提度假村 - 巴音郭楞乡"/>
+  <img data-src="../imgs/region-line/xinjiang/32t.png" title="32、那拉提度假村 - 巴音郭楞乡"/>
+
+  <h4 id="33">33、巴音郭楞乡 - 库车县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/33.png" width="61%" height="40%" title="33、巴音郭楞乡 - 库车县"/>
+  <img data-src="../imgs/region-line/xinjiang/33t.png" title="33、巴音郭楞乡 - 库车县"/>
+
+  <h4 id="34">34、库车县 - 喀斯坎村&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/34.png" width="61%" height="40%" title="34、库车县 - 喀斯坎村"/>
+  <img data-src="../imgs/region-line/xinjiang/34t.png" title="34、库车县 - 喀斯坎村"/>
+
+  <h4 id="35">35、喀斯村 - 阿拉尔市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/35.png" width="61%" height="40%" title="35、喀斯村 - 阿拉尔市"/>
+  <img data-src="../imgs/region-line/xinjiang/35t.png" title="35、喀斯村 - 阿拉尔市"/>
+
+  <h4 id="36">36、阿拉尔市 - 沙漠公路A&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/36.png" width="61%" height="40%" title="36、阿拉尔市 - 沙漠公路A"/>
+  <img data-src="../imgs/region-line/xinjiang/36t.png" title="36、阿拉尔市 - 沙漠公路A"/>
+
+  <h4 id="37">37、沙漠公路A - 沙漠公路B&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/37.png" width="61%" height="40%" title="37、沙漠公路A - 沙漠公路B"/>
+  <img data-src="../imgs/region-line/xinjiang/37t.png" title="37、沙漠公路A - 沙漠公路B"/>
+
+  <h4 id="38">38、沙漠公路B - 塔瓦库勒乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/38.png" width="61%" height="40%" title="38、沙漠公路B - 塔瓦库勒乡"/>
+  <img data-src="../imgs/region-line/xinjiang/38t.png" title="38、沙漠公路B - 塔瓦库勒乡"/>
+
+  <h4 id="39">39、塔瓦库勒乡 - 和田市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/39.png" width="61%" height="40%" title="39、塔瓦库勒乡 - 和田市"/>
+  <img data-src="../imgs/region-line/xinjiang/39t.png" title="39、塔瓦库勒乡 - 和田市"/>
+
+  <h4 id="40">40、和田市 - 木吉乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/40.png" width="61%" height="40%" title="40、和田市 - 木吉乡"/>
+  <img data-src="../imgs/region-line/xinjiang/40t.png" title="40、和田市 - 木吉乡"/>
+
+  <h4 id="41">41、木吉乡 - 叶城县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/41.png" width="61%" height="40%" title="41、木吉乡 - 叶城县"/>
+  <img data-src="../imgs/region-line/xinjiang/41t.png" title="41、木吉乡 - 叶城县"/>
+
+  <h4 id="42">42、叶城县 - 希依提墩乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/42.png" width="61%" height="40%" title="42、叶城县 - 希依提墩乡"/>
+  <img data-src="../imgs/region-line/xinjiang/42t.png" title="42、叶城县 - 希依提墩乡"/>
+
+  <h4 id="43">43、希依提墩乡 - 疏勒县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/43.png" width="61%" height="40%" title="43、希依提墩乡 - 疏勒县"/>
+  <img data-src="../imgs/region-line/xinjiang/43t.png" title="43、希依提墩乡 - 疏勒县"/>
+
+  <h4 id="44">44、疏勒县 - 奥依塔克镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/44.png" width="61%" height="40%" title="44、疏勒县 - 奥依塔克镇"/>
+  <img data-src="../imgs/region-line/xinjiang/44t.png" title="44、疏勒县 - 奥依塔克镇"/>
+
+  <h4 id="45">45、奥依塔克镇 - 布伦口乡&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/45.png" width="61%" height="40%" title="45、奥依塔克镇 - 布伦口乡"/>
+  <img data-src="../imgs/region-line/xinjiang/45t.png" title="45、奥依塔克镇 - 布伦口乡"/>
+
+  <h4 id="46">46、布伦口乡 - 塔什库尔干塔吉克自治县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/xinjiang/46.png" width="61%" height="40%" title="46、布伦口乡 - 塔什库尔干塔吉克自治县"/>
+  <img data-src="../imgs/region-line/xinjiang/46t.png" title="46、布伦口乡 - 塔什库尔干塔吉克自治县"/>
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/xinjiang.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '新疆民风民俗', '新疆，古称西域，意思是中国西部的疆域，这一名称自汉代出现于我国史籍，一直沿用到清朝统一新疆，之后改称新疆。新疆，在古代称为西域，也是古代丝绸之路的核心之地，是一个多民族聚居的地区，也是多宗教信仰的地方。那么新疆的文化有什么特色？'],
+    ['方言文化', 'live-2', '新疆方言', '新疆方言及新疆话等概念仅指新疆的汉语方言，在任何情况下都没有维吾尔语及其他少数民族语言的意思，这是全国很多人都容易陷入的误区，如果要指代少数民族语言则用该少数民族语言的本名，如“维吾尔语”、“哈萨克语”。'],
+    ['节日文化', 'live-3', '新疆节日', '新疆是一个多民族聚居的地区，共有47个民族成份，其中世居民族有汉族、 维吾尔族、 哈萨克族、回族等等，为此新疆有很多的民族节庆活动，每年到了八月份的时候，新疆吐鲁番就会举行葡萄节等著名节日，那么新疆除了葡萄节还有什么重要的传统节日习俗呢？'],
+    ['嫁娶文化', 'live-4', '新疆嫁娶文化', '说起新疆大家可能就会想到新疆的美食，其实新疆是一个善歌善舞的地方，在其结婚的流程中也是有所体现的，那么在新疆举办婚礼有什么需要注意什么事项呢？新疆都有哪些结婚习俗呢？'],
+    ['饮食文化', 'live-5', '新疆饮食文化', '疆饮食的原料是比较丰富的，主要有蔬菜、瓜果、鱼、肉、蛋等，蔬菜在调味上与其他菜系一样，差异主要就是在用肉、蛋方面，有着独特的习惯和讲究。它既具清真菜特性，又具有中国西北菜系味重香浓的烹饪特点。'],
+    ['新疆禁忌', 'live-6', '新疆禁忌', '新疆是一个穆斯林聚居的地区，他们热情、好客、爽直、忠厚，因传统的沿袭和宗教的清规，在日常生活、人和人的交往中有严格的礼仪讲究，禁忌亦与内地不同。这些禁忌是伴随着新疆的历代宗教信仰及长期的生活习惯沿袭下来的。因此在游览时，一定要入乡随俗，加以尊重，以免产生误会。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xinjiang/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xinjiang-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['龟兹文化', 'feature-1', '龟兹文化', '龟兹文化是我国古代汉唐文化、古代印度文化、古代希腊文化、古代波斯文化交互融合并结合龟兹人文特点而孕育的有着鲜明民族特征、地域特色的一种文化综合体。其文化特征主要是兼容并蓄的古佛教文化、石窟壁画、乐舞、戏曲、文物、诗词等，是人类共同的文化遗产。'],
+    ['刀郎文化', 'feature-2', '刀郎文化', '刀郎文化发源于喀喇昆仑山的叶尔羌河，经塔克拉玛干沙漠一路北去。在叶尔羌河两岸，有广袤的草地荒原和繁盛的原始胡杨林，还有在这片绿海中繁衍生息的刀郎人和他们的文化。如今，“刀郎文明”、“刀郎文化”、“刀郎艺术”、“刀郎风格”等词汇已成了时髦用语。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xinjiang/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xinjiang-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['新疆曲子戏', 'art-1', '新疆曲子戏', '新疆曲子戏，是流行于乌鲁木齐、昌吉、米泉、阜康、焉耆及伊犁哈萨克自治州的戏曲剧种。新疆曲子戏形成于乌鲁木齐及北疆地区。1959年，在新疆曲子戏流行最广的吉昌回自治州正式成立了新疆曲子剧团。从1960年到现在，已先后挖掘出50多个传统剧目，47个唱腔曲调和10余个曲牌。'],
+    ['新疆舞', 'art-2', '新疆舞文化', '新疆舞的原创民族是维吾尔族,舞蹈活泼优美，步伐轻快灵巧，身体各部分的运用较为细致，尤其是手腕和舞姿的变化极为丰富。新疆的舞蹈风格有着浓郁的西域风格。接下来本文将为大家详细的介绍新疆舞的分类，以及新疆舞的舞蹈特点。'],
+    ['新疆达瓦孜', 'art-3', '新疆达瓦孜文化', '"达瓦孜" 是维吾尔族一种古老的传统杂技表演艺术。"达"在维吾尔语是"悬空"之意，"瓦孜"是指嗜好做某件事的人。"达瓦孜"一词，是借用波斯语"达尔巴里"，意思是高空走大绳表演，古时称为"走索"、"高原祭"、"踏软索"等。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xinjiang/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xinjiang-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['维吾尔族民居建筑技艺', 'building-1', '维吾尔族建筑技术', '维吾尔族民居建筑技艺是维吾尔族传统建筑技艺，于2011年申报国家文化遗产。维吾尔族民间建筑。传统建筑为方形，开天窗。屋顶一般平坦，可作晒场用。室内一般砌实心土炕，亦有可取暖的空心炕，高约30厘米，供起居坐卧。墙上开壁龛，放置食物和用具，有的壁龛还构成各种几何图案，并喜在墙上挂壁毯和石膏雕饰。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xinjiang/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="xinjiang-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '新疆',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

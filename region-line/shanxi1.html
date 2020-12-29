@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>陕西-地区路线</title>
+  <meta name="description" content="陕西, shanxi1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|陕、秦、三秦||<b>著名景点</b>|兵马俑、法门寺、华山、太白山、黄帝陵、大雁塔、长城等|
+|<b>行政区类别</b>|省||<b>机    场</b>|西安咸阳国际机场 、榆林榆阳机场、汉中城固机场等|
+|<b>所属地区</b>|中国西北||<b>火车站</b>|西安站、西安北站、宝鸡站、宝鸡南站等|
+|<b>下辖地区</b>|10个地级市（含30个市辖区、72个县、5个县级市）||<b>车牌代码</b>|陕A/B/C/D/E/F/G/H/J/K/V|
+|<b>电话区号</b>|029、0911—0917、0919||<b>GDP</b>|21898.81亿元（2017年）|
+|<b>邮政区码</b>|830000-840000||<b>人均GDP</b>|57095元|
+|<b>地理位置</b>|中国西部内陆腹地||<b>行政区划代码</b>|610000|
+|<b>面    积</b>|20.58万平方千米||-|-|
+|<b>人    口</b>|3835.44万（2017年末常住人口）||-|-|
+|<b>方    言</b>|中原官话、西南官话、晋语||-|-|
+|<b>气候条件</b>|北暖温带、亚热带季风性气候||-|-|
+
+| <b>陕西生活文化</b> | <b>陕西特色文化</b> | <b>陕西曲艺文化</b> | <b>陕西建筑文化</b> | <b>陕西宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">陕西剪纸</a> | <a href="javascript:;" onclick="art(this);">陕西秦腔</a> | <a href="javascript:;" onclick="building(this);">陕西窑洞</a> | <a href="javascript:;" onclick="religion(this);">陕北宗教文化</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">陕北秧歌</a> | <a href="javascript:;" onclick="art(this);">老腔皮影戏</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">宝鸡社火脸谱</a> | <a href="javascript:;" onclick="art(this);">华阴老腔</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">安塞腰鼓</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">绥米唢呐</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">陕西禁忌</a> | <a href="javascript:;" onclick="feature(this);">陕北民歌</a> |-| -|-|
+|-| <a href="javascript:;" onclick="feature(this);">陕西八怪</a> |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/shanxi1.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/shanxi1.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '陕西民风民俗', '陕西在历史长河中不仅展现了朝代更替的变化历程，铸造了民族盛衰、强弱易势的历史印迹，同时，也孕育和创造了丰富深邃的物质文明和精神文明，造就了一大批光照千古的文化巨匠，他们为人类留下了灿烂的文化艺术成果。那么如今陕西还有哪些民俗文化呢？'],
+    ['方言文化', 'live-2', '陕西方言', '陕西方言由关中话、陕北话、陕南话三部分构成。狭义的陕西话仅指关中话，关中方言分为陕西西府方言（宝鸡、咸阳西部）和东府方言（西安、咸阳大部、渭南、铜川）。陕西是中国历史上建都朝代最多、建都时间最长、影响力最大的地区，其方言也是各具特色。'],
+    ['节日文化', 'live-3', '陕西节日', '在陕西先后有西周、秦、西汉、前赵、前秦、后秦、西魏、北周、大夏、隋、唐等十余个政权在陕西建都，时间长达1000余年，是我国历史上建都朝代最多、时间最长的省份，长期成为中国政治、经济、文化中心，留下了极为丰富的历史文化遗产。那么陕西如今还保留着有哪些特色的传统节日习俗呢？'],
+    ['嫁娶文化', 'live-4', '陕西嫁娶文化', '陕西历史源远流长，民族文化闻名遐迩。 这里是中国古人类和中华民族文化重要的发祥地之一，是中国历史上多个朝代政治、经济、文化的中心，也是现代中国革命的圣地，为炎黄子孙的生存、繁衍和人类历史文明做出了独特的贡献。那么陕西有哪些结婚习俗呢？陕西的结婚风俗流程有哪些呢？'],
+    ['饮食文化', 'live-5', '陕西饮食文化', '陕西是中华文明与文化的发祥地，民以食为天，政治、经济、文化的发达与繁荣，必然促进和带动饮食文化的发达和发展。西安是周秦汉唐等13个王朝建都的地方，历时1100多年，为了满足众多帝王将相、豪门贵族的饮食需要，陕西这块土地上必然会最早、最先诞生饮食文化。'],
+    ['陕西禁忌', 'live-6', '陕西禁忌', '陕西历史悠久，是中华文明的重要发祥地和华夏文明的见证，是中国历史上多个朝代政治、经济、文化的中心，是中华民族历史文明最早走向世界的地方，也是现代中国革命的圣地，为炎黄子孙的生存、繁衍和人类历史文明做出了独特的贡献。那么去陕西旅游的你知道陕西有什么生活禁忌么？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi1/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi1-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['陕西剪纸', 'feature-1', '剪纸文化', '陕西剪纸是历史悠久的传统民间艺术形式之一。剪纸是一种镂空艺术，在视觉上给人以透空的感觉和艺术享受。其载体可以是纸张、金银箔、树皮、树叶、布、皮、革等片状材料。陕西从南到北，特别是黄土高原，八百里秦川，到处都能见到红红绿绿的剪纸。'],
+    ['陕北秧歌', 'feature-2', '秧歌文化', '陕北秧歌，又称“闹红火”、“闹秧歌”、“闹社火”、“闹阳歌”等，是流传于陕西、陕北高原的一种具有广泛群众性和代表性的汉族传统舞蹈，吸收当地流传的水船、跑驴、高跷、狮子、踢场子等形式中的艺术元素，组合成新的独特的舞种，在锣鼓乐器伴奏下以腰部为中心点，头和上体随双臂大幅度扭动，整支舞蹈热烈而充满欢快的氛围。'],
+    ['宝鸡社火脸谱', 'feature-3', '脸谱文化', '陕西宝鸡地区，人们习称西府，是陕西社火脸谱艺术具有代表性的地区之一。特别是陇县和宝鸡县的社火脸谱，流传历史久远，脸谱造型奇特，色彩质朴明快，纹饰严格讲究，谱样多而齐全，代表了西府社火脸谱的最高水准。社火起源于原始社会的文面，文身、巫术、祭祀、宗教，古代的角抵、驱傩、祭社活动。'],
+    ['安塞腰鼓', 'feature-4', '安塞腰鼓', '安塞腰鼓是陕西省的传统 民俗舞蹈。表演可由几人或上千人一同进行，磅礴的气势，精湛的表现力令人陶醉，被称为天下第一鼓。安塞腰鼓由来已久，本是古代军旅以增军中士气及传递情报所用，这里是用来表达胜利的欢呼和丰收的喜悦。颇密的击鼓声，强悍的步伐，变幻的阵势，雄壮的呐喊，尽现男子阳刚之美，在国际上极富盛名。'],
+    ['绥米唢呐', 'feature-5', '唢呐文化', '绥米唢呐是陕西陕北人民生活中十分常见的一种汉族民俗艺术形式，无论城镇乡下，凡遇婚丧嫁娶、开张庆典、乔迁新居、闹秧歌、合龙口、闹满月、过周年、办庙会及各种庆祝活动都需要雇一、两班吹手来吹奏助兴。唢呐曲牌是有讲究的。红事白事都有专门的套曲。红事以大摆队（亦称得胜令）为主旋律，白事以孤苦伶仃为主旋律。'],
+    ['陕北民歌', 'feature-6', '陕北民歌文化', '陕北民歌是我国民歌的一种，广泛的流传在陕北，用陕北方言唱出的一种地方歌曲，是陕北汉族劳动人民精神、思想、感情的结晶。一般是用来唱出自己在黄土高原上的心声。陕北民歌分为劳动号子、信天游、小调三类。这些自成体裁又各具特点的民歌，都从各方面反映了社会生活，唱出了陕北人民的苦乐和爱憎。'],
+    ['陕西八怪', 'feature-7', '陕西八怪文化', '陕西八怪是指陕西省的关中地区（大致包括西安、宝鸡、咸阳、渭南、铜川，秦岭以北，黄土高原以南）出现的八种独特的汉族民风民俗。由于气候、经济、文化等多方面原因的影响，关中地区在衣、食、住、行、乐等方面，形成了一些独特的方式。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi1/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi1-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['陕西秦腔', 'art-1', '秦腔文化', '秦腔，中国汉族最古老的戏剧之一，秦腔又称乱弹，流行于中国西北的陕西、青海、宁夏、甘肃、新疆等地，其中以宝鸡的西府秦腔口音最为古老，保留了较多古老发音。又因其以枣木梆子为击节乐器，所以又叫“梆子腔”，俗称“桄桄子”。'],
+    ['老腔皮影戏', 'art-2', '老腔皮影戏', '什么是老腔皮影戏，老腔皮影是流传于陕西关中华阴一带的汉族戏剧艺术形式之一。俗称老腔影子，发源于八百里秦川东部、西岳华山脚下的华阴市双泉村。其唱腔特点是粗犷豪迈、雄浑奔放、高亢激越。'],
+    ['华阴老腔', 'art-3', '华阴老腔', '华阴老腔系明末清初，以陕西省华阴县市，久为华阴县泉店村张家户族的家族戏（只传本姓本族，不传外人）。其声腔具有刚直高亢、磅礴豪迈的气魄，听起来颇有关西大汉咏唱大江东去之慨；落音又引进渭水船工号子曲调，采用一人唱众人帮合的拖腔（民间俗称为拉波）。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi1/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi1-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['陕西窑洞', 'building-1', '窑洞文化', '陕西窑洞是中国北方黄土高原上特有的传统民居形式，分土窑洞、石窑洞、砖窑洞、土基子窑洞、柳椽柳巴子窑洞和接口子窑洞多种。到陕北旅游，无论是游览延安，还是游览榆林地区，抬头低头随处可见那或傍山而建、或平地而箍、或沉入地下筑成大井式院落的窑洞，一孔孔，一排排。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi1/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi1-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['陕北宗教文化', 'religion-1', '陕北宗教文化', '陕北宗教文化给地域大众文化浓浓带上重彩，有着极其复杂的历史原因。这种古老而鲜活的社会文化现象把世俗与宗教熔为一体，长期积淀了农民群众的思想意识、价值观念、行为方式和心理态势，并表现为一种世代延续、传承和发展的能力']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi1/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi1-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '陕西',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

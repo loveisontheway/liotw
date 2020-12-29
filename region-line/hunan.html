@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>湖南-地区路线</title>
+  <meta name="description" content="湖南, hunan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|湘、楚、湘楚、潇湘、三湘、三湘四水||<b>著名景点</b>|张家界/衡山/岳麓山/岳阳楼/炎帝陵/凤凰古城/韶山/崀山/东江湖等|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|长沙黄花国际机场、张家界荷花国际机场等|
+|<b>所属地区</b>|中南地区，华中地区||<b>火车站</b>|长沙站、株洲站、衡阳站、怀化站、娄底站|
+|<b>下辖地区</b>|13个地级市、1个自治州||<b>车牌代码</b>|湘A-湘U|
+|<b>电话区号</b>|（+86）0730-0746||<b>GDP</b>|34590.56亿元（2017年）|
+|<b>邮政区码</b>|410011-427000||<b>人均GDP</b>|50422元|
+|<b>地理位置</b>|中国中南地区、长江中游、洞庭湖以南||<b>历史名人</b>|毛泽东、贺龙、曾国藩、魏源等|
+|<b>面    积</b>|21.18万平方千米||<b>著名高校</b>|湖南大学、中南大学、国防科大|
+|<b>人    口</b>|6860.2万人（2017年）||<b>党政领导</b>|省委书记：杜家毫，省长：许达哲|
+|<b>方    言</b>|湘语、西南官话、赣语、客家语、湘南土话等||<b>行政区划代码</b>|430000|
+|<b>气候条件</b>|大陆性中亚热带季风湿润气候||-|-|
+
+| <b>湖南生活文化</b> | <b>湖南特色文化</b> | <b>湖南曲艺文化</b> | <b>湖南建筑文化</b> | <b>湖南宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">滩头年画</a> | <a href="javascript:;" onclick="art(this);">湖南湘剧</a> | <a href="javascript:;" onclick="building(this);">湖南传统建筑</a> | <a href="javascript:;" onclick="religion(this);">湖南道教文化</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">蚕灯舞</a> | <a href="javascript:;" onclick="art(this);">湖南祁剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">土家族摆手舞</a> | <a href="javascript:;" onclick="art(this);">湖南花鼓戏</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">新化山歌</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">瑶族长鼓舞</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">湖南禁忌</a> | <a href="javascript:;" onclick="feature(this);">宝庆竹刻</a> |-| -|-|
+|-| <a href="javascript:;" onclick="feature(this);">湖南非物质文化遗产</a> |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/hunan.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/hunan.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '湖南民风民俗', '湖湘文化，是指一种具有鲜明特征、相对稳定并有传承关系的历史文化形态。当然也指湖南几千年历史沉淀下来的文化底蕴。不同的地方、不同的民俗风土人情，就形成了不同的文化，值得一探究竟。'],
+    ['方言文化', 'live-2', '湖南方言', '湖南方言指湖南境内的方言，其中汉语方言包括湘语、西南官话、赣语、客语，另外，还有湘南土话、乡话这一些尚未确定归属的方言。湖南的少数民族语言主要有苗语的湘西次方言，土家语的龙山土话、保靖土话、孟兹话，侗语、勉语以及壮语。'],
+    ['节日文化', 'live-3', '湖南节日', '湖南是一个多民族省份，全国56个民族，都有居民在境内生活。湖南少数民族主要分布在湘西、湘南和湘东的边远地区，各少数民族都有自己的民族语言、风俗习惯和宗教信仰。那么湖南除了普通的节日习俗之外，湖南还有哪些特色的节日习俗文化呢？'],
+    ['嫁娶文化', 'live-4', '湖南嫁娶文化', '湖南是多民族省份，有汉族、土家族、苗族、瑶族、侗族、白族、回族等51个民族。其中世居的有汉、苗、土家、侗、瑶、回、壮、白族等9个民族，世居少数民族大多数居住在湘西、湘南和湘东山区。土家族婚礼别具一格，姑娘在出嫁时要唱“哭嫁歌”，送亲时姑娘和母亲唱“发轿歌”，新婚夫妇进了洞房，歌手就唱“贺喜歌”和“拜客歌”。'],
+    ['饮食文化', 'live-5', '湖南饮食文化', '湘菜，是中国历史悠久的一个地方菜。是汉族饮食文化八大菜系之一。湘菜历史悠久，早在汉朝就已经形成菜系，烹调技艺已有相当高的水平。湖南地处我国中南地区，气候温暖，雨量充沛，自然条件优越。湘西多山，盛产笋、蕈和山珍野味；湘东南为丘陵和盆地，家牧副渔发达；湘北是著名的洞庭湖平原，素称"鱼米之乡"。'],
+    ['湖南禁忌', 'live-6', '湖南禁忌', '湖南人的性格以热情豪爽著称，新世纪初著名歌唱家宋祖英以一首《辣妹子》让湖南的湘妹子“享誉全国”，在“不怕辣，辣不怕”的“泼辣”背后，掩藏着的是湘妹子临水而居的柔情。面对人生的逆境，湖南人秉持的信条是“吃得苦，耐得烦，不怕死，霸得蛮”，正是因为有了这样的精神激励，才有了湖南如今中部崛起大省的繁荣。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hunan/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hunan-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['滩头年画', 'feature-1', '滩头年画', '滩头年画是湖南省宝庆（现在为邵阳市）隆回滩头镇汉族民间工艺品之一。是中国汉族特有的一种绘画体裁，也是中国农村老百姓喜闻乐见的艺术形式。种类在最盛期达六十多种。那么滩头年画有哪些艺术特色呢？'],
+    ['蚕灯舞', 'feature-2', '蚕灯舞文化', '蚕灯舞，是溆浦县颇具特色的一种民间舞蹈。流行于龙潭、小黄沙、竹园一带，是聚居在此地张姓家族的族灯。解放前每年春节举行灯会，龙潭街上千人聚会，热闹非凡。各大姓不论远近，都要把本族的灯舞到街上表演，其中尤以小黄沙张姓人的“蚕灯”别具一格，在此地享有盛名。'],
+    ['土家族摆手舞', 'feature-3', '摆手舞文化', '摆手舞是土家族古老的传统舞蹈，主要流传在鄂、湘、渝、黔交界的酉水河和乌江流域，以重庆市秀山县、酉阳县、贵州沿河土家族自治县、湖北恩施自治州的来凤、湖南湘西自治州的龙山、永顺为主要传承地，共有四节。现在恩施土家族苗族自治州有改编的新版摆手舞，更易于学习和传承。'],
+    ['新化山歌', 'feature-4', '山歌文化', '新化山歌，是主要流传于湖南省娄底市新化县民间的民歌。新化山歌，其内容广泛、调式古老、风格独特、音韵简朴、结构多变，音乐特色鲜明，表现形式丰富多样，句式长短有致，俚俗方言衬词较多，说唱风味很浓。'],
+    ['瑶族长鼓舞', 'feature-5', '长鼓舞文化', '长鼓舞长鼓舞分“单人舞”、“双人舞”、“群舞”等类型。它有72套表演程式,而每一套又分“起堂”、“移堂”等若干动物细节。其动作特征是粗犷、勇猛、奔放、刚强、雄劲、彪悍、洒脱。不管是跳、跃、蹲、挫或旋转、翻扑、大蹦、仰腾等动态，都表现了瑶族人民热情奔放、坚强勇敢的性格特征。'],
+    ['宝庆竹刻', 'feature-6', '竹刻文化', '宝庆竹刻是从实用竹器工艺中脱胎出来的一种集观赏、实用于一体的民间工艺。 宝庆属西高东低半山区半丘陵地貌，盛产楠竹，自古竹器制作业十分发达，是中国竹文化的主要发源地之一。宝庆竹刻这朵民间艺术奇葩虽然在历代战乱和20世纪60年代屡受严重摧折，仍顽强地生存了下来。'],
+    ['湖南非物质文化遗产', 'feature-7', '湖南非物质文化遗产', '非物质文化遗产是指各族人民世代相承的、与群众生活密切相关的各种传统文化表现形式和文化空间。湖南是中国西南少数民族文化的重要发祥地之一，悠久的历史，多元的民族和文化，独特的自然资源给湖南留下了丰厚的非物质文化遗产。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hunan/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hunan-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['湖南湘剧', 'art-1', '湘剧文化', '湘剧源出于明代的弋阳腔，后又吸收昆腔、皮黄等声腔，形成一个包括高腔、低牌子、昆腔、乱弹的多声腔剧种。剧目以高腔、乱弹为主，与民间艺术和地方语言巧妙结合，富有湖南民间地方特色，如《琵琶记》、《白兔记》、《拜月记》等。'],
+    ['湖南祁剧', 'art-2', '祁剧文化', '祁剧是湖南省汉族地方戏剧种之一。它又称“祁阳班子”，民国初年称“祁阳戏”，因形成于祁阳而得名“祁剧”。流布区域较为广泛，除湖南的衡阳、零陵、怀化、邵阳、郴州等地区拥有祁剧演出班社之外，不少祁剧班社还到外省演出，曾一度形成“祁阳弟子遍天下”的鼎盛局面。想要了解更多关于祁剧的资料么？'],
+    ['湖南花鼓戏', 'art-3', '花鼓戏文化', '花鼓戏，中国汉族地方戏曲剧种，通常特指湖南花鼓戏。湖北、江西、安徽、河南、陕西等省亦有同名的地方剧种。湖南花鼓戏是湖南各地花鼓戏流派的总称。由于流行地区不同而有长沙花鼓戏、岳阳花鼓戏、衡阳花鼓戏、邵阳花鼓戏、常德花鼓戏、零陵花鼓戏等六个流派之分，其都各具不同的艺术风格。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hunan/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hunan-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['湖南传统建筑', 'building-1', '湖南传统建筑', '湘西位于湖南省西北部，地处湘、鄂、川、黔四省边区，乃古蛮夷之地。特有的生活方式等结合了山区的建筑材质、新的自然环境和社会的经济发展背景，创造了独特的建筑艺术。如堂屋、火塘、门扇、窗棂、柱头、天花板等，统称湘西民居或民居文化。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hunan/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hunan-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['湖南道教文化', 'religion-1', '道教文化', '湖南道教始于两晋南北朝时期（公元265-581）。晋太兴年间，女官祭酒魏华存至我省南岳潜心修道16年，宣讲上清经录，成为湖南最早的道教传播者。由此推算，湖南道教已有1700余年历史。那如今湖南的道观文化发展的怎么样了呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hunan/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hunan-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '湖南',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

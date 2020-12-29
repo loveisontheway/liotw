@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>山东-瀑布流相册</title>
+		<meta name="description" content="山东, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '海滨冬日'],
+			['2.jpg', '天主教堂'],
+			['3.jpg', '城市夜景'],
+			['4.jpg', '城市建筑'],
+			['5.jpg', '泰山'],
+			['6.jpg', '泰山'],
+			['7.jpg', '胶州湿地公园'],
+			['8.jpg', '兖州兴隆文化园'],
+			['9.jpg', '冬日城市风景'],
+			['10.jpg', '青岛'],
+			['11.jpg', '青岛老城'],
+			['12.jpg', '泰安宁阳文庙'],
+			['13.jpg', '威海雪景'],
+			['14.jpg', '青岛灵山湾'],
+			['15.jpg', '青岛灵山湾'],
+			['16.jpg', '烟台桑岛海豚湾'],
+			['17.jpg', '泰山'],
+			['18.jpg', '济宁'],
+			['19.jpg', '沂山'],
+			['20.jpg', '济南趵突泉'],
+			['21.jpg', '济南趵突泉'],
+			['22.jpg', '青岛崂山'],
+			['23.jpg', '烟台南山大佛'],
+			['24.jpg', '烟台海阳沙雕'],
+			['25.jpg', '水泊梁山'],
+			['26.jpg', '蒙山'],
+			['27.jpg', '泰安彩石溪'],
+			['28.jpg', '济南大明湖'],
+			['29.jpg', '桃花峪'],
+			['30.jpg', '蓬莱八仙渡'],
+			['31.jpg', '蓬莱'],
+			['32.jpg', '中国游艇（帆船）'],
+			['33.jpg', '济南九如山瀑布群'],
+			['34.jpg', '曲阜孔庙'],
+			['35.jpg', '孔庙']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml += 
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/shandong/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/shandong/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div> 
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js"></script>
+	<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+    <script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '图片无水印...',
+			  text: 'Image without watermark...',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

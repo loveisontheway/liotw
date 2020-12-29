@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>山西-地区路线</title>
+  <meta name="description" content="山西, shanxi" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|晋，三晋||<b>著名景点</b>|五台山、平遥古城、云冈石窟、乔家大院、皇城相府等|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|太原武宿国际机场、运城关公机场、长治王村机场、大同云冈机场等|
+|<b>所属地区</b>|中国华北||<b>火车站</b>|太原站、太原南站、大同站等|
+|<b>下辖地区</b>|11个地级市||<b>车牌代码</b>|晋A-晋M|
+|<b>电话区号</b>|0349—0359||<b>GDP</b>|-|
+|<b>邮政区码</b>|030000—048000||<b>人均GDP</b>|-|
+|<b>地理位置</b>|太行山以西，吕梁山以东；黄河中游东岸||-|-|
+|<b>面    积</b>|15.67万平方千米||-|-|
+|<b>人    口</b>|3702.35万人（2017年常住总人口）||-|-|
+|<b>方    言</b>|晋语、中原官话||<b>行政区划代码</b>|140000|
+|<b>气候条件</b>|温带大陆性季风气候||-|-|
+
+| <b>山西生活文化</b> | <b>山西特色文化</b> | <b>山西曲艺文化</b> | <b>山西建筑文化</b> | <b>山西宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">红色文化</a> | <a href="javascript:;" onclick="art(this);">山西蒲剧</a> | <a href="javascript:;" onclick="building(this);">山西居民</a> | <a href="javascript:;" onclick="religion(this);">山西宗教/庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">山西民歌</a> | <a href="javascript:;" onclick="art(this);">山西晋剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">晋商文化</a> | <a href="javascript:;" onclick="art(this);">北路梆子</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">踢鼓秧歌</a> | <a href="javascript:;" onclick="art(this);">上党梆子</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">威风锣鼓</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">山西禁忌</a> | <a href="javascript:;" onclick="feature(this);">山西心意拳</a> |-| -|-|
+|-| <a href="javascript:;" onclick="feature(this);">广灵剪纸</a> |-|-|-|
+|-| <a href="javascript:;" onclick="feature(this);">山西面塑</a> |-|-|-|
+|-| <a href="javascript:;" onclick="feature(this);">山西炕围画</a> |-|-|-|
+|-| <a href="javascript:;" onclick="feature(this);">山西旺火</a> |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/shanxi.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/shanxi.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '山西民风民俗', '山西历史文化具有不断变革和进步的鲜明特色，始终走在时代的前列。山西历史文化的发展证明，社会的变革和进步，既以先进思想为依据，又是新思想的摇篮。那么山西历史文化有什么特点，山西有哪些民俗文化？山西当地有什么文化节日活动呢？'],
+    ['方言文化', 'live-2', '山西方言', '山西方言也指晋语。晋语是中国北方的唯一一个非官话方言。晋语别于官话的最大特点就是保留入声。晋语的声调也有极复杂的连读变调现象。晋语全浊音清化有四种不同的演化方式。多数晋语有五个声调，部分地区有六个、七个或四个声调。晋语有很多与官话差异较大的特征词以及保留的古语词。晋语区还是中国唐诗的重要产区。'],
+    ['节日文化', 'live-3', '山西节日', '悠久的山西历史积淀了丰厚而灿烂的文化，作为全国石器文化的集中区、变法维新的滥觞地、佛教文化的首善区、多元文化的交汇地、古木建筑的博物馆、戏剧文化的发祥地，山西有哪些特色的节庆活动呢？山西特色的传统节日习俗节日都还有哪些呢？'],
+    ['嫁娶文化', 'live-4', '山西嫁娶文化', '山西北部地区(以大同为代表)，婚俗的一项--倒宝壶。结婚那天去娶新娘的时候新郎要带些两瓶红酒，到了女方家里后，娘家人要把瓶里的酒倒掉，然后用绿豆把酒瓶装满，这也就是所谓的宝壶。那么山西除了这些习俗之外还有哪些结婚的习俗呢？山西传统的结婚习俗又是怎么样的呢？'],
+    ['饮食文化', 'live-5', '山西饮食文化', '位于黄河怀抱里的山西，由于自然的、社会的多种历史因素，形成了一定的文化定位，形成了地域性的文化凝固，作为文化重要组成部分的山西饮食文化也有着自己的一定特色。山西人历来“专力农耕”，人民群众的饮食以粮为主，粮食的种类与制作是区别各地人民群众日常生活特点的重要标志。'],
+    ['山西禁忌', 'live-6', '山西禁忌', '山西历史悠久，人文荟萃，一直就有“地上看山西，地下看陕西”一说。去山西旅游的你或者在山西生活的你，知道山西有哪些生活禁忌么？去山西旅游都要注意些什么呢？山西的历史文化文化悠久，那么现在山西还保留了哪些风俗忌讳呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['红色文化', 'feature-1', '红色文化', '山西是具有光荣传统的革命老区，也是红色文化资源的重要聚集地。从“五四”运动、大革命时期、国内革命战争时期、抗日战争时期、解放战争时期到社会主义建设和改革开放时期，全省革命遗址、纪念建筑物有3399处，相关联其它遗址383处，共3782处。'],
+    ['山西民歌', 'feature-2', '山西民歌', '山西民歌是一种非常古老的传统民间艺术之一。以歌唱历史人物或历史传说故事为主。相传于尧天舜日之时就有传录的，如《击壤歌》：“日出而作，日入而息，凿井而饮，耕田而食，帝力于我何有哉”；《南风歌》：“南风之熏兮，可以解吾民之愠兮！南风之时兮，可以阜吾民之财兮！”《诗三百》中所收集的《魏风》、《唐风》共十九篇，大部分采自山西。'],
+    ['晋商文化', 'feature-3', '晋商文化', '山西简称"晋"，我们经常提起的晋商就是活跃于明清时期，也就是14世纪中叶至20世纪初的山西商人群体。"晋人善贾"，古已有之，最早的晋商可以追溯到战国时期魏国的大商人猗顿，到明代已在全国享有盛誉。那么如今晋商文化还保留了哪些特色的文化呢？'],
+    ['踢鼓秧歌', 'feature-4', '踢鼓秧歌', '踢鼓秧歌是流传在山西朔州地区的民间舞蹈，尤以朔城区、平鲁区最盛行，流传也广。它以粗犷、刚劲、稳健、风趣的艺术特点。博得广大群众的喜爱。那么踢鼓秧歌起源于什么时候呢？踢鼓秧歌的踢法又有哪些呢？'],
+    ['威风锣鼓', 'feature-5', '威风锣鼓', '威风锣鼓是流行在霍州、洪洞、汾西、临汾一带的民间广场艺术，是一种民间打击乐器的合奏形式，由于它击奏多姿，威武雄壮，所以俗称为“威风锣鼓”。每逢过年过节，喜庆丰收，集会游行，便会出现在民间。那么威风锣鼓起源于什么时候呢？威风锣鼓的主要特色有哪些呢？'],
+    ['山西心意拳', 'feature-6', '心意拳', '心意拳，中国传统拳术之一，是中国武文化和东方神秘文化的重要组成部分，这是中华武术百花园中的一朵奇葩。据传心意拳为宋代名将民族英雄岳飞所创。心意拳的技击性很强，它能用头、肩、肘、手、胯、膝、足等部位击打敌方，非常实用，并因此受到国内外武术家的重视和广大武术爱好者的喜爱。'],
+    ['广灵剪纸', 'feature-7', '广灵剪纸', '广灵剪纸作为中国传统民间剪纸三大流派之一，以其生动的构图、传神的表现力、细腻的刀法、考究的用料与染色、精细的包装制作工艺，独树一帜，被誉为“中华民间艺术一绝”，在中国剪纸中占有重要地位。那么广灵剪纸有哪些制作工艺技巧呢？广灵剪纸艺术特色有哪些？'],
+    ['山西面塑', 'feature-8', '山西面塑', '面塑，俗称面花、礼馍、花糕、捏面人，是源于山东、山西、北京的中国民间传统艺术之一。即以面粉为主料，调成不同色彩，用手和简单工具，塑造出各种栩栩如生的形象。那么山西的面塑有哪些造型特点呢？'],
+    ['山西炕围画', 'feature-9', '山西炕围画', '炕围画是一种民间的室内装饰画，亦称“墙围画”。在我国北方较流行。作为山西地方文化中一支地域性很强的造型艺术形式，是壁画、建筑彩绘、年画的复合体。晋东南地区、吕梁地区、晋中地区、忻州地区、雁北地区均有分布，其中尤以原平、代县的炕围画最为著名。'],
+    ['山西旺火', 'feature-10', '山西旺火', '生旺火是中国北方地区的一种历史悠久的风俗习惯，主要以山西为主，河北、内蒙古等地也有庆祝。垒旺火一般在春节除夕和元宵节时进行。家家户户院落门前都要用大块煤炭垒成塔状，称之为旺火，以图吉利，祝贺全年兴旺。由于旺火需要消耗大量的煤炭资源，且具有空气污染、易引发火灾等缺点，不少地方对点旺火开始施加限制，并提倡使用环保旺火。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['山西蒲剧', 'art-1', '山西蒲剧', '蒲剧又称蒲州梆子，当地人通称乱弹戏，是我国最古老的地方民间戏曲艺术之一。因兴于山西晋南古蒲州（今山西运城永济）一带而得名。蒲剧在清代乾隆时期外省称“乱弹”、“晋腔”、“山陕梆子腔”、“西梆”等；嘉庆、道光以后，又称“山西梆子”。那么蒲剧有哪些艺术特点呢？'],
+    ['山西晋剧', 'art-2', '山西晋剧', '晋剧就是山西梆子，是中国北方的一个重要戏剧剧种，也叫中路戏，中国传统戏曲。因兴起于山西中部的汾阳、孝义、祁县、太谷及太原而得名。流传外地后，被称为山西梆子，后改称晋剧，也被称之为中路梆子，其特点是旋律婉转、流畅，曲调优美、圆润、亲切，道白清晰，具有晋中地区浓郁的乡土气息和自己独特风格。那么晋剧有哪些艺术特色呢？'],
+    ['北路梆子', 'art-3', '北路梆子', '北路梆子，又名“上路戏”，大约形成于16世纪中叶，19世纪初叶已趋成熟。流行于山西北中部、内蒙中西部、河北西北部及陕西北部，是华北地区较有影响的汉族戏曲剧种之一。北路梆子的发源地正是在雁门关以北的大同一带。据大同城西观音堂戏台题壁记载：“双庆戏班于嘉庆十三年六月十九日演出《十五贯》一剧。'],
+    ['上党梆子', 'art-4', '上党梆子', '上党梆子是山西省四大梆子之一，流行于山西东南部。享有同蒲剧、晋剧同等历史的文化资格，是上党戏的代表剧种。它在道光年间称为本地土戏，1934年赴省城太原演出时称作上党宫调，1954年定名为上党梆子。上党梆子以演唱梆子腔为主，兼唱昆曲、皮黄、罗罗腔、卷戏，俗称“昆梆罗卷黄”。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['山西居民', 'building-1', '山西居民', '山西民居是中国传统民居建筑的一个重要流派。在中国民居中，山西民居和皖南民居齐名，一向有“北山西，南皖南”的说法。山西民居中，最富庶、最华丽的民居要数汾河一带的民居了，而汾河流域的民居，最具代表性的又数祁县和平遥。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['山西宗教/庙会', 'religion-1', '山西宗教/庙会', '山西省有佛教、道教、伊斯兰教、天主教、基督教，信教群众160万余人，占全省总人口的4.9%。其中，佛教72万余人，道教近5万人，伊斯兰教8万余人，天主教22万余人，基督教52万余人。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shanxi/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shanxi-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '山西',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>山东-地区路线</title>
+  <meta name="description" content="山东, shandong" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|齐鲁、东鲁、海右、海岱||<b>著名景点</b>|泰山、崂山、三孔、微山湖、沂蒙山、趵突泉、栈桥、蓬莱阁、等|
+|<b>行政区类别</b>|省||<b>机    场</b>|济南遥墙国际机场、青岛流亭国际机场、烟台蓬莱国际机场等|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|济南站、青岛站、烟台站等|
+|<b>下辖地区</b>|2副省级市15地级市||<b>车牌代码</b>|鲁A—鲁Y|
+|<b>电话区号</b>|0530—0539、0543、0546、0631—0635||<b>GDP</b>|72678.2亿元（2017年）|
+|<b>邮政区码</b>|250000—277000||<b>人均GDP</b>|72851元（2017年）|
+|<b>地理位置</b>|中国东部，黄海、渤海之滨||<b>齐鲁名人</b>|孔子、孟子、墨子、孙子、莫言等|
+|<b>面    积</b>|15.58万平方公里||<b>著名大学</b>|山东大学、中国海洋大学等|
+|<b>人    口</b>|10005.83万人（2017年末常住人口）||<b>省    花</b>|牡丹|
+|<b>方    言</b>|冀鲁官话、中原官话、胶辽官话||<b>省委书记</b>|刘家义|
+|<b>气候条件</b>|温带季风气候||<b>省    长</b>|龚正|
+
+| <b>山东生活文化</b> | <b>山东特色文化</b> | <b>山东曲艺文化</b> | <b>山东建筑文化</b> | <b>山东宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">潍坊风筝</a> | <a href="javascript:;" onclick="art(this);">山东快书</a> | <a href="javascript:;" onclick="building(this);">山东建筑文化</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">高密剪纸</a> | <a href="javascript:;" onclick="art(this);">胶东大鼓</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">聂家庄泥塑</a> | <a href="javascript:;" onclick="art(this);">山东大鼓</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">扑灰年画</a> | <a href="javascript:;" onclick="art(this);">山东琴书</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">山东禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/shandong.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/shandong.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '山东民风民俗', '山东素称“齐鲁之邦，礼仪之乡”，鲁中平原以农耕文化为特色，潍坊风筝、杨家埠年画散发着浓郁的泥土气息；胶东沿海渔家风情浓郁，粗犷奔放；鲁西地区传统深重，是孔孟之乡。在特有的地域文化熏陶下，山东的民俗风情风格多样，生生不息。'],
+    ['方言文化', 'live-2', '山东方言', '山东有一百多个县市的方言均属于官话大区（也叫北方方言）。参考古代清声母入声字和次浊声母入声字在今天各地的分化规律，山东各地方言又分别划归三个不同的官话小区：冀鲁官话、中原官话、胶辽官话。那么山东方言的形成主要受什么因素影响呢？'],
+    ['节日文化', 'live-3', '山东节日', '山东境内曾存有齐、鲁、曹、滕、卫诸国，齐国“通商工之业，便鱼盐之利，而人民多归”；鲁国融合周文化与东方文化，为“礼仪之邦”。而如今的山东是一个山东民俗风情多姿多彩，或古朴典雅，或灵巧别致，具有鲜明的地方色彩的一个城市。那么山东除了一些普通的节日风俗以外，山东还有哪些特殊的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '山东嫁娶文化', '中国自古以来就人多地广。但是因为地域不同、文化差异等原因，中国各地婚礼习俗，包括每个地区订婚、结婚习俗自然也就不同。那么在山东这个大省里，现代都还保存着哪些婚嫁习俗呢？现代的结婚习俗和以前还有没有什么不同呢？'],
+    ['饮食文化', 'live-5', '山东饮食文化', '山东古称齐鲁，是中华民族群构时期的策源地之一。史前期的仰韶文化、大汶口文化、龙山文化及齐家文化的沉积，夏、商、周三代的兴盛与文化的纵横积淀，使得北方饮食文化中的齐鲁饮食文化区获得了显著发展，并因此成为众多区域文化区中影响最大的文化区。'],
+    ['山东禁忌', 'live-6', '山东禁忌', '山东是孔孟之乡，无论过年过节，还是喝酒吃饭规矩都比较多。那么在山东生活的你，知道山东有哪些生活禁忌么？在山东生活，什么话不能说，说话需要注意哪些词语呢？山东的一些特殊的节日都需要注意些什么？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shandong/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shandong-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['潍坊风筝', 'feature-1', '潍坊风筝', '山东潍坊市被各国推崇为“世界风筝之都”。山东潍坊是中国著名风筝产地，明代就已在民间出现扎制风筝的艺人。清代，随着放风筝习俗的流行，风筝艺术亦达到鼎盛阶段。那么潍坊风筝有什么特点呢？潍坊风筝成为中国著名风筝的产地的原因是什么？潍坊风筝的制作工艺有哪些呢？'],
+    ['高密剪纸', 'feature-2', '高密剪纸', '高密剪纸是山东省高密市汉族民间艺术三绝之一。高密剪纸包括窗花、门笺、墙花、顶棚花、灯花、花样、喜花、春花、丧花等。它的流传同高密农村的节令风俗有着密切的关系。窗花、门笺、灯花，便是在春节或元宵节时贴挂的。高密剪纸题材广泛内容丰富，花草虫鱼、飞禽走兽和人物皆可入剪。'],
+    ['聂家庄泥塑', 'feature-3', '聂家庄泥塑', '聂家庄泥塑被称为高密四绝之一，是一种古老的传统民间艺术，作为山东省高密市聂家庄生产的泥玩具。相传始于明代隆庆、万历年间。那么聂家庄泥塑到底是怎么发展而成的呢？'],
+    ['扑灰年画', 'feature-4', '扑灰年画', '扑灰年画是中国历史悠久的汉族传统民间艺术形式，山东高密地区汉族民间年画中的一个古老画种，始见于明代成化年间(1465-1487年)，盛行于清代。从现有的资料看，现在中国只有高密一地存在这种年画，主要集中在高密北乡姜庄、夏庄一带三十多个村庄。所谓扑灰，即用柳枝烧灰，描线作底版，一次复印多张。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shandong/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shandong-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['山东快书', 'art-1', '山东快书', '山东快书起源于山东省临清、济宁、菏泽、兖州一带的汉族传统曲艺形式，流行于山东、华北、东北各地。其初专说武松故事，曾名“武老二”。山东快书演唱者一人手持竹板或铜板两块，以快节奏击板叙唱，又名竹板快书，流传至今已有百余年历史。'],
+    ['胶东大鼓', 'art-2', '胶东大鼓', '胶东大鼓是一种山东省的传统戏曲剧种之一，主要伴奏乐器为三弦、书鼓、钢板(上为月牙形，下为长方形)。属板腔结构体，七声宫调式，主要板式有起腔、二板、平腔、落板等。胶东大鼓的艺术手段，主要是说和唱，通过说唱来交代故事，描绘人物，介绍环境，渲染气氛。那么胶东大鼓是起源于什么时候呢？胶东大鼓的艺术特色有哪些呢？'],
+    ['山东大鼓', 'art-3', '山东大鼓', '山东大鼓是北方大鼓之鼻祖，中国北方地区现存最早的传统曲艺鼓书暨鼓曲形式，相传形成于明代末期，已有三百五十多年的历史。主要流传于以山东省菏泽为中心的广大鲁、苏、豫地区。原称犁铧大鼓， 因其伴奏乐器为犁铧碎片而得名。自《老残游记》之后，始谐音美其称为“梨花大鼓”。那么山东大鼓有哪些艺术特色呢？'],
+    ['山东琴书', 'art-4', '山东琴书', '山东琴书是山东地区传统曲艺品种之一，又称“小曲子”、“唱扬琴”、“山东洋琴”、“改良琴书”等。发源于鲁西南的菏泽（古曹州）地区，产生于清代乾隆初年。原为农民自娱的庄家耍（又叫玩局）。清末呈现兴盛局面，名家辈出，流传地区日益广泛。那么山东琴书相比胶东大鼓还有山东快书，山东琴书又有什么艺术特色呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shandong/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shandong-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['山东建筑文化', 'building-1', '山东建筑文化', '古建筑是先人为我们留下的珍贵文化瑰宝，它具有历史、文化、科技、艺术等多方面价值。一座保存完好的古建筑，既是研究某一阶段历史文化的重要实物资料，又是社会、文化变迁的历史见证。那么山东有哪些著名的古建筑呢，山东特色建筑有哪些？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/shandong/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="shandong-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '山东',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

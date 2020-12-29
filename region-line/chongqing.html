@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>重庆-地区路线</title>
+  <meta name="description" content="重庆, chongqing" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|山城、巴渝、渝州、雾都、桥都、江城||<b>著名景点</b>|洪崖洞、大足石刻、武隆喀斯特旅游区、长江三峡、武陵山大裂谷等|
+|<b>行政区类别</b>|直辖市||<b>机    场</b>|重庆江北国际机场、万州五桥机场、黔江武陵山机场|
+|<b>所属地区</b>|中国·西南地区、长江上游地区||<b>火车站</b>|庆站、沙坪坝站、重庆北站、重庆西站、万州北站、荣昌北站等|
+|<b>下辖地区</b>|26个区、8个县、4个自治县||<b>车牌代码</b>|渝A、B、C、D、F、G、H|
+|<b>电话区号</b>|（（+86）023||<b>GDP</b>|19500.27亿元（2017年）|
+|<b>邮政区码</b>|400000-409912||<b>人均GDP</b>|63689元（9433美元）（2017年）|
+|<b>地理位置</b>|长江上游地区 中国内陆西南部||<b>最高建筑</b>|重庆环球金融中心（高339米）|
+|<b>面    积</b>|8.24万平方千米||<b>高等学府</b>|重大、西南大学、陆军军医大学|
+|<b>人    口</b>|常住人口3075.16万（2017年）||<b>市委书记</b>|陈敏尔|
+|<b>方    言</b>|西南官话-重庆方言、土家语、苗语等||<b>行政区划代码</b>|500000|
+|<b>气候条件</b>|亚热带季风性湿润气候||<b>市    长</b>|唐良智|
+|-|-||<b>市    树</b>|黄桷树|
+|-|-||<b>市    花</b>|山茶花|
+
+| <b>重庆生活文化</b> | <b>重庆民间特色文化</b> | <b>重庆曲艺文化</b> | <b>重庆建筑文化</b> | <b>重庆宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">秀山花灯</a> | <a href="javascript:;" onclick="art(this);">重庆川剧</a> | <a href="javascript:;" onclick="building(this);">重庆传统建筑文化</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">梁平年画</a> | <a href="javascript:;" onclick="art(this);">川江号子</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">梁平竹帘</a> | <a href="javascript:;" onclick="art(this);">木洞山歌</a>| - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/chongqing.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/chongqing.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '重庆民风民俗', '重庆是中国著名的历史文化古城，以重庆为中心的古巴渝地区是巴渝文化的发祥地，这片土地孕育了重庆悠久的历史。重庆不仅历史文化悠久，而且民间艺术也是广为流传和传颂。那么重庆的传统民俗都有哪些呢？'],
+    ['方言文化', 'live-2', '重庆方言', '重庆话是指居住在重庆包括周边区县（如合川区、涪陵区、垫江县等）的重庆本地人所使用的语言，属于四川话成渝片，是川东官话的代表，也是四川话中最具影响力的代表性方言之一。虽然广义的来说，重庆话也可以指重庆市所辖各区县所有重庆本地人所使用的语言，但由于重庆市境内语言差异较大，还有大量岷江小片、土广东话、老湖广话的使用者。'],
+    ['节日文化', 'live-3', '重庆节日', '纵观重庆市城内巴山绵延，渝水纵横，俯瞰历史源远流长，文化积淀深厚，构成了集山、水、林、泉、瀑、峡、洞等为一体的壮丽自然景色和熔巴渝文化、民族文化、移民文化、三峡文化、“陪都”文化、都市文化于一炉的浓郁文化色彩。从而铸就了重庆多种多样的传统节日习俗。下面我们就一起来详细的了解一下重庆有哪些传统节日习俗文化吧！'],
+    ['嫁娶文化', 'live-4', '重庆嫁娶文化', '重庆市位于中国西南部，长江与嘉陵江交汇处，四面环山，江水回绕，城市傍水依山，层叠而上，既以江城著称。公元581年隋文帝改楚州为渝州，重庆始简称“渝”。重庆是中国唯一辖有民族自治地方的直辖市，在这么一个历史悠久的地方为此有关重庆结婚习俗的讲究更是多样化，那么重庆结婚习俗有哪些?'],
+    ['饮食文化', 'live-5', '重庆饮食文化', '重庆火锅是重庆饮食文化的代表。据说以前船工在江边升火做饭驱寒，炊具仅一瓦罐，罐中盛汤，加入各种菜，又添以海椒、花椒祛湿，船工吃后，酣畅淋漓。这习俗沿袭下来，日渐丰富，成为重庆人特有的美食。现在重庆已获得“中国火锅之都”的名号。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/chongqing/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="chongqing-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['秀山花灯', 'feature-1', '秀山花灯', '秀山花灯以重庆市秀山土家族苗族自治县的花灯艺术最具代表性而命名，又称跳花灯、耍花灯、花灯戏，是一种古老的民间歌舞说唱艺术，广泛流传于四川、湖南、贵州、湖北四省交界的土家族聚居地区。秀山花灯是重庆市秀山土家族苗族自治县土、苗、汉各族人民喜爱民间歌舞，她历史悠久，遍及全县各村寨、城镇。'],
+    ['梁平年画', 'feature-2', '梁平年画', '梁平年画是套色木刻版画，号称“四川三大年画”（绵竹、梁平、夹江）之一。梁平年画表现手法浪漫，画面饱满简洁，造型古朴粗犷，神态生动，构图完整，对比强烈，以驱邪纳福、喜庆吉祥、历史故事等为题材，作为具有极高的艺术价值。与梁平竹帘、梁山灯戏并称"梁平三绝"，曾被誉为川东奇葩。'],
+    ['梁平竹帘', 'feature-3', '梁平竹帘', '梁平竹帘，又称梁山竹帘，中国民间手工艺品，竹帘画的一种。是流传千年的历史文化遗产，已被录入中国国家级非物质文化遗产名录。 《辞海》记载："竹帘画，在细竹丝编织的帘子上加上画的工艺品，产于四川省梁山县（今重庆市梁平县）"。而梁平竹帘的工艺制作历史已逾千年。史料记载，早在北宋年间，就被列为皇家贡品，饮誉天下，素有"天下第一帘"之称。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/chongqing/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="chongqing-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['重庆川剧', 'art-1', '重庆川剧', '川剧，是中国传统戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区。川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。川剧由昆曲、高腔、胡琴、弹戏、灯调五种声腔组成。'],
+    ['川江号子', 'art-2', '川江号子', '川江号子是川江船工们为统一动作和节奏，由号工领唱，众船工帮腔、合唱的一种一领众和式的民间歌唱形式。重庆市和四川东部是川江号子的主要发源地和传承地。川江号子主要流传于金沙江、长江及其支流岷江、沱江、嘉陵江、乌江和大宁河等流域。'],
+    ['木洞山歌', 'art-3', '木洞山歌', '木洞山歌是重庆市巴南区木洞镇民众传唱的传统山歌歌种，木洞山歌系重庆市巴南区木洞镇民众传唱的山歌歌种，它的渊源可以追溯到上古时代的“巴渝歌舞”，中经战国时代的“下里巴人”、汉代的“巴子讴歌”、唐代的“竹枝”，直至明清演化形成木洞山歌。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/chongqing/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="chongqing-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['重庆传统建筑文化', 'building-1', '重庆传统建筑', '重庆一般民居院落十分窄小，形成极小的天井，仅供采光通风所用，易保持阴凉，且因势就形，占地面积较小，布局相对自由。只在较为平坦的地方，有一些名门望族较大的院落。在较大的民居院落中，敞廊、敞厅较多，并成为居民生活中交往的场所。那么重庆整体的传统建筑风格是怎么样的呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/chongqing/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="chongqing-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '重庆',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

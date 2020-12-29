@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>四川-地区路线</title>
+  <meta name="description" content="四川, sichuan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|川，蜀，天府之国||<b>著名景点</b>|九寨-黄龙、都江堰-青城山、乐山-峨眉山、阆中古城、稻城亚丁等|
+|<b>行政区类别</b>|省||<b>机    场</b>|成都双流国际机场、绵阳南郊机场等|
+|<b>所属地区</b>|西南地区||<b>火车站</b>|成都站、成都东站、绵阳站、内江北站、达州站、乐山站等|
+|<b>下辖地区</b>|1个副省级市、17个地级市、3个自治州||<b>车牌代码</b>|川A-川Z|
+|<b>电话区号</b>|028，081X，082X，083X||<b>GDP</b>|36980.2亿元（2017年）|
+|<b>邮政区码</b>|61XXXX，62XXXX，63XXXX，64XXXX||<b>人均GDP</b>|44651.00元（2017年）|
+|<b>地理位置</b>|中国西南部||<b>主要河流</b>|长江、岷江、沱江、涪江、嘉陵江|
+|<b>面    积</b>|48.6万平方千米||<b>高等学府</b>|川大、电子科大、西南交通大学等|
+|<b>人    口</b>|8302万人（2017年）||<b>历史名人</b>|李冰、诸葛亮、武则天、邓小平等|
+|<b>方    言</b>|西南官话-四川话、彝语、羌语、藏语、客家话||<b>省委书记</b>|彭清华|
+|<b>气候条件</b>|亚热带季风气候（四川盆地）、高原山地气候（川西高原）||<b>省    长</b>|尹力|
+
+| <b>四川生活文化</b> | <b>四川民间特色文化</b> | <b>四川曲艺文化</b> | <b>四川建筑文化</b> | <b>四川宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">传统曲艺</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">川剧</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">蜀绣</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">糖画</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">四川皮影戏</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">四川禁忌</a> | - |-| -|-|
+|-| - |-|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/sichuan.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/sichuan.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '四川民风民俗', '四川历史悠久，地大物博，自古以来就享有“天府之国”的美誉。四川有人类活动的历史可以追溯到200万年以前。在四川东部的巫山县( 现属 重庆市)，科学家发现了距今202—204万年前的人类头骨化石。在川中的资阳县，出土了着名的“资阳人”头骨化石。那么四川至今都还有哪些民俗文化呢？'],
+    ['方言文化', 'live-2', '四川方言', '四川话，又称巴蜀方言，属汉语西南官话。现今四川话形成于清朝康熙年间的“ 湖广填四川”的大移民运动时期，是由明之前流行于四川地区的 蜀语和来自 湖广、广东、江西等地的各地移民方言逐渐演变融合而形成的。'],
+    ['节日文化', 'live-3', '四川节日', '四川在古时属梁州，秦朝统一中国后设置蜀郡，西汉时司益州郡，魏晋时期分为梁益二州，宋朝时设置益州、梓州、利州和夔州四路，合称为“川陕四路”，简称四川路，这便是四川一名的来历。四川的历史如此悠久，那么四川的传统节日有哪些呢？'],
+    ['嫁娶文化', 'live-4', '内蒙古嫁娶文化', '四川在20世纪80年代就已经出现自由恋爱而结合的例子，但是当时最为重要的婚嫁途径还是“父母之命，媒妁之言”。而这种说媒的方式稍稍有别于古装影视剧中的形式。那么如今四川的结婚习俗都还有哪些呢？'],
+    ['饮食文化', 'live-5', '四川饮食文化', '川菜是我国著名的地方菜之一，在我国烹饪历史上占有重要地位，它取材广泛，调味多变，菜式多样，口味清鲜，醇浓并重，以善用麻辣著称，并以其别具一格的烹调方法和浓郁的地方风味，享誉中外，成为中华民族饮食文化与文明史上一颗灿烂夺目的明珠。川菜与鲁菜、淮扬菜、粤菜并称中国的四大菜系。'],
+    ['四川禁忌', 'live-6', '四川禁忌', '四川俗语说 : “ 清早起来三道快 ,猴子、 老虎与妖怪. ”因此 ,迷信的人特别忌讳说凶猛的动物以及鬼怪之类。四川以前的语言的禁忌就更多，平常忌说“鬼、虎、豹、猴、蛇、落、痣、破、烂、倒”等。那么四川如今还会忌讳说什么话呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/sichuan/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="sichuan-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['传统曲艺', 'feature-1', '四川传统曲艺文化', '四川曲艺是以四川民间说唱艺术为基础发展起来的，其起源可追溯到汉代以前。1959年成都近郊出土的几尊东汉陶制说书俑，“击鼓说书，喜形于色”，可见当时说唱艺术就流行了。唐宋时期，四川民间说唱艺术更盛，且文化性更强。那么四川现在还有哪些传统曲艺文化呢？'],
+    ['川剧', 'feature-2', '四川川剧文化', '川剧，是中国传统戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区。川剧脸谱，是川剧表演艺术中重要的组成部分，是历代川剧艺人共同创造并传承下来的艺术瑰宝。川剧由昆曲、高腔、胡琴、弹戏、灯调五种声腔组成。'],
+    ['蜀绣', 'feature-3', '四川蜀绣', '蜀绣是中国的传统工艺，与苏绣、湘绣、粤绣齐名，为中国四大名绣之一。集中于四川成都，产于四川成都、绵阳等地，在晋代被称蜀中之宝。蜀绣以软缎和彩丝为主要原料，针法包括12大类共122种，充分发挥了手绣的特长，形成了具有浓厚的地方风格。那么蜀绣有什么制作工艺呢？'],
+    ['糖画', 'feature-4', '四川糖画', '糖画是一种传统民间手工艺，以糖为材料来进行造型的。所用的工具仅一勺一铲，糖料一般是红、白糖加上少许饴糖放在炉子上用温火熬制，熬到可以牵丝时即可以用来浇铸造型了。在绘制造型时，由艺人用小汤勺舀起溶化了的糖汁，在石板上飞快地来回浇铸，画出造型，民间艺人的手上功夫便是造型的关键。'],
+    ['四川皮影戏', 'feature-5', '四川皮影戏', '四川皮影又叫“灯影戏”。大多具有汉魏石刻简约纯朴的古韵，清代极盛也分东西两路，东路分布于川东、川北山区，影人形制多以直线造型、刻工精细，形体高约30厘米，以牛皮制成。当地人称作“渭南影子”，因为从陕西渭南传来之故。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/sichuan/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="sichuan-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '四川',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

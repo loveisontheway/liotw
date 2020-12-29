@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>广东-地区路线</title>
+  <meta name="description" content="广东, guangdong" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|南粤||<b>著名景点</b>|丹霞山、长隆欢乐世界、华侨城、白云山、雁南飞、观澜湖、罗浮山|
+|<b>行政区类别</b>|省||<b>机    场</b>|广州白云机场、深圳宝安机场等|
+|<b>所属地区</b>|中国华南||<b>火车站</b>|广州南站、广州站、广州东站、深圳北站等|
+|<b>下辖地区</b>|21个地级市、20个县级市||<b>车牌代码</b>|粤+城市牌号|
+|<b>电话区号</b>|020、066+、075+、076+||<b>GDP</b>|8.99万亿元（2017年）|
+|<b>邮政区码</b>|51-52（广州：510000）||<b>人均GDP</b>|80490元|
+|<b>地理位置</b>|中国南岭以南，南海之滨||<b>高等院校</b>|中大、华工、暨大、华师等|
+|<b>面    积</b>|17.97万平方公里||<b>省    长</b>|马兴瑞|
+|<b>人    口</b>|11169万人（2017年常住人口）||<b>省委书记</b>|李希|
+|<b>方    言</b>|粤语、客家语、闽语等||<b>行政区划代码</b>|440000|
+|<b>气候条件</b>|亚热带季风气候||-|-|
+
+| <b>广东生活文化</b> | <b>广东特色文化</b> | <b>广东曲艺文化</b> | <b>广东建筑文化</b> | <b>广东宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">饮茶文化</a> | <a href="javascript:;" onclick="art(this);">曲艺文化</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">文化遗产</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">广东禁忌</a> | - | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图](#one)
++ [II. 景点](#two)
++ [III. 路线规划（所含地区：广东、福建、浙江、江苏、山东、河北、天津、北京、辽宁、吉林、黑龙江）](#three)
+  - [1、岑溪市 - 云浮市](#1)
+  - [2、云浮市 - 广州市](#2)
+  - [3、广州市 - 横沥镇](#3)
+  - [4、横沥镇 - 深圳市](#4)
+  - [5、深圳市 - 黄埠镇](#5)
+  - [6、黄埠镇 - 陆丰市](#6)
+  - [7、陆丰市 - 惠来县](#7)
+  - [8、惠来县 - 汕头市](#8)
+  - [9、汕头市 - 云霄县](#9)
+  - [10、云霄县 - 漳州市](#10)
+  - [11、漳州市 - 泉州市](#11)
+  - [12、泉州市 - 福清市](#12)
+  - [13、福清市 - 罗源县](#13)
+  - [14、罗源县 - 甘棠镇](#14)
+  - [15、甘棠镇 - 霞浦县](#15)
+  - [16、霞浦县 - 福鼎市](#16)
+  - [17、福鼎市 - 温州市](#17)
+  - [18、温州市 - 台州市](#18)
+  - [19、台州市 - 宁海县](#19)
+  - [20、宁海县 - 杭州市](#20)
+  - [21、杭州市 - 苏州市](#21)
+  - [22、苏州市 - 南通市](#22)
+  - [23、南通市 - 大丰市](#23)
+  - [24、大丰市 - 滨海港镇](#24)
+  - [25、滨海港镇 - 连云港市](#25)
+  - [26、连云港 - 青岛市](#26)
+  - [27、青岛市 - 乳山市](#27)
+  - [28、乳山市 - 威海市](#28)
+  - [29、威海市 - 蓬莱市](#29)
+  - [30、蓬莱市 - 央子镇](#30)
+  - [31、央子镇 - 滨州市](#31)
+  - [32、滨州市 - 天津市](#32)
+  - [33、天津市 - 北京市](#33)
+  - [34、北京市 - 唐山市](#34)
+  - [35、唐山市 - 秦皇岛市](#35)
+  - [36、秦皇岛市 - 葫芦岛市](#36)
+  - [37、葫芦岛市 - 盘锦市](#37)
+  - [38、盘锦市 - 沈阳市](#38)
+  - [39、沈阳市 - 四平市](#39)
+  - [40、四平市 - 长春市](#40)
+  - [41、长春市 - 扶余市](#41)
+  - [42、扶余市 - 哈尔滨市](#42)
+  - [43、哈尔滨市 - 大庆市](#43)
+  - [44、大庆市 - 齐齐哈尔市](#44)
+
+<h2 id="one"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;总路线图</h2>
+<img data-src="../imgs/region-line/guangdong/guangdong.png" width="70%" height="70%" title="总路线图"/>
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/guangdong.gif" title="景点"/>
+
+<h2 id="three"><i class="fa fa-spinner fa-pulse"></i>&nbsp;路线规划（所含地区：广东、福建、浙江、江苏、山东、河北、天津、北京、辽宁、吉林、黑龙江）</h2>
+  <h4 id="1">1、岑溪市 - 云浮市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/1.png" width="61%" height="40%" title="1、岑溪市 - 云浮市"/>
+  <img data-src="../imgs/region-line/guangdong/1t.png" title="1、岑溪市 - 云浮市"/>
+
+  <h4 id="2">2、云浮市 - 广州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/2.png" width="61%" height="40%" title="2、云浮市 - 广州市"/>
+  <img data-src="../imgs/region-line/guangdong/2t.png" title="2、云浮市 - 广州市"/>
+
+  <h4 id="3">3、广州市 - 横沥镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/3.png" width="61%" height="40%" title="3、广州市 - 横沥镇"/>
+  <img data-src="../imgs/region-line/guangdong/3t.png" title="3、广州市 - 横沥镇"/>
+
+  <h4 id="4">4、横沥镇 - 深圳市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/4.png" width="61%" height="40%" title="4、横沥镇 - 深圳市"/>
+  <img data-src="../imgs/region-line/guangdong/4t.png" title="4、横沥镇 - 深圳市"/>
+
+  <h4 id="5">5、深圳市 - 黄埠镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/5.png" width="61%" height="40%" title="5、深圳市 - 黄埠镇"/>
+  <img data-src="../imgs/region-line/guangdong/5t.png" title="5、深圳市 - 黄埠镇"/>
+
+  <h4 id="6">6、黄埠镇 - 陆丰市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/6.png" width="61%" height="40%" title="6、黄埠镇 - 陆丰市"/>
+  <img data-src="../imgs/region-line/guangdong/6t.png" title="6、黄埠镇 - 陆丰市"/>
+
+  <h4 id="7">7、陆丰市 - 惠来县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/7.png" width="61%" height="40%" title="7、陆丰市 - 惠来县"/>
+  <img data-src="../imgs/region-line/guangdong/7t.png" title="7、陆丰市 - 惠来县"/>
+
+  <h4 id="8">8、惠来县 - 汕头市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/8.png" width="61%" height="40%" title="8、惠来县 - 汕头市"/>
+  <img data-src="../imgs/region-line/guangdong/8t.png" title="8、惠来县 - 汕头市"/>
+
+  <h4 id="9">9、汕头市 - 云霄县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/9.png" width="61%" height="40%" title="9、汕头市 - 云霄县"/>
+  <img data-src="../imgs/region-line/guangdong/9t.png" title="9、汕头市 - 云霄县"/>
+
+  <h4 id="10">10、云霄县 - 漳州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/10.png" width="61%" height="40%" title="10、云霄县 - 漳州市"/>
+  <img data-src="../imgs/region-line/guangdong/10t.png" title="10、云霄县 - 漳州市"/>
+
+  <h4 id="11">11、漳州市 -泉州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/11.png" width="61%" height="40%" title="11、漳州市 -泉州市"/>
+  <img data-src="../imgs/region-line/guangdong/11t.png" title="11、漳州市 -泉州市"/>
+
+  <h4 id="12">12、泉州市 - 福清市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/12.png" width="61%" height="40%" title="12、泉州市 - 福清市"/>
+  <img data-src="../imgs/region-line/guangdong/12t.png" title="12、泉州市 - 福清市"/>
+
+  <h4 id="13">13、福清市 - 罗源县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/13.png" width="61%" height="40%" title="13、福清市 - 罗源县"/>
+  <img data-src="../imgs/region-line/guangdong/13t.png" title="13、福清市 - 罗源县"/>
+
+  <h4 id="14">14、罗源县 - 甘棠镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/14.png" width="61%" height="40%" title="14、罗源县 - 甘棠镇"/>
+  <img data-src="../imgs/region-line/guangdong/14t.png" title="14、罗源县 - 甘棠镇"/>
+
+  <h4 id="15">15、甘棠镇 - 霞浦县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/15.png" width="61%" height="40%" title="15、甘棠镇 - 霞浦县"/>
+  <img data-src="../imgs/region-line/guangdong/15t.png" title="15、甘棠镇 - 霞浦县"/>
+
+  <h4 id="16">16、霞浦县 - 福鼎市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/16.png" width="61%" height="40%" title="16、霞浦县 - 福鼎市"/>
+  <img data-src="../imgs/region-line/guangdong/16t.png" title="16、霞浦县 - 福鼎市"/>
+
+  <h4 id="17">17、福鼎市 - 温州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/17.png" width="61%" height="40%" title="17、福鼎市 - 温州市"/>
+  <img data-src="../imgs/region-line/guangdong/17t.png" title="17、福鼎市 - 温州市"/>
+
+  <h4 id="18">18、温州市 - 台州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/18.png" width="61%" height="40%" title="18、温州市 - 台州市"/>
+  <img data-src="../imgs/region-line/guangdong/18t.png" title="18、温州市 - 台州市"/>
+
+  <h4 id="19">19、台州市 - 宁海县&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/19.png" width="61%" height="40%" title="19、台州市 - 宁海县"/>
+  <img data-src="../imgs/region-line/guangdong/19t.png" title="19、台州市 - 宁海县"/>
+
+  <h4 id="20">20、宁海县 - 杭州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/20.png" width="61%" height="40%" title="20、宁海县 - 杭州市"/>
+  <img data-src="../imgs/region-line/guangdong/20t.png" title="20、宁海县 - 杭州市"/>
+
+  <h4 id="21">21、杭州市 - 苏州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/21.png" width="61%" height="40%" title="21、杭州市 - 苏州市"/>
+  <img data-src="../imgs/region-line/guangdong/21t.png" title="21、杭州市 - 苏州市"/>
+
+  <h4 id="22">22、苏州市 - 南通市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/22.png" width="61%" height="40%" title="22、苏州市 - 南通市"/>
+  <img data-src="../imgs/region-line/guangdong/22t.png" title="22、苏州市 - 南通市"/>
+
+  <h4 id="23">23、南通市 - 大丰市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/23.png" width="61%" height="40%" title="23、南通市 - 大丰市"/>
+  <img data-src="../imgs/region-line/guangdong/23t.png" title="23、南通市 - 大丰市"/>
+
+  <h4 id="24">24、大丰市 - 滨海港镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/24.png" width="61%" height="40%" title="24、大丰市 - 滨海港镇"/>
+  <img data-src="../imgs/region-line/guangdong/24t.png" title="24、大丰市 - 滨海港镇"/>
+
+  <h4 id="25">25、滨海港镇 - 连云港市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/25.png" width="61%" height="40%" title="25、滨海港镇 - 连云港市"/>
+  <img data-src="../imgs/region-line/guangdong/25t.png" title="25、滨海港镇 - 连云港市"/>
+
+  <h4 id="26">26、连云港 - 青岛市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/26.png" width="61%" height="40%" title="26、连云港 - 青岛市"/>
+  <img data-src="../imgs/region-line/guangdong/26t.png" title="26、连云港 - 青岛市"/>
+
+  <h4 id="27">27、青岛市 - 乳山市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/27.png" width="61%" height="40%" title="27、青岛市 - 乳山市"/>
+  <img data-src="../imgs/region-line/guangdong/27t.png" title="27、青岛市 - 乳山市"/>
+
+  <h4 id="28">28、乳山市 - 威海市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/28.png" width="61%" height="40%" title="28、乳山市 - 威海市"/>
+  <img data-src="../imgs/region-line/guangdong/28t.png" title="28、乳山市 - 威海市"/>
+
+  <h4 id="29">29、威海市 - 蓬莱市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/29.png" width="61%" height="40%" title="29、威海市 - 蓬莱市"/>
+  <img data-src="../imgs/region-line/guangdong/29t.png" title="29、威海市 - 蓬莱市"/>
+
+  <h4 id="30">30、蓬莱市 - 央子镇&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/30.png" width="61%" height="40%" title="30、蓬莱市 - 央子镇"/>
+  <img data-src="../imgs/region-line/guangdong/30t.png" title="30、蓬莱市 - 央子镇"/>
+
+  <h4 id="31">31、央子镇 - 滨州市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/31.png" width="61%" height="40%" title="31、央子镇 - 滨州市"/>
+  <img data-src="../imgs/region-line/guangdong/31t.png" title="31、央子镇 - 滨州市"/>
+
+  <h4 id="32">32、滨州市 - 天津市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/32.png" width="61%" height="40%" title="32、滨州市 - 天津市"/>
+  <img data-src="../imgs/region-line/guangdong/32t.png" title="32、滨州市 - 天津市"/>
+
+  <h4 id="33">33、天津市 - 北京市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/33.png" width="61%" height="40%" title="33、天津市 - 北京市"/>
+  <img data-src="../imgs/region-line/guangdong/33t.png" title="33、天津市 - 北京市"/>
+
+  <h4 id="34">34、北京市 - 唐山市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/34.png" width="61%" height="40%" title="34、北京市 - 唐山市"/>
+  <img data-src="../imgs/region-line/guangdong/34t.png" title="34、北京市 - 唐山市"/>
+
+  <h4 id="35">35、唐山市 - 秦皇岛市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/35.png" width="61%" height="40%" title="35、唐山市 - 秦皇岛市"/>
+  <img data-src="../imgs/region-line/guangdong/35t.png" title="35、唐山市 - 秦皇岛市"/>
+
+  <h4 id="36">36、秦皇岛市 - 葫芦岛市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/36.png" width="61%" height="40%" title="36、秦皇岛市 - 葫芦岛市"/>
+  <img data-src="../imgs/region-line/guangdong/36t.png" title="36、秦皇岛市 - 葫芦岛市"/>
+
+  <h4 id="37">37、葫芦岛市 - 盘锦市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/37.png" width="61%" height="40%" title="37、葫芦岛市 - 盘锦市"/>
+  <img data-src="../imgs/region-line/guangdong/37t.png" title="37、葫芦岛市 - 盘锦市"/>
+
+  <h4 id="38">38、盘锦市 - 沈阳市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/38.png" width="61%" height="40%" title="38、盘锦市 - 沈阳市"/>
+  <img data-src="../imgs/region-line/guangdong/38t.png" title="38、盘锦市 - 沈阳市"/>
+
+  <h4 id="39">39、沈阳市 - 四平市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/39.png" width="61%" height="40%" title="39、沈阳市 - 四平市"/>
+  <img data-src="../imgs/region-line/guangdong/39t.png" title="39、沈阳市 - 四平市"/>
+
+  <h4 id="40">40、四平市 - 长春市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/40.png" width="61%" height="40%" title="40、四平市 - 长春市"/>
+  <img data-src="../imgs/region-line/guangdong/40t.png" title="40、四平市 - 长春市"/>
+
+  <h4 id="41">41、长春市 - 扶余市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/41.png" width="61%" height="40%" title="41、长春市 - 扶余市"/>
+  <img data-src="../imgs/region-line/guangdong/41t.png" title="41、长春市 - 扶余市"/>
+
+  <h4 id="42">42、扶余市 - 哈尔滨市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/42.png" width="61%" height="40%" title="42、扶余市 - 哈尔滨市"/>
+  <img data-src="../imgs/region-line/guangdong/42t.png" title="42、扶余市 - 哈尔滨市"/>
+
+  <h4 id="43">43、哈尔滨市 - 大庆市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/43.png" width="61%" height="40%" title="43、哈尔滨市 - 大庆市"/>
+  <img data-src="../imgs/region-line/guangdong/43t.png" title="43、哈尔滨市 - 大庆市"/>
+
+  <h4 id="44">44、大庆市 - 齐齐哈尔市&nbsp;&nbsp;<i class="fa fa-bicycle fa-2x"></i></h4>
+  <img data-src="../imgs/region-line/guangdong/44.png" width="61%" height="40%" title="44、大庆市 - 齐齐哈尔市"/>
+  <img data-src="../imgs/region-line/guangdong/44t.png" title="44、大庆市 - 齐齐哈尔市"/>
+  
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/guangdong.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '广东民风民俗', '民俗文化，是指民间民众的风俗生活文化的统称。也泛指一个国家、民族、地区中集居的民众所创造、共享、传承的风俗生活习惯。是在普通人民群众（相对于官方）的生产生活过程中所形成的一系列非物质的东西。当然在广东这个经济发达的地区也有其各地区主要的民俗文化，比如广东的三大主要语言、广东人的生活风俗：饮早茶、吃宵夜、饮糖水、喝凉茶、喝老火靓汤、打边炉（吃火锅）、冬令吃狗肉等。 广东人的信仰风俗：南海神诞、天后诞、郑仙诞、金花诞、上元诞、中元诞、下元诞（合为三元）等。'],
+    ['方言文化', 'live-2', '广东方言', '广东的汉族居民，主要可分为广府、客家与潮汕三大民系。大民系的形成，是中原汉族与岭南土著长期融合的结果。这种融合早已有之，而较大规模的融合则始于秦征岭南，经过两晋、两宋、明末三次移民高潮(来自中原地区，还包括楚、吴越、闽等岭北地区)，逐渐形成了三大民系。由于历史上的种种原因，三大民系的人民长期各自保持其生活习俗、文化意识和性格特征，共同构成了广东文化丰富多彩、千姿百态的风情魅力，并以其各自的优势，促进了岭南文化的发展。因此也就形成广东的三大主要方言。粤语、潮汕话以及客家话。'],
+    ['节日文化', 'live-3', '广东节日', '在广东除了我国通常的传统节日，如春节、中秋节、国庆节等等，还有一些属于广东比较有特色的节日。比如广州地区的“人日节”，在解放前在“人日”这天广州地区的男女老少都会结伴到郊外游玩。而到芳村“游花地”更是出游的必选。醉观公园所在地便是当年“游花地”的地点之一“醉观园”。还有茂名电白县、化州、高州、茂南、茂港及邻近的湛江吴川、阳春一带的农村每年都会举办年例。还有广东的龙舟节，龙舟竞渡在广州至少有上千年的历史。每年端午节，都要举办端午赛龙舟的活动。'],
+    ['嫁娶文化', 'live-4', '广东嫁娶文化', '儒家经典《礼记·昏仪》说：“夫权,始于冠，本于昏(婚)，重于喪祭，专于朝聘，和于射乡。此礼之大体也。昏(婚)礼者，礼之本也。”可见儒家十分推重婚姻礼俗。中国传统文化历来重视儒家思想，在这一思想的影响下，形成了五彩缤纷、礼制颇多的婚俗文化。广东的传统婚俗，大抵就是中国传统文化在一个地方的具体表现。 中国传统婚嫁基本遵循西周时期的“婚姻六礼”，这是婚姻成立的必要条件和必经程序。不过时到今天，由于这种传统婚嫁礼仪繁琐需时，广东地区甚少会采用全套[三书六礼]仪式，多化繁为简。'],
+    ['饮食文化', 'live-5', '广东饮食文化', '广东饮食文化在中国饮食文化中具有极其重要的地位，而“食在广州，味在潮汕”这种文化现象，则是广东饮食文化的集中表现，它涵盖了独具特色的粤菜精华、别具一格的岭南饮食风格。广州人的饮食款式新颖，量少而精，味求隽永，清爽香脆，浓郁鲜美。这个风俗与爱好，已有非常悠久的历史。广东饮食文化，是指广东省的人们的饮食文化习惯，讲究味道之鲜美，色、香、味、形整体设计之完美。其实说到底，广东饮食文化主要包含：第一就是粤菜，第二就是早茶文化，第三就是广东小吃，第四就是广东饮食习俗。'],
+    ['广东禁忌', 'live-6', '广东禁忌', '广州人的意头和禁忌：对输赢的“输”，改说成“胜”字。如“通书”作“通胜”。“干杯”叫“饮胜”。在宴席上猜拳斗酒，首先就要说声“发财”，然后开始。“猪、牛肝”叫“猪、牛润”。“萝卜干”叫“萝卜润”、“豆腐干”称作“豆腐润”。猪、牛舌则称“猪、牛利”等在日常生活中，对自然和生理或是认为的现象，也有很多忌讳。比如打喷嚏，立即喊声“大吉利是”！认为是有人叨念说他怎的。喜鹊当头鸣叫，则预兆带来佳音（好兆头）。反之，对乌鸦、猫头鹰叫则认为是“不祥之兆”。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guangdong/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guangdong-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['饮茶文化', 'feature-1', '饮茶文化', '在广东，民间以茶相待已成为一种礼节，如有客到，第一件事便是奉上一杯“靓茶”，第一句话是“请饮茶”，以此表示主人的热情、友好和礼貌。广东地处亚热带，日照长、气温高、流汗多，人们需要通过饮食来补充大量的水分。饮茶同喝水一样，首先是人类生存的需要。随着社会经济的发展，茶文化的内涵不断丰富，入明以来，广州“茶市”与潮州“功夫茶”，这两朵岭南茶文化的奇葩破绽而开。至清代，广东茶文化进入第一个兴盛期，在茶市、茶馆、茶具、用茶方式，以及人们对茶的品味的文化心态等方面，均达到空前水平。'],
+    ['文化遗产', 'feature-2', '文化遗产', '广东的文化遗产，蕴涵着广东人民特有的精神文化价值，是生活在这片热土上的历代先民们智慧的结晶。2011年6月，国务院第三次全国文物普查领导小组发出《关于核定广东省第三次全国文物普查登记不可移动文物的函》，认定广东省调查基本单元123个，登记不可移动文物共37156处，其中古遗址2462处，占总量的6.63%；古墓葬2528处，占总量的6.8%；古建筑20566处，占总量的55.35%；石窟寺及石刻769处，占总量的2.07%；近现代重要史迹及代表性建筑10821处，占总量的29.12%；其他10处，占总量的0.03%。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guangdong/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guangdong-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['曲艺文化', 'art-1', '曲艺文化', '曲艺是中华民族各种“说唱艺术”的统称，它是由民间口头文学和歌唱艺术经过长期发展演变形成的一种独特的艺术形式。曲艺作为中国最具民族民间色彩的表演艺术，在中国整个的文艺发展史上，占有十分重要的地位。广义的广东曲艺是指广东省内各个曲艺品种。有龙舟歌、高州八音锣鼓、信宜采茶调、木鱼书、兴宁市竹板歌、粤曲、粤语讲古、潮州歌册、粤曲星腔、花朝戏；粤东北的“二人转”、新兴花灯调、民间曲艺、东莞木鱼歌、龙舟歌、龙舟说唱等。实际指的是广州和岭南地区的说唱文学。狭义的广东曲艺单指粤曲演唱。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guangdong/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guangdong-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '广东',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

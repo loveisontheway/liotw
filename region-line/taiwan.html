@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>台湾-地区路线</title>
+  <meta name="description" content="台湾, taiwan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|福尔摩沙（Formosa）、宝岛、中华台北||<b>著名景点</b>|台北101、台北故宫、日月潭、阿里山、玉山、爱河、垦丁、太鲁阁|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|台湾桃园国际机场、高雄国际机场、台北松山机场、台中清泉岗机场|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|台北车站、高雄车站、台中车站、台南车站、花莲车站、桃园车站等|
+|<b>下辖地区</b>|6“直辖市”、3市、13县||<b>车牌代码</b>|-|
+|<b>电话区号</b>|+886||<b>GDP</b>|5295.5亿美元（2014年）国际汇率 |
+|<b>邮政区码</b>|-||<b>人均GDP</b>|22598美元（2014年）国际汇率|
+|<b>地理位置</b>|中国大陆东南沿海的大陆架上||<b>主要民族</b>|汉族、台湾原住民族（即高山族）|
+|<b>面    积</b>|36192.8155平方千米||<b>主要宗教</b>|佛教、道教、基督新教、天主教等|
+|<b>人    口</b>|2349.2074万（2015年底）||<b>货    币</b>|港元（HK$）|
+|<b>方    言</b>|闽南语（台湾话）、客家语、福州话等汉语方言；南岛语系诸语言||<b>货币单位</b>|新台币（NTD，TWD）|
+|<b>气候条件</b>|北回归线以北属亚热带季风气候，以南属热带季风气候 ||<b>地理最高点</b>|玉山主峰（海拔3952米）|
+|-|-||<b>最长河流</b>|浊水溪（186.6千米）|
+|-|-||<b>最大湖泊</b>|曾文水库（17.14平方千米）|
+|-|-||<b>主要城市</b>|台北、高雄、新北、台中、台南等|
+|-|-||<b>著名大学</b>|国立台湾大学、国立清华大学、国立交通大学、国立成功大学、国立政治大学|
+
+| <b>台湾旅游攻略</b> | <b>台湾旅游必去景点</b> | <b>台湾旅游注意事项</b> | <b>港澳台</b> | <b>其它</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="strategy(this);">台湾旅游攻略</a> | <a href="javascript:;" onclick="scene(this);">台北101</a> | <a href="javascript:;" onclick="notes(this);">台湾旅游注意事项</a> | <a href="javascript:;" onclick="tips(this);">港澳台旅游小贴士</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">台北故宫</a> | - | <a href="introduce.html">港澳台简介</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">日月潭</a> | - | <a href="permit.html">港澳台通行证</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">阿里山</a> | - |-|-|
+| - | <a href="javascript:;" onclick="scene(this);">西门町</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">淡水</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">九份</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">垦丁</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">野柳</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">夜市</a> | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/travel-map/taiwan.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/taiwan.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var strategyArr = [
+    [
+      '台湾旅游攻略', 
+      'strategy-1', 
+      '台湾旅游景点/攻略/自由行', 
+      '台湾很小，台湾也很大，从城市到乡村，高山到大海，峡谷到湖潭，每个地方都散发着不同的风情，值得细细品味。享受台北，品味台南，领略高雄，漫步垦丁。',
+      '<b>最佳季节 ： </b>9月-11月',
+      '<b>建议游玩 ： </b>7-8日',
+      '<b>人均花费 ： </b>￥5000-12000元'
+    ]
+  ];
+
+  var strategy = function(obj) {
+    var title = obj.innerText;
+    for(var strategy of strategyArr) {
+      if(strategy[0] === title) {
+        swal({
+          title: strategy[2],
+          html: '<img src="../imgs/timeline/taiwan/'+strategy[1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+strategy[3]+'</p><p style="text-align:left;text-indent:35px;">'+strategy[4]+'</p><p style="text-align:left;text-indent:35px;">'+strategy[5]+'</p><p style="text-align:left;text-indent:35px;">'+strategy[6]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var sceneArr = [
+    ['台北101', 'scene-1', '台湾最知名的建筑，拥有世界最快速电梯，设计宏伟，视野开阔，最适合夜间欣赏城市繁华。'],
+    ['台北故宫', 'scene-2', '故宫馆藏相当丰富，而且整座建筑风格庄重典雅。'],
+    ['日月潭', 'scene-3', '潭水清澈晶莹，而且湖面辽阔。其实日月潭最美的地方叫水社坝，清爽宜人。'],
+    ['阿里山', 'scene-4', '山上的天气真好，景色还是不错的很迷人。樱花开的灿烂蛮漂亮，早晨山上的气温有点低，不过空气很清新，植被都十分的茂盛。'],
+    ['西门町', 'scene-5', '西门町的特色小吃很多，很热闹。卖相味道不俗，绝佳好吃。'],
+    ['淡水', 'scene-6', '干净的小城，渔人码头、日落、情人桥，骑着单车，载着恋人，整个感觉都很悠闲舒服。'],
+    ['九份', 'scene-7', '台湾的一个小镇，是一个美丽的山城，清新的空气。'],
+    ['垦丁', 'scene-8', '台湾的“天涯海角”，纯净的海景、洁白的沙滩、热带的风情，还有刺激的游乐项目，充足的阳光，非常美的海边景色。'],
+    ['野柳', 'scene-9', '野柳地质公园以其独特的地形地貌吸引着游客，号称世界十大最美海岸之一。'],
+    ['夜市', 'scene-10', '台湾十大夜市：台北士林夜市、台中逢甲夜市、嘉义文化路夜市、台南花园夜市、高雄六合夜市、凤山中华街夜市、宜兰罗东夜市、华西街夜市、宁夏夜市、基隆庙口']
+  ];
+
+  var scene = function(obj) {
+    var title = obj.innerText;
+    for(var scene of sceneArr) {
+      if(scene[0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/taiwan/'+scene[1]+'.jpg" width="240px" height="240px"/><p>'+scene[2]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var notesArr = [
+    [
+      '台湾旅游注意事项', 
+      '<b>交通：</b>到达与离开主要是飞机和轮船，岛内交通则以铁路和公路为主。',
+      '<b>住宿：</b>在台湾住宿相当方便，国际级的观光饭店或是平民化的旅社十分普及。',
+      '<b>美食：</b>大肠包小肠、鼎边锉、蚵仔煎、阿宗面线、甜不辣、棺材板、姜母鸭。',
+      '<b>购物：</b>台湾是世界名牌、奢侈品的集中地，台湾的货品税与营收税已包含在定价中，不另加收。部分大型百货商店、品牌专卖店提供5％退税，在离境日于机场退税柜台办理退税手续。',
+      '<b>通行证：</b>由大陆公安单位签发的《大陆居民往来台湾通行证》及个人旅游签注，入台证。',
+      '<b>货币：</b>台湾的流通货币为新台币（NT$），汇率兑换大约为1：4.7，汇率浮动。台湾的部分银行可以实现人民币和台币的直接兑换。一般商场都可以使用信用卡、VISA、万事达双币信用卡。'
+    ]
+  ];
+
+  var notes = function(obj) {
+    var title = obj.innerText;
+    for(var notes of notesArr) {
+      if(notes[0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+notes[1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notes[2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notes[3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notes[4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notes[5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notes[6]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var tipsArr = [
+    [
+      '港澳台旅游小贴士', 
+      '1、多了解香港及澳门的法律法规。',
+      '2、香港及澳门旅游地图、交通指南。',
+      '3、银两：港币、人民币、现金、银行卡。',
+      '4、要注意陋习：不要当众裸上身试衣、男子裸露上、不要街头爆粗口、室内不可以吸烟、地铁里不能吃盒饭、父母亲教好小孩子不要随地小便，不要随地吐痰，闯红灯、乱扔垃圾等等。否则最少罚HKD00。',
+      '5、每位客人可携带一件手提行李登机，规格以不超过标准(长56CM，宽36CM，高23CM)为准，数量以不超过20公斤为准。箱式的、带拉杆的行李乘国际航班时必须拖运。',
+      '6、身份证原件、无身份证儿童带户口本原件，带有效签注的港澳通行证。',
+      '7、赴台旅游应当持《大陆居民往来台湾通行证》、旅游签注和入台证。'
+    ]
+  ];
+
+  var tips = function(obj) {
+    var title = obj.innerText;
+    for(var tips of tipsArr) {
+      if(tips[0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+tips[1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[6]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tips[7]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '台湾',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

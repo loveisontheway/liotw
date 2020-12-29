@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>天津-地区路线</title>
+  <meta name="description" content="天津, tianjin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|津沽、津门||<b>著名景点</b>|五大道、天津之眼、鼓楼、盘山、古文化街、水上公园、黄崖关长城|
+|<b>行政区类别</b>|直辖市||<b>机    场</b>|天津滨海国际机场|
+|<b>所属地区</b>|华北地区||<b>火车站</b>|天津站、天津西站、天津南站、天津北站、滨海站、于家堡站等|
+|<b>下辖地区</b>|16区||<b>车牌代码</b>|津A-津R|
+|<b>电话区号</b>|(+86)022||<b>GDP</b>|18595.38亿元（2017年）|
+|<b>邮政区码</b>|300000||<b>人均GDP</b>|119441元（2017年）|
+|<b>地理位置</b>|环渤海湾中心||<b>市花、市树</b>|月季、绒毛白蜡|
+|<b>面    积</b>|1.1946万平方千米||<b>现任领导</b>|市委书记李鸿忠、市长张国清|
+|<b>人    口</b>|1556.87万（2017年常住人口）||<b>著名高校</b>|南开大学、天津大学等|
+|<b>方    言</b>|天津话||<b>行政区划代码</b>|120000|
+|<b>气候条件</b>|暖温带半湿润大陆季风型气候||<b>最高建筑</b>|天津117大厦（596.5m）|
+
+| <b>天津生活文化</b> | <b>天津特色文化</b> | <b>天津曲艺文化</b> | <b>天津建筑文化</b> | <b>天津宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">泥人张彩塑</a> | <a href="javascript:;" onclick="art(this);">天津相声</a> | <a href="javascript:;" onclick="building(this);">天津标志性建筑</a> | <a href="javascript:;" onclick="religion(this);">天津宗教</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">杨柳青年画</a> | <a href="javascript:;" onclick="art(this);">天津快板</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">风筝魏</a> | <a href="javascript:;" onclick="art(this);">天津时调</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">天津刻砖刘</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">津门法鼓</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">天津禁忌</a> | <a href="javascript:;" onclick="feature(this);">葛沽宝辇会</a> |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/tianjin.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/tianjin.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '天津民风民俗', '天津简称津，意为天子渡过的地方，别名津沽、津门等。天津始于隋朝大运河的开通。在南运河和北运河的交会处、现在的金钢桥三岔河口地方，史称“三会海口”，是天津最早的发祥地。唐中叶以后，天津成为南方粮、绸北运的水陆码头。那么天津当地有什么特色文化？'],
+    ['方言文化', 'live-2', '天津方言', '天津话，中国北方方言中的一种，流行于天津市市区和塘沽城区及周边地区。通常指的天津话是以天津市内六区（和平、河西、河东、河北、南开、红桥）及西郊和南郊一部分、东郊小部分和塘沽城区（大沽、新城、塘沽、于家堡、邓善沽等沿海河两岸地区）本地居民所使用的方言。'],
+    ['节日文化', 'live-3', '天津节日', '天津，海河之畔的一颗渤海明珠。海河贯穿了整个天津卫，她孕育了这座城.海河孕育了这座城，也倒映这这座城的魅力。天津，她不仅有西方殖民时代的烙印，还饱含传统的中国文化。那么天津如今还保留着哪些特色的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '天津嫁娶文化', '天津从明初设卫以来，迄今已有600来年的历史。由于天津是个五方杂处之地，因此其风俗习惯是杂揉各地之长，而逐步形成：自己的风俗习惯。那么在天津旧社会时期，天津有什么结婚文化习俗呢？天津现在保留的结婚文化习俗还有哪些呢？'],
+    ['饮食文化', 'live-5', '天津饮食文化', '天津的饮食文化驰名中外，不少到天津旅游的人都是奔着吃来的。这里既有登得大雅之堂的天津菜，也有众多风味独具的津门特色小吃。天津是退海之地，古有九河下梢之说，盛产鱼、虾、蟹，民间素有“吃鱼吃吓，天津为家”的说法。'],
+    ['天津禁忌', 'live-6', '天津禁忌', '去天津旅游的你或者是在天津生活的你，你都知道天津有哪些生活禁忌么？你知道天津人在平时的生活节日里都会注意些什么呢？天津人平日里都有哪些忌讳呢？或者你了解天津的一些平时的禁忌么？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/tianjin/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="tianjin-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['泥人张彩塑', 'feature-1', '泥人张彩塑', '泥人张彩塑为天津市的一种民间文化，著名的汉族传统手工艺品之一。作为北方流传的一派民间彩塑，创始于清代道光年间，是天津艺人张明山于19世纪中叶创造的彩绘泥塑艺术品，现为天津市首批国家级非物质文化遗产。泥人张彩塑被公认为是天津的一绝，早在清代乾隆、嘉庆年间就已经享有很大声誉。'],
+    ['杨柳青年画', 'feature-2', '杨柳青年画', '杨柳青年画，全称“杨柳青木板年画”，属于木版印绘制品，是著名的中国民间木版年画之一，与苏州桃花坞年画并称“南桃北柳”。杨柳青年画产生于中国明代崇祯年间，继承了宋、元绘画的传统，吸收了明代木刻版画、工艺美术、戏剧舞台的形式，采用木版套印和手工彩绘相结合的方法，创立了鲜明活泼、喜气吉祥、富有感人题材的独特风格。'],
+    ['风筝魏', 'feature-3', '风筝魏', '风筝魏是天津著名风筝艺人魏元泰制作的风筝，传统手工艺术珍品，民间传统节日文化习俗。故称风筝魏。那么风筝魏的风筝有什么特点呢？如今的状况又是怎么呢？'],
+    ['天津刻砖刘', 'feature-4', '天津刻砖刘', '在天津有项与泥人张齐名的绝活儿，号称刻砖刘。不同的是泥人张说的是一个家族，而刻砖刘却指的是一个人(刘凤鸣)。由于道光年间天津的刻砖技艺达到了顶峰，回人马顺清发明的“贴砖法”，增加砖面的厚度、扩大画面的空间，从而使作品层次更加分明，增强了透视感。向马师傅求教的人很多，而最终成名成家的还是马顺清的外孙刘凤鸣，也就是我们所说的刻砖刘。'],
+    ['津门法鼓', 'feature-5', '津门法鼓', '津门法鼓是天津市的一种地方传统音乐舞蹈艺术，以老会或圣会的表演形式出现。法鼓一词源自佛教，是指法堂上做法事时专用的鼓。法鼓起源于僧、道作法时演奏的音乐，后传入民间，鼓牌子都是群众自己创造的，富有地方色彩。'],
+    ['葛沽宝辇会', 'feature-6', '葛沽宝辇会', '宝辇会主要活动区域在天津市津南区的葛沽镇，它是葛沽人民在长期渔、盐劳作和漕运影响下，在独特的地域文化孕育下形成的以娱神、娱人为内容，以民间花会为载体，含有历史、民俗、艺术、信仰、商贸等诸多文化内容的传统民间文化活动。是北方大型的妈祖祭祀活动 ，是古镇特有的文化遗存表现形式。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/tianjin/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="tianjin-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['天津相声', 'art-1', '天津相声', '相声产生于北京，成就于天津。天津是培养相声名家的摇篮。最早的相声演出在清末至上世纪20年代，此间天津相声进入繁荣发展阶段。天津相声的表演特色是自成一派的。天津相声以讽刺见长 ，火爆热烈 ，富于幽默感，说逗俱佳 。如：张寿臣的《哏政部》、小蘑菇的《牙粉袋》、马三立的《买猴》等作品，讽刺意味浓厚。'],
+    ['天津快板', 'art-2', '天津快板', '天津快板是一种传统说唱艺术。上世纪50年代形成，是天津业余演员改革、发展天津时调“大数子”的结果：去掉了“大数子”的前两句“靠山调”慢板，丰富了伴奏音乐。演出时，演员手持节子板数叙，唱调几言皆可，上、下句子要求对仗，对尾字的要求押韵即可，全篇既可一辙到底，也可用花辙。自由活泼，颇富韵律。'],
+    ['天津时调', 'art-3', '天津时调', '天津时调是中国天津曲艺中最有代表性的传统曲种之一，它用天津地方语的字音演唱，内容通俗易懂，腔调高亢爽朗，具有浓郁的天津乡土气息。其表演形式为一人或二人执节子板站唱，另有人操大三弦和四胡等伴奏。除少数曲目二人对唱外，多为一人独唱，伴奏乐器为大三弦、四胡、节子板。唱腔有靠山调、老鸳鸯调、喇哈调、落尺时调等。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/tianjin/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="tianjin-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['天津标志性建筑', 'building-1', '天津建筑', '天津也有很多地标性建筑,它们经过历史长河,见证着天津的时代变迁。比如有中国迄今保存最为完整的外国洋楼建筑群五大道，是多位名人的故居，行走于其中，惬意和闲适。还有天津的地标之一、世界上唯一一座建在桥上的摩天轮——天津之眼等等。那么天津还有哪些标志性建筑呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/tianjin/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="tianjin-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['天津宗教', 'religion-1', '天津宗教文化', '天津市主要宗教为佛教、道教、伊斯兰教、天主教和基督教。全市教徒共26.7万人，宗教职业人员近200人，宗教职业人员近200人。1979年以来，共恢复开放宗教活动场所79处，其中较闻名的有佛教的大悲禅院，伊斯兰教的天津清真大寺、金家窑清真寺、天穆清真北寺、河西区三义庄清真寺，天主教的西开教堂、望海楼教堂，基督教的滨江道教堂等。']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/tianjin/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="tianjin-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '天津',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

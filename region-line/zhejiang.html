@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>浙江-地区路线</title>
+  <meta name="description" content="浙江, zhejiang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|之江、鱼米之乡||<b>著名景点</b>|西湖、楠溪江、溪口、沈园、普陀山、雁荡山、南湖、乌镇等|
+|<b>行政区类别</b>|省||<b>机    场</b>|杭州萧山机场、宁波机场、温州机场等|
+|<b>所属地区</b>|中国华东地区||<b>火车站</b>|杭州东站、杭州站、宁波站、温州南站等|
+|<b>下辖地区</b>|11个地级市、37个市辖区、19个县级市、32个县、1个自治县||<b>车牌代码</b>|浙A-浙L|
+|<b>电话区号</b>|0570-0580||<b>GDP</b>|51768亿元（2017年）|
+|<b>邮政区码</b>|310000-325800||<b>人均GDP</b>|92057元（2017年）|
+|<b>地理位置</b>|中国东南沿海，长江三角洲南翼||<b>历史名人</b>|陆游、厉鹗、鲁迅、蒋介石、金庸|
+|<b>面    积</b>|10.43万平方千米||<b>著名院校</b>|浙江大学、中国美术学院|
+|<b>人    口</b>|5657万人（2017年）||<b>主要高校</b>|浙江工业大学、浙江理工大学、宁波大学、浙江师范大学等|
+|<b>方    言</b>|吴语、徽语、闽语等||<b>省委书记</b>|车俊|
+|<b>气候条件</b>|亚热带季风气候||<b>省    长</b>|袁家军|
+
+| <b>浙江生活文化</b> | <b>浙江特色文化</b> | <b>浙江曲艺文化</b> | <b>浙江建筑文化</b> | <b>浙江宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">浙江吴越文化</a> | <a href="javascript:;" onclick="art(this);">浙江越剧文化</a> | <a href="javascript:;" onclick="building(this);">浙江建筑文化</a> | <a href="javascript:;" onclick="religion(this);">浙江庙宇文化</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">浙江剪纸文化</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">浙江杭绣文化</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">浙江瓯绣文化</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/zhejiang.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/zhejiang.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '浙江民风民俗', '浙江，简称“浙”，省会杭州。境内最大的河流钱塘江，因江流曲折，称之江、折江，又称浙江，省以江名。浙江是吴越文化、江南文化的发源地，是中国古代文明的发祥地之一。同时也是典型的山水江南、鱼米之乡，被称为“丝绸之府”、“鱼米之乡”。那么浙江省有哪些特色文化以及浙江当地的节日活动呢？'],
+    ['方言文化', 'live-2', '浙江方言', '浙江方言的分布情况较为复杂，境内存在吴语、闽语、客家语、徽语、官话、赣语等不同的汉语方言。浙江人大部分属于使用吴语的江浙民系。由于浙江省主要少数民族畲族也使用客家语—畲话，因此浙江全省通用汉语方言。那么浙江方言的形成主要受什么因素影响呢？'],
+    ['节日文化', 'live-3', '浙江节日', '浙江各地的风俗与全国一样，新春佳节也特别隆重、热闹、庆祝活动以吉祥为核心，丰富多彩;主要有放爆仗、拜年、吃年糕等吉祥风俗。那么浙江除了这些普通的节日风俗以外，浙江还有哪些特殊的传统节日呢？'],
+    ['嫁娶文化', 'live-4', '浙江嫁娶文化', '我国古代有“六礼”之说，现今部分地区也有这个习俗，六礼即纳采、问名、纳吉、纳征，请期、亲迎。实际上各地区民间约定成俗的婚礼习俗并不完全为这六礼所限，它将相亲、订婚阶段的过程简化，那么在浙江又有什么结婚习俗呢？浙江传统的婚假习俗和浙江现代的结婚习俗有什么不同么？'],
+    ['饮食文化', 'live-5', '浙江饮食文化', '浙江省位于我国东海之滨，历史悠久，西南丘陵起伏，树木蓊郁，盛产山珍；沿海渔场密布，岛屿众多，水产资源丰富。因此，历代浙江人民不论是日常饮食，或是岁时、礼仪方面的各种食品，都十分丰富，品种繁多，风味各异，富有各自的地方特色。那么浙江都有哪些饮食特色呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/zhejiang/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="zhejiang-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['浙江吴越文化', 'feature-1', '浙江吴越文化', '吴越文化又称江浙文化，是汉文明的重要组成部分，也是江浙的地域文化。吴越文化区以太湖流域为中心，其范围包括今上海、江苏南部、浙江、安徽南部、江西东北部，以钱塘江为界，吴越文化可细分为“吴文化”和“越文化”，两者同源同出。那么吴越文化的特点和形成的原因是什么呢？'],
+    ['浙江剪纸文化', 'feature-2', '浙江剪纸文化', '浙江剪纸是古老的汉族民间艺术。浙江省的剪纸文化主要以浦江、缙云、乐清、永康、桐庐等地最富特色，浙江剪纸题材丰富，层次分明，挺秀，细致。其中，乐清剪纸最为出名。那么浙江的剪纸题材都有哪些呢？'],
+    ['浙江杭绣文化', 'feature-3', '浙江杭绣文化', '杭绣即杭州刺绣，亦称吉绣，起源于汉代，至南宋为极盛时期。当时的刺绣，一为“宫廷绣”，一为“民间绣”，前者专为皇室内苑绣各种服饰，后者刺绣官服、被面、屏风、壁挂等。直至清末民初，杭绣仍盛行而不衰，城内后市衔、粥教坊、天水桥一带有刺绣作坊近20处，擅长刺绣的手艺人多达二、三百人。那么杭州刺绣的工艺手法怎么样呢？'],
+    ['浙江瓯绣文化', 'feature-4', '浙江瓯绣文化', '瓯绣，又称画帘，是浙江温州的地方传统艺术，产于瓯江地区；也是浙江“三雕一绣”特种工艺品之一，由中国传统刺绣发展而来。它与湘绣、苏绣、蜀绣合称中国四大名绣。瓯绣是中国出口名绣之一，不仅被国家珍藏，还被作为国礼赠送，有“发绣外交”之说。那么瓯绣如今的现状如何呢？']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/zhejiang/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="zhejiang-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['浙江越剧文化', 'art-1', '浙江越剧文化', '越剧，是中国五大戏曲种类之一，有“中国第二大剧种”之称，是第一批国家非物质文化遗产。越剧长于抒情，以唱为主，声腔清悠婉丽优美动听，表演真切动人，极具江南灵秀之气；多以“才子佳人”题材的戏为主，艺术流派纷呈。主要流行于浙江、上海、江苏、福建等江南地区，那么越剧有哪些艺术特色呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/zhejiang/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="zhejiang-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['浙江建筑文化', 'building-1', '浙江建筑文化', '乌镇隶属浙江省嘉兴市桐乡，西临湖州市，北界江苏苏州市吴江区，为二省三市交界之处。乌镇 曾名乌墩和青墩，具有六千余年悠久历史，是全国二十个黄金周预报景点及江南六大古镇之一，那么乌镇的建筑构造整体上是怎么样的呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/zhejiang/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="zhejiang-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['浙江庙宇文化', 'religion-1', '浙江庙宇文化', '浙江素有“文物之邦”的美誉，浙江寺院在全国有重要地位的。南宋宁宗时，由于史弥远的奏称，制造了寺院等级，有“五山十刹”的规定。这“五山”(杭州径山的兴圣万福寺、灵隐山的灵隐寺、南屏山的净慈寺、宁波天童山的景德寺、阿育王山的广利寺)都在浙江。那么浙江有哪些著名的寺庙，浙江的庙会文化是什么样的？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/zhejiang/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="zhejiang-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '浙江',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

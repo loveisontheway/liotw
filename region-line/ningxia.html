@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>宁夏-地区路线</title>
+  <meta name="description" content="宁夏, ningxia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|塞上江南||<b>著名景点</b>|水洞沟，沙坡头，火石寨|
+|<b>行政区类别</b>|自治区||<b>机    场</b>|银川河东国际机场、中卫香山机场、固原六盘山机场|
+|<b>所属地区</b>|中国西北||<b>火车站</b>|银川站、石嘴山站等|
+|<b>下辖地区</b>|5个地级市||<b>车牌代码</b>|宁A—宁E|
+|<b>电话区号</b>|（+86）0951-0955||<b>GDP</b>|3150.06亿元（2016年）|
+|<b>邮政区码</b>|750000-756400||<b>人均GDP</b>|46202元|
+|<b>地理位置</b>|贺兰山东麓，黄土高原北部||<b>名称寓意</b>|夏地安宁|
+|<b>面    积</b>|6.64万平方千米||<b>高等院校</b>|宁夏大学、宁夏医科大学|
+|<b>人    口</b>|681.79万（2017年）||<b>行政区划代码</b>|640100-640500|
+|<b>方    言</b>|兰银官话||<b>现任领导</b>|党委书记石泰峰，区主席咸辉|
+|<b>气候条件</b>|温带大陆性半干旱气候||-|-|
+
+| <b>宁夏生活文化</b> | <b>宁夏特色文化</b> | <b>宁夏曲艺文化</b> | <b>宁夏建筑文化</b> | <b>宁夏宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">杨氏家族泥塑</a> | <a href="javascript:;" onclick="art(this);">山花儿</a> | <a href="javascript:;" onclick="building(this);">窑洞/堡子</a> | <a href="javascript:;" onclick="religion(this);">寺庙/庙宇</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">高台马社火</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">回族剪纸</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">贺兰皮影戏</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">宁夏禁忌</a> | <a href="javascript:;" onclick="feature(this);">北武当庙寺庙音乐</a>| -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"内蒙古"）](neimenggu.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"内蒙古"）](neimenggu.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/ningxia.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/ningxia.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '宁夏民风民俗', '宁夏行政区划图宁夏位于“丝绸之路”上，历史上曾是东西部交通贸易的重要通道，作为黄河流经的地区，这里同样有古老悠久的黄河文明。早在三万年前，宁夏就已有了人类生息的痕迹。公元1038年，党项族的首领李元昊在此建立了西夏王朝。历史上是“丝绸之路”的要道，素有“塞上江南”之美誉。那么如今宁夏还保留了哪些特色习俗文化呢？'],
+    ['方言文化', 'live-2', '宁夏方言', '宁夏方言属于北方方言（官话）系统，其内部可以划分为北部川区和南部山区两大区域。宁夏北部川区话属于兰银官话银川片和银吴片，南部山区话属于中原官话秦陇、陇中、关中片。宁夏方言的构成以山陕人的“秦晋话”为主，并杂以齐鲁燕赵语、江淮语、甚至吴越川滇语。宁夏方言的来历和我区人文、地理、历史沿革、汉族及其他少数民族人口的迁徙等因素息息相关。'],
+    ['嫁娶文化', 'live-3', '宁夏嫁娶文化', '宁夏是一个多民族聚居的地方。是我国回族人口最多的省份，居民大都信仰伊斯兰教，是我国最大的伊斯兰教圣地。婚礼，是回族人民一生中的一个大礼。回族老人常常把给儿子举行婚礼、完婚叫“卸担儿”，认为这是“终身大事”，是老人的责任。回族对婚礼特别重视和讲究，但由于回民分布在全国各地，回族婚礼形式多种多样。'],
+    ['饮食文化', 'live-4', '宁夏饮食文化', '宁夏民族众多，有回、汉、满、蒙等20多个民族。民族多呈大分散小集中方式居住，加上各地区主要农作物不同，日常饮食习俗复杂，各有自己的特点。在口味上，汉族素喜食咸辣，冬季喜食酸辣，特别是在豪饮之后，多以酸菜解酒解腻；回族偏喜浓甜厚味。各民族间虽信仰不同，风俗各异，但仍和睦相处。例如回族以“清真”为本，饮食上有禁忌，但对汉族等民族的食俗，又表现得很豁达。'],
+    ['宁夏禁忌', 'live-5', '宁夏禁忌', '宁夏回族历史渊源流长，最早可上溯唐末。“丝绸之路”从西汉初辟始，就一直是连接欧亚陆路交往的交通大动脉，宁夏正处在这条商路的必经地区。唐代盛世使丝路比以往任何时候都活跃，而当时同样强大且与唐接壤的大食国民、包括当地波斯人及已经改信伊斯兰的中亚各族穆斯林，在这支异常活跃的丝路商业大军中占很大的比重。为此，宁夏的生活禁忌主要还是回族的一些风俗居多。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/ningxia/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="ningxia-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['杨氏家族泥塑', 'feature-1', '杨氏家族泥塑', '隆德杨氏家族的泥塑艺术是一种汉族民俗工艺品。可溯源到清光绪年间，一直以家族口、耳、手代代相传的方式传承，目前健在的彩塑老艺人杨栖鹤是第四代传人。杨氏泥塑在选料、酿泥、造像程序及色彩处理等方面都有自己独特的工艺。杨氏家族泥塑艺术是珍贵的民间传统雕塑艺术的延续。它起源于清道光十二年，至今已有170多年历史，几经兴衰，但仍以顽强的生命力存在于六盘山地区。'],
+    ['高台马社火', 'feature-2', '高台马社火', '高台马社火是一种传统民俗祭神活动。每年正月初九举行，内容包括高跷、推推车、赶毛驴、花船、秧歌队、彩车、腰鼓队表演等，涉及表演、造型、语言、彩绘、手工制作等多种艺术类型。马社火顾名思义，就是在马背上演出的社火，是六盘山区群众根据居住的地形、地理特点和条件，借助畜力而创造的一种传统民俗文化艺术形式。'],
+    ['回族剪纸', 'feature-3', '回族剪纸', '剪纸，这朵瑰丽的回族民间艺术之花，以旺盛的生命力深深扎根于回族民间艺术土壤之中。在西北回族聚居区，回族妇女的剪纸内容丰富，生活气息浓厚，无论在窗户上、墙壁上、顶棚上，还是箱柜上，随处可见她们的作品。回族妇女具有剪纸的传统习俗。一般女孩到了七八岁，就拿起剪刀开始剪，一直剪到六七十岁。'],
+    ['贺兰皮影戏', 'feature-4', '贺兰皮影戏', '皮影戏又称“牛皮影戏”、“灯影戏”，是长期流传于我国北方的一种具有民族风格的传统戏。它用灯光把用兽皮或纸板做成的人物剪影照射在白色的影幕上，配合音乐、唱白以表演故事的民间戏剧形式。它既是所有中国造型艺术（如剪纸、绘画、工艺美术、雕刻等）的结合，又是所有传统表演艺术（如京戏、地方戏、相声、口技等）的综合。'],
+    ['北武当庙寺庙音乐', 'feature-5', '北武当庙寺庙音乐', '北武当庙佛教音乐“渣渣子”是我国古代的“工尺谱”之外的一种记谱方式，是用来记录乐曲的节奏、音符、所示法器的种类的一种特殊的记录方法，与简谱、五线谱不同的是它采用竖行记谱方式，用不同的符号代表不同的法器。以符号的距离远近表示时值的长短。“渣渣子”与工尺谱结合起来，即接近于现在的简谱或五线谱。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/ningxia/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="ningxia-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['山花儿', 'art-1', '宁夏山花儿', '“山花儿”俗称干花儿、山曲子、野花儿，是主要流传在六盘山地区回族聚居区的代表性民歌体裁，在旋律形态上，它是“花儿” 由中心地带向四周传播过程中，因地域差别形成的自然变异现象。山花儿作为回族群众愉悦自我、怡情解闷、吐纳情感的一种自娱性山野歌曲，有广泛的群众基础和浑厚的民俗文化内涵。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/ningxia/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="ningxia-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['窑洞/堡子', 'building-1', '宁夏建筑风格', '宁夏地域文化丰富，西夏文化、边塞文化、伊斯兰文化、移民文化和汉族文化的相互交融，产生了富有特色的地方建筑。总体上说，宁夏民居风格浑朴，在建造技术与材料上蕴含着劳动人民征服自然的勤劳和智慧。为此窑洞、老堡子等建筑都是宁夏传统建筑的代表。那么宁夏的窑洞、老堡子等建筑有哪些特点呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/ningxia/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="ningxia-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['寺庙/庙宇', 'religion-1', '庙宇/寺庙', '宁夏是一个多民族聚居的地方。回族、维吾尔族、东乡族、哈萨克族、撒拉族和保安族等信奉伊斯兰教，汉族中的部分群众信仰佛教、基督教、道教、天主教。全区现有清真寺3300多处，阿訇4000多人，满拉6000多人，伊斯兰教协会13个。还有佛教、道教、天主教、基督教寺观教堂200处。那么宁夏有哪些著名的寺庙呢？宁夏著名的庙会又有哪些呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/ningxia/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="ningxia-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '宁夏',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

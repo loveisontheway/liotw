@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>安徽-地区路线</title>
+  <meta name="description" content="安徽, anhui" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|皖、八皖、新安、吴头楚尾、江淮之滨||<b>著名景点</b>|逍遥津 包公园 明中都 三河古镇 皇藏峪 天堂寨 古徽州文化旅游区|
+|<b>行政区类别</b>|省||<b>机    场</b>|合肥新桥国际机场、黄山屯溪国际机场、安庆机场、池州机场等|
+|<b>所属地区</b>|中国华东||<b>火车站</b>|合肥南站、宿州东站、蚌埠南站、黄山北站|
+|<b>下辖地区</b>|16个地级市、7个县级市、44个市辖区、54个县、1个国家级新区||<b>车牌代码</b>|皖A-皖S|
+|<b>电话区号</b>|0550至0566||<b>GDP</b>|27518.7亿元（2017年）|
+|<b>邮政区码</b>|230000至247000||<b>人均GDP</b>|44206元人民币（2017年）|
+|<b>地理位置</b>|中国东部，长江下游，淮河中游||<b>四大名山</b>|齐云山、黄山、九华山、天柱山|
+|<b>面    积</b>|14.01万平方千米||<b>四大名湖</b>|巢湖、万佛湖、太平湖、花亭湖|
+|<b>人    口</b>|6254.8万人（2017年）||<b>历史名人</b>|老子、庄子、朱元璋、曹操、包拯|
+|<b>方    言</b>|江淮官话、中原官话、吴语、徽语、赣语||<b>省树、省花</b>|黄山松、皖杜鹃|
+|<b>气候条件</b>|暖温带向亚热带的过渡型气候||<b>著名高校</b>|中国科大、合工大、安大、安师大|
+|-|-||<b>现任领导</b>|省委书记：李锦斌、省长：李国英|
+
+| <b>安徽生活文化</b> | <b>安徽特色文化</b> | <b>安徽曲艺文化</b> | <b>安徽建筑文化</b> | <b>安徽宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">阜阳剪纸</a> | <a href="javascript:;" onclick="art(this);">安徽黄梅戏</a> | <a href="javascript:;" onclick="building(this);">徽派建筑</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">芜湖铁画</a> | <a href="javascript:;" onclick="art(this);">安徽庐剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">宣纸制作技艺</a> | <a href="javascript:;" onclick="art(this);">徽剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | <a href="javascript:;" onclick="art(this);">泗州戏</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/anhui.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/anhui.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '安徽民风民俗', '安徽大地锦绣多姿，文化古迹甚多，是中国旅游资源最丰富的省份之一。安徽省是中国文化发达最早的地区之一，悠久的历史产生出对中国传统主流文化有重大影响的思想学派，至今仍影响着中国乃至世界文化。 所以这里的传统风俗也是多样多彩。'],
+    ['方言文化', 'live-2', '安徽方言', '安徽方言并非单一系统的方言，而是由各种不同的方言组成的。安徽省内各方言可大致分为官话、赣语、吴语、徽语四类汉语方言。官话区包括中原官话和江淮官话，官话区基本可以互相通话，赣语内部和吴语内部也基本可以互通，而徽语内部差异较大，互通有一定难度。'],
+    ['节日文化', 'live-3', '安徽节日', '安徽省是中国文化发达最早的地区之一，悠久的历史产生出对中国传统主流文化有重大影响的思想学派，至今仍影响着中国乃至世界文化。但是民俗是来自于民众，传承于民众，规范民众，又深藏于民众的行为、语言和心理中的一种特殊力量。现如今，安徽在传统的节日文化中还保留了哪些习俗呢？'],
+    ['嫁娶文化', 'live-4', '安徽嫁娶文化', '由于历史地理因素导致安徽全省分为若干不同的文化区域。皖东地区由于历史地理因素属于淮扬、金陵文化区。以合肥为代表的皖中地区属于江淮文化淮右区。皖南其他地方则是江淮文化和赣文化的相互融合。自然在安徽不同地区的人们就有不同的结婚文化习俗。'],
+    ['饮食文化', 'live-5', '安徽饮食文化', '安徽饮食文化大体分为皖南、沿江、沿淮三类，总体上讲究原汁原味、酥嫩香鲜、浓淡适宜，同时又各具特色。其中皖南徽菜是中国八大菜系之一，以烹制山珍野味，重油、重色、重火功而闻名，汤汁清纯，味道醇厚，原锅上桌，香气四溢，著名菜肴有火腿炖甲鱼、腌鲜桂鱼、火腿炖笋等。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/anhui/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="anhui-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['阜阳剪纸', 'feature-1', '阜阳剪纸', '阜阳剪纸是安徽阜阳一门古老的传统民间艺术。其多以吉祥喜庆、五谷丰登、六畜兴旺、年年有鱼（余）等民间题材为主。情趣丰富，装饰味重，兼有南北剪纸的艺术特色，即粗犷之中蕴纤巧，质朴之中见秀丽，刚柔兼备，情趣醇和。其作品有单色、填色和染色等。'],
+    ['芜湖铁画', 'feature-2', '芜湖铁画', '芜湖铁画原名“铁花”，安徽省芜湖地区特产，为中国汉族独具风格的工艺品之一。芜湖铁画吸取了我国传统国画的构图法及金银首饰、剪纸、雕塑等工艺技法，以低碳钢作原料，以铁代墨，以锤代笔，经过出稿、剪、砸、烧打、上漆蜡、上框等工序和“打活”、“钻活”等工艺，制作成山水、人物、花卉、虫鱼、飞禽、走兽等各种艺术品。'],
+    ['宣纸制作技艺', 'feature-3', '宣纸制作工艺', '造纸术为中国古代四大发明之一，宣纸是传统手工纸品最杰出的代表，居文房四宝之首。宣纸以安徽宣城而得名，但宣城本身实不产纸，而是周围诸地产纸，皆以宣城为散集地的原因。古代的宣纸制作技艺是今天所无法超越的，古代精湛的宣纸制作技艺早已失传。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/anhui/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="anhui-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['安徽黄梅戏', 'art-1', '安徽黄梅戏', '黄梅戏，旧称黄梅调或采茶戏，是中国五大戏曲剧种之一。也是与庐剧、徽剧、泗州戏并列的安徽四大优秀剧种之一。黄梅戏源于湖北、安徽、江西三省交界处黄梅一带的采茶调。清末传入毗邻的安徽省怀宁县等地区，与当地民间艺术结合，并用安庆方言歌唱和念白，逐渐发展为一个新生的戏曲剧种。'],
+    ['安徽庐剧', 'art-2', '安徽庐剧', '庐剧，旧称“倒七戏”，流行于以合肥为中心的江淮一带和大别山区，包括六安、淮南、巢湖、滁州、芜湖等地。庐剧曲调清新朴实，优美动听，很受当地群众喜爱。清末以来，主要流行于安徽境内的淮河以南，长江以北的江淮地区。庐剧发源于大别山区的霍山，它在大别山一带的山歌、淮河一带的花鼓灯歌舞的基础上吸收了锣鼓书（门歌）、端公戏、嗨子戏的唱腔发展而成。'],
+    ['徽剧', 'art-3', '安徽徽剧', '徽剧是一种重要的汉族地方戏曲，主要流行于古徽州府（歙县、黟县、休宁、婺源、绩溪、祁门）和安庆市一带。明末清初，乱弹声腔传入安徽一带，与地方声腔及民间音乐结合，在安庆府的石牌、枞阳、桐城等地形成拨子。乾隆年间，拨子与四平腔脱胎而来的吹腔逐渐融合，形成二簧腔。二黄腔又与湖北西皮形成皮簧合奏，奠定了徽剧的基础。徽剧是解放后的定名。'],
+    ['泗州戏', 'art-4', '泗州戏', '泗州戏原名“拉魂腔”，是安徽省四大汉族戏曲剧种之一，流行于安徽淮河两岸，距今已有二百多年的历史。它与山东的柳琴戏、江苏的淮海戏同是由"拉魂腔"发展而来，彼此之间存在着一定的血缘关系。泗州戏具有深厚的群众基础和丰富的文化底蕴，以优美的唱腔、动听的旋律，唱响淮河两岸、大江南北。泗州戏与皖北人民的生活、习俗有着密切的联系，显示出强烈的地域文化特征。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/anhui/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="anhui-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['徽派建筑', 'building-1', '徽派建筑', '徽派建筑集徽州山川风景之灵气，融风俗文化之精华，风格独特，结构严谨，雕镂精湛，不论是村镇规划构思，还是平面及空间处理、建筑雕刻艺术的综合运用都充分体现了鲜明的地方特色。那么徽派建筑有什么建筑特色呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/anhui/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="anhui-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '安徽',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

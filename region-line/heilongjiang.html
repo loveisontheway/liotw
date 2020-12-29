@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>黑龙江-地区路线</title>
+  <meta name="description" content="黑龙江, heilongjiang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|龙江||<b>著名景点</b>|太阳岛、北极村、中央大街、五大连池、扎龙湿地、镜泊湖等|
+|<b>行政区类别</b>|省||<b>机    场</b>|哈尔滨太平国际机场、齐齐哈尔三家子机场、牡丹江海浪国际机场等|
+|<b>所属地区</b>|东北地区||<b>火车站</b>|哈尔滨站、哈尔滨西站、齐齐哈尔站、牡丹江站、佳木斯站等|
+|<b>下辖地区</b>|12个地级市、1个地区||<b>车牌代码</b>|黑A-黑R|
+|<b>电话区号</b>|0451-0459；0466-0469||<b>GDP</b>|16199.9亿元（2017年）|
+|<b>邮政区码</b>|150000-160000||<b>人均GDP</b>|42758元|
+|<b>地理位置</b>|东北||-|-|
+|<b>面    积</b>|47.3万平方千米||-|-|
+|<b>人    口</b>|3788.7万（2017年常住总人口）||-|-|
+|<b>方    言</b>|-||-|-|
+|<b>气候条件</b>|温带大陆性季风气候||-|-|
+
+| <b>黑龙江生活文化</b> | <b>黑龙江特色文化</b> | <b>黑龙江曲艺文化</b> | <b>黑龙江建筑文化</b> | <b>黑龙江宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">黑龙江冰雕艺术</a> | <a href="javascript:;" onclick="art(this);">东北二人转</a> | <a href="javascript:;" onclick="building(this);">黑龙江建筑风格</a> | <a href="javascript:;" onclick="religion(this);">宗教/庙宇</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">东北秧歌</a> | <a href="javascript:;" onclick="art(this);">东北大鼓</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">方正剪纸</a> | <a href="javascript:;" onclick="art(this);">龙江剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">桦树皮制作技艺</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">兰西挂钱</a> | -|-|-|
+| - | <a href="javascript:;" onclick="feature(this);">黑龙江非物质文化遗产</a> | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/heilongjiang.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/heilongjiang.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '黑龙江民风民俗', '黑龙江流域的文化文明，与黄河流域文化文明，长江流域的文化文明，并称中国三大文化文明发源地。多年来，人们把黑龙江称之为北大荒，但是回顾黑龙江的历史文化，却让人觉得北大荒的荒字不是荒凉，而是辽阔无边，深邃极远。那么如今黑龙江还保留哪些特色的传统文化？黑龙江还有哪些民俗活动呢？'],
+    ['方言文化', 'live-2', '黑龙江方言', '黑龙江是一个多民族杂居的地区，汉族人口占绝大多数，其他少数民族有蒙古族、满族、朝鲜族、回族、鄂温克族、赫哲族、鄂伦春族、达斡尔族等。独特的地理环境和民族杂居状况使得人们在日常交际中形成了今天的黑龙江方言。'],
+    ['节日文化', 'live-3', '黑龙江节日', '黑龙江大部分地区一年中有一半时间都被白雪覆盖，独特的自然环境创造出了神奇的自然景观，一些河湖与山坡成为开展冰雪活动的好场所。为此也形成了黑龙江独特的冰雪文化，那么黑龙江现在还有哪些特色的传统节日习俗呢?黑龙江都有哪些特色的节庆活动呢？'],
+    ['嫁娶文化', 'live-4', '黑龙江嫁娶文化', '结婚风俗就是结婚的礼节。在黑龙江这个地方举办婚礼，讲究风风火火，不管是接新娘还是宴请宾客，都会非常讲究面子，闹洞房就更加是如此，越多人闹就代表着兆头越好，所以不少黑龙江人在结婚的时候都会请来众多朋友。那么黑龙江的结婚习俗除了这些，还有哪些讲究呢？'],
+    ['饮食文化', 'live-5', '黑龙江饮食文化', '黑龙江有土著的金元文化的积淀与满洲饮食文化。黑龙江人大部分为山东移民的后代，山东人带来了齐鲁文化，包括鲁菜。随着1898年中东铁路的修建，大批俄国人进入以哈尔滨为中心的地区。外来饮食文化的传入，对黑龙江地区传统的饮食模式产生了巨大影响。三种饮食文化交汇、融合，逐步形成了独具特色的黑龙江饮食文化。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/heilongjiang/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="heilongjiang-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['黑龙江冰雕艺术', 'feature-1', '黑龙江冰雕艺术', '冰雕，顾名思义就是在冰上雕刻出各样的东西，比如：动物，家庭用品等。早在我国东北，因天寒地冻，经常冰天雪地，门外积雪盈尺，那时已有人将河水结成的冰块鉴取雕成简单形状以盛物，故冰雕最早应发源于中国。随着冰雕行业的发展越来越多的品牌进入中国市场。'],
+    ['东北秧歌', 'feature-2', '东北秧歌', '东北秧歌是中国北方地区劳动人民长期创造积累的艺术财富，它起源于插秧耕田的劳动生活，又和古代祭祀农神祈求丰收，祈福禳灾时所唱的颂歌、禳歌有关，并在发展过程中不断吸收农歌、菱歌、民间武术、杂技以及戏曲的技艺与形式，从而由一般的演唱秧歌发展到今天广大群众喜闻乐见的一种民间歌舞。那么东北秧歌有哪些艺术特色呢？'],
+    ['方正剪纸', 'feature-3', '方正剪纸', '方正剪纸是黑龙江省方正县的汉族传统手工技艺，也是黑龙江省哈尔滨市的一个地方特色产品。方正剪纸乡土气息浓郁，图案简洁明朗，概括力强，式样繁多，内容丰富，工艺细腻，在创作观念和整体创作上基本打破了陈陈相因的汉族民间剪纸模式范畴，感染力、趣味性强，自然大方，艺术语言更加明朗化，风格日臻完善。'],
+    ['桦树皮制作技艺', 'feature-4', '桦树皮制作技艺', '桦树皮制作技艺是我国北方游猎民族的独特手工技艺，具有浓厚的民族特色和地域性，主要流传在内蒙古自治区东北部鄂伦春族、鄂温克族、达斡尔族的聚居区，以及古代黑龙江流域的赫哲族聚居区。这片广袤的土地上生长着大片白桦林，因此这些民族和白桦树结下了不解的情缘，他们的桦树皮手工艺制作丰富多彩。'],
+    ['兰西挂钱', 'feature-5', '兰西挂钱', '兰西挂钱是黑龙江省的特色传统手工艺品。诞生于清朝末年，它的最早创立者是手艺精湛的民间老艺人李一剪，兰西县小榆树人。主要作品是《慎终追远》《孝思为则》《祖德宗功》等，多是与传统民俗、祭祀神灵、驱恶攘邪有关。寄托着中国劳动人民对美满生活的向往和朴素的审美情趣。'],
+    ['黑龙江非物质文化遗产', 'feature-6', '黑龙江非物质文化遗产', '非物质文化遗产是指各种以非物质形态存在的与群众生活密切相关、世代相承的传统文化表现形式，包括口头传统、传统表演艺术、民俗活动和礼仪与节庆、有关自然界和宇宙的民间传统知识和实践、传统手工艺技能等以及与上述传统文化表现形式相关的文化空间。那么黑龙江省有哪些非物质文化遗产呢？']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/heilongjiang/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="heilongjiang-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['东北二人转', 'art-1', '东北二人转', '二人转，史称小秧歌、双玩艺、蹦蹦，又称过口、双条边曲、风柳、春歌、半班戏、东北地方戏等。它植根于东北民间文化，属于中国走唱类曲艺曲种，流行于辽宁、吉林、黑龙江、内蒙古东部三市一盟和河北省东北部。东北特色二人转主要来源于东北大秧歌和河北的莲花落。用东北人的俏皮话说：二人转是“秧歌打底，莲花落镶边”。'],
+    ['东北大鼓', 'art-2', '东北大鼓', '东北大鼓是流行于中国东北地区（黑，吉，辽）的传统曲艺鼓书暨鼓曲形式，为国家级非物质文化遗产之一。在民间传播的历史悠久，并一度盛行于沈阳，而沈阳于清末曾设奉天府，故曾有"奉天大鼓"之称。2006年5月20日，该曲艺经国务院批准列入第一批国家级非物质文化遗产名录。'],
+    ['龙江剧', 'art-3', '龙江剧', '龙江剧是中国最年轻的戏曲剧种之一，是20世纪50年代末诞生在黑龙江的地方戏曲新剧种。黑龙江汉族地方戏曲之一。龙江剧的伴奏乐器以板胡、唢呐、二胡、琵琶、笛、笙、扬琴等为主，配以提琴、单簧管等西洋乐器。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/heilongjiang/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="heilongjiang-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['黑龙江建筑风格', 'building-1', '黑龙江建筑风格', '建筑产生于人类征服自然的斗争中，随着社会的发展，政治，宗教，科学、文化艺术等因素不断赋予了建筑新的内容和形式，从原始的洞穴、巢居到今天的城市综合建筑艺术，便是这一过程的缩影。那么在黑龙江这个“冰城”里，黑龙江的建筑风格特色又会是怎么样的呢？']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/heilongjiang/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="heilongjiang-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['宗教/庙宇', 'religion-1', '黑龙江宗教/庙宇', '黑龙江省宗教信仰人群约占总人口中成人（18岁以上）人群的3.5%，除回族（约15万人）及部分朝鲜族（约3万人左右）信仰伊斯兰教和基督教外，佛教和道教为汉族及其他少数民族（大约有5万人左右）信教人群的主要信仰。那么黑龙江的佛教、道教、基督教分别是什么时候传入黑龙江的呢？黑龙江的名寺又有哪些呢？黑龙江有没有大型的庙会呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/heilongjiang/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="heilongjiang-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '黑龙江',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

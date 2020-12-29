@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>香港-地区路线</title>
+  <meta name="description" content="香港, xianggang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|香江、香岛、东方之珠||<b>著名景点</b>|维多利亚港、香港迪士尼乐园、海洋公园、香港杜莎夫人蜡像馆等|
+|<b>行政区类别</b>|特别行政区||<b>机    场</b>|香港国际机场|
+|<b>所属地区</b>|中国华南||<b>火车站</b>|红磡站、西九龙站等|
+|<b>下辖地区</b>|香港岛、九龙半岛、新界，共18区||<b>车牌代码</b>|粤Z（进入内地）|
+|<b>电话区号</b>|+852||<b>GDP</b>|26626.37亿港元（2017年）|
+|<b>邮政区码</b>|999077||<b>人均GDP</b>|360220港元（2017年）|
+|<b>地理位置</b>|珠江三角洲东南部，珠江口东岸，南海北部||<b>高等院校</b>|香港大学、香港中文大学等|
+|<b>面    积</b>|1106.34平方公里||<b>时    区</b>|GMT+8（北京时间）|
+|<b>人    口</b>|740.98万人（2017年）||<b>货    币</b>|港元（HK$）|
+|<b>方    言</b>|粤语（广府话、围头话），客家话||<b>道路通行规则</b>|靠左驾驶|
+|<b>气候条件</b>|亚热带季风气候||<b>地区代码</b>|HKG|
+|-|-||<b>官方语言</b>|中文、英文|
+|-|-||<b>政治体制</b>|行政主导的代议民主制|
+|-|-||<b>法律体系</b>|英美法系|
+|-|-||<b>首任行政长官</b>|董建华|
+|-|-||<b>现任行政长官</b>|林郑月娥|
+
+| <b>香港旅游攻略</b> | <b>香港旅游必去景点</b> | <b>香港旅游注意事项</b> | <b>港澳台</b> | <b>其它</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="strategy(this);">香港旅游攻略</a> | <a href="javascript:;" onclick="scene(this);">维多利亚港</a> | <a href="javascript:;" onclick="notes(this);">香港旅游注意事项</a> | <a href="javascript:;" onclick="tips(this);">港澳台旅游小贴士</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">香港迪士尼乐园</a> | - | <a href="introduce.html">港澳台简介</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">香港海洋公园</a> | - | <a href="permit.html">港澳台通行证</a> | - |
+| - | <a href="javascript:;" onclick="scene(this);">黄大仙祠</a> | - |-|-|
+| - | <a href="javascript:;" onclick="scene(this);">昂坪360缆车</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">天际100</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">南丫岛</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">天星小轮</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">星光大道</a> | -|-|-|
+| - | <a href="javascript:;" onclick="scene(this);">太平山</a> | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/travel-map/xianggang.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/xianggang.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var strategyArr = [
+    [
+      '香港旅游攻略', 
+      'strategy-1', 
+      '香港旅游景点/攻略/自由行', 
+      '香港作为中西文化汇流的聚点，高度的文化差异造就了这座国际性的大都会。这里包罗万象，这是个浓缩的精华的世界，是繁华热闹的不夜城。香港处于交通枢纽，零关税的商贸要地，使之赢得“购物天堂”的美誉。',
+      '<b>最佳季节 ： </b>四季皆宜，秋冬最佳',
+      '<b>建议游玩 ： </b>2-5天',
+      '<b>人均花费 ： </b>¥4500元'
+    ]
+  ];
+
+  var strategy = function(obj) {
+    var title = obj.innerText;
+    for(var i=0; i<strategyArr.length; i++) {
+      if(strategyArr[i][0] === title) {
+        swal({
+          title: strategyArr[i][2],
+          html: '<img src="../imgs/timeline/xianggang/'+strategyArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+strategyArr[i][3]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][4]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][5]+'</p><p style="text-align:left;text-indent:35px;">'+strategyArr[i][6]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var sceneArr = [
+    ['维多利亚港', 'scene-1', '香港九龙港岛及九龙半岛之间', '推荐理由：地标式景点，全球十大必看夜景之一。建议晚间上游轮，香江两边的美景尽收眼底。'],
+    ['香港迪士尼乐园', 'scene-2', '香港离岛大屿山香港迪士尼乐园度假区', '推荐理由：中国唯一的迪士尼乐园，大朋友小朋友都喜欢。网上订票比现场便宜多了，推荐。'],
+    ['香港海洋公园', 'scene-3', '香港香港岛香港仔黄竹坑南朗山', '推荐理由：有人说比迪斯尼好玩多啦！坐缆车上去，一路大海，风景迷人。游乐设施和剧场表演都很有爱。'],
+    ['黄大仙祠', 'scene-4', '香港九龙黄大仙竹园村2号', '推荐理由：本港最有名的庙宇之一，据说求签超灵，难怪香火那么旺。'],
+    ['昂坪360缆车', 'scene-5', '香港离岛大屿山地铁东涌站', '推荐理由：连接大屿山东涌及昂坪的超长缆车，车厢是“水晶”透明车底。沿路都是大海和山峦，爱看风景的游客必选。'],
+    ['天际100', 'scene-6', '香港九龙尖沙咀柯士甸道西1号环球贸易...', '推荐理由：全港至高点，也是许多港片的拍摄地。喜欢“一览众山小”的游客可以去玩玩，随便一拍都跟大片似的。'],
+    ['南丫岛', 'scene-7', '香港离岛南丫岛', '推荐理由：影帝周润发的故乡，TVB的最佳外景地。小小岛屿有山有树有海，还有不少海产手信可买。'],
+    ['天星小轮', 'scene-8', '香港九龙尖沙咀码头(近维多利亚港)', '推荐理由：全港最便宜的交通工具，如果觉得游轮太超过，可以坐天星小轮观看香港夜景喔！'],
+    ['星光大道', 'scene-9', '香港九龙尖沙咀东海滨长廊(近尖东)', '推荐理由：追星的童鞋必去景点，香港明星的签名和手印看花眼呢！ 海滨大道也非常美，晚上还可以欣赏对岸的维多利亚港夜景。'],
+    ['太平山', 'scene-10', '香港岛西部', '推荐理由：全港最佳观景平台，夜景比白天更美。缆车和大巴登顶各有趣味。']
+  ];
+
+  var scene = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<sceneArr.length; j++) {
+      if(sceneArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/xianggang/'+sceneArr[j][1]+'.jpg" width="240px" height="240px"/><p style="color:#319cef">'+sceneArr[j][2]+'</p><p>'+sceneArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var notesArr = [
+    [
+      '香港旅游注意事项', 
+      '<b>签证：</b>《往来港澳通行证》。申请人在户口所在地公安局出入境管理处办理即可。', 
+      '<b>交通：</b>出入境交（航空、铁路、水运）；香港境内（港铁MTR、巴士或小巴、电车、的士、山顶缆车、轮渡、轻轨等最）。', 
+      '<b>住宿：</b>住宿费用普遍偏高，另收10%服务费，并且房型通常要比内地小很多。中级酒店的住宿费用每晚约在800港币以上，这种档次的酒店大多集中在油麻地和旺角一带。',
+      '<b>美食：</b>港式风味、港式海鲜、港式茶餐厅、港式烧腊、港式甜品…', 
+      '<b>购物：</b>香港商场打折最多的时期是每年12月至隔年农历年三十之间的“圣诞新年大降价”。此外，在香港，数码产品，名牌和奢侈品，化妆品，相比内地价格都要低，香港购物是免税的，没有税可退。', 
+      '<b>货币：</b>港币与人民币的汇率约为1:0.8，游客可在出发前在银行提前兑换港币。此外，印有VISA、Master或银联字样的信用卡。', 
+      '<b>通信：</b>无论是中国移动用户还是中国联通用户，在赴港之前，均需开通相关业务，否则在港并无通讯信号。游客也可以在网上或在抵达香港后购买当地电话卡。',
+      '<b>电压：</b>香港电源电压为200/220伏，一般住宿地都提供变压器和转换器。'
+    ]
+  ];
+
+  var notes = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<notesArr.length; k++) {
+      if(notesArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][6]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][7]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+notesArr[k][8]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  var tipsArr = [
+    [
+      '港澳台旅游小贴士', 
+      '1、多了解香港及澳门的法律法规。',
+      '2、香港及澳门旅游地图、交通指南。',
+      '3、银两：港币、人民币、现金、银行卡。',
+      '4、要注意陋习：不要当众裸上身试衣、男子裸露上、不要街头爆粗口、室内不可以吸烟、地铁里不能吃盒饭、父母亲教好小孩子不要随地小便，不要随地吐痰，闯红灯、乱扔垃圾等等。否则最少罚HKD00。',
+      '5、每位客人可携带一件手提行李登机，规格以不超过标准(长56CM，宽36CM，高23CM)为准，数量以不超过20公斤为准。箱式的、带拉杆的行李乘国际航班时必须拖运。',
+      '6、身份证原件、无身份证儿童带户口本原件，带有效签注的港澳通行证。',
+      '7、赴台旅游应当持《大陆居民往来台湾通行证》、旅游签注和入台证。'
+    ]
+  ];
+
+  var tips = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<tipsArr.length; m++) {
+      if(tipsArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][1]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][2]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][3]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][4]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][5]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][6]+'</p>'+
+                '<p style="text-align:left;text-indent: 35px;">'+tipsArr[m][7]+'</p>'
+          ,
+          showConfirmButton: false,
+          width:'50rem',
+          background: '#DBF5FF'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '香港',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

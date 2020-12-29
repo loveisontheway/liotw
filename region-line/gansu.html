@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>甘肃-地区路线</title>
+  <meta name="description" content="甘肃, gansu" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|甘、陇、陇右、雍凉、陇原||<b>著名景点</b>|莫高窟、麦积山、崆峒山、嘉峪关、鸣沙山月牙泉、拉卜楞寺等|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|兰州站、兰州西站、天水站、嘉峪关站、武威站、金昌站、敦煌站等|
+|<b>所属地区</b>|中国西北||<b>火车站</b>|乌鲁木齐站、喀什站、哈密站等|
+|<b>下辖地区</b>|12个地级市、2个自治州||<b>车牌代码</b>|甘A/B/C/D/E/F/G/H/J/K/L/M/N/P|
+|<b>电话区号</b>|0930-0939、0941、0943||<b>GDP</b>|-|
+|<b>邮政区码</b>|730000-747000||<b>人均GDP</b>|-|
+|<b>地理位置</b>|中国西北内陆、黄河上游、六盘山以西||-|-|
+|<b>面    积</b>|42.59万平方千米||-|-|
+|<b>人    口</b>|2625.71万人（2017年常住人口）||-|-|
+|<b>气候条件</b>|温带季风气候、亚热带季风气候、温带大陆气候、高山高原气候||-|-|
+
+| <b>甘肃生活文化</b> | <b>甘肃民间特色文化</b> | <b>甘肃曲艺文化</b> | <b>甘肃建筑文化</b> | <b>甘肃宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">大地湾文化</a> | <a href="javascript:;" onclick="art(this);">甘肃陇剧</a> | <a href="javascript:;" onclick="building(this);">甘肃建筑风格</a> | <a href="javascript:;" onclick="religion(this);">甘肃庙宇/庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">伏羲文化</a> | <a href="javascript:;" onclick="art(this);">甘南藏戏</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">陇东皮影</a> | - | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">甘肃花儿</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">兰州鼓子</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">甘肃禁忌</a> | - |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"内蒙古"）](neimenggu.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"内蒙古"）](neimenggu.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/gansu.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/gansu.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '甘肃民风民俗','甘肃文化是中华民族多元一体文化的重要组成部分，是华夏文明的发祥地之一，与巴蜀文化、关中文化、齐鲁文化、吴越文化等中国其他地域文化一样，有着悠久的历史传统和鲜明的地域特征。那么甘肃有哪些特色的传统文化呢？'],
+    ['方言文化', 'live-2', '甘肃方言', '甘肃方言，是一个很笼统的概念，由于甘肃省地域广阔，经度跨度大，所以形成了很多方言分支。甘肃境内方言分兰银官话和中原官话， (其中在此尤其要着重说明的一点，据史料记载:黄帝之后分封于蓟(今北京宣武区广安门)，北京开始操天水的陇中方言(黄帝语言)，此说明天水是古黄帝部落语言之源头。'],
+    ['节日文化', 'live-3', '内蒙古节日', '蒙甘肃省是一个多民族聚居的地方，其中少数民族有回、藏、东乡、土、裕固、保安、蒙古、撒拉、哈萨克、满族等16个少数民族。这些民族，各有独特的习俗。为此，甘肃省各民族的节庆习俗，既有民族间的岁时习俗影响，又带有自己鲜明的民族色彩。那么甘肃有哪些著名的节庆活动呢？甘肃大型的节日庆典有哪些呢？'],
+    ['嫁娶文化', 'live-4', '甘肃嫁娶文化', '甘肃随着社会发展和文化积淀，逐渐形成了多姿多彩的具有鲜明地方特色的婚姻民俗。甘肃地区的汉族婚礼虽延续了传统六礼的内容，但在程序上有所简化，具有浓郁的西北地方特色，包括议婚订婚下彩选定婚期婚礼回门等内容。那么甘肃还保留了哪些结婚习俗文化呢？甘肃的有哪些结婚流程呢？'],
+    ['饮食文化', 'live-5', '甘肃饮食文化', '甘肃是一个地域跨度很大的省份，自然环境是影响食物原料种类的重要因素，复杂的自然地理环境使得甘肃的饮食原料种类丰富。这也就造就了甘肃饮食文化的多元化。甘肃的饮食特色从地域上来讲可以分成三大块：以敦煌为代表的西部饮食文化；以兰州为代表的中部饮食文化；以陇南为代表的南部饮食文化。'],
+    ['甘肃禁忌', 'live-6', '甘肃禁忌', '甘肃日常生活中的饮食规矩，最普遍的是客不择食、卧不进食、食不敲碗、禁剥馍皮等。客不择食即做客时不能挑剔饭菜，且以先动粗淡饭为礼；卧不进食，即是认为躺着吃东西是好吃懒做之态；食不敲碗，认为吃饭敲碗不雅观，没礼貌；禁剥馍皮，有尚节俭、不浪费之意。那么甘肃除了这些规矩外，甘肃还有哪些生活忌讳呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/gansu/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="gansu-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['大地湾文化', 'feature-1', '大地湾文化', '大地湾文化亦称“老官台文化”，是中国黄河中游已知最早的新石器时代文化。其主要分布在渭河流域、关中及丹江上游地区，存在于约公元前6000年至5000 年。大地湾文化内涵丰富、特征鲜明，既是中国率先使用彩陶的史前先民，又是西北地区最早产生的农业文化。因其属于新石器时代早期，所以处处显露出原始的特征。'],
+    ['伏羲文化', 'feature-2', '伏羲文化', '伏羲文化是伏羲时代产生的龙文化、玉文化、观天文化、姓氏文化、渔猎文化、太极八卦文化，原始文字与数字文化的总称。太昊伏羲皇首创的龙文化是维系中华民族众志成城的精神纽带，成为民族传统、民族感情、民族精神的集中体现。'],
+    ['陇东皮影', 'feature-3', '陇东皮影', '陇东皮影又叫灯影子、牛皮娃娃，是甘肃陇东地区古老的传统民间艺术。它是舞台演出的用具，同时也是一种民间工艺品。旧时，陇东皮影戏是以食用的清油（植物油）为燃料的灯光照射牛皮做成的人物剪影为傀儡的一种民间影子戏。白天有太阳的时候也可演出，称为热影子戏。'],
+    ['甘肃花儿', 'feature-4', '甘肃花儿', '花儿”是流传在甘肃、青海、宁夏三省（区）广大地区的民歌。“花儿”又称“少年”。男青年唱的叫“少年”， 女青年唱的称“花儿”。据说，“花儿”至少已有四百多年的历史了。它内容丰富多彩，形式自由活泼，语言生动形象，曲调高昂优美，具有浓郁的生活气息和乡土特色，深受回、汉、藏、东乡、土、撒拉等民族的喜爱。'],
+    ['兰州鼓子', 'feature-5', '兰州鼓子', '兰州鼓子，又名兰州曲子、兰州鼓子词，是流行于甘肃省兰州地区的一种汉族民间曲艺形式，中国曲艺的古老曲种之一。在兰州地区曾经是家喻户晓，人人皆知的文化娱乐形式，所以能弹会唱者甚多。如遇喜庆节日，请客宴会，不论在农村的家庭院落，还是集镇的茶肆酒楼，老兰州人聚集在一起弹唱;每当唱到高潮之时，他们便一人演唱而众人帮腔显得气氛十分热闹。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/gansu/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="gansu-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['甘肃陇剧', 'art-1', '陇剧文化', '陇剧原名陇东道情，是甘肃省独有汉族戏曲艺术。起源于汉代的道情说唱，唐宋时期由宫廷走向民间。扎根于陇东的渔鼓道情，逐渐吸收了当地民间音乐营养，增加二股弦等乐器，衍化为皮影唱腔音乐。1958年搬上舞台，1959年正式命名为陇剧。'],
+    ['甘南藏戏', 'art-2', '甘南藏戏', '甘南藏戏藏语称“南木特”、即“传记”之意。又因在拉卜楞寺首次演出，故又称“拉卜楞藏戏”。甘南藏戏诞生于甘南藏族自治州，是从藏族民间舞蹈、民歌、僧歌演变而来的。藏戏在甘南普遍流行开来，并传至四川的甘孜、阿坝一带以及青海黄南自治州等方言区。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/gansu/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="gansu-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['甘肃建筑风格', 'building-1', '甘肃建筑', '甘肃历史上是一个多民族地区,由于历代统治阶级相互攻战征掠 ,使甘肃成了历史上军事争夺频繁的地区。这种状况反映到建筑上,使甘肃建筑非常突出地普遍具有军事的性质 ,出现了大量军事城池、长城边墙、关隘、烽火台、堡寨和驻兵屯田设施。而且城乡民居也都具有防御性质,聚居防守 ,庄堡棋布 ,尤以河西走廊地区最为显著。也是甘肃建筑特色之一。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/gansu/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="gansu-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['甘肃庙宇/庙会', 'religion-1', '庙宇/庙会文化', '说起甘肃的宗教文化，你知道佛教是什么时候传入甘肃的么？你知道甘肃著名的寺庙有哪些么？甘肃历史悠久，建省约有1200多年的历史，而佛教传入甘肃的时间约在前秦时,甘肃有名的几处文物古迹,如敦煌的莫高窟、永靖的炳灵寺、天水的麦积山等,都是因佛教的传入,先后于前秦、北魏时期营造的。那么甘肃除了佛教还有哪些宗教呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/gansu/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="gansu-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '甘肃',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

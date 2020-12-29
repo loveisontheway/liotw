@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>吉林-地区路线</title>
+  <meta name="description" content="吉林, jilin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|白山黑土||<b>著名景点</b>|长影世纪城、净月潭、伪满皇宫、松花湖、向海、长白山等|
+|<b>行政区类别</b>|省||<b>机    场</b>|长春龙嘉国际机场、延吉朝阳川机场、长白山机场、白城长安机场等|
+|<b>所属地区</b>|中国东北地区||<b>火车站</b>|长春站、长春西站、吉林站、四平站、白城站等|
+|<b>下辖地区</b>|长春、吉林市等8个地级市和延边1个自治州||<b>车牌代码</b>|吉A-吉K|
+|<b>电话区号</b>|0431-0439||<b>GDP</b>|15288亿元（2017年）|
+|<b>邮政区码</b>|130000-138000||<b>人均GDP</b>|56102元|
+|<b>地理位置</b>|中国东北中部，东北亚地理中心||<b>省    会</b>|长春市|
+|<b>面    积</b>|18.74万平方千米||<b>原省会</b>|吉林市|
+|<b>人    口</b>|2717.43万人（2017年）||<b>重点大学</b>|吉林大学、东北师范大学|
+|<b>方    言</b>|东北官话||-|-|
+|<b>气候条件</b>|温带季风气候||-|-|
+
+| <b>吉林生活文化</b> | <b>吉林特色文化</b> | <b>吉林曲艺文化</b> | <b>吉林建筑文化</b> | <b>吉林宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">长白山森林号子</a> | <a href="javascript:;" onclick="art(this);">吉林吉剧</a> | <a href="javascript:;" onclick="building(this);">吉林建筑风格</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">马氏布偶</a> | <a href="javascript:;" onclick="art(this);">吉林新城戏</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">东北秧歌</a> | <a href="javascript:;" onclick="art(this);">二人转</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">踩高跷</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">马头琴</a> | -|-|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/jilin.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/jilin.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '吉林民风民俗', '吉林市是一座拥有300多年历史的古城，其原名“吉林乌拉”，满语意为沿江的城池，也是全国唯一一个与省名相重的城市。吉林雾凇、冰雪体育、松花湖、乌拉古城、北山古庙群及满族、朝鲜族民俗风情等构成了吉林特有的北方特色。那么吉林省文化有什么特色？吉林省当地有什么节庆活动？'],
+    ['方言文化', 'live-2', '吉林方言', '吉林方言出自东北方言，比黑龙江方言细腻，又比辽宁方言粗狂，有自己的特色。吉林方言是吉林文化的重要组成部分，吉林方言的历史成因是由当地各地区语言文化相互融合而产生的。那么吉林方言有哪些语言特色呢？'],
+    ['节日文化', 'live-3', '吉林节日', '吉林省是一个多民族聚居的地方，吉林省少数民族主要包括满族、朝鲜族、蒙古族、回族和锡伯族。这些民族，又各有独特的习俗。为此，吉林省各民族的节庆习俗，既有民族间的岁时习俗影响，又带有自己鲜明的民族色彩。那么吉林有哪些著名的节庆活动呢？吉林大型的节日庆典有哪些呢？'],
+    ['嫁娶文化', 'live-4', '吉林嫁娶文化', '你知道历史文化深厚的吉林在结婚上有什么习俗么？你知道知道吉林结婚的特色吗？在吉林结婚要准备什么聘礼呢？在吉林，结婚前一天晚上新郎的新房（睡觉的屋）里不能让人乱进特别是床上不让别人坐，要找一个没结过婚的男孩压床，结婚的早晨去祖坟去上坟是告诉祖先一声你要结婚了。'],
+    ['饮食文化', 'live-5', '吉林饮食文化', '吉菜历史悠久,自古还有汉、朝、蒙等民族在这里繁衍生息,各民族文化和饮食习惯不同,如满族人喜食炖菜和面点、朝鲜族酷爱冷面和狗肉、蒙古族爱吃烤肉,这些特有的饮食习惯,形成了独特的多元化饮食文化。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jilin/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jilin-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['长白山森林号子', 'feature-1', '长白山号子文化', '长白山森林号子是长白山区伐木人抬木时唱的一种歌，俗话叫“号子”。号子是人在抬木时自然发出的呼声，由抬木人的领头人“杠头”（又叫号子头）来“领唱”，其余的人“接唱”（又叫接号），便于抬木行走时迈步整齐，使木头悠起来，从而平分压力，运走木头。那么长白山森林号子有哪些主要特征呢？'],
+    ['马氏布偶', 'feature-2', '马氏布偶文化', '马氏布偶属于母系传承，是流传于东北民间古老技艺的一种。近年来马氏布偶第三代传人马淑琴不断继承创新，不仅将布偶作品绝活达到新的高度，而且还练就了一手非凡的刺绣绝活。那么马氏布偶有什么艺术特色呢？'],
+    ['东北秧歌', 'feature-3', '东北秧歌文化', '东北秧歌是中国北方地区劳动人民长期创造积累的艺术财富，它起源于插秧耕田的劳动生活，又和古代祭祀农神祈求丰收，祈福禳灾时所唱的颂歌、禳歌有关，并在发展过程中不断吸收农歌、菱歌、民间武术、杂技以及戏曲的技艺与形式，从而由一般的演唱秧歌发展到今天广大群众喜闻乐见的一种民间歌舞。那么东北秧歌有哪些艺术特色呢？'],
+    ['踩高跷', 'feature-4', '踩高跷文化', '踩高跷俗称缚柴脚，亦称“高跷”、“踏高跷”、“扎高脚”、“走高腿”，是民间盛行的一种群众性技艺表演，多在一些民间节日里由舞蹈者脚上绑着长木跷在广场进行表演。踩高跷技艺性强，形式活泼多样，由于演员踩跷比一般人高，便于远近观赏，而且流动方便无异于活动舞台，因此深受群众喜爱。那么你知道踩高跷起源于什么时候么？'],
+    ['马头琴', 'feature-5', '马头琴文化', '马头琴，是蒙古民间拉弦乐器。蒙古语称“潮尔”。琴身木制，长约一米，有两根弦，共鸣箱呈梯形，声音圆润，低回宛转，音量较弱。马头琴是一种两弦的弦乐器，有梯形的琴身和雕刻成马头形状的琴柄，为蒙古族人民喜爱的乐器。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jilin/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jilin-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['吉林吉剧', 'art-1', '吉剧文化', '吉剧流行于吉林省各地以及辽宁、黑龙江、内蒙古自治区的一些地区，是在建国后在二人转的基础上发展而成的新剧种，因其诞生于吉林省的省会长春而得名，唱腔是以板腔体为主，兼用曲牌的综合体制，代表性剧目有《蓝河怨》、《桃李梅》、《包公赔情》、《燕青卖线》、《搬窑》以及《江姐》、《雨夜送粮》等。'],
+    ['吉林新城戏', 'art-2', '新城戏文化', '新城戏是以流传于吉林省扶余一带的满族曲艺八角鼓为基础发展而成。因扶余在清代曾设新城府治，故定名为新城戏。新城戏音乐整体上以八角鼓为基础，吸收满族民间音乐(满族民歌、太平鼓等)，以板式变化为主，兼用曲牌。行当以生(小生、老生)、旦(青衣、花旦)、丑(文丑)为主，长于表现悲欢离合的故事情节以及轻松喜悦的故事。'],
+    ['二人转', 'art-3', '二人转文化', '二人转，史称小秧歌、双玩艺、蹦蹦，又称过口、双条边曲、风柳、春歌、半班戏、东北地方戏等。它植根于东北民间文化，属于中国走唱类曲艺曲种，流行于辽宁、吉林、黑龙江、内蒙古东部三市一盟和河北省东北部。东北特色二人转主要来源于东北大秧歌和河北的莲花落。用东北人的俏皮话说：二人转是“秧歌打底，莲花落镶边”。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jilin/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jilin-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['吉林建筑风格', 'building-1', '吉林建筑文化', '吉林的古建筑古代传承性，还具有礼制、美术装饰、传统民俗文化特色，尤其是古建筑装饰艺术具有地方代表性。吉林市的古建筑现保存下来的很少。有寺庙建筑，和民居建筑，但这些建筑承袭了中国古建筑的形式，特别是在建筑装饰上，反应了当时的历史及一方文化风貌，具有明显的地方特色。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/jilin/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="jilin-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '吉林',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>湖北-地区路线</title>
+  <meta name="description" content="湖北, hubei" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|鄂、楚、荆楚||<b>著名景点</b>|黄鹤楼、武汉东湖、神农架、武当山、长江三峡、隆中风景区等|
+|<b>行政区类别</b>|省||<b>机    场</b>|武汉天河国际机场、十堰武当山机场、宜昌三峡机场等|
+|<b>所属地区</b>|华中地区||<b>火车站</b>|武昌站、汉口站、武汉站、宜昌东站、襄阳站等|
+|<b>下辖地区</b>|12个地级市，3个省直管市，1个自治州，1个林区||<b>车牌代码</b>|鄂A—鄂S|
+|<b>电话区号</b>|027、0710—0728||<b>GDP</b>|36522.95亿元（2017年)|
+|<b>邮政区码</b>|430000—443000||<b>人均GDP</b>|62061元（2017年)|
+|<b>地理位置</b>|中国中部偏南、长江中游||<b>省树、省花</b>|水杉、梅花|
+|<b>面    积</b>|18.59万平方千米||<b>著名高校</b>|武汉大学、华中科技大学、华农|
+|<b>人    口</b>|5902万人（2017年常住人口）||<b>历史名人</b>|孟浩然、屈原、李时珍、王昭君|
+|<b>方    言</b>|西南官话、江淮官话、赣语等||<b>行政区划代码</b>|420000|
+|<b>气候条件</b>|亚热带季风性湿润气候||<b>党政领导</b>|省委书记：蒋超良、省长：王晓东|
+
+| <b>湖北生活文化</b> | <b>湖北特色文化</b> | <b>湖北曲艺文化</b> | <b>湖北建筑文化</b> | <b>湖北宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">湖北传统手工艺文化</a> | <a href="javascript:;" onclick="art(this);">湖北楚剧</a> | <a href="javascript:;" onclick="building(this);">湖北建筑文化</a> | <a href="javascript:;" onclick="religion(this);">湖北庙宇/庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">宜昌丝竹</a> | <a href="javascript:;" onclick="art(this);">湖北汉剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">武当武术</a> | <a href="javascript:;" onclick="art(this);">湖北大鼓</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">汉江平原平影戏</a> | <a href="javascript:;" onclick="art(this);">湖北评书</a> |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">湖北地龙灯</a> | -|-|-|
+| <a href="javascript:;" onclick="live(this);">湖北禁忌</a> | <a href="javascript:;" onclick="feature(this);">湖北非物质文化</a> |-| -|-|
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/hubei.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/hubei.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '湖北民风民俗', '湖北位居华中腹地，文化底蕴深厚，是中华民族灿烂文化的重要发祥地之一。在湖北郧县等地考古发现远古时代郧阳人、长阳人的化石表明，早在七八十万年前，我们的祖先就在这块土地上辛勤劳作，繁衍生息，创造了光辉灿烂的历史文化。那么如今湖北还有哪些传统文化民俗呢？湖北还有哪些节日活动呢？'],
+    ['方言文化', 'live-2', '湖北方言', '湖北省的汉语方言主要包括西南官话、江淮官话（楚语）、赣方言，其中西南官话是主体，它不仅覆盖了全省面积和人口的三分之二，甚至还分布在四川、重庆、贵州、云南、湖南、广西等邻省的广大地区。在湖北的东南，靠近江西的咸宁，大冶、阳新，梁子湖讲赣语，官方称为大通片。'],
+    ['节日文化', 'live-3', '湖北节日', '湖北是楚文化的发源地，也是多民族聚居的地区，土家、侗、苗等少数民族在省内大量分布，也形成了湖北当地不少别具特色的节庆活动。那么现在湖北还有哪些特色的节庆活动呢？湖北特色的传统节日习俗节日都还有哪些呢？'],
+    ['嫁娶文化', 'live-4', '湖北嫁娶文化', '荆楚的婚俗礼仪，总体上来说是沿习先秦时代婚嫁中的纳采、问名、纳吉、纳征、请期、亲迎的六礼古习，并在此基础上不断丰富、发展，形成了自己的鲜明特色。比如将加冠礼(成人礼)与婚礼合二为一进行，新媳妇进门，婆婆要用盘端枣子、花生给她吃，以求早生贵子等等。那么湖北如今还有哪些特色结婚风俗流程呢？'],
+    ['饮食文化', 'live-5', '湖北饮食文化', '湖北省饮食风俗是自然条件、民族迁徙和民族构成、历史传承、食俗交融等综合作用的结果，菜点以水产为本，鱼馔为主。集南北各派之精华，形成了熔汉沔风味、荆宜风味、襄郧风味、鄂东南风味、鄂西南土家族苗族风味于一炉的鄂菜鱼馔特色。'],
+    ['湖北禁忌', 'live-6', '湖北禁忌', '湖北地方文化汇东西南北之长，承楚文化之绪，具有悠久的文化历史。幽深的历史感融合着高峡平湖的壮观、荆楚文化的异彩，使得湖北这个“中部崛起”的中心点愈发地融会古今贯通中西，飞速的发展。那么去湖北这个历史文化悠久的地方旅游或者生活有哪些需要注意的生活忌讳呢？湖北有哪些禁忌习俗呢？']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hubei/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hubei-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['湖北传统手工艺文化', 'feature-1', '手工艺文化', '手工艺品指的是纯手工或借助工具制作的产品。可以使用机械工具，但前提是工艺师直接的手工作业仍然为成品的最主要来源。如今随着大工业机械化方式批量生产，手工艺品的市场也在逐渐的减弱。那么现在湖北还有哪些传统的手工艺技术呢？'],
+    ['宜昌丝竹', 'feature-2', '宜昌丝竹', '宜昌丝竹是在湖北民间器乐分类中唯宜昌独有的器乐类别，它是以"丝竹"为主奏乐器演奏曲牌，与打击乐合成的一种器乐艺术品种，故宜昌丝竹亦称"细乐"，流行于宜昌东部地区而以宜昌鸦鹊岭地区最盛，以其演奏效果上的细腻、婉转、吉祥、典雅而被广泛用于民间吉庆、盛典等各种红事场合。那么宜昌丝竹有哪些艺术特色呢？'],
+    ['武当武术', 'feature-3', '武当武术', '武当武术历史悠久，博大精深。元末明初武当道士张三丰集其大成，被尊为武当武术的开山祖师。张三丰将《易经》和《道德经》的精髓与武术巧妙融为一体，创造了具有重要养生健身价值，以太极拳、形意拳、八卦掌为主体的武当武术。后经历代武术家不断创新、充实、积累，形成中华武术一大流派，素有“北宗少林，南尊武当”之称。'],
+    ['汉江平原平影戏', 'feature-4', '汉江平原平影戏', '江汉平原皮影戏是一种古老的传统艺术。迄今已有300余年的历史，是指流行在湖北中南部沔阳（今仙桃市）、天门、潜江、监利、洪湖、京山、公安等县（市）具有相同艺术特征的皮影戏，江汉平原皮影戏是江汉人自己的“土电影”，深受老百姓的喜爱。'],
+    ['湖北地龙灯', 'feature-5', '地龙灯文化', '地龙灯是湖北省来凤县旧司乡牛王节流传下来的一种民间艺术文化。“地龙灯，地龙灯，不用篾篓不用棍，巴地梭着走，活像其龙行。站的骑马桩，弓腰箭步行，似同狮子灯。那么现在地龙灯的发展情况又是如何呢？'],
+    ['湖北非物质文化', 'feature-6', '湖北非物质文化', '非物质文化遗产是民族个性、民族审美习惯的“活”的显现。湖北作为中华民族灿烂文化的重要发祥地之一。如今湖北有哪些传统的手工艺技能或者社会风俗、礼仪、节庆等被列入了国家级非物质文化遗产了呢？']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hubei/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hubei-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['湖北楚剧', 'art-1', '楚剧文化', '楚剧，旧称哦呵腔、黄孝花鼓戏、西路花鼓戏，清代道光年间鄂东流行的哦呵腔与湖北省武汉市黄陂区、孝感市一带的山歌、道情、竹马、高跷及民间说唱等融合，形成一个独立的地方传统声腔剧种之一，1926年改称楚剧，距今已有一百五十余年的历史。是湖北地区具有广泛影响的地方剧种。那么楚剧有哪些艺术特色呢？'],
+    ['湖北汉剧', 'art-2', '汉剧文化', '汉剧，旧称楚调、汉调（楚腔、楚曲），民国时期定名汉剧，俗称“二黄”。汉剧是湖北传统戏曲剧种之一，也是陕西省的第二大剧种，主要流行于湖北省境地内长江汉水流域，以及湖南、陕西南部、四川和广东部分地区。汉剧角色共分为十行：一末、二净、三生、四旦、五丑、六外、七小、八贴、九夫、十杂。腔调除了西皮、二黄外，罗罗腔也用得较多。'],
+    ['湖北大鼓', 'art-3', '湖北大鼓', '湖北大鼓原名“鼓书”，又称“打鼓说书”、“打鼓京腔”等，是一种流行于孝感、黄冈和武汉一带的汉族说唱艺术。原先湖北的鼓书，与我国北方的鼓词类传统说唱艺术有着同宗的关系，而鼓词(鼓书)又与说书(评书)，在历史上有密切的联系。那么湖北大鼓有哪些艺术特色以及著名的传统曲目呢？'],
+    ['湖北评书', 'art-4', '湖北文化', '湖北评书是湖北省的传统说唱艺术。流行于中国北方地区，作为一种独立的说书品种，大约形成于清代初期。许多渠道的资料证明，评书虽然是口头讲说的表演形式，但其艺人来源却多为“唱曲”的转行。相传形成于北京的评书艺术，其第一代艺人王鸿兴。那么湖北评书有哪些特征呢？']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hubei/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hubei-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['湖北建筑文化', 'building-1', '建筑文化', '湖北建筑作为文化的一种记载，它的存在不仅代表一种建筑工艺，更重要的是体现了一种鲜活的民族文化。湖北在我国古代是属于荆楚地区，那么湖北文化自然也与荆楚文化有着密切的联系。为此湖北古代的建筑是在一定程度上就是属于荆楚风格的建筑。然而荆楚建筑文化的最大特点体现在它的“天人合一”建筑观上，它所展现的是“自然与精神的统一”。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hubei/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hubei-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['湖北庙宇/庙会', 'religion-1', '庙宇/庙会文化', '湖北佛教、道教、伊斯兰教、天主教、基督教五大宗教俱全，鄂东黄梅禅宗文化、鄂西武当道教文化历史悠久，底蕴深厚，形成“东禅西道”的湖北传统宗教文化格局。那么湖北在这样的宗教文化格局下，湖北现在还有哪些著庙会呢？湖北著名的寺庙有哪些呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/hubei/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="hubei-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '湖北',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+
+</script>
+</body>
+</html>

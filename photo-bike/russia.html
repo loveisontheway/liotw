@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>俄罗斯（russia）-瀑布流相册</title>
+		<meta name="description" content="俄罗斯, russia, 瀑布流相册" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/photo-wall/animate.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/photo-wall/bootstrap.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/photo-wall/style.css">
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="../css/photo-wall/magnific-popup.css">
+		<!-- Modernizr JS -->
+		<script src="../js/photo-wall/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+		var imgArr = [
+			['1.jpg', '俄罗斯贝加尔湖奥利洪岛'],
+			['2.jpg', '俄罗斯贝加尔湖奥利洪岛'],
+			['3.jpg', '俄罗斯滑冰运动员安迪琳娜'],
+			['4.jpg', '俄罗斯第聂伯河'],
+			['5.jpg', '俄罗斯建筑风景'],
+			['6.jpg', '俄罗斯建筑风景'],
+			['7.jpg', '俄罗斯建筑风景'],
+			['8.jpg', '俄罗斯建筑风景'],
+			['9.jpg', '俄罗斯建筑风景'],
+			['10.jpg', '俄罗斯建筑风景'],
+			['11.jpg', '俄罗斯小镇苏兹达尔'],
+			['12.jpg', '俄罗斯小镇苏兹达尔'],
+			['13.jpg', '俄罗斯小镇苏兹达尔'],
+			['14.jpg', '俄罗斯堪察加半岛'],
+			['15.jpg', '俄罗斯堪察加半岛'],
+			['16.jpg', '俄罗斯堪察加半岛'],
+			['17.jpg', '俄罗斯堪察加半岛'],
+			['18.jpg', '俄罗斯贝加尔湖'],
+			['19.jpg', '俄罗斯贝加尔湖'],
+			['20.jpg', '俄罗斯贝加尔湖'],
+			['21.jpg', '俄罗斯贝加尔湖'],
+			['22.jpg', '俄罗斯贝加尔湖'],
+			['23.jpg', '俄罗斯贝加尔湖'],
+			['24.jpg', '俄罗斯瓦西里升天教堂建筑'],
+			['25.jpg', '俄罗斯莫斯科'],
+			['26.jpg', '俄罗斯莫斯科'],
+			['27.jpg', '俄罗斯莫斯科'],
+			['28.jpg', '俄罗斯苏兹达里'],
+			['29.jpg', '俄罗斯苏兹达里'],
+			['30.jpg', '俄罗斯涅瓦河两岸风光'],
+			['31.jpg', '俄罗斯圣彼得堡夏宫'],
+			['32.jpg', '俄罗斯莫斯科红场'],
+			['33.jpg', '俄罗斯莫斯科红场'],
+			['34.jpg', '俄罗斯圣彼得堡'],
+			['35.jpg', '俄罗斯圣彼得堡'],
+			['36.jpg', '俄罗斯圣彼得堡'],
+			['37.jpg', '俄罗斯圣彼得堡'],
+			['38.jpg', '俄罗斯圣彼得堡'],
+			['39.jpg', '俄罗斯圣彼得堡'],
+			['40.jpg', '俄罗斯莫斯科谢尔盖修道院'],
+			['41.jpg', '俄罗斯冬宫广场'],
+			['42.jpg', '俄罗斯冬宫广场'],
+			['43.jpg', '俄罗斯瓦兹尼基市'],
+			['44.jpg', '秋天的俄罗斯'],
+			['45.jpg', '秋天的俄罗斯'],
+			['46.jpg', '俄罗斯贝加尔湖'],
+			['47.jpg', '俄罗斯贝加尔湖'],
+			['48.jpg', '俄罗斯圣彼得堡涅瓦河'],
+			['49.jpg', '俄罗斯联盟152毫米双管自行火炮'],
+			['50.jpg', '圣彼得堡城市'],
+			['51.jpg', '圣彼得堡城市'],
+			['52.jpg', '圣彼得堡城市'],
+			['53.jpg', '圣彼得堡城市'],
+			['54.jpg', '圣彼得堡城市'],
+			['55.jpg', '俄罗斯圣彼得堡冬宫'],
+			['56.jpg', '俄罗斯圣彼得堡冬宫'],
+			['57.jpg', '俄罗斯圣彼得堡冬宫'],
+			['58.jpg', '俄罗斯圣彼得堡冬宫'],
+			['59.jpg', '俄罗斯圣彼得堡冬宫'],
+			['60.jpg', '俄罗斯圣彼得堡涅瓦河'],
+			['61.jpg', '芳堤娜城堡'],
+			['62.jpg', '芳堤娜城堡'],
+			['63.jpg', '索契冬奥会俄罗斯风景'],
+			['64.jpg', '俄罗斯城市'],
+			['65.jpg', '俄罗斯莫斯科克拉斯宏密瑞士酒店']
+		];
+		$(function(){
+			var divHtml = '';
+			for (var i=0; i<imgArr.length; i++) {
+				divHtml +=
+				'<div class="grid-item item animate-box" data-animate-effect="fadeIn">'+
+				    '<a href="../imgs/photo-wall/russia/'+imgArr[i][0]+'" class="image-popup" title="'+imgArr[i][1]+'">'+
+						'<div class="img-wrap">'+
+							'<img src="../imgs/photo-wall/russia/'+imgArr[i][0]+'" alt="" class="img-responsive">'+
+						'</div>'+
+						'<div class="text-wrap">'+
+							'<div class="text-inner popup">'+
+								'<div>'+
+									'<h2>'+imgArr[i][1]+'</h2>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</a>'+
+				'</div>';
+			}
+			$('.grid').prepend(divHtml);
+		});
+	</script>
+	</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div id="loader">
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="dot"></div>
+			 <div class="lading"></div>
+		</div>
+	</div>
+	<!-- Preloader End-->
+	<div id="fh5co-page">
+	<div class="aside-toggle btn-circle">
+		<a href="#"><span></span><em>About</em></a>
+	</div>
+	<div class="back-to-home btn-circle">
+		<a href="javascript:window.history.back();"><span></span><em>Back</em></a>
+	</div>
+
+	<div id="fh5co-aside">
+		<div class="image-bg"></div>
+		<div class="overlay"></div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="fh5co-aside-inner">
+					<div class="row" id="fh5co-bio">
+						<div class="col-md-12">
+							<h2>关于我&nbsp;&nbsp;About Me</h2>
+						</div>
+						<div class="col-md-6">
+							<p>来路不由己，但前路可期，因为<a href="../liotw.html#3rdPage">爱就在路上</a>。</p>
+						</div>
+						<div class="col-md-6">
+							<p>The way is not by oneself, but the way before can be, because <a href="../liotw.html#3rdPage">love is on the way</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="fh5co-image-grid">
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		</div>
+	</div>
+
+	</div>
+	<!-- jQuery Easing -->
+	<script src="../js/photo-wall/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="../js/photo-wall/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="../js/photo-wall/jquery.waypoints.min.js"></script>
+	<!-- Magnific -->
+	<script src="../js/photo-wall/jquery.magnific-popup.min.js"></script>
+	<script src="../js/photo-wall/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="../js/photo-wall/isotope.pkgd.min.js"></script>
+	<script src="../js/photo-wall/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="../js/photo-wall/TweenLite.min.js"></script>
+	<script src="../js/photo-wall/CSSPlugin.min.js"></script>
+	<script src="../js/photo-wall/EasePack.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="../js/photo-wall/main.js"></script>
+	<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+    <script src="../js/sweetalert/sweetalert2.all.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			swal({
+			  title: '图片无水印...',
+			  text: 'Image without watermark...',
+			  width: '41rem',
+			  showConfirmButton: false,
+			  timer: 5000
+			});
+		});
+	</script>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>贵州-地区路线</title>
+  <meta name="description" content="贵州, guizhou" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|贵、黔||<b>著名景点</b>|黄果树瀑布、梵净山、织金洞、万峰林、千户苗寨|
+|<b>行政区类别</b>|省||<b>机    场</b>|贵阳龙洞堡国际机场、遵义新舟机场、铜仁凤凰机场等|
+|<b>所属地区</b>|中国西南地区||<b>火车站</b>|贵阳北站、遵义站、安顺西站等|
+|<b>下辖地区</b>|6个地级市、3个自治州||<b>车牌代码</b>|贵A～贵J|
+|<b>电话区号</b>|0851～0859||<b>GDP</b>|13500亿元（2017年）|
+|<b>邮政区码</b>|830000-840000||<b>人均GDP</b>|38000元（2017年）|
+|<b>地理位置</b>|中国西南||<b>著名高校</b>|贵州大学、贵州师范大学等|
+|<b>面    积</b>|17.6167万平方千米||<b>省委书记</b>|孙志刚|
+|<b>人    口</b>|3581万人（2017年）||<b>主要民族</b>|汉、苗、布依、侗、水等|
+|<b>方    言</b>|西南官话||<b>行政区划代码</b>|520000|
+|<b>气候条件</b>|亚热带湿润季风气候||<b>省    长</b>|谌贻琴|
+
+| <b>贵州生活文化</b> | <b>贵州特色文化</b> | <b>贵州曲艺文化</b> | <b>贵州建筑文化</b> | <b>贵州宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">水西文化</a> | <a href="javascript:;" onclick="art(this);">贵州黔剧</a> | <a href="javascript:;" onclick="building(this);">贵州吊脚楼</a> | - |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">贵州酒文化</a> | <a href="javascript:;" onclick="art(this);">苗族剪纸</a> | <a href="javascript:;" onclick="building(this);">侗乡风雨桥</a> | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">夜郎文化</a> | <a href="javascript:;" onclick="art(this);">安顺蜡染</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | - | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | - | -|-|-|
+| <a href="javascript:;" onclick="live(this);">贵州禁忌</a> | - |-| -|-|
+--
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（暂无）](#one)
++ [II. 景点](#two)
++ [III. 路线规划（暂无）](#three)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/guizhou.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/guizhou.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '贵州民风民俗', '贵州是中国古人类发祥地之一，据考古发现，中国南方主要的旧石器时代文化遗址，差不多都是在贵州境内发现的。这说明贵州各族人民的祖先很早以前就在这块土地上繁衍生息，并在劳动生活中创造了贵州远古文化。贵州建省虽然只有500多年，但是从文献资料提供的情况来看，贵州的历史可以追溯得更远。贵州随着经济的发展至今，还保留着贵州哪些传统节日民俗呢？'],
+    ['方言文化', 'live-2', '贵州方言', '贵州话，属于西南官话的一支或者说是多支，所谓贵州话可能是以贵阳为主要标准来看吧。但是现在整个西南官话地区语言受普通话影响有逐渐发展壮大相互统一、同化之趋势。下面我们就一起来了解一下贵州的方言吧，顺便学学贵州的一些地方语言，去深入感受贵州的语言文化魅力吧！'],
+    ['节日文化', 'live-3', '贵州节日', '贵州秀丽古朴、风景如画并有“百节之乡”的美誉，众多的节日活动让这片本就美丽的土地更是增加额一份风情。“百节之乡”贵州都有哪些节日？'],
+    ['嫁娶文化', 'live-4', '贵州嫁娶文化', '贵州是古人类发祥地之一，远古人类化石和远古文化遗存发现颇多。早在24万年前，就有人类栖息繁衍，已发现石器时代文化遗址80余处。贵州历史悠久，文化源远流长。贵州结婚风俗也绚丽多彩，是贵州的一块绚丽的文化瑰宝。那么贵州有哪些婚嫁习俗呢？贵州的结婚流程有哪些呢？'],
+    ['饮食文化', 'live-5', '贵州饮食文化', '贵州地处亚热带高原山区，得天独厚地气候，提供了各种动植物（包括家养和野生）生长的最佳条件，而这些大自然慷慨赐予的动植物，又给各族人民提供了生存和创造饮食文化的原材料，从而形成了许多鲜为人知的贵州民族饮食习俗。'],
+    ['贵州禁忌', 'live-6', '贵州禁忌', '贵州少数民族众多，同一民族又有很多分支，在各自古老的生活形态中形成的习俗禁忌自不在少数，下面就和小编一起来详细的了解一下贵州的一些生活禁忌和说话忌讳，这样下次出发贵州旅游时，就可以入乡随俗，尽情的体验当地人的热情，开心的玩耍了！']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guizhou/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guizhou-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['水西文化', 'feature-1', '水西文化', '水西文化，属于中国贵州省彝族文化的重要组成部分，是根植于中国贵州省毕节市乌江、鸭池河水以西的区域的文化。从蜀汉至清初的1400多年间，毕节属水西，归彝族世袭统治，在这块神奇的土地上，创造了灿烂的水西文明。丰富的彝学文典，使水西成了中国彝文化研究中心。'],
+    ['贵州酒文化', 'feature-2', '贵州酒文化', '贵州是名符其实的名酒之乡。除国酒茅台之外，还有董酒、习酒、贵州醇、青酒、刺梨糯米酒、苗酒、夹酒、朱昌酒、苞谷酒、金沙窖酒等等。'],
+    ['夜郎文化', 'feature-3', '夜郎文化', '夜郎文化是指夜郎政治、经济范围内所有民族文化的组合，也是指受夜郎文化势力影响的周边地区文化的组合，包括古夜郎文化，也涵盖了夜郎风影响的当代民族文化。古夜郎强盛时期，其疆城达到昆明以东、广西中西部、湖南芷江等地。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guizhou/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guizhou-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['贵州黔剧', 'art-1', '贵州黔剧', '黔剧是流行于贵州省的地方戏曲剧种之一，是由流传在贵州的曲艺扬琴（又名“文琴”、“贵州弹词”）于1953年演变发展而成的，主要以扬琴为伴奏乐器，地方特色浓郁。那么黔剧都有艺术特色呢？黔剧起源于哪里呢？'],
+    ['苗族剪纸', 'art-2', '苗族剪纸', '苗族剪纸俗称“花纸”、“剪花”、“绣花纸”，苗语称“西给港”、“西给榜”，意为“动物剪纸”和“花卉剪纸”。剑河苗族剪纸不同于汉民族和北方少数民族的窗花剪纸，其主要用途是作为苗族服饰刺绣纹样稿。类型可分为革东和新民、新合两种，手法主要采用剪、刻、扎等方式。'],
+    ['安顺蜡染', 'art-3', '安顺蜡染', '贵州安顺蜡染被誉为“东方第一染”，安顺也被誉为“蜡染之乡”。 安顺于1992年成功举办了首届蜡染艺术节，吸引了来自国内外的众多宾客，自此蜡染艺术走向全国，走向世界。安顺有大量的蜡染作坊、工厂，涌现出一批知名的蜡染艺人，安顺蜡染网上有介绍蜡染匠人。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guizhou/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guizhou-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var buildingArr = [
+    ['贵州吊脚楼', 'building-1', '贵州吊脚楼', '吊脚楼，也叫“吊楼”，为苗族（重庆、贵州等）、壮族、布依族、侗族、水族、土家族等族传统民居，在渝东南及桂北、湘西、鄂西、黔东南地区的吊脚楼特别多。吊脚楼多依山靠河就势而建，呈虎坐形，以“左青龙，右白虎，前朱雀，后玄武”为最佳屋场，后来讲究朝向，或坐西向东，或坐东向西。'],
+    ['侗乡风雨桥', 'building-2', '侗乡风雨桥', '风雨桥是侗族独有的桥。流行于湖南、湖北、贵州、广西等地。由桥、塔、亭组成。全用木料筑成，桥面铺板，两旁设栏干、长凳，桥顶盖瓦，形成长廊式走道。塔、亭建在石桥墩上，有多层，檐角飞翘，顶有宝葫芦等装饰。因行人过往能避风雨，故名。']
+  ];
+
+  var building = function(obj) {
+    var title = obj.innerText;
+    for(var m=0; m<buildingArr.length; m++) {
+      if(buildingArr[m][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/guizhou/'+buildingArr[m][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+buildingArr[m][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="guizhou-'+buildingArr[m][1]+'.html" style="font-size:24px;">&nbsp;'+buildingArr[m][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '贵州',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

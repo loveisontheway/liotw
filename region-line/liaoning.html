@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>辽宁-地区路线</title>
+  <meta name="description" content="辽宁, liaoning" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"/>
+	<link rel="stylesheet" href="../js/region-line/scrolltop.css">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main" style="width: auto;height:600px;"></div>
+<xmp theme="cerulean" style="display:none;">
+|   |   |   |   |   |
+| - | - | - | - | - |
+|<b>别名</b>|共和国长子、东方鲁尔||<b>著名景点</b>|沈阳故宫、清昭陵、清福陵、星海广场、千山、鸭绿江、本溪水洞等|
+|<b>行政区类别</b>|省级行政区||<b>机    场</b>|沈阳桃仙国际机场、大连周水子国际机场、丹东浪头国际机场等|
+|<b>所属地区</b>|中国东北||<b>火车站</b>|沈阳站、沈阳北站、大连站、鞍山站、锦州站等|
+|<b>下辖地区</b>|14个地级市、16个县级市、25个县||<b>车牌代码</b>|辽A－辽P|
+|<b>电话区号</b>|(+86)024、0411-0429||<b>GDP</b>|23942亿元（2017年）|
+|<b>邮政区码</b>|110000—125000||<b>人均GDP</b>|54800元|
+|<b>地理位置</b>|中国东北地区、沿海地区||<b>著名高校</b>|大连理工大学、东北大学等|
+|<b>面    积</b>|14.8万平方千米||<b>省    花</b>|天女花、君子兰|
+|<b>人    口</b>|4368.9万人（2017年）||<b>省委书记</b>|陈求发|
+|<b>方    言</b>|东北官话、胶辽官话||<b>省    长</b>|唐一军|
+|<b>气候条件</b>|温带季风气候||-|-|
+
+| <b>辽宁生活文化</b> | <b>辽宁特色文化</b> | <b>辽宁曲艺文化</b> | <b>辽宁建筑文化</b> | <b>辽宁宗教文化</b> |
+| - | - | - | - | - |
+| <a href="javascript:;" onclick="live(this);">习俗/民俗</a> | <a href="javascript:;" onclick="feature(this);">凌源皮影戏</a> | <a href="javascript:;" onclick="art(this);">辽宁辽剧</a> | - | <a href="javascript:;" onclick="religion(this);">宗教/庙会</a> |
+| <a href="javascript:;" onclick="live(this);">方言文化</a> | <a href="javascript:;" onclick="feature(this);">海城喇叭戏</a> | <a href="javascript:;" onclick="art(this);">辽宁鼓乐</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">节日文化</a> | <a href="javascript:;" onclick="feature(this);">抚顺地秧歌</a> | <a href="javascript:;" onclick="art(this);">阜新蒙古剧</a> | - | - |
+| <a href="javascript:;" onclick="live(this);">嫁娶文化</a> | <a href="javascript:;" onclick="feature(this);">庄河剪纸</a> | - |-|-|
+| <a href="javascript:;" onclick="live(this);">饮食文化</a> | <a href="javascript:;" onclick="feature(this);">本溪社火</a> | -|-|-|
+
+
+## <i class="fa fa-file-text-o"></i>&nbsp;目录（Table of Contents）
++ [I. 总路线图（参考"广东"）](guangdong.html)
++ [II. 景点](#two)
++ [III. 路线规划（参考"广东"）](guangdong.html)
+
+<h2 id="two"><i class="fa fa-star-o"></i>&nbsp;景点</h2>
+<img data-src="../imgs/region-line/scenic-spot/liaoning.gif" title="景点"/>
+
+</xmp>
+<div id="back"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
+<div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
+<div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/jquery/lazyload.min.js"></script>
+<script src="../js/region-line/scrolltop.js"></script>
+<script src="../js/region-line/strapdown.js"></script>
+<script src="../js/echarts/echarts-4.0.4.js"></script>
+<script src="../js/echarts/map/province/liaoning.js"></script>
+<script src="../js/sweetalert/es6-promise.auto.min.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript">
+  $('img').lazyload();
+  var liveArr = [
+    ['习俗/民俗', 'live-1', '辽宁民风民俗', '辽河流域是中华民族灿烂文化的发祥地之一。自周王朝，到清王朝的建立，历朝各代在这方土地上留下了众多富有传奇色彩的文物古迹。尤以中部的沈阳故宫、关外三陵等清前史迹，南部的近代战争史迹和西部的秦汉、辽宋、明清史迹驰名中外。辽宁文化历史悠久，那么辽宁省文化有什么特色？'],
+    ['方言文化', 'live-2', '辽宁方言', '辽宁话是汉语方言之一，通行于全辽宁省，主要有东北官话（沈阳话、本溪话、鞍山话、铁岭话、锦州话、阜新话）与东南部的胶辽官话（大连话、丹东话、营口话）两种大区。在历史上看，辽宁方言糅合了满、蒙语的一些词汇，辽南地区（如大连）还吸收了日韩等外来词汇。'],
+    ['节日文化', 'live-3', '辽宁节日', '辽宁当地节庆丰富多彩，除了传统节日庆典外，当地少数民族节日也很多。其中著名的节庆活动就有中国沈阳国际冰雪节、大连国际服装节、鞍山千山国际旅游节、本溪国际枫叶节、锦州国际民间艺术节等。那么辽宁除了这些著名的节庆活动之外，辽宁还有哪些著名的节庆活动呢？辽宁大型的节日庆典有哪些呢？'],
+    ['嫁娶文化', 'live-4', '辽宁嫁娶文化', '辽宁地区的历史源远流长，那么辽宁的嫁娶文化又怎么样呢？辽宁地区都有哪些结婚风俗的流程呢？辽宁的少数民族又有哪些结婚风俗流程呢？结婚是一辈子中尤为重要的一件事，婚礼也即如此。准备在辽宁结婚的你，知道结婚时需要注意哪些事项吗？'],
+    ['饮食文化', 'live-5', '辽宁饮食文化', '辽菜是在满族菜点、东北菜的基础上，吸取鲁菜和京菜之长，形成了自己的独特风格。辽宁菜特点是一菜多味、咸甜分明、酥烂香脆、明油亮芡、讲究造型。这些肴馔的特色，可用一首小诗来概括：山珍海味取料广，火锅白肉美名扬。']
+  ];
+
+  var live = function(obj) {
+    var title = obj.innerText;
+    for (var i=0; i<liveArr.length; i++) {
+      if(liveArr[i][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/liaoning/'+liveArr[i][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+liveArr[i][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="liaoning-'+liveArr[i][1]+'.html" style="font-size:24px;">&nbsp;'+liveArr[i][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var featureArr = [
+    ['凌源皮影戏', 'feature-1', '凌源皮影戏', '凌源皮影属中国北方皮影戏的一个重要支脉,相传已有300多年的历史。在传承与发展的过程中,形成了鲜明的艺术风格和独特的艺术魅力——影人雕镂玲珑剔透、操纵表演惟妙惟肖、掐嗓演唱独具特色。1996年，文化部命名凌源市为“中国民间艺术之乡（皮影艺术）”。1999年9月17日，原文化部部长贺敬之在参观凌源收藏的几千卷影卷时说：“凌源的影卷可为全国之最”。'],
+    ['海城喇叭戏', 'feature-2', '海城喇叭戏', '海城喇叭戏广泛流传于辽宁省海城一带的传统地方小戏剧种。早期的民间艺人，因受条件的限制，仅头戴一顶圆毡帽，身穿大布衫，系腰带以扮演戏中各种人物，因此又称“大布衫子”戏。由于它的主要伴奏乐器是唢呐，唢呐在当地俗名“喇叭”，故称“喇叭戏”。'],
+    ['抚顺地秧歌', 'feature-3', '抚顺地秧歌文化', '抚顺地秧歌，也被称为“ 鞑子秧歌”，是一种形成年代久远、民族性、民间性及地域特色极为浓郁的民间舞蹈形式。抚顺地秧歌主要流行在辽宁省东北部的抚顺。抚顺市是 满族的故乡、清王朝的发祥地。清王朝统一全国后，东北地区较为安定，满族民间在原有民间舞蹈基础上，不断吸收其他民族民间舞蹈，逐渐形成了从表演形式到角色、装扮、舞蹈动作都独具特色的满族秧歌。'],
+    ['庄河剪纸', 'feature-4', '庄河剪纸文化', '庄河剪纸，指产生和流传于辽宁省庄河市群众中的剪纸艺术。庄河剪纸历史悠久，沿袭了古老的传统样式和表现手法。在平视构图、平面造型、镂空效果和连接关系以及强调装饰、讲究纸感刀趣等基本形态上，保持了传统剪纸的共性特征。其剪纸构图单纯，造型极为简炼和艺术夸张。'],
+    ['本溪社火', 'feature-5', '本溪社火文化', '本溪社火是一种历史悠久的传统民俗活动。属于武技类，因此也称“武社火”，当地俗称“武秧歌”。杨和礼告诉记者，社火的演出，主要在春节和元宵节期间。本溪社火类似于京剧中的武打戏，社火在出场时通常先排兵布阵，前面有将，后面有兵卒，呈现出古老战场的气势。']
+  ];
+
+  var feature = function(obj) {
+    var title = obj.innerText;
+    for(var j=0; j<featureArr.length; j++) {
+      if(featureArr[j][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/liaoning/'+featureArr[j][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+featureArr[j][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="liaoning-'+featureArr[j][1]+'.html" style="font-size:24px;">&nbsp;'+featureArr[j][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var artArr = [
+    ['辽宁辽剧', 'art-1', '辽剧文化', '辽南戏又称辽剧，是一种新兴的地方戏曲剧种。主要源于辽宁省辽南皮影戏，是该地区农村祭祀娱人的一种主要演出形式。演出时照本宣唱，唱腔曲调吸收、借鉴了河北省皮影的成份，唱腔以板式变化体为主。四台子村业余剧团的皮影艺人以真人上台唱影调的形式演出了业余作者翁景树编写的现代戏《白杨树下》,把影窗艺术变成舞台艺术，取名影调戏。'],
+    ['辽宁鼓乐', 'art-2', '辽宁鼓乐文化', '辽宁鼓吹乐，俗称鼓乐。它是我国传统的民族民间器乐乐种之一。辽宁鼓乐分为唢呐乐和笙管乐，又根据风格特点、演奏曲目等划分为辽南、辽西、辽东、沈阳、辽北、朝阳等六个地方派别，是辽宁民间日常节庆礼仪活动重要的表现形式之一。 2006年5月20日，辽宁鼓乐经国务院批准列入第一批国家级非物质文化遗产名录。'],
+    ['阜新蒙古剧', 'art-3', '阜新蒙古剧文化', '阜新蒙古剧是在阜新蒙古贞短调民歌基础上产生的，是蒙古民族的歌、舞、扮、诗、骑、射的综合艺术。在解放初，阜新地区就形成了蒙古剧的雏型。1947—1949年，获得解放的佛寺村民间艺人编写和排演了《慰问军属》的短歌剧。把蒙古民歌“明月”曲调配用到了剧中，加上对白、对唱、扮演等形式搬上了舞台。']
+  ];
+
+  var art = function(obj) {
+    var title = obj.innerText;
+    for(var k=0; k<artArr.length; k++) {
+      if(artArr[k][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/liaoning/'+artArr[k][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+artArr[k][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="liaoning-'+artArr[k][1]+'.html" style="font-size:24px;">&nbsp;'+artArr[k][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  var religionArr = [
+    ['宗教/庙会', 'religion-1', '庙宇/庙会', '辽宁省是全国宗教工作重点省区之一。现有佛教、道教、伊斯兰教、天主教、基督教五种宗教。截止2014年底，全省有信教群众约204.4万人，占全省总人口的4.7%。依法认定备案的宗教教职人员3839人。那么辽宁有哪些著名的名寺及庙会呢？']
+  ];
+
+  var religion = function(obj) {
+    var title = obj.innerText;
+    for(var n=0; n<religionArr.length; n++) {
+      if(religionArr[n][0] === title) {
+        swal({
+          title: title,
+          html: '<img src="../imgs/timeline/liaoning/'+religionArr[n][1]+'.jpg" width="305px" height="255px"/><p style="text-indent: 35px;">'+religionArr[n][3]+'</p>',
+          showConfirmButton: false,
+          width:'40rem',
+          background: '#DBF5FF',
+          footer: '<a href="liaoning-'+religionArr[n][1]+'.html" style="font-size:24px;">&nbsp;'+religionArr[n][2]+'&nbsp;</a>'
+        });
+      }
+    }
+  }
+
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+  // 指定图表的配置项和数据
+  var option = {
+      series: [{
+          type: 'map',
+          map: '辽宁',
+          label: {
+            normal: {show: false}
+          },
+          data: []
+      }]
+  };
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>
