@@ -23,6 +23,7 @@
 <img data-src="../imgs/region-line/scenic-spot/jiangsu.gif" title="景点"/>
 
 </xmp>
+<div id="translate"></div>
 <div id="backBike"><a><img data-src="../imgs/region-line/back.png" width="48" border="0" alt="返回首页" title="返回首页"></a></div>
 <div id="full-top"><a><img data-src="../imgs/region-line/back-top.png" width="20" border="0" alt="返回顶部" title="返回顶部"></a></div>
 <div id="full-btm"><a><img data-src="../imgs/region-line/back-btm.png" width="20" border="0" alt="跳到底部" title="跳到底部"></a></div>
@@ -53,6 +54,13 @@
   };
   // 使用刚指定的配置项和数据显示图表。
   myChart.setOption(option);
+</script>
+<script src="../js/i18n/translate.js"></script>
+<script>
+    translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+    translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+    translate.setUseVersion2(); //设置使用v2.x 版本
+    translate.execute(); //执行翻译初始化操作，显示出select语言选择
 </script>
 </body>
 </html>

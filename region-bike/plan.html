@@ -9,6 +9,22 @@
 		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
 		<style type="text/css">
 			.cycling,.camping > div { text-indent: 1em; }
+			#translate {
+				position: fixed;
+				top: 70px;
+				right: 70px;
+				color: #fff;
+				font-weight: 700;
+				z-index: 99;
+				font-size: 1.9em;
+				-webkit-font-smoothing: antialiased;
+				-moz-font-smoothing: antialiased;
+			}
+
+			#translate select {
+				background-color: transparent;
+				border: 1px solid hsla(0, 0%, 0%, 0.2);
+			}
 		</style>
 	</head>
 	<body>
@@ -16,6 +32,7 @@
 			<h1>
 				<img src="../imgs/liotw.png"/>&nbsp;&nbsp;love is on the way
 			</h1>
+			<div id="translate"></div>
 		</hgroup>
 		<div class="responsive-tabs">
 			<h2>总路线图</h2>
@@ -262,7 +279,7 @@
 					<li>
 						<b><i class="fa fa-fa fa-2x"></i>&nbsp;露营注意事项: </b>
 						<span style="font-size: 14px;" class="camping">
-							<div>出发之前，必须尽可能想象在野外将会面临的各种境地，以便准备相应的技能和装备 
+							<div>出发之前，必须尽可能想象在野外将会面临的各种境地，以便准备相应的技能和装备
 。野营需要根据你野营的地方、季节，人数决定你所需要的装备，最基本的需要帐篷、防潮垫。如果离家近可以使用家里的被子，如果远那么需要睡袋。如果是天气较凉需要气垫或者气床。如果试试开车那么野营装备是越多越好，如果是徒步你还需要准备一个背负系统好的登山包。在户外野营你需要关注天气，户外运动最重要的是注意安全。</div>
 							<h4>一、方向问题</h4>
 							<div>出行前尽可能地搜集活动地区的地图和相关资料，对将要出现的较大转向和明显的标志物做初步了解。当有等高线地图时，可将预定线路和方向进行分析，如：需翻越几道山梁、经过几个丫口、大致海拔上升和下降情况。这样有助于在行进中判定方向。</div>
@@ -330,11 +347,11 @@
 					<li>拍照留念，录制视频，用于网站分享</li>
 				</ol>
 			</div>
-			
+
 			<h2>采购清单</h2>
 			<div>
 				<ul>
-					<li>电子产品: 
+					<li>电子产品:
 						<code><pre>
 1、无人机一台（大疆）
 2、运动相机一台（GoPro Hero7,自拍杆,头盔带,胸带,两电一充,收纳盒）
@@ -349,7 +366,7 @@
 11、micro SD卡TF卡（SanDisk/闪迪 256GB）
 						</pre></code>
 					</li>
-					<li>露营装备: 
+					<li>露营装备:
 						<code><pre>
 1、单人帐篷一顶（Naturehike/挪客）
 2、睡袋一个（BLACKICE/黑冰 B1000）
@@ -357,7 +374,7 @@
 4、防潮垫一个（Naturehike/挪客）
 						</pre></code>
 					</li>
-					<li>骑行装备: 
+					<li>骑行装备:
 						<code><pre>
 1、前车筐一个，后货架一个，驮包一个，绑带两根
 2、自行车修车工具一套，变速线一根（备用）
@@ -373,7 +390,7 @@
 12、车前灯一个（CATEYE/猫眼 VOLT800），尾灯一个
 						</pre></code>
 					</li>
-					<li>炊具用具: 
+					<li>炊具用具:
 						<code><pre>
 1、便携组合套锅具炊具餐具（Naturehike/挪客）
 2、折叠野营炉头（Naturehike/挪客）
@@ -385,7 +402,7 @@
 8、红糖，枸杞，陈皮糖/椰子糖，花生，白酒
 						</pre></code>
 					</li>
-					<li>其它: 
+					<li>其它:
 						<code><pre>
 1、医药箱一个，绳索一根，口哨一只
 2、公益物件（笔、书、衣服等），根据情况购买
@@ -426,7 +443,7 @@
 						</pre></code>
 					</li>
 				</ul>
-				
+
 			</div>
 		</div>
 		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
@@ -435,6 +452,13 @@
 			$(document).ready(function() {
 				RESPONSIVEUI.responsiveTabs();
 			});
+		</script>
+		<script src="../js/i18n/translate.js"></script>
+		<script>
+			translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+			translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+			translate.setUseVersion2(); //设置使用v2.x 版本
+			translate.execute(); //执行翻译初始化操作，显示出select语言选择
 		</script>
 	</body>
 </html>

@@ -12,6 +12,7 @@
 	</head>
 	<body style="background-color: #DBF5FF;">
 		<div class="container">
+			<div id="translate"></div>
 			<header class="clearfix">
 				<span>
 					<a href="javascript:window.history.back(-1);">
@@ -19,7 +20,7 @@
 					</a>
 				</span>
 				<h1>秀山花灯</h1>
-			</header>	
+			</header>
 			<div class="main">
 				<ul class="cbp_tmtimeline">
 					<li>
@@ -86,5 +87,12 @@
 	<script src="../js/jquery/jquery-1.11.3.min.js"></script>
 	<script src="../js/region-line/scrolltop.js"></script>
 	<script src="../js/timeline/modernizr.custom.js"></script>
+		<script src="../js/i18n/translate.js"></script>
+		<script>
+			translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+			translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+			translate.setUseVersion2(); //设置使用v2.x 版本
+			translate.execute(); //执行翻译初始化操作，显示出select语言选择
+		</script>
 	</body>
 </html>

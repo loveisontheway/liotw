@@ -90,10 +90,10 @@
                 seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
 
             // based on the date change the refrence wording
-            var ref_days = (days === 1) ? 'day' : 'days',
-                ref_hours = (hours === 1) ? 'hour' : 'hours',
-                ref_minutes = (minutes === 1) ? 'minute' : 'minutes',
-                ref_seconds = (seconds === 1) ? 'second' : 'seconds';
+            // var ref_days = (days === 1) ? 'day' : 'days',
+            //     ref_hours = (hours === 1) ? 'hour' : 'hours',
+            //     ref_minutes = (minutes === 1) ? 'minute' : 'minutes',
+            //     ref_seconds = (seconds === 1) ? 'second' : 'seconds';
 
             // set to DOM
             container.find('.days').text(days);
@@ -101,12 +101,12 @@
             container.find('.minutes').text(minutes);
             container.find('.seconds').text(seconds);
 
-            container.find('.days_ref').text(ref_days);
-            container.find('.hours_ref').text(ref_hours);
-            container.find('.minutes_ref').text(ref_minutes);
-            container.find('.seconds_ref').text(ref_seconds);
+            // container.find('.days_ref').text(ref_days);
+            // container.find('.hours_ref').text(ref_hours);
+            // container.find('.minutes_ref').text(ref_minutes);
+            // container.find('.seconds_ref').text(ref_seconds);
         }
-        
+
         // start
         var interval = setInterval(countdown, 1000);
     };

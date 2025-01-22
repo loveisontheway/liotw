@@ -12,6 +12,7 @@
 	</head>
 	<body style="background-color: #DBF5FF;">
 		<div class="container">
+			<div id="translate"></div>
 			<header class="clearfix">
 				<span>
 					<a href="javascript:window.history.back(-1);">
@@ -19,7 +20,7 @@
 					</a>
 				</span>
 				<h1>新疆民风民俗</h1>
-			</header>	
+			</header>
 			<div class="main">
 				<ul class="cbp_tmtimeline">
 					<li>
@@ -36,7 +37,7 @@
 							<p>古尔邦节</p>
 							<p>又称宰牲节，相传真主安拉曾命令先知易卜拉欣宰杀儿子献祭，忠诚的易卜拉欣听从真主的命令准备杀子，此时真主命他以羊代子。这一天是肉孜节后的70天，即回历12月10日，人们将这天定为宰牺节。在这些节日里，穆斯林们都要沐浴整装去清真寺做礼拜，还要走亲访友，杀羊烹肉款待客人，进行各种娱乐活动，场面十分热闹。</p>
 							<p>肉孜节</p>
-							<p>回历每年9月，又称开斋节，新疆信仰伊斯兰教的民族都过这个节日。在这个月里成年穆斯林（伊斯兰教信徒）都要“封斋”（意为斋戒），他们进食只能在日落后至日出前，白天则绝对禁食，到斋期结束才“开斋”，恢复正常的白天进食习惯。这是个大节日，要连续三天隆重的庆祝。 
+							<p>回历每年9月，又称开斋节，新疆信仰伊斯兰教的民族都过这个节日。在这个月里成年穆斯林（伊斯兰教信徒）都要“封斋”（意为斋戒），他们进食只能在日落后至日出前，白天则绝对禁食，到斋期结束才“开斋”，恢复正常的白天进食习惯。这是个大节日，要连续三天隆重的庆祝。
 麦德尔节</p>
 							<p>来源于藏传佛教（喇嘛教）。相传为弥勒佛的诞辰纪念日，时间是农历的正月十五日。新疆蒙古族很重视这个节日。这一天，也是蒙古族最盛大的庙会。回历巴罗提月的头两天是塔吉克族的传统节日：灯节，又称巴罗提节，人们通宵不眠。据说来源于拜火教。节日前一夜，全家人围着一支支代表家庭成员的蜡烛，由家长按辈分大小逐个叫唤家人的名宇，被叫者必须应答，然后将蜡烛一齐点燃，以示吉庆，祈祷后才能共进节日晚餐。为召唤吉样，入夜时要将一支酥油火把插在房顶，即“点天灯”，并堆草点火在房前，能驱鬼辟邪。第二天，全家到家族墓地祭扫并在墓地上共进晚餐。</p>
 							<p>播种节</p>
@@ -82,5 +83,12 @@
 	<script src="../js/jquery/jquery-1.11.3.min.js"></script>
 	<script src="../js/region-line/scrolltop.js"></script>
 	<script src="../js/timeline/modernizr.custom.js"></script>
+		<script src="../js/i18n/translate.js"></script>
+		<script>
+			translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+			translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+			translate.setUseVersion2(); //设置使用v2.x 版本
+			translate.execute(); //执行翻译初始化操作，显示出select语言选择
+		</script>
 	</body>
 </html>

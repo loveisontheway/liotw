@@ -1,5 +1,5 @@
 #back,#backBike {
-position: fixed; 
+position: fixed;
 	text-align: center;
 	line-height: 30px;
 	width: 48px;
@@ -14,7 +14,7 @@ position: fixed;
 }
 
 #full-top {
-position: fixed; 
+position: fixed;
 	text-align: center;
 	line-height: 30px;
 	width: 30px;
@@ -29,7 +29,7 @@ position: fixed;
 }
 
 #full-btm {
-position: fixed; 
+position: fixed;
 	text-align: center;
 	line-height: 30px;
 	width: 30px;
@@ -41,4 +41,21 @@ position: fixed;
 	_position: absolute;
 	_right: auto;
 	z-index: 999999;
+}
+
+#translate {
+	position: fixed;
+	top: 70px;
+	right: 70px;
+	color: #fff;
+	font-weight: 700;
+	z-index: 99;
+	font-size: 1.9em;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+#translate select {
+	background-color: transparent;
+	border: 1px solid hsla(0, 0%, 0%, 0.2);
 }

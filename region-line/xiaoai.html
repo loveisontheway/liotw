@@ -9,6 +9,22 @@
 		<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
 		<style type="text/css">
 			.cycling,.camping > div { text-indent: 1em; }
+			#translate {
+				position: fixed;
+				top: 70px;
+				right: 70px;
+				color: #fff;
+				font-weight: 700;
+				z-index: 99;
+				font-size: 1.9em;
+				-webkit-font-smoothing: antialiased;
+				-moz-font-smoothing: antialiased;
+			}
+
+			#translate select {
+				background-color: transparent;
+				border: 1px solid hsla(0, 0%, 0%, 0.2);
+			}
 		</style>
 	</head>
 	<body>
@@ -17,6 +33,7 @@
 				<img src="../imgs/liotw.png"/>&nbsp;&nbsp;love is on the way
 			</h1>
 		</hgroup>
+		<div id="translate"></div>
 		<div class="responsive-tabs">
 			<h2>联系方式</h2>
 			<div>
@@ -30,7 +47,7 @@
 						</pre></code>
 					</li>
 				</ul>
-				
+
 			</div>
 		</div>
 		<script src="../js/jquery/jquery-1.11.3.min.js"></script>
@@ -39,6 +56,13 @@
 			$(document).ready(function() {
 				RESPONSIVEUI.responsiveTabs();
 			});
+		</script>
+		<script src="../js/i18n/translate.js"></script>
+		<script>
+			translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+			translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+			translate.setUseVersion2(); //设置使用v2.x 版本
+			translate.execute(); //执行翻译初始化操作，显示出select语言选择
 		</script>
 	</body>
 </html>

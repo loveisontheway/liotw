@@ -161,6 +161,23 @@
 		line-height: 50px;
 		width: 100%;
 	}
+
+	#translate {
+		position: fixed;
+		top: 20px;
+		right: 30px;
+		color: #fff;
+		font-weight: 700;
+		z-index: 99;
+		font-size: 1.9em;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+	}
+
+	#translate select {
+		background-color: transparent;
+		/*border: 1px solid hsla(0, 0%, 0%, 0.2);*/
+	}
 	</style>
 </head>
 <body>
@@ -184,6 +201,8 @@
 		<img src="imgs/liotw.png"/>
 	</a>
 </div>
+<div id="translate"></div>
+
 <!-- <div id="menu">
 <ul>
 	<li data-menuanchor="firstPage"><a href="#firstPage">love</a></li>
@@ -205,33 +224,40 @@
 				<i class="fa fa-video-camera fa-2x"></i>
 			</a>
 		</span>
-		<h1 style="font-size: 2em;color:#444;">出发倒计时</h1>
-		<p style="font-size: 1em;color:#444;">Start countdown</p>
+		<h1 style="font-size: 2em;color:#444;">启动计时器</h1>
+<!--		<h1 style="font-size: 2em;color:#444;">出发倒计时</h1>-->
+<!--		<p style="font-size: 1em;color:#444;">Start countdown</p>-->
 		<ul class="countdown">
 		  <li> <span class="days">00</span>
-		    <p class="days_ref">days</p>
+		    <p class="days_ref">天</p>
+<!--		    <p class="days_ref">days</p>-->
 		  </li>
 		  <li class="seperator">.</li>
 		  <li> <span class="hours">00</span>
-		    <p class="hours_ref">hours</p>
+		    <p class="hours_ref">时</p>
+<!--		    <p class="hours_ref">hours</p>-->
 		  </li>
 		  <li class="seperator">:</li>
 		  <li> <span class="minutes">00</span>
-		    <p class="minutes_ref">minutes</p>
+		    <p class="minutes_ref">分</p>
+<!--		    <p class="minutes_ref">minutes</p>-->
 		  </li>
 		  <li class="seperator">:</li>
 		  <li> <span class="seconds">00</span>
-		    <p class="seconds_ref">seconds</p>
+		    <p class="seconds_ref">秒</p>
+<!--		    <p class="seconds_ref">seconds</p>-->
 		  </li>
 		</ul>
-		<h5>出发时间：2019.03.09&nbsp;&nbsp;杭州</h5>
-		<h6>Departure time：2019.03.09&nbsp;&nbsp;hangzhou</h6>
+		<h5>出发时间:&nbsp;2019.03.09&nbsp;杭州</h5>
+<!--		<h6>Departure time:&nbsp;2019.03.09&nbsp;hangzhou</h6>-->
 	</div>
 	<div class="section" id="section1">
 		<div id="mainMap" style="width: 100%;height: 90%;background-size: contain;background-position: center center;object-fit: contain;"></div>
+		<a style="font-size:18px;color:#0B615E;" href="region-line/plan.html">前期规划路线</a>
 	</div>
 	<div class="section" id="section5">
 		<div id="bikeMap" style="width: 100%;height: 90%;background-size: contain;background-position: center center;object-fit: contain;"></div>
+		<a style="font-size:18px;color:#0B615E;" href="region-bike/plan.html">实际骑行路线</a>
 	</div>
 	<div class="section" id="section2">
 		<!-- <img data-src="imgs/fullpage/we.png" alt="we" /> -->
@@ -383,74 +409,74 @@
 <script src="js/jquery/jquery.downCount.js"></script>
 <script src="js/jquery/rvc.js"></script>
 <script src="./index.js"></script>
-<link rel="stylesheet" crossorigin href="https://g.alicdn.com/aliyun-documentation/web-chatbot-ui/0.0.14/index.css" />
-<script type="module" crossorigin src="https://g.alicdn.com/aliyun-documentation/web-chatbot-ui/0.0.14/index.js"></script>
-	<script>
-		window.CHATBOT_CONFIG = {
-			endpoint: "https://web-chatbot-syz-qqeoiqjceq.cn-hangzhou.fcapp.run/chat", // 可以替换为 https://{your-fc-http-trigger-domain}/chat
-			displayByDefault: false, // 默认不展示 AI 助手聊天框
-			aiChatOptions: { // aiChatOptions 中 options 会传递 aiChat 组件，自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat
-				conversationOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#conversation-options
-					conversationStarters: [
-						{prompt: '山水图片'},
-						{prompt: '百度二维码'},
-						{prompt: '欧洲签证'},
-					]
-				},
-				displayOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#display-options
-					height: 600,
-				},
-				personaOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#chat-personas
-					assistant: {
-						name: '你好，我是 爱就在路上 的 AI 助手',
-						// AI 助手的图标
-						avatar: 'https://img.alicdn.com/imgextra/i2/O1CN01Pda9nq1YDV0mnZ31H_!!6000000003025-54-tps-120-120.apng',
-						tagline: '您可以尝试点击下方的快捷入口开启体验！',
-					}
-				}
+<link rel="stylesheet" crossorigin href="css/ali-qwen/index.css" />
+<script type="module" crossorigin src="js/ali-qwen/index.js"></script>
+<!--<link rel="stylesheet" crossorigin href="https://g.alicdn.com/aliyun-documentation/web-chatbot-ui/0.0.14/index.css" />-->
+<!--<script type="module" crossorigin src="https://g.alicdn.com/aliyun-documentation/web-chatbot-ui/0.0.14/index.js"></script>-->
+<script>
+	window.CHATBOT_CONFIG = {
+		endpoint: "https://web-chatbot-syz-qqeoiqjceq.cn-hangzhou.fcapp.run/chat", // 可以替换为 https://{your-fc-http-trigger-domain}/chat
+		displayByDefault: false, // 默认不展示 AI 助手聊天框
+		aiChatOptions: { // aiChatOptions 中 options 会传递 aiChat 组件，自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat
+			conversationOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#conversation-options
+				conversationStarters: [
+					{prompt: '山水图片'},
+					{prompt: '百度二维码'},
+					{prompt: '欧洲签证'},
+				]
 			},
-			dataProcessor: {
-				/**
-				 * 在向后端大模型应用发起请求前改写 Prompt。
-				 * 比如可以用于总结网页场景，在发送前将网页内容包含在内，同时避免在前端显示这些内容。
-				 * @param {string} prompt - 用户输入的 Prompt
-				 * @param {string}  - 改写后的 Prompt
-				 */
-				rewritePrompt(prompt) {
-					return prompt;
+			displayOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#display-options
+				height: 600,
+			},
+			personaOptions: { // 自定义取值参考：https://docs.nlkit.com/nlux/reference/ui/ai-chat#chat-personas
+				assistant: {
+					name: '你好，我是 爱就在路上 的 AI 助手',
+					// AI 助手的图标
+					avatar: 'https://img.alicdn.com/imgextra/i2/O1CN01Pda9nq1YDV0mnZ31H_!!6000000003025-54-tps-120-120.apng',
+					tagline: '您可以尝试点击下方的快捷入口开启体验！',
 				}
 			}
-		};
-	</script>
-	<style>
-		.nlux-conversation-container img, fieldset {
-		  border: 0;
-		  max-width: 160px;
+		},
+		dataProcessor: {
+			/**
+			 * 在向后端大模型应用发起请求前改写 Prompt。
+			 * 比如可以用于总结网页场景，在发送前将网页内容包含在内，同时避免在前端显示这些内容。
+			 * @param {string} prompt - 用户输入的 Prompt
+			 * @param {string}  - 改写后的 Prompt
+			 */
+			rewritePrompt(prompt) {
+				return prompt;
+			}
 		}
-		:root {
-		  /* webchat 工具栏的颜色 */
-		  --webchat-toolbar-background-color: #1464E4;
-		  /* webchat 工具栏文字和按钮的颜色 */
-		  --webchat-toolbar-text-color: #FFF;
-		}
-		/* webchat 对话框如果被遮挡，可以尝试通过 z-index、bottom、right 等设置来调整位置 */
-		.webchat-container {
-		  z-index: 100;
-		  bottom: 10px;
-		  right: 10px;
-		}
-		/* webchat 的唤起按钮如果被遮挡，可以尝试通过 z-index、bottom、right 等设置来调整位置 */
-		.webchat-bubble-tip {
-		  z-index: 99;
-		  bottom: 10px;
-		  right: 60px;
-		}
-		.nlux-conversation-container p {
-			font-size: 14px;
-		}
-	</style>
-
-
+	};
+</script>
+<style>
+	.nlux-conversation-container img, fieldset {
+	  border: 0;
+	  max-width: 160px;
+	}
+	:root {
+	  /* webchat 工具栏的颜色 */
+	  --webchat-toolbar-background-color: #1464E4;
+	  /* webchat 工具栏文字和按钮的颜色 */
+	  --webchat-toolbar-text-color: #FFF;
+	}
+	/* webchat 对话框如果被遮挡，可以尝试通过 z-index、bottom、right 等设置来调整位置 */
+	.webchat-container {
+	  z-index: 100;
+	  bottom: 10px;
+	  right: 10px;
+	}
+	/* webchat 的唤起按钮如果被遮挡，可以尝试通过 z-index、bottom、right 等设置来调整位置 */
+	.webchat-bubble-tip {
+	  z-index: 99;
+	  bottom: 10px;
+	  right: 60px;
+	}
+	.nlux-conversation-container p {
+		font-size: 14px;
+	}
+</style>
 <script type="text/javascript">
 
 	$('#rvc1').rvc({
@@ -481,10 +507,11 @@
 	$('.countdown').downCount({
 		date: '03/09/2019 00:00:00',
 		offset: +8
-	}, function () {
-		$('#section0 h1').html('启动计时器');
-		$('#section0 p').html('Start timer');
 	});
+	// }, function () {
+	// 	$('#section0 h1').html('启动计时器');
+	// 	$('#section0 p').html('Start timer');
+	// });
 
 	(function() {
 		var o = navigator.userAgent.match(/MSIE (\d+)/);
@@ -743,23 +770,23 @@
 				});
 
 	            myChart.setOption({
-	            	title: {
-			            // text: '跨境骑行300天',
-			            text: '前期规划路线',
-			            textStyle:{
-		                    color:'#0B615E'
-		                },
-			            // subtext: 'Cross-border cycling for 300 days',
-			            subtext: 'earlier stage plan line',
-			            subtextStyle:{
-		                    color:'#0B615E'
-		                },
-		                link: "region-line/plan.html",	// 点击标题内容要跳转的链接
-		                sublink: "region-line/plan.html",
-			            x:'center',
-				        y:'top',
-				        textAlign:'center'
-			        },
+	            	// title: {
+			        //     // text: '跨境骑行300天',
+			        //     // text: '前期规划路线',
+			        //     textStyle:{
+		            //         color:'#0B615E'
+		            //     },
+			        //     // subtext: 'Cross-border cycling for 300 days',
+			        //     // subtext: 'earlier stage plan line',
+			        //     subtextStyle:{
+		            //         color:'#0B615E'
+		            //     },
+		            //     link: "region-line/plan.html",	// 点击标题内容要跳转的链接
+		            //     sublink: "region-line/plan.html",
+			        //     x:'center',
+				    //     y:'top',
+				    //     textAlign:'center'
+			        // },
 				    tooltip: {
 						formatter: function (params, ticket, callback) {
 							if (params.name.indexOf('>') != -1) {
@@ -1380,21 +1407,21 @@
 				});
 
 	            myChart.setOption({
-	            	title: {
-			            text: '实际骑行路线',
-			            textStyle:{
-		                    color:'#0B615E'
-		                },
-			            subtext: 'actual bike line',
-			            subtextStyle:{
-		                    color:'#0B615E'
-		                },
-		                link: "region-bike/plan.html",	// 点击标题内容要跳转的链接
-		                sublink: "region-bike/plan.html",
-			            x:'center',
-				        y:'top',
-				        textAlign:'center'
-			        },
+	            	// title: {
+			        //     text: '实际骑行路线',
+			        //     textStyle:{
+		            //         color:'#0B615E'
+		            //     },
+			        //     subtext: 'actual bike line',
+			        //     subtextStyle:{
+		            //         color:'#0B615E'
+		            //     },
+		            //     link: "region-bike/plan.html",	// 点击标题内容要跳转的链接
+		            //     sublink: "region-bike/plan.html",
+			        //     x:'center',
+				    //     y:'top',
+				    //     textAlign:'center'
+			        // },
 				    tooltip: {
 						formatter: function (params, ticket, callback) {
 							if (params.name.indexOf('>') != -1) {
@@ -1824,6 +1851,19 @@
 	});
 	 /* Preloder End
 	-------------------------------------------------------------------*/
+</script>
+<!--<script src="https://cdn.staticfile.net/translate.js/3.12.0/translate.js"></script>-->
+<script src="js/i18n/translate.js"></script>
+<script>
+	// translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认自动识别当前网页显示文字的语种。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明。
+	translate.service.use('client.edge'); //设置机器翻译服务通道，直接客户端本身，不依赖服务端 。相关说明参考 http://translate.zvo.cn/43086.html
+	// translate.execute();//进行翻译
+
+	//translate.ignore.tag.push('span'); //翻译时追加上自己想指定忽略的tag标签，凡是在这里面的，都不进行翻译。
+	//translate.ignore.class.push('test');	//翻译时指定忽略的class name，凡是class name 在这里面的，都不进行翻译。如果不设置默认只有 ignore 这一个
+	translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+	translate.setUseVersion2(); //设置使用v2.x 版本
+	translate.execute(); //执行翻译初始化操作，显示出select语言选择
 </script>
 </body>
 </html>
